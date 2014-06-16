@@ -3,8 +3,6 @@
  * Elgg reported content plugin language pack
  *
  * @package ElggReportedContent
- * @version 1.8.3
- * @update 2012-1-30
  */
 
 $japanese = array(

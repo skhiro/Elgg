@@ -3,9 +3,6 @@
  * Elgg pages plugin language pack
  * 
  * @package ElggPages
- * @update 2013-5-1
- * @version 1.8.15
- * @subpackage Languages.Japanese
  */
 
 

@@ -2,9 +2,6 @@
 /**
  * Blog Japanese language file.
  *
- * @update 2013-2-14
- * @version 1.8.6
- * @subpackage Languages.Japanese
  */
 
 /**

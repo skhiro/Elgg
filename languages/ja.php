@@ -2,8 +2,6 @@
 /**
  * Core Japanese Language
  *
- * @update 2014-4-21
- * @version 1.8.19
  * @package Elgg.Core
  * @subpackage Languages.Japanese
  *

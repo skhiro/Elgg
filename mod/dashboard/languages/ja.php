@@ -2,8 +2,6 @@
 /**
  * User dashboard 日本語 languages file
  *
- * @version 1.8.3
- * @update 2012-1-30
  */
 
 $japanese = array(

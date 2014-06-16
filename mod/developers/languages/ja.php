@@ -2,9 +2,6 @@
 /**
  * Elgg developer tools 日本語 language file.
  *
- * @update 2013-5-1
- * @version 1.8.15
- * @subpackage Languages.Japanese
  */
 
 $japanese = array(

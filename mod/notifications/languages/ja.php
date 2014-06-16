@@ -2,8 +2,6 @@
 /*
  * Notification language pack
  *
- * @update 2012-9-19
- * @version 1.8.8
  */
 $japanese = array(
 

@@ -1,9 +1,6 @@
 <?php
 /**
  * Twitter API plugin 日本語 language definition file
- *
- * @version 1.8.15
- * @update 2013-5-1
  */
 
 $japanese = array(

@@ -3,10 +3,9 @@
  * Elgg groups plugin language pack
  *
  * @package ElggGroups
- * @update 2013-2-14
- * @version 1.8.12
- * @subpackage Languages.Japanese
- *
+ */
+
+/* *
  *------------------------------------------------------------------
  * 以下は、このファイルで(Email 通知に使われるメールのサブジェクト)に使われるキー名です。
  * 必要に応じて内容を書き換えて使用すると便利です。

@@ -3,10 +3,6 @@
  * Elgg diagnostics language pack.
  *
  * @package ElggDiagnostics
- * @author Curverider Ltd
- * @link http://elgg.com/
- * @version 1.8.3
- * @update 2012-1-30
  */
 
 $japanese = array(

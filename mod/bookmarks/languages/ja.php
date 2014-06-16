@@ -2,9 +2,6 @@
 /**
  * Bookmarks English language file
  *
- * @update 2012-9-9
- * @version 1.8.4
- * @subpackage Languages.Japanese
  */
 
 /**

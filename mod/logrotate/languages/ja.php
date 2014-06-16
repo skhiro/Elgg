@@ -3,8 +3,6 @@
  * Elgg log rotator language pack.
  * 
  * @package ElggLogRotate
- * @version 1.8.16
- * @update 2013-7-1
  */
 
 $japanese = array(

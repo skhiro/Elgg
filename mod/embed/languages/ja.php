@@ -2,8 +2,6 @@
 /**
  * Embed 日本語 language strings
  *
- * @version 1.8.3
- * @updte 2012-1-30
  */
 
 $japanese = array(

@@ -1,9 +1,6 @@
 <?php
 /*
  * Members 日本語 language file
- *
- * @version 1.8.3
- * @update 2012-1-30
  */
 $japanese = array(
 	'members:label:newest' => '新着',

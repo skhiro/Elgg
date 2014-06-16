@@ -3,9 +3,6 @@
  * Elgg log browser plugin language pack
  *
  * @package ElggLogBrowser
- * @update 2012-6-21 
- * @version 1.8.6
- * @subpackage Languages.Japanese
  */
 
 $japanese = array(

@@ -3,11 +3,9 @@
  * Elgg send a message action page
  * 
  * @package ElggMessages
- * @version 1.8.4
- * @update 2012-5-16
- * @subpackage Languages.Japanese
- *
- *
+ */
+
+/**
  *------------------------------------------------------------------
  * 以下は、このファイルで(Email 通知に使われるメールのサブジェクト)に使われるキー名です。
  * 必要に応じて内容を書き換えて使用すると便利です。
