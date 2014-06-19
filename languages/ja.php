@@ -1,15 +1,11 @@
 <?php
 /**
- * Core Japanese Language
- *
- * @package Elgg.Core
- * @subpackage Languages.Japanese
- *
- *
- *------------------------------------------------------------------
  * 以下は、このファイルで(Email 通知に使われるメールのサブジェクト)に使われるキー名です。
  * 必要に応じて内容を書き換えて使用すると便利です。
  * 
+ * notificatoin:subject
+ *    デファオルトの通知メッセージ
+ *
  * useradd:subject
  *    ユーザの作成時に送られます
  *
@@ -30,9 +26,9 @@
  *
  *'friend:newfriend:subject' => "【Elgg研究会】%s さんはあなたを友達に登録しました！",
  *
- *'email:resetpassword:subject' => "【Elgg研究会】パスワードをリセットしました",
+ *'email:changepassword:subject' => "【Elgg研究会】パスワードをリセットしました",
  *
- *'email:resetreq:subject' => "【Elgg研究会】新しいパスワードのリクエスト",
+ *'email:resetreq:subject' => "【Elgg研究会】パスワードの変更のリクエスト",
  *
  *'generic_comment:email:subject' => '【Elgg研究会】新しいコメントがあります！',
  * 
@@ -53,7 +49,7 @@
  *
  */
 
-$japanese = array(
+return array(
 /**
  * Sites
  */
@@ -66,7 +62,7 @@ $japanese = array(
 
 	'login' => 'ログイン',
 	'loginok' => "ログインしました。",
-	'loginerror' => "ログインできませんでした。このサイトの登録したかどうかご確認の上、もう一度お試しください。",
+	'session_expired' => "あなたのセッションは期限切れです。ログインするためにはページを再読み込みしてください。",
 	'login:empty' => "ログイン名とパスワードが必要です。",
 	'login:baduser' => "あなたのログインアカウントを読み込むことができませんでした。",
 	'auth:nopams' => "内部エラー。ユーザ認証機能がインストールされていません。",
@@ -74,10 +70,12 @@ $japanese = array(
 	'logout' => "ログアウト",
 	'logoutok' => "ログアウトしました。",
 	'logouterror' => "ログアウトできませんでした。もう一度お試しください。",
+	'loginerror' => "ログインできませんでした。このサイトの登録したかどうかご確認の上、もう一度お試しください。",
 
-	'loggedinrequired' => "ログインしないと、このページを見ることはできません。",
-	'adminrequired' => "管理者でないと、このページを見ることはできません。",
-	'membershiprequired' => "このグループのメンバでないと、このページを見ることはできません。",
+	'loggedinrequired' => "要求されたページはログインしないとご覧になることはできません。",
+	'adminrequired' => "要求されたページは管理者でないとご覧になることはできません。",
+	'membershiprequired' => "要求されたページはこのグループのメンバでないとご覧になることはできません。",
+	'limited_access' => "あなたには要求されたページを閲覧する十分な権限はありません。",
 
 
 /**
@@ -90,25 +88,6 @@ $japanese = array(
 	'actionnotfound' => "%s のアクションファイルが見つかりませんでした。",
 	'actionloggedout' => "ログアウトのままですと、アクションを実行できません。",
 	'actionunauthorized' => 'あなたの権限では、このアクションを実行することはできません。',
-
-	'InstallationException:SiteNotInstalled' => 'このリスエストは扱うことができません。このサイトがうまく設定されていないか、データベースがダウンしています。',
-	'InstallationException:MissingLibrary' => '%s をロードできませんでした。',
-	'InstallationException:CannotLoadSettings' => 'Elggは設定ファイルを読み込むことができませんでした。そのファイルは存在しないか、適切なパーミッションになっていないと思われます。',
-
-	'SecurityException:Codeblock' => "特権コードブロックを実行しょうとしましたが拒否されました。",
-	'DatabaseException:WrongCredentials' => "Elggは入力された情報でデータベースに接続することができませんでした。設定ファイルを見なおしてください。",
-	'DatabaseException:NoConnect' => "Elggはデータベース「 %s 」を見つけることができませんでした。 データベースが作成済みかどうか、アクセスできるのかどうか確認してください。",
-	'SecurityException:FunctionDenied' => "権限の必要な機能「 %s 」へのアクセスが拒否されました。",
-	'DatabaseException:DBSetupIssues' => "いくつか問題が発生しました: ",
-	'DatabaseException:ScriptNotFound' => "Elggは %s にて要求されたデータベーススクリプトを見つけることができませんでした。",
-	'DatabaseException:InvalidQuery' => "クエリーの記述が間違っています。",
-	'DatabaseException:InvalidDBLink' => "データベースへの接続が切れました。",
-
-	'IOException:FailedToLoadGUID' => 'GUID:%2$d から、新しい %1$s を読込こもうとしましたが、失敗しました。',
-	'InvalidParameterException:NonElggObject' => "非ElggObjectがElggObjectコンストラクタに渡されました！",
-	'InvalidParameterException:UnrecognisedValue' => "コンストラクタに認識できない値が渡されました。",
-
-	'InvalidClassException:NotValidElggStar' => "GUID:%d は適切な %s ではありません。",
 
 	'PluginException:MisconfiguredPlugin' => "%s (guid: %s) は、設定にミスがあるプラグインですので、起動を無効にしました。起こり得る原因についてはElgg wikiにて検索してみてください。(http://docs.elgg.org/wiki/)",
 	'PluginException:CannotStart' => '%s (guid: %s) は起動できず停止状態のままです。理由: %s',
@@ -123,6 +102,7 @@ $japanese = array(
 	'ElggPlugin:NoPluginPackagePackage' => 'プラグインID %s (guid %s) のElggPluginPackage がありません。',
 
 	'ElggPluginPackage:InvalidPlugin:MissingFile' => '必要なファイル "%s" が見つかりません。',
+	'ElggPluginPackage:InvalidPlugin:InvalidId' => 'マニフェストのIDに一致させるには、このプラグインのディレクトリの名前を "%s" に変えなければいけません。',
 	'ElggPluginPackage:InvalidPlugin:InvalidDependency' => 'マニフェストに記述されている依存関係のタイプ "%s" が正しくありません。',
 	'ElggPluginPackage:InvalidPlugin:InvalidProvides' => 'マニフェストに記述されているプロバイドのタイプ "%s" が正しくありません。',
 	'ElggPluginPackage:InvalidPlugin:CircularDep' => 'プラグイン %3$s で依存関係のタイプ %2$s の "%1$s" が正しくありません。依存関係が循環しています。',
@@ -131,10 +111,11 @@ $japanese = array(
 	'ElggPlugin:Exception:CannotRegisterViews' => 'プラグイン %s (guid: %s)のViewディレクトリを %s で開くことができません。パーミッションを調べてください！',
 	'ElggPlugin:Exception:CannotRegisterLanguages' => 'プラグイン %s (guid: %s)の言語ファイルを%sに登録できません。パーミッションを調べてください！',
 	'ElggPlugin:Exception:NoID' => 'プラグイン guid %s のIDがありません！',
-
+	'PluginException:NoPluginName' => "プラグイン名を見つけることができませんでした。",
 	'PluginException:ParserError' => 'API(var. %s)でプラグイン %s のマニフェストを解析するときにエラーが発生しました)。',
 	'PluginException:NoAvailableParser' => 'マニフェストAPI(Ver. %s)のパーサをプラグイン%sの中で見つけることができません。',
 	'PluginException:ParserErrorMissingRequiredAttribute' => "マニフェストファイル内で'%s'属性が必要なのですがプラグイン%sの中ではありませんでした。",
+	'ElggPlugin:InvalidAndDeactivated' => '%s は不正なプラグインですので起動されませんでした。',
 
 	'ElggPlugin:Dependencies:Requires' => '必須',
 	'ElggPlugin:Dependencies:Suggests' => '示唆',
@@ -144,6 +125,7 @@ $japanese = array(
 	'ElggPlugin:Dependencies:Priority' => '優先',
 
 	'ElggPlugin:Dependencies:Elgg' => 'Elgg version',
+	'ElggPlugin:Dependencies:PhpVersion' => 'PHP version',
 	'ElggPlugin:Dependencies:PhpExtension' => 'PHP extension: %s',
 	'ElggPlugin:Dependencies:PhpIni' => 'PHP ind セッティング: %s',
 	'ElggPlugin:Dependencies:Plugin' => 'プラグイン:%s',
@@ -152,124 +134,6 @@ $japanese = array(
 	'ElggPlugin:Dependencies:Priority:Uninstalled' => '%s は、インストールされていません',
 	'ElggPlugin:Dependencies:Suggests:Unsatisfied' => 'ありません',
     'ElggPlugin:Dependencies:ActiveDependent' => '%s と依存関係にある他のプラグインが存在します。 このプラグインを無効にする前に、次のプラグインを先に無効にしなければなりません。: %s',
-
-	'ElggPlugin:InvalidAndDeactivated' => '%s は、不正なプラグインですので停止しました。',
-
-	'InvalidParameterException:NonElggUser' => "非ElggUserオブジェクトがElggUserのコンストラクタに渡されました！",
-
-	'InvalidParameterException:NonElggSite' => "非ElggSiteオブジェクトがElggSiteのコンストラクタに渡されました！",
-
-	'InvalidParameterException:NonElggGroup' => "非ElggGroupがElggGroupのコンストラクタに渡されました！",
-
-	'IOException:UnableToSaveNew' => "新しい %s を保存できません。",
-
-	'InvalidParameterException:GUIDNotForExport' => "エクスポート中にGUIDが記述されていませんでした。このようなことは起こらないはずなのですが。",
-	'InvalidParameterException:NonArrayReturnValue' => "エンティティーをシリアライズする関数に非配列の戻り値のパラメータを渡しています。",
-
-	'ConfigurationException:NoCachePath' => "キャッシュのパスが設定されていません。",
-	'IOException:NotDirectory' => "%s はディレクトリではありません。",
-
-	'IOException:BaseEntitySaveFailed' => "オブジェクトのベースエンティティの情報を新規保存することができません！",
-	'InvalidParameterException:UnexpectedODDClass' => "import() に見当違いなODD classが渡されました。",
-	'InvalidParameterException:EntityTypeNotSet' => "Entity タイプをセットしてください。",
-
-	'ClassException:ClassnameNotClass' => "%s は %s ではありません。",
-	'ClassNotFoundException:MissingClass' => "クラス「 %s 」がみつかりませんでした。プラグインがないのかも。",
-	'InstallationException:TypeNotSupported' => "型「 %s 」はサポートされていません。この場合、インストール時にエラーが発生していたことが考えられます。たいていは、アップグレードが完全にされなかったときに起こるようです。",
-
-	'ImportException:ImportFailed' => "次の要素をインポートできません。: %d",
-	'ImportException:ProblemSaving' => "保存中に問題が発生しました。:  %s",
-
-	'ImportException:NoGUID' => "新しくエンティティーが生成されましたが、GUIDが付いていません。これは、ありえないことです。",
-
-
-	'ImportException:GUIDNotFound' => "エンティティー '%d' を見つけることができませんでした。",
-	'ImportException:ProblemUpdatingMeta' => "'%s' (エンティティー %d)の更新時に問題が起こりました。",
-
-	'ExportException:NoSuchEntity' => "そのようなエンティティー(GUID:%id)は、ありません。",
-
-	'ImportException:NoODDElements' => "インポートデータにOpenDD要素が見つかりませんでした。インポートは失敗しました。",
-	'ImportException:NotAllImported' => "全ての要素がインポートされませんでした。",
-
-	'InvalidParameterException:UnrecognisedFileMode' => "認識できないファイルモード(%s)です",
-	'InvalidParameterException:MissingOwner' => "ファイル %s (file guid:%d) (owner guid:%d) はオーナーが不明です。",
-	'IOException:CouldNotMake' => "%s を作成できませんでした。",
-	'IOException:MissingFileName' => "ファイル名を入力しないとファイルを開くことができません",
-	'ClassNotFoundException:NotFoundNotSavedWithFile' => "Filesstore class %s をファイル %u で使用するにあたって、ロードすることができません。",
-	'NotificationException:NoNotificationMethod' => "通知の手段が指定されていません。",
-	'NotificationException:NoHandlerFound' => "'%s'に対するハンドラが見つかりません、または、呼び出せませんでした。",
-	'NotificationException:ErrorNotifyingGuid' => "%d をお知らせするときにエラーが起こりました。",
-	'NotificationException:NoEmailAddress' => "GUID:%d に対して電子メールアドレスを取得することができませんでした。",
-	'NotificationException:MissingParameter' => "必要なパラメータがありません。'%s'",
-
-	'DatabaseException:WhereSetNonQuery' => "WHEREが非WhereQueryComponentに含まれています",
-	'DatabaseException:SelectFieldsMissing' => "SELECTクエリ文にフィールドが記述されていません",
-	'DatabaseException:UnspecifiedQueryType' => "認識できない、もしくは仕様に見当たらないクエリのタイプです",
-	'DatabaseException:NoTablesSpecified' => "クエリ文にテーブルが記述されていません",
-	'DatabaseException:NoACL' => "クエリでアクセスコントロールが生成されていません",
-
-	'InvalidParameterException:NoEntityFound' => "エンティティーが見つかりませんでした。存在しないか、あなたがアクセスできないかどちらかでしょう。",
-
-	'InvalidParameterException:GUIDNotFound' => "GUID:%s が見つかりませんでした。もしくは、あなたがアクセス権を持っていないかです。",
-	'InvalidParameterException:IdNotExistForGUID' => "申し訳ありません、「'%s(guid:%d)」は存在しません。 ",
-	'InvalidParameterException:CanNotExportType' => "申し訳ありません。「%s」のエクスポートの方法がわかりません。",
-	'InvalidParameterException:NoDataFound' => "データをひとつも見つけることができませんでした。",
-	'InvalidParameterException:DoesNotBelong' => "エンティティーに属していません。",
-	'InvalidParameterException:DoesNotBelongOrRefer' => "エンティティーに属していないか参照していません。",
-	'InvalidParameterException:MissingParameter' => "パラメータがありません。GUIDを生成する必要があります。",
-	'InvalidParameterException:LibraryNotRegistered' => '%s は登録されたライブラリではありません。',
-	'InvalidParameterException:LibraryNotFound' => '%s ライブラリをロードすることができませんでした(from %s)',
-
-	'APIException:ApiResultUnknown' => "API 結果は未知の型です。このようなことは通常起こりえません。",
-	'ConfigurationException:NoSiteID' => "サイトIDが記述されていません",
-	'SecurityException:APIAccessDenied' => "申し訳ありません、APIへのアクセスが管理者によって許可されていません。",
-	'SecurityException:NoAuthMethods' => "このAPIリクエストを認証できる認証法が見つかりませんでした。",
-	'SecurityException:ForwardFailedToRedirect' => 'ヘッダがすでに送られましたので、問題はリダイレクトにはありません。安全性のために、実行を停止しています。ファイル %s の %d 行目より出力を開始します。さらに詳しい情報は、http://docs.elgg.org/ で探してみてください。',
-	'InvalidParameterException:APIMethodOrFunctionNotSet' => "expose_method()呼び出しにおいて、メソッドもしくは関数がセットされていませんでした。",
-	'InvalidParameterException:APIParametersArrayStructure' => "メソッド「%s」呼び出しにおいて、パラメータ配列構造体が間違っています。",
-	'InvalidParameterException:UnrecognisedHttpMethod' => "%s は、APIメソッド「%s」に対して認識されていないhttpメソッドです。",
-	'APIException:MissingParameterInMethod' => "パラメータ%s（メソッド%s）がありません。",
-	'APIException:ParameterNotArray' => "%sは、配列にしてください。",
-	'APIException:UnrecognisedTypeCast' => 'メソッド「%3$s」の変数「%2$s」は%1$sにキャストされていますが、認識でない型です。',
-	'APIException:InvalidParameter' => 'メソッド「%2$s」の「%1$s」において不正なパラメータが見つかりました。',
-	'APIException:FunctionParseError' => "%s(%s) にパースエラーが生じました",
-	'APIException:FunctionNoReturn' => "%s(%s) は値を返しませんでした。",
-	'APIException:APIAuthenticationFailed' => "メソッド呼び出しがAPI認識で失敗しました",
-	'APIException:UserAuthenticationFailed' => "メソッド呼び出しがユーザ認識で失敗しました。",
-	'SecurityException:AuthTokenExpired' => "ユーザ認証のトークンが欠如、不正、期限切れのうちのいづれかです。",
-	'CallException:InvalidCallMethod' => "%s は '%s' を用いて呼び出されなければいけません。",
-	'APIException:MethodCallNotImplemented' => "メソッドコール '%s' は、実装されていません。",
-	'APIException:FunctionDoesNotExist' => "メソッド '%s' の関数は呼び出し不可です。",
-	'APIException:AlgorithmNotSupported' => "アルゴリズム '%s' はサーポートされていないか使用不可にされています。",
-	'ConfigurationException:CacheDirNotSet' => "キャッシュディレクトリ 'cache_path' が未設定です。",
-	'APIException:NotGetOrPost' => "リクエストメソッドは GET か POST でなければなりません。",
-	'APIException:MissingAPIKey' => "API キーが欠如しています。",
-	'APIException:BadAPIKey' => "API キーが間違っています",
-	'APIException:MissingHmac' => "X-Elgg-hmac ヘッダが欠如しています",
-	'APIException:MissingHmacAlgo' => "X-Elgg-hmac-algo ヘッダが欠如しています",
-	'APIException:MissingTime' => "X-Elgg-time ヘッダが欠如しています",
-	'APIException:MissingNonce' => "X-Elgg-nonce ヘッダが欠如しています",
-	'APIException:TemporalDrift' => "X-Elgg-time があまりにも遠い過去か未来になっています。エポックが失敗しています。",
-	'APIException:NoQueryString' => "クエリ文字列にデータが欠如しています",
-	'APIException:MissingPOSTHash' => "X-Elgg-posthash ヘッダが欠如しています",
-	'APIException:MissingPOSTAlgo' => "X-Elgg-posthash_algo ヘッダが欠如いています",
-	'APIException:MissingContentType' => "投稿データにコンテントタイプが欠如しています",
-	'SecurityException:InvalidPostHash' => "POST データハッシュが不正です。 -  %s であるはずなのですが %s 担っています",
-	'SecurityException:DupePacket' => "すでにパケットシグネチャを受け取っているのですが、再び現れました。",
-	'SecurityException:InvalidAPIKey' => "API キーが不正か欠如しています。",
-	'NotImplementedException:CallMethodNotImplemented' => "メソッド '%s' の呼び出しは現在サポートされていません。",
-
-	'NotImplementedException:XMLRPCMethodNotImplemented' => "XML-RPC メソッドコール '%s' は、まだ導入されていません。",
-	'InvalidParameterException:UnexpectedReturnFormat' => "メソッド '%s' を呼び出しましたが、予測外の結果が返されてきました。",
-	'CallException:NotRPCCall' => "先ほどの呼び出しは正しいXML-RPC呼び出しでは無いようです",
-
-	'PluginException:NoPluginName' => "プラグイン名が見つかりませんでした",
-
-	'SecurityException:authenticationfailed' => "ユーザを認証することができませんでした",
-
-	'CronException:unknownperiod' => '%s は、期間として認識できませんでした。',
-
-	'SecurityException:deletedisablecurrentsite' => 'あなたが現在見ているサイトを削除またはアクセス不可にすることができません',
 
 	'RegistrationException:EmptyPassword' => 'パスワードの項目は空欄のままにはできません',
 	'RegistrationException:PasswordMismatch' => 'パスワードは一致させなければなりません',
@@ -284,18 +148,26 @@ $japanese = array(
 
 	'pageownerunavailable' => '警告： ページオーナー %d を許可できません。',
 	'viewfailure' => 'View %s において内部エラーが発生しました。',
+	'view:missing_param' => "View %2$s で必要なパラメータ '%1$s' がありません。",
 	'changebookmark' => 'このページに対するあなたのブックマークを変更してください。',
-	'noaccess' => 'ログインしないとコンテントを閲覧することはできません。あるいは、閲覧しようとしているこのコンテントはすでに削除されてしまっているか、あなたに閲覧する権限がないかです。',
+	'noaccess' => 'あなたが閲覧しようとしているコンテントはすでに削除されてしまっているか、あるいはあなたに閲覧する権限がないかどちらかです。',
 	'error:missing_data' => 'あなたのリクエストにおいていくつかデータの欠損がありました。',
+	'save:fail' => 'データを保存するのに失敗しました',
+	'save:success' => 'データを保存しました',
 
-	'error:default' => 'おっと、なにかうまくいきませんでした。',
-	'error:404' => '申し訳ありません、あなたがリクエストしたページを見つけることができませんでした。',
+	'error:default:title' => 'アレッ？',
+	'error:default:content' => 'アレッ？何かがおかしいです。',
+	'error:404:title' => 'ページが見つかりませんでした',
+	'error:404:content' => '申し訳あrません。ご要望のページを見つけることができませんでした',
 
-/**
- * API
- */
-	'system.api.list' => "システムで利用可能な全てのAPIコールのリスト",
-	'auth.gettoken' => "このAPIコールでユーザは認証トークンを取得できます。この認証トークンは、これから実装が予定されている認証APIコールに使用することができます。auth_tokenの引数のパラメータに使用してください。",
+	'upload:error:ini_size' => 'アップロードしようとされているファイルは、サイズが大きすぎるようです。',
+	'upload:error:form_size' => 'アップロードしようとされているファイルは、サイズが大きすぎるようです。',
+	'upload:error:partial' => 'ファイルのアップロードはまだ完了していませんでした。',
+	'upload:error:no_file' => 'ファイルを選択してください。',
+	'upload:error:no_tmp_dir' => 'アップロードされたファイルを保存出来ませんでした。',
+	'upload:error:cant_write' => 'アップロードされたファイルを保存出来ませんでした。',
+	'upload:error:extension' => 'アップロードされたファイルを保存出来ませんでした。',
+	'upload:error:unknown' => 'ファイルアップロードに失敗しました。',
 
 /**
  * User details
@@ -316,10 +188,15 @@ $japanese = array(
 	'PRIVATE' => "本人のみ",
 	'LOGGED_IN' => "ログインユーザのみ",
 	'PUBLIC' => "公開",
+	'LOGGED_OUT' => "ログアウトしたユーザ",
 	'access:friends:label' => "友達のみ",
 	'access' => "公開範囲",
+	'access:overridenotice' => "注意: グループポリシーですでに設定されているので、このコンテントはグループメンバーからのみしかアクセスすることができません。",
 	'access:limited:label' => "限定公開",
 	'access:help' => "コンテンツの公開範囲を設定します。",
+	'access:read' => "読み込みアクセス",
+	'access:write' => "書き込みアクセス",
+	'access:admin_only' => "管理者のみ",
 
 /**
  * Dashboard and widgets
@@ -462,6 +339,7 @@ $japanese = array(
 	'profile:editdefault:fail' => 'デフォルトプロフィールを保存できませんでした。',
 	'profile:field_too_long' => '"%s" セクションが長すぎるので、あなたのプロフィール情報を保存することができません。',
 	'profile:noaccess' => "あなたには、このプロフィールを編集する権限がありません。",
+	'profile:invalid_email' => 'メールアドレス 「%s」が間違っているようです。有効なアドレスを登録しなおしてください。',
 
 /**
  * Feeds
@@ -488,8 +366,12 @@ $japanese = array(
 	'river:ingroup' => '%sグループ内',
 	'river:none' => '近況報告はありません',
 	'river:update' => '%s さんの更新',
-	'river:delete:success' => 'River 項目を削除しました。',
-	'river:delete:fail' => 'River 項目は削除できませんでした。',
+	'river:delete' => 'このアクティビティ項目を削除しました',
+	'river:delete:success' => 'River 項目を削除しました',
+	'river:delete:fail' => 'River 項目は削除できませんでした',
+	'river:subject:invalid_subject' => '正しいユーザではありません',
+	'activity:owner' => 'アクティビティ一覧',
+
 
 	'river:widget:title' => '近況報告',
 	'river:widget:description' => "最新の近況報告を表示",
@@ -501,14 +383,13 @@ $japanese = array(
  * Notifications
  */
 	'notifications:usersettings' => "通知設定",
-	'notifications:methods' => "通知の方法を選んで下さい。",
 	'notification:method:email' => 'Email',
 
 	'notifications:usersettings:save:ok' => "通知設定を保存しました。",
-	'notifications:usersettings:save:fail' => "通知設定の保存に失敗しました。",
+	'notifications:usersettings:save:fail' => "通知設定を保存する際に問題が起こりました。",
 
-	'user.notification.get' => '特定のユーザへの通知の設定を表示します。',
-	'user.notification.set' => '特定のユーザへの通知について設定してください。',
+	'notification:subject' => '%s についての通知',
+	'notification:body' => '%s にて新しいアクティビティを見る',
 /**
  * Search
  */
@@ -567,9 +448,9 @@ $japanese = array(
 	'adduser:bad' => "新しいユーザが登録できません。",
 
 	'user:set:name' => "アカウント編集",
-	'user:name:label' => "氏名", // （＊）Display name(ログイン時に必要なログイン名usernameと違ってサイトで実際に表示される名前)のこと。各サイトの都合で変更してください。
-	'user:name:success' => "氏名を変更しました。",
-	'user:name:fail' => "氏名を変更できません。長すぎた可能性があります。もう一度試してみてください。",
+	'user:name:label' => "表示名", // （＊）Display name(ログイン時に必要なログイン名usernameと違ってサイトで実際に表示される名前)のこと。各サイトの都合で変更してください。
+	'user:name:success' => "表示名を変更しました。",
+	'user:name:fail' => "表示名を変更できませんでした。",
 
 	'user:set:password' => "パスワード",
 	'user:current_password:label' => '現在のパスワード',
@@ -580,19 +461,19 @@ $japanese = array(
 	'user:password:fail:notsame' => "パスワードが一致しません。",
 	'user:password:fail:tooshort' => "パスワードが短すぎるので登録できません。",
 	'user:password:fail:incorrect_current_password' => '先ほど入力されたパスワードは間違っています。',
-	'user:resetpassword:unknown_user' => 'ユーザが見当たりません。',
-	'user:resetpassword:reset_password_confirm' => '登録されたEメールアドレスに新しいパスワードを送信しました。',
+	'user:changepassword:unknown_user' => 'ユーザが見当たりません。',
+	'user:changepassword:change_password_confirm' => 'パスワードを変更します。',
 
 	'user:set:language' => "言語設定",
-	'user:language:label' => "利用する言語",
-	'user:language:success' => "利用する言語設定を更新しました。",
-	'user:language:fail' => "言語設定が保存できません。",
+	'user:language:label' => "言語の設定",
+	'user:language:success' => "言語の設定を更新しました。",
+	'user:language:fail' => "言語の設定を保存できませんでした。",
 
 	'user:username:notfound' => 'ログイン名 %s が見当たりません。',
 
 	'user:password:lost' => 'パスワードを忘れた場合',
-	'user:password:resetreq:success' => '新しいパスワード発行の手続きをしました。ご登録のEメールあてに確認のメールを送信しました。',
-	'user:password:resetreq:fail' => '新しいパスワード発行の手続きに失敗しました。',
+	'user:password:changereq:success' => '新しいパスワード発行の手続きをしました。ご登録のEメールあてに確認のメールを送信しました。',
+	'user:password:changereq:fail' => '新しいパスワード発行の手続きに失敗しました。',
 
 	'user:password:text' => '新しいパスワードを再発行されたい場合は、ログイン名もしくは電子メールアドレスを入力し送信ボタンを押してください。',
 
@@ -624,10 +505,17 @@ $japanese = array(
 	'admin:statistics' => '統計情報',
 	'admin:statistics:overview' => '概要',
 	'admin:statistics:server' => 'サーバの情報',
+	'admin:statistics:cron' => 'Cron',
+	'admin:cron:record' => '最後に行った Cron Jobs',
+	'admin:cron:period' => 'Cron の間隔',
+	'admin:cron:friendly' => '最後に完了した時間',
+	'admin:cron:date' => '日付と時間',
 
 	'admin:appearance' => '見た目',
 	'admin:administer_utilities' => 'ユーティリティ',
 	'admin:develop_utilities' => 'ユーティリティ',
+	'admin:configure_utilities' => 'ユーティリティ',
+	'admin:configure_utilities:robots' => 'Robots.txt',
 
 	'admin:users' => "ユーザ",
 	'admin:users:online' => 'オンライン中',
@@ -640,13 +528,17 @@ $japanese = array(
 	'admin:users:opt:description' => "ユーザとアカウント情報の設定",
 	'admin:users:find' => '検索',
 
+	'admin:administer_utilities:maintenance' => 'メンテナンス・モード',
+	'admin:upgrades' => 'アップグレード',
+
 	'admin:settings' => 'セッティング',
 	'admin:settings:basic' => '基本設定',
 	'admin:settings:advanced' => '詳細設定',
 	'admin:site:description' => "この管理パネルでは、インストールしたサイト全体に関わる設定をコントロールすることができます。はじめるには、以下のオプションを選択してください。",
 	'admin:site:opt:linktext' => "サイトの構築..",
-	'admin:site:access:warning' => "公開範囲の変更は、これから作成されるコンテンツにのみに適用されます。（作成済みのコンテンツには影響しません）",
+	'admin:settings:in_settings_file' => 'この設定は、settings.php 内で行えます。',
 
+	'admin:legend:security' => 'セキュリティ',
 	'admin:site:secret:intro' => 'Elgg は様々な目的で使用するセキュリティートークンを作成するためのキーを1つ使用します。',
 	'admin:site:secret_regenerated' => "あなたのサイトの秘密キーを作り直しました。",
 	'admin:site:secret:regenerate' => "サイトの秘密キーを作成します。",
@@ -664,6 +556,8 @@ $japanese = array(
 	'admin:widget:online_users:help' => '現在サイトにいるユーザのリスト',
 	'admin:widget:new_users' => '新規ユーザ',
 	'admin:widget:new_users:help' => '新規ユーザのリスト',
+	'admin:widget:banned_users' => '出入り禁止のユーザ',
+	'admin:widget:banned_users:help' => '出入り禁止のユーザのリスト',
 	'admin:widget:content_stats' => 'コンテントの統計情報',
 	'admin:widget:content_stats:help' => 'ユーザが作成したコンテントの記録を保存しています。',
 	'widget:content_stats:type' => 'コンテントのタイプ',
@@ -672,10 +566,10 @@ $japanese = array(
 	'admin:widget:admin_welcome' => 'Welcome',
 	'admin:widget:admin_welcome:help' => "Elggの管理エリアについての短い紹介",
 	'admin:widget:admin_welcome:intro' =>
-'Elggにようこそ！現在あなたは管理業務のダッシュボードを見ていると思います。このページはサイトで何がおっこっているかを追跡するのに便利なようにできています。',
+'Elggにようこそ！現在あなたが見ている画面は管理業務のダッシュボードです。このページはサイトで何がおっこっているかを追跡するのに便利なようにできています。',
 
 	'admin:widget:admin_welcome:admin_overview' =>
-"管理エリアのナビゲーションは右側のメニューにあり、3節で構成されています:
+"管理エリアのナビゲーションは右側のメニューにあり、3つの節で構成されています:
 	<dl>
 			<dt>管理業務</dt><dd>報告コンテントの監視、誰がオンラインしているか、統計情報を見るなど日常の業務</dd>
 			<dt>構成設定</dt><dd>サイト名の設定やプラグインの起動など、たまにしか行わない業務</dd>
@@ -713,10 +607,6 @@ $japanese = array(
 	'admin:plugins:category:theme' => 'テーマ',
 	'admin:plugins:category:widget' => 'ウィジェット',
 	'admin:plugins:category:utility' => 'ユーティリティ',
-
-	'admin:plugins:sort:priority' => '優先順位',
-	'admin:plugins:sort:alpha' => 'アルファベット順',
-	'admin:plugins:sort:date' => '最新',
 
 	'admin:plugins:markdown:unknown_plugin' => '不明なプラグイン',
 	'admin:plugins:markdown:unknown_file' => '不明なファイル',
@@ -757,6 +647,12 @@ $japanese = array(
 	'admin:plugins:label:moreinfo' => '詳細情報',
 	'admin:plugins:label:version' => "バージョン",
 	'admin:plugins:label:location' => '場所',
+	'admin:plugins:label:contributors' => '寄与者',
+	'admin:plugins:label:contributors:name' => '名前',
+	'admin:plugins:label:contributors:email' => 'E-mail',
+	'admin:plugins:label:contributors:website' => 'Website',
+	'admin:plugins:label:contributors:username' => 'コミュニティのユーザーネーム',
+	'admin:plugins:label:contributors:description' => '説明',
 	'admin:plugins:label:dependencies' => '依存関係',
 
 	'admin:plugins:warning:elgg_version_unknown' => 'このプラグインは、旧のマニフェストファイルを使用していますので互換性のあるElggバージョンを記載していません。おそらく、うまく作動しないでしょう。',
@@ -848,6 +744,19 @@ $japanese = array(
 	'admin:default_widgets:unknown_type' => '不明なウィジェットのタイプです。',
 	'admin:default_widgets:instructions' => '選択したウィジェットページに既定のウィジェットを追加、削除、配置変更、設定変更します。ここでした変更はこのサイトの新規ユーザのみに反映されます。',
 
+	'admin:robots.txt:instructions' => "このサイトの robots.txt ファイルを編集します。",
+	'admin:robots.txt:plugins' => "プラグインは編集結果を robots.txt ファイルに追加しています。",
+	'admin:robots.txt:subdir' => "Elggがサブディレクトリにインストールされているため、The robots.txt tool は機能しないでしょう。",
+
+	'admin:maintenance_mode:default_message' => '申し訳ありません。このサイトは現在メンテナンス中で接続出来ません。',
+	'admin:maintenance_mode:instructions' => 'サイトのアップグレードやサイトに大きな変更をするときに、メンテナンス・モードをご利用ください。
+		メンテナンス・モードにすると、管理者のみログインできサイトを閲覧することができます。',
+	'admin:maintenance_mode:mode_label' => 'メンテナンス・モード',
+	'admin:maintenance_mode:message_label' => 'メンテナンス・モードに入っているときに、ユーザに表示されるメッセージ',
+	'admin:maintenance_mode:saved' => 'メンテナンス・モードの設定が保存されました。',
+	'admin:maintenance_mode:indicator_menu_item' => 'サイトはメンテナンス・モードになっていあます。',
+	'admin:login' => '管理者ログイン',
+
 /**
  * User settings
  */
@@ -857,7 +766,7 @@ $japanese = array(
 	'usersettings:statistics:opt:description' => "サイト上のユーザとオブジェクトに関する統計情報を表示します。",
 	'usersettings:statistics:opt:linktext' => "アカウントの統計情報",
 
-	'usersettings:user' => "あなたの設定",
+	'usersettings:user' => "%s さんの設定",
 	'usersettings:user:opt:description' => "ユーザ設定の管理を行います。",
 	'usersettings:user:opt:linktext' => "設定の変更",
 
@@ -879,6 +788,7 @@ $japanese = array(
  */
 	'river:all' => '全アクティビティ',
 	'river:mine' => 'My アクティビティ',
+	'river:owner' => '%s さんのアクティビティ',
 	'river:friends' => '友達のアクティティ',
 	'river:select' => '表示:%s',
 	'river:comments:more' => '+%u more',
@@ -889,6 +799,18 @@ $japanese = array(
 	'friends:icon_size' => "アイコンのサイズ",
 	'friends:tiny' => "tiny",
 	'friends:small' => "small",
+
+/**
+ * Icons
+ */
+
+	'icon:size' => "アイコンのサイズ",
+	'icon:size:topbar' => "トップバー",
+	'icon:size:tiny' => "Tiny",
+	'icon:size:small' => "Small",
+	'icon:size:medium' => "Medium",
+	'icon:size:large' => "Large",
+	'icon:size:master' => "Extra Large",
 
 /**
  * Generic action words
@@ -904,8 +826,16 @@ $japanese = array(
 	'edit' => "編集",
 	'delete' => "削除",
 	'accept' => "承認する",
+	'reject' => "拒否",
+	'decline' => "Decline",
+	'approve' => "賛成",
+	'activate' => "起動",
+	'deactivate' => "停止",
+	'disapprove' => "反対",
+	'revoke' => "破棄",
 	'load' => "読込",
 	'upload' => "アップロード",
+	'download' => "ダウンロード",
 	'ban' => "投稿禁止",
 	'unban' => "投稿禁止解除",
 	'banned' => "入場禁止",
@@ -915,8 +845,11 @@ $japanese = array(
 	'complete' => "完了",
 	'open' => "開く",
 	'close' => '閉じる',
+	'hide' => '隠す',
+	'show' => '表示する',
 	'reply' => "返信",
 	'more' => 'More',
+	'more_info' => '更に詳しく',
 	'comments' => 'コメント',
 	'import' => 'インポート',
 	'export' => 'エクスポート',
@@ -938,16 +871,20 @@ $japanese = array(
 	'site' => 'サイト',
 	'activity' => 'アクティビティ',
 	'members' => 'メンバ',
+	'menu' => 'メニュー',
 
 	'up' => '上へ',
 	'down' => '下へ',
 	'top' => '最初',
 	'bottom' => '最後',
+	'right' => '右',
+	'left' => '左',
 	'back' => '後へ',
 
 	'invite' => "招待する",
 
 	'resetpassword' => "パスワードをリセットする",
+	'changepassword' => "パスワードを変更",
 	'makeadmin' => "管理者権限を与える",
 	'removeadmin' => "管理者権限を外す",
 
@@ -955,9 +892,18 @@ $japanese = array(
 	'option:no' => "いいえ",
 
 	'unknown' => 'よくわからない',
+	'never' => '未',
 
-	'active' => 'Active',
+	'active' => 'アクティブ',
 	'total' => '総数',
+
+	'ok' => 'OK',
+	'any' => 'Any',
+	'error' => 'エラー',
+	
+	'other' => 'その他',
+	'options' => 'オプション',
+	'advanced' => '詳細設定',
 
 	'learnmore' => "詳細はここをクリック",
     'unknown_error' => '原因不明のエラーが発生しました。',
@@ -967,12 +913,35 @@ $japanese = array(
 	'content:latest:blurb' => 'もしくは、ここをクリックしてサイト全体での新しい記事を見る',
 
 	'link:text' => 'リンク一覧',
+
 /**
  * Generic questions
  */
 
 	'question:areyousure' => 'よろしいですか？',
 
+ /**
+ * Status
+ */
+
+	'status' => 'ステータス',
+	'status:unsaved_draft' => '未保存の下書き',
+	'status:draft' => '下書き',
+	'status:unpublished' => '未公開',
+	'status:published' => '公開済み',
+	'status:featured' => '注目',
+	'status:open' => 'オープン',
+	'status:closed' => 'クローズド',
+
+/**
+ * Generic sorts
+ */
+
+	'sort:newest' => '新しい順',
+	'sort:popular' => '人気順',
+	'sort:alpha' => 'アルファベット順',
+	'sort:priority' => '優先度順',
+		
 /**
  * Generic data words
  */
@@ -999,6 +968,7 @@ $japanese = array(
 /**
  * Entity actions
  */
+
 	'edit:this' => 'これを編集',
 	'delete:this' => 'これを削除',
 	'comment:this' => 'コメントをつける',
@@ -1033,7 +1003,7 @@ $japanese = array(
 
 /**
  * System messages
- **/
+ */
 
 	'systemmessages:dismiss' => "クリックすると消えます。",
 
@@ -1041,6 +1011,7 @@ $japanese = array(
 /**
  * Import / export
  */
+
 	'importsuccess' => "データのインポートに成功しました。",
 	'importfail' => "OpenDDデータのインポートに失敗しました。",
 
@@ -1057,6 +1028,13 @@ $japanese = array(
 	'friendlytime:days:singular' => "昨日",
 	'friendlytime:date_format' => 'Y年m月d日@ H:i',
 
+	'friendlytime:future:minutes' => "%s分で",
+	'friendlytime:future:minutes:singular' => "1分で",
+	'friendlytime:future:hours' => "%s時間で",
+	'friendlytime:future:hours:singular' => "1時間で",
+	'friendlytime:future:days' => "%s日で",
+	'friendlytime:future:days:singular' => "明日",
+
 	'date:month:01' => '1月 %s',
 	'date:month:02' => '2月 %s',
 	'date:month:03' => '3月 %s',
@@ -1070,6 +1048,24 @@ $japanese = array(
 	'date:month:11' => '11月 %s',
 	'date:month:12' => '12月 %s',
 
+	'date:weekday:0' => 'Sunday',
+	'date:weekday:1' => 'Monday',
+	'date:weekday:2' => 'Tuesday',
+	'date:weekday:3' => 'Wednesday',
+	'date:weekday:4' => 'Thursday',
+	'date:weekday:5' => 'Friday',
+	'date:weekday:6' => 'Saturday',
+	
+	'interval:minute' => '毎分',
+	'interval:fiveminute' => '5分毎',
+	'interval:fifteenmin' => '15分毎',
+	'interval:halfhour' => '30分毎',
+	'interval:hourly' => '1時間毎',
+	'interval:daily' => '毎日',
+	'interval:weekly' => '毎週',
+	'interval:monthly' => '毎月',
+	'interval:yearly' => '毎年',
+	'interval:reboot' => 'リブート時',
 
 /**
  * System settings
@@ -1083,35 +1079,46 @@ $japanese = array(
 	'installation:dataroot:warning' => "手作業でこのディレクトリを作成しないといけません。Elggのインストールしたディレクトリと別のところのほうがいいでしょう。",
 	'installation:sitepermissions' => "デフォルトのアクセス権限",
 	'installation:language' => "サイトのデフォルトの言語",
-	'installation:debug' => "デバッグモード（詳しい情報を生成し、エラーを診断するときに使えます。）しかし、システムをスローダウンさせてしまうことがありますので、何か問題が起こった時にだけ使用されることをお勧めします:",
+	'installation:debug' => "サーバのログに書き込まれる情報の量をコントロールします。",
+	'installation:debug:label' => 'ログレベル:',
 	'installation:debug:none' => 'デバッグモードをOFFにする（推奨）',
 	'installation:debug:error' => '致命的なエラーのみ表示する',
 	'installation:debug:warning' => 'エラーと警告を表示する',
-	'installation:debug:notice' => 'エラーと警告と通告の3つ全部を記録する',
+	'installation:debug:notice' => 'エラーと警告と通告を記録する',
+	'installation:debug:info' => '全てを記録する',
 
 	// Walled Garden support
-	'installation:registration:description' => 'ユーザ登録はデフォルトで可能となっています。新規ユーザが勝手に登録できるようにさせたくなければ、OFFにしてください。',
+	'installation:registration:description' => 'ユーザ登録はデフォルトで可能となっています。人が勝手に自分で登録できるようにしたくなければ、OFFにしてください。',
 	'installation:registration:label' => '新規ユーザに登録ができるようにする',
-	'installation:walled_garden:description' => 'このサイトをプライベートネットワークにする。この設定にすると、ログインしていないユーザは公開指定されているものを除いてサイト内のページを見ることができなくなります。',
+	'installation:walled_garden:description' => '非会員がサイトの内容を閲覧できないようにする（ただし、ログインページや登録ページのようなパブリックなWebページを除く）。',
 	'installation:walled_garden:label' => 'ページをログインユーザ限定にする',
 
-	'installation:httpslogin' => "HTTPS接続越しにユーザをログインさせることができるようにします。ただし、あなたのサイトのサーバがHTTPS接続に対応していないといけません。",
+	'installation:httpslogin' => "HTTPS接続越しにユーザをログインさせることができるようにします。ただし、WebサーバがHTTPS接続に対応していないといけません。",
 	'installation:httpslogin:label' => "HTTPSログインを可能にする",
 	'installation:view' => "あなたのサイトのデフォルトで使用するviewを入力してください。デフォルトviewを使用する場合は、空欄のままにしておいてください。(よくわからない場合は、そのままにしておいてください)",
 
 	'installation:siteemail' => "サイトの電子メールアドレス（システムメールを送信するときに使用します）:",
 
-	'installation:disableapi' => "Elggはwebサービスを構築するときのためにAPIを備えており、リモートアプリケーションがあなたのサイトと通信を可能とします。",
-	'installation:disableapi:label' => "ElggのwebサービスAPIを可能にする",
+	'admin:site:access:warning' => "ユーザが新しくコンテントを作成する際に示されるプライバシー・セッティングです。これを変更しても、すでにあるコンテントへのアクセス権は変更されません。",
+	'installation:allow_user_default_access:description' => "チェックすると、各ユーザがそれぞれののプライバシー・セッティングを設定することができます。この場合、システムのプライバシー・セッティングは上書きされます。",
+	'installation:allow_user_default_access:label' => "ユーザがデフォルトのアクセス権を設定できるようにする",
 
-	'installation:allow_user_default_access:description' => "チェックすると、ユーザ個人で自分のデフォルトのアクセスレベルを設定することができます。ユーザが設定した値は、システムの値よりも優先されてしまいます。",
-	'installation:allow_user_default_access:label' => "ユーザデフォルトアクセスを可能にする",
-
-	'installation:simplecache:description' => "このsimple cacheは、CSSやJavaScriptなどの静的コンテントをキャッシュすることによって、サイトのパフォーマンスを改善させます。通常、この設定は有効にしておきます。",
+	'installation:simplecache:description' => "このsimple cacheは、CSSやJavaScriptなどの静的コンテントをキャッシュすることによって、サイトのパフォーマンスを改善させます。",
 	'installation:simplecache:label' => "Simple cache を使う(推奨)",
 
-	'installation:systemcache:description' => "システムキャッシュ機能を使用すると、ファイルのデータをキャッシュすることによって、Elggエンジンの読み込み時間を短縮することができます。",
+    'installation:minify:description' => "Simple cache は JavaScripte と CSS ファイルを圧縮することでパフォーマンスも改善することができます。（simple cacheを「有効」にする必要があります。）",
+    'installation:minify_js:label' => "JavaScript を圧縮（推奨）",
+    'installation:minify_css:label' => "CSS を圧縮（推奨）",
+
+    'installation:htaccess:needs_upgrade' => ".htaccess をアップデートしてください。そうすることにより、path が GET のパラメタ __elgg_uri にインジェクトされます。(ファイル htaccess_dist を参考にしてください。)",
+
+    'installation:systemcache:description' => "ステムキャッシュはデータをファイルにキャッシュすることでElggの読み込み時間を少なくします。",
 	'installation:systemcache:label' => "システムキャッシュを使う(推奨)",
+
+	'admin:legend:caching' => 'キャシュ',
+	'admin:legend:content_access' => 'コンテント・アクセス',
+	'admin:legend:site_access' => 'サイト・アクセス',
+	'admin:legend:debug' => 'デバッグとログ',
 
 	'upgrading' => 'アップグレード中...',
 	'upgrade:db' => 'データベースをアップグレードしました。',
@@ -1120,7 +1127,7 @@ $japanese = array(
 	'upgrade:unlock:confirm' => "もうひとつアップグレードがありますのでデータベースをロックします。複数のアップグレードを同時に実行するのは危険です。他のアップグレードがないことをご確認の上作業を継続してください。ロックを解除しますか？",
 	'upgrade:locked' => "アップグレードできません。別のアップグレードが実行されています。アップグレードのロックを解除するには、管理セクションに行ってください。",
 	'upgrade:unlock:success' => "アップグレードのロックを解除しました。",
-'upgrade:unable_to_upgrade' => 'アップグレードできませんでした',
+    'upgrade:unable_to_upgrade' => 'アップグレードできませんでした',
 	'upgrade:unable_to_upgrade_info' =>
 		'今回のインストールではアップグレードできませんでした。旧バージョンのviewがElggコアviewディレクトリにあるためです。
 		これらの旧viewは廃止または削除されたので、そのまま残っていると新Elggが正常に作動しなくなります。
@@ -1130,14 +1137,44 @@ $japanese = array(
 		手順の詳細は、<a href="http://docs.elgg.org/wiki/Upgrading_Elgg">Upgrading Elgg documentation</a> をご覧ください。
 		その他なにかお困りでしたら、遠慮無く<a href="http://community.elgg.org/pg/groups/discussion/">Community Support Forums</a>に投稿してみてください。',
 
-
 	'update:twitter_api:deactivated' => 'Twitter API(旧称Twitter Service)はアップグレード中に停止しました。必要なら、手動でプラグインを再起動させてください。',
 	'update:oauth_api:deactivated' => 'OAuth API(旧称 OAuth LIb)はアップグレード中に停止しました。必要なら、手動でプラグインを再起動させてください。',
 	'upgrade:site_secret_warning:moderate' => "システムの安全性を改善するために、サイトの秘密キーを再生成するようにしましょう。設定 &gt; セッティング &gt; 詳細設定で設定出来ます。",
 	'upgrade:site_secret_warning:weak' => "システムの安全性を改善するためにサイトの秘密キーを再生成してください。設定 &gt; セッティング &gt; 詳細設定",
 
+	'ElggUpgrade:error:url_invalid' => 'URLに不正な値がります。',
+	'ElggUpgrade:error:url_not_unique' => 'アップグレードの URLs は唯一のもの(unique)でなければいけません。',
+	'ElggUpgrade:error:title_required' => 'ElggUpgrade objects にはタイトル(a title)がなければいけません。',
+	'ElggUpgrade:error:description_required' => 'ElggUpgrade objects には説明(a description)がなければいけません。',
+	'ElggUpgrade:error:upgrade_url_required' => 'ElggUpgrade objects にはアプグレードURL(an upgrade URL)がなければいけません。',
 
-	'deprecated:function' => '関数 %s() は %s()に変わりました。',
+	'deprecated:function' => '関数 %s() は廃止され %s()に変わりました。',
+
+	'admin:pending_upgrades' => 'サイトはアップグレードの途中で中断されています。これ以降は直接あなたの操作が必要です。',
+	'admin:view_upgrades' => '中断されているアップグレードを見る。',
+ 	'admin:upgrades' => 'アプグレード',
+	'item:object:elgg_upgrade' => 'サイトのアップグレード',
+	'admin:upgrades:none' => 'このインストールは最新の状態です！',
+
+	'upgrade:item_count' => 'アップグレードが必要なものが <b>%s</b> 個あります。',
+	'upgrade:warning' => '<b>警告:</b> 大きなサイトでは、このアップグレードはかなり長い時間かかるでしょう！',
+	'upgrade:success_count' => 'アップグレード済み:',
+	'upgrade:error_count' => 'エラー:',
+	'upgrade:river_update_failed' => 'item id %s のriverエントリを更新するのに失敗しました。',
+	'upgrade:timestamp_update_failed' => 'item id %s のタイムスタンプを更新するのに失敗しました。',
+	'upgrade:finished' => 'アプグレードを完了しました',
+	'upgrade:finished_with_errors' => '<p>アップグレードはエラーが出て終了してしまいました。 ページをリフレッシュして、もう一度アップグレードを実行してください。</p></p><br />再びエラーが起こったなら、原因を究明するためサーバのエラーログをチェックしてみてください。Elgg community の <a href="http://community.elgg.org/groups/profile/179063/elgg-technical-support">Technical support group</a> にエラーを修正するための答えがあるかもしれません。</p>',
+
+	// Strings specific for the comments upgrade
+	'admin:upgrades:comments' => 'コメントのアップグレード',
+	'upgrade:comment:create_failed' => 'Comment id %s を entity に変換するのに失敗しました。',
+
+	// Strings specific for the datadir upgrade
+	'admin:upgrades:datadirs' => 'データディレクトリのアップグレード',
+
+	// Strings specific for the discussion reply upgrade
+	'admin:upgrades:discussion_replies' => 'Discussion repryのアップグレード',
+	'discussion:upgrade:replies:create_failed' => 'Discussion reply id %s を entity に変換するのに失敗しました。',
 
 /**
  * Welcome
@@ -1149,11 +1186,17 @@ $japanese = array(
 /**
  * Emails
  */
-	'email:settings' => "Eメール設定",
-	'email:address:label' => "あなたのEメールアドレス",
 
-	'email:save:success' => "新しい電子メールアドレスを保存しました。",
-	'email:save:fail' => "あなたの電子メールアドレスを保存できませんでした。",
+	'email:from' => 'From',
+	'email:to' => 'To',
+	'email:subject' => 'Subject',
+	'email:body' => 'Body',
+
+	'email:settings' => "Eメール設定",
+	'email:address:label' => "Eメールアドレス",
+
+	'email:save:success' => "新しいEメールアドレスを保存しました。アドレスが正しいかどうかの確認が求められています。",
+	'email:save:fail' => "Eメールアドレスを保存できませんでした。",
 
 	'friend:newfriend:subject' => "%s さんはあなたを友達に登録しました！",
 	'friend:newfriend:body' => "%s さんはあなたを友達として登録しました！
@@ -1162,21 +1205,24 @@ $japanese = array(
 
 %s
 
-(※) このメールには返信しないでください。",
+(※) このメールには、返信をしないようにお願いします。",
 
+	'email:changepassword:subject' => "パスワードが変更されました!",
+	'email:changepassword:body' => "%s　さん、こんにちは。
+
+あなたのパスワードが変更されましたので、お知らせいたします。",
 
 	'email:resetpassword:subject' => "パスワードをリセットしました",
-	'email:resetpassword:body' => "%s さん, こんにちは。
+	'email:resetpassword:body' => "%s さん、こんにちは。
 
 あなたのパスワードをリセットしました: %s",
 
+	'email:changereq:subject' => "パスワード変更のリクエスト",
+	'email:changereq:body' => "%s さん、こんにちは。
 
-	'email:resetreq:subject' => "新しいパスワードのリクエスト",
-	'email:resetreq:body' => "%s さん、こんにちは,
+誰か(from the IP address %s) があなたのアカウントのパスワードの変更を求めています。
 
-だれか (from the IP address %s) があなたのアカウントのパスワードの再発行を求めています。
-
-御自身がパスワードの再発行をリクエストされたのでしたら、下記リンクをクリックしてください。見の覚えが無いようでしたらこのメールを無視してください。
+御自身がパスワードの変更をリクエストされたのでしたら、下記リンクをクリックしてください。身に覚えが無いようでしたらこのメールを無視してください。
 
 %s
 ",
@@ -1191,15 +1237,11 @@ $japanese = array(
 	'user:default_access:failure' => "新しい公開範囲の設定が保存できません。",
 
 /**
- * XML-RPC
- */
-	'xmlrpc:noinputdata'	=>	"入力データがありません",
-
-/**
  * Comments
  */
 
 	'comments:count' => "%s さんのコメント",
+	'item:object:comment' => 'コメント',
 
 	'river:comment:object:default' => '%s さんが、%s さんにコメントしました',
 
@@ -1208,14 +1250,16 @@ $japanese = array(
 	'generic_comments:text' => "コメント",
 	'generic_comments:latest' => "最新のコメント",
 	'generic_comment:posted' => "コメントを投稿しました。",
+	'generic_comments:edit' => "コメントを編集",
 	'generic_comment:deleted' => "コメントを削除しました。",
 	'generic_comment:blank' => "申し訳ありません。コメント内容が空欄のため保存できません。",
 	'generic_comment:notfound' => "申し訳ありません。検索しましたが見つかりませんでした。",
 	'generic_comment:notdeleted' => "申し訳ありません。このコメントが削除できませんでした。",
-	'generic_comment:failure' => "コメントした際、予期せぬエラーが発生しました。",
+	'generic_comment:failure' => "コメントを保存する際に予期せぬエラーが発生しました。",
 	'generic_comment:none' => 'コメントはありません',
 	'generic_comment:title' => '%s さんが付けたコメント',
 	'generic_comment:on' => '%s さんが %s にコメント',
+	'generic_comments:latest:posted' => '投稿:', //un
 	'generic_comment:email:subject' => '新しいコメントがあります！',
 	'generic_comment:email:body' => "あなたの投稿「 %s 」に、 %s さんがコメントしました:
 
@@ -1231,7 +1275,7 @@ $japanese = array(
 
 %s
 
-※　このメールには返信しないでください。",
+※　このメールには返信をしないようお願いします。",
 
 /**
  * Entities
@@ -1273,6 +1317,12 @@ $japanese = array(
 
 	'js:security:token_refresh_failed' => '%s への接続に失敗しました。コンテントを保存するときに問題が発生したようです。このページを再読込してください。',
 	'js:security:token_refreshed' => '%s への接続が復帰しました！',
+	'js:lightbox:current' => "画像 %s枚目(全%s枚)",
+
+/**
+ * Miscellaneous
+ */
+	'elgg:powered' => "Powered by Elgg",
 
 /**
  * Languages according to ISO 639-1
@@ -1422,4 +1472,3 @@ $japanese = array(
 	"zu" => "Zulu",
 );
 
-add_translation("ja",$japanese);
