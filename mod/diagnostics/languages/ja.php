@@ -1,16 +1,9 @@
 <?php
-/**
- * Elgg diagnostics language pack.
- *
- * @package ElggDiagnostics
- */
-
-$japanese = array(
+return = array(
 	'admin:administer_utilities:diagnostics' => 'システム診断',
 	'diagnostics' => 'システム診断',
 	'diagnostics:report' => '診断報告書',
 	'diagnostics:description' => 'Elggの障害の解析に有効なレポートです。開発者はバグレートを送る際にこれを添付することをお勧めします。',
-	'diagnostics:download' => 'Download',
 	'diagnostics:header' => '========================================================================
 Elgg Diagnostic Report
 Generated %s by %s
@@ -41,5 +34,3 @@ Global variables:
 %s
 ------------------------------------------------------------------------',
 		  );
-
-add_translation("ja",$japanese);
