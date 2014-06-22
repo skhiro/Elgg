@@ -1,13 +1,8 @@
 <?php
-/**
- * Elgg developer tools 日本語 language file.
- *
- */
-
-$japanese = array(
+return = array(
 	// menu
 	'admin:develop_tools' => 'ツール',
-	'admin:develop_tools:preview' => 'テーマの見本',
+	'admin:develop_tools:sandbox' => 'テーマの見本',
 	'admin:develop_tools:inspect' => '内部を見る',
 	'admin:develop_tools:unit_tests' => 'ユニットテスト',
 	'admin:developers' => '開発者',
@@ -36,6 +31,7 @@ $japanese = array(
 	'developers:debug:error' => 'Error',
 	'developers:debug:warning' => 'Warning',
 	'developers:debug:notice' => 'Notice',
+	'developers:debug:info' => 'Info',
 	
 	// inspection
 	'developers:inspect:help' => 'Elggフレームワークの構築設定を覗いてみる',
@@ -43,18 +39,21 @@ $japanese = array(
 	// event logging
 	'developers:event_log_msg' => "%s: '%s, %s' in %s",
 
-	// theme preview
-	'theme_preview:general' => 'イントロダクション',
-	'theme_preview:breakout' => 'iframe外で表示する',
-	'theme_preview:buttons' => 'ボダン',
-	'theme_preview:components' => 'コンポーネント',
-	'theme_preview:forms' => 'フォーム',
-	'theme_preview:grid' => 'グリッド',
-	'theme_preview:icons' => 'アイコン',
-	'theme_preview:modules' => 'モジュール',
-	'theme_preview:navigation' => 'ナビゲーション',
-	'theme_preview:typography' => '文字の体裁',
-	'theme_preview:miscellaneous' => 'その他',
+	// theme sandox
+	'theme_sandbox:intro' => 'イントロダクション',
+	'theme_sandbox:breakout' => 'iframe外で表示する',
+	'theme_sandbox:buttons' => 'ボダン',
+	'theme_sandbox:components' => 'コンポーネント',
+	'theme_sandbox:forms' => 'フォーム',
+	'theme_sandbox:grid' => 'グリッド',
+	'theme_sandbox:icons' => 'アイコン',
+	'theme_sandbox:javascript' => 'JavaScript',
+	'theme_sandbox:layouts' => 'レイアウト',
+	'theme_sandbox:modules' => 'モジュール',
+	'theme_sandbox:navigation' => 'ナビゲーション',
+	'theme_sandbox:typography' => '文字の体裁',
+
+	'theme_sandbox:icons:blurb' => 'アイコンを表示させるには、 <em>elgg_view_icon($name)</em> または、 elgg-icon-$name クラスを使用してください。',
 
 	// unit tests
 	'developers:unit_tests:description' => 'コアクラスとコア関数のバグを検出するために、Elggにはユニットテストと統合テストがあります。',
@@ -64,5 +63,3 @@ $japanese = array(
 	// status messages
 	'developers:settings:success' => '設定を保存しました',
 );
-
-add_translation('ja', $japanese);
