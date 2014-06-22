@@ -1,9 +1,5 @@
 <?php
-/**
- * Custom Index 日本語 language file
- *
- */
-$japanese = array(
+return array(
 	
 	'custom:bookmarks' => "新着ブックマーク",
 	'custom:groups' => "新着グループ",
@@ -11,6 +7,3 @@ $japanese = array(
 	'custom:blogs' => "新着ブログ記事",
 	'custom:members' => "最近の参加メンバー",
 		  );
-					
-add_translation("ja",$japanese);
-
