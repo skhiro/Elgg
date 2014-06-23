@@ -1,11 +1,5 @@
 <?php
-/**
- * Elgg garbage collector language pack.
- *
- * @package ElggGarbageCollector
- */
-
-$japanese = array(
+return array(
 	'garbagecollector:period' => 'ガベージコレクションをする頻度',
 	
 	'garbagecollector:weekly' => '１週間に１回',
@@ -22,6 +16,3 @@ $japanese = array(
 	'garbagecollector:gc:metastrings' => 'どこからもリンクされていないメタ文字を削除中',
 	
 	);
-					
-add_translation("ja",$japanese);
-
