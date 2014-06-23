@@ -1,11 +1,5 @@
 <?php
 /**
- * Elgg file plugin language pack
- *
- * @package ElggFile
- */
-
-/**
  *------------------------------------------------------------------
  * 以下は、このファイルで(Email 通知に使われるメールのサブジェクト)に使われるキー名です。
  * 必要に応じて内容を書き換えて使用すると便利です。
@@ -14,7 +8,7 @@
  *
  */
 
-$japanese = array(
+return array(
 	/**
 	 * Menu items and titles
 	 */
@@ -38,9 +32,6 @@ $japanese = array(
 	'file:add' => 'ファイルをアップロード',
 			
 	'file:file' => "ファイル",
-	'file:title' => "タイトル",
-	'file:desc' => "説明",
-	'file:tags' => "タグ",
 	
 	'file:list:list' => 'リスト表示に切り替え',
 	'file:list:gallery' => 'ギャラリー表示に切り替え',
@@ -72,8 +63,6 @@ $japanese = array(
 	
 	'groups:enablefiles' => 'グループファイルを使用する',
 
-	'file:download' => "このファイルをダウンロード",
-	
 	'file:delete:confirm' => "本当にこのファイルを削除しますか？",
 	
 	'file:tagcloud' => "タグクラウド",
@@ -85,24 +74,17 @@ $japanese = array(
 	
 	'item:object:file' => 'ファイル',
 	
-	'file:newupload' => '新しいファイルがアップロードされました',
-	'file:notification' =>
-'%s さんが新しいファイルをアップロードしました:
+	'file:notify:summary' => '新着ファイル「%s」がアップロードされました。',
+	'file:notify:subject' => '新着ファイル: %s',
+	'file:notify:body' =>
+'%s さんが、新たにファイルをアップロードしました: %s
 
 %s
-%s
 
-閲覧してコメントするには:
+ファイルを閲覧・コメントするには:
 %s
 ',
 		
-	/**
-	 * Embed media
-	 **/
-	
-	'file:embed' => "メディアの埋め込み",
-	'file:embedall' => "すべて",
-	
 	/**
 	 * Status messages
 	 */
@@ -118,9 +100,6 @@ $japanese = array(
 	'file:uploadfailed' => "申し訳ありません。ファイルを保存できません。",
 	'file:downloadfailed' => "申し訳ありません。今、このファイルは利用できません。",
 	'file:deletefailed' => "今、このファイルは削除できません。",
-	'file:noaccess' => "このファイルを変更する権限がありません。",
-	'file:cannotload' => "ファイルを読み込む際にエラーが発生しました。",
+	'file:noaccess' => "あなたには、このファイルを変更する権限がありません。",
 	'file:nofile' => "ファイルを選択して下さい。",
 	);
-					
-add_translation("ja",$japanese);
