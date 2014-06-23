@@ -1,10 +1,5 @@
 <?php
-/**
- * Embed 日本語 language strings
- *
- */
-
-$japanese = array(
+return array(
 	'embed:embed' => '埋め込み',
 	'embed:media' => '埋め込むコンテント',
 	'embed:instructions' => 'コンテントに埋め込むファイルをクリックしてください。',
@@ -17,6 +12,3 @@ $japanese = array(
 
 	'embed:no_sections' => 'サポートされている埋め込みプラグインが見つかりませんでした。埋め込みサポート済みのプラグインが利用できるかどうか、サイト管理者にお問い合わせください。',
 		  );
-					
-add_translation("ja",$japanese);
-
