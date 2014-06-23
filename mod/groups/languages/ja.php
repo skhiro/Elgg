@@ -1,19 +1,13 @@
 <?php
 /**
- * Elgg groups plugin language pack
- *
- * @package ElggGroups
- */
-
-/* *
  *------------------------------------------------------------------
  * 以下は、このファイルで(Email 通知に使われるメールのサブジェクト)に使われるキー名です。
  * 必要に応じて内容を書き換えて使用すると便利です。
  *
- * groupforumtopic:new
- *      新規投稿時
- * discussion:notification:topic:subject
+ * discussion:topic:notify:subject
  *      グループに新しい議題が提示された時
+ * discussion:reply:notify:subject
+ *      議題に対する返答なされた時
  * groups:invite:subject
  *      グループに招待された時
  * groups:welcome:subject
@@ -22,15 +16,15 @@
  *      グループに参加申請をした時
  * 
  * 例）
- *'groupforumtopic:new' => "【Elgg研究会】新規投稿",
- *'discussion:notification:topic:subject'=> "【Elgg研究会】新しい議題が提示されました。",
+ *'discussion:topic:notify:subject'=> "【Elgg研究会】新しい議題が提示されました。",
+ *'discussion:reply:notify:subject'=>'【Elgg研究会】議題 %s に対する返答がありました。',
  *'groups:invite:subject' => "【Elgg研究会】%sさん、%s に招待されています。",
  *'groups:welcome:subject' => "【Elgg研究会】ようこそ、「 %s 」グループへ！",
  *'groups:request:subject' => "【Elgg研究会】%s さんは「 %s 」に参加希望を申請しました。",
  * 
  */
 
-$japanese = array(
+return array(
 
 	/**
 	 * Menu items and titles
@@ -65,12 +59,23 @@ $japanese = array(
 	'groups:members:title' => '%s のメンバ',
 	'groups:members:more' => "メンバ一覧",
 	'groups:membership' => "グループ参加の許可",
+	'groups:content_access_mode' => "グループコンテントへのアクセス（読み書き）の設定",
+	'groups:content_access_mode:warning' => "警告: 変更はこれから作成されるコンテントのみ有効で、すでに存在しているグループコンテントに対しては効果ありません。",
+	'groups:content_access_mode:unrestricted' => "制限なし - アクセスはコンテントレベルでの設定に依ります。",
+	'groups:content_access_mode:membersonly' => "メンバ限定 - 非メンバはグループコンテントに決してアクセスできません。",
 	'groups:access' => "公開範囲の許可",
 	'groups:owner' => "班長",
 	'groups:owner:warning' => "警告: この値を変更しますと、あなたはこのグループの班長ではなくなってしまいますが、よろしいでしょうか。",
 	'groups:widget:num_display' => '一覧表示数',
 	'groups:widget:membership' => '参加グループ',
 	'groups:widgets:description' => '所属するグループをプロフィールに表示する',
+
+	'groups:widget:group_activity:title' => 'グループアクティビティ',
+	'groups:widget:group_activity:description' => 'あなたの所属する１グループのアクティビティを見る',
+	'groups:widget:group_activity:edit:select' => 'グループを選択してください',
+	'groups:widget:group_activity:content:noactivity' => 'このグループでのアクティビティはありません',
+	'groups:widget:group_activity:content:noselect' => 'グループを選択するにはこのウィジェットを編集してください',
+
 	'groups:noaccess' => 'グループへのアクセスを許可しない',
 	'groups:permissions:error' => 'あなたの権限ではこれはできません',
 	'groups:ingroup' => 'グループ内で',
@@ -99,22 +104,27 @@ $japanese = array(
 	'groups:search_in_group' => "このグループ内を検索",
 	'groups:acl' => "グループ: %s",
 
-	'discussion:notification:topic:subject' => 'グループ会議に新しい記事が投稿されました',
-	'groups:notification' =>
-'%s さんがグループ「 %s 」にて新しい議題を追加しました:
+	'discussion:topic:notify:summary' => '新しい議題「%s」が投稿されました',
+	'discussion:topic:notify:subject' => '新着議題: %s',
+	'discussion:topic:notify:body' =>
+'%s さんは、グループ %s に新しい議題を投稿しました:
+
+題名: %s
 
 %s
-%s
 
-閲覧または、返答するには:
+この議題を閲覧したり議題に返答するには:
 %s
 ',
-	'discussion:notification:reply:body' =>
-'%1$s さんがグループ %3$s の議題「 %2$s 」に返答しました:
+
+	'discussion:reply:notify:summary' => '議題 %s に対して新しい返答がありました。',
+	'discussion:reply:notify:subject' => '新着返答:  議題 %s',
+	'discussion:reply:notify:body' =>
+'%1$s さんがグループ %3$s の議題「%2$s」に返答しました:
 
 %4$s
 
-閲覧または、返答するには:
+この会議を閲覧したり議題に返答するには:
 %5$s
 ',
 	'groups:activity' => 'グループのうごき',
@@ -129,6 +139,7 @@ $japanese = array(
 	'groups:invitations:none' => '現在、グループへの招待はありません。',
 
 	'item:object:groupforumtopic' => "議題",
+	'item:object:discussion_reply' => "議論の返答",
 
 	'groupforumtopic:new' => "新規投稿", // これを参照しているところは無いようです。
 
@@ -142,26 +153,27 @@ $japanese = array(
 	'groups:none' => 'グループはまだ作られていません',
 
 
-	/*
+	/**
 	 * Access
 	 */
 	'groups:access:private' => 'クローズド - 招待制です。',
 	'groups:access:public' => 'フリー参加 - 誰でも参加できます。',
-	'groups:access:group' => 'グループメンバのみ',
+	'groups:access:group' => 'グループ参加者のみ',
 	'groups:closedgroup' => 'ここは参加者限定のグループ（クローズド・グループ）です。',
 	'groups:closedgroup:request' => 'このグループへの参加をご希望される場合は「参加希望」をクリックしてください。参加リクエストが送信されます。',
+	'groups:closedgroup:membersonly' => "このグループはクローズドグループなのでグループ参加者以外の方にはアクセスできません。",
+	'groups:opengroup:membersonly' => "このグループのコンテントにはグループ参加者のみアクセスできます。",
+	'groups:opengroup:membersonly:join' => 'グループに参加するには、「参加」メニューリンクをクリックしてください。',
 	'groups:visibility' => 'このグループのコンテンツをみることができる人',
 
-	/*
+	/**
 	 *Group tools
 	 */
 	'groups:enableforum' => 'グループ会議の利用',
-	'groups:yes' => 'はい',
-	'groups:no' => 'いいえ',
 	'groups:lastupdated' => '最終更新 %s(%s さん)',
 	'groups:lastcomment' => '最新コメント %s(%s さん)',
 
-	/*
+	/**
 	Group discussion
 	*/
 	'discussion' => '会議室',
@@ -181,8 +193,12 @@ $japanese = array(
 	'discussion:error:permissions' => 'あなたには、このアクションを行う権限がありません',
 	'discussion:error:notdeleted' => '議題を削除できませんでした。',
 
+	'discussion:reply:edit' => '返答を編集',
 	'discussion:reply:deleted' => '返答を削除しました。',
+	'discussion:reply:error:notfound' => '議論の返答は見つかりませんでした。',
 	'discussion:reply:error:notdeleted' => '返答を削除することができませんでした。',
+
+	'admin:groups' => 'グループ',
 
 	'reply:this' => '返答する',
 
@@ -193,9 +209,8 @@ $japanese = array(
 	'groups:addtopic' => '新規議題作成',
 	'groups:forumlatest' => '最新のやりとり',
 	'groups:latestdiscussion' => '最新のやりとり',
-	'groups:newest' => '新着順',
-	'groups:popular' => '人気順',
 	'groupspost:success' => 'コメントを投稿しました。',
+	'groupspost:failure' => '返答を保存スル際に問題が発生しました。',
 	'groups:alldiscussion' => '最新のやりとり',
 	'groups:edittopic' => '議題の編集',
 	'groups:topicmessage' => '議題メッセージ',
@@ -206,11 +221,8 @@ $japanese = array(
 	'groups:lastperson' => '最後に投稿した人',
 	'groups:when' => 'いつ',
 	'grouptopic:notcreated' => '議題はありません。',
-	'groups:topicopen' => '議論中',
 	'groups:topicclosed' => '議論終了',
-	'groups:topicresolved' => '解決済み',
 	'grouptopic:created' => '議題を作成しました。',
-	'groupstopic:deleted' => '議題を削除しました。',
 	'groups:topicsticky' => 'スティッキー',
 	'groups:topicisclosed' => 'この議題は終了しました。',
 	'groups:topiccloseddesc' => 'この議題は終了しました。新しいコメントは受け付けていません。',
@@ -267,9 +279,9 @@ $japanese = array(
 %s",
 
 
-	/*
-		Forum river items
-	*/
+	/**
+     *	Forum river items
+     */
 
 	'river:create:group:default' => '%s さんは、グループ「 %s 」を作成しました。',
 	'river:join:group:default' => '%s さんは、グループ「 %s 」に参加しました。',
@@ -313,10 +325,10 @@ $japanese = array(
 	'groups:invitekilled' => '招待状を削除しました。',
 	'groups:joinrequestkilled' => '参加希望申請を削除しました。',
 
-	// ecml
+	/**
+     * ecml
+     */
 	'groups:ecml:discussion' => 'グループ会議',
 	'groups:ecml:groupprofile' => 'グループプロフィール',
 
 );
-
-add_translation("ja",$japanese);
