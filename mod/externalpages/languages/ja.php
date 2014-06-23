@@ -1,10 +1,5 @@
 <?php
-/**
- * External pages 日本語 language file
- *
- */
-
-$japanese = array(
+return array(
 	  
 	/**
 	 * Menu items and titles
@@ -23,5 +18,3 @@ $japanese = array(
 	'expages:posted' => "ページを更新しました。",
 	'expages:error' => "このページを保存できませんでした。",
 		  );
-
-add_translation("ja",$japanese);
