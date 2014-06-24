@@ -1,9 +1,5 @@
 <?php
 /**
- * The Wire English language file
- */
-
-/**
  *------------------------------------------------------------------
  * 以下は、このファイルで(Email 通知に使われるメールのサブジェクト)に使われるキー名です。
  * 必要に応じて内容を書き換えて使用すると便利です。
@@ -31,7 +27,7 @@
  *
  */
 
-$japanese = array(
+return array(
 	
 	/**
 	 * Menu items and titles
@@ -40,18 +36,14 @@ $japanese = array(
 	'thewire:everyone' => "みんなのつぶやき",
 	'thewire:user' => "%s さんのつぶやき",
 	'thewire:friends' => "友達のつぶやき",
-	'thewire:reply' => "返信",
 	'thewire:replying' => "返信: %s (@%s) さんへ 内容",
 	'thewire:thread' => "スレッド",
 	'thewire:charleft' => "残りの文字数（半角文字で）",
 	'thewire:tags' => "「 %s 」でタグ付けされたつぶやき",
 	'thewire:noposts' => "つぶやきはありません",
 	'item:object:thewire' => "つぶやき",
-	'thewire:update' => '更新',
 	'thewire:by' => '%s さんのつぶやき',
 
-	'thewire:previous' => "前",
-	'thewire:hide' => "隠す",
 	'thewire:previous:help' => "前の投稿を見る",
 	'thewire:hide:help' => "前の投稿隠す",
 	
@@ -75,16 +67,21 @@ $japanese = array(
 	'thewire:deleted' => "つぶやきを削除しまいした。",
 	'thewire:blank' => "申し訳ありません、入力欄が空欄なので投稿できません。",
 	'thewire:notfound' => "申し訳ありません、お探しの投稿は見つかりませんでした。",
+	'thewire:notsaved' => "申し訳ありません。このつぶやきを保存できませんでした",
 	'thewire:notdeleted' => "申し訳ありません、この投稿を削除できませんでした。",
 	
 	/**
 	 * Notifications
 	 */
-	'thewire:notify:subject' => "新しいつぶやきが追加されました",
-	'thewire:notify:reply' => '%s さんが%s さんのつぶやきに返信しました:',
-	'thewire:notify:post' => '%s さんのつぶやき:',
+	'thewire:notify:summary' => '新しいつぶやき: %s',
+	'thewire:notify:subject' => "%s さんの新しいつぶやき",
+	'thewire:notify:reply' => '%s さんが %s さんのつぶやきに返答しました:',
+	'thewire:notify:post' => '%s さんはつぶやきました:',
+	'thewire:notify:footer' => "閲覧・返答するには:\n%s",
 
+	/**
+	 * Settings
+	 */
+	'thewire:settings:limit' => "つぶやきに使用できる最大の文字数:",
+	'thewire:settings:limit:none' => "制限なし",
 );
-					
-add_translation("ja",$japanese);
-

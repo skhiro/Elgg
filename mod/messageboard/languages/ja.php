@@ -1,8 +1,4 @@
 <?php
-/** 
- * Message board plugin langue file
- */
-
 /**
  *------------------------------------------------------------------
  * 以下は、このファイルで(Email 通知に使われるメールのサブジェクト)に使われるキー名です。
@@ -31,7 +27,8 @@
  *です。
  *
  */
-$japanese = array(
+
+return array(
 	
 	/**
 	 * Menu items and titles
@@ -98,5 +95,3 @@ $japanese = array(
 	'messageboard:failure' => "書き込みの際に何からのエラーが発生しました。もう一度お試しください。",
 	
 );
-					
-add_translation("ja",$japanese);

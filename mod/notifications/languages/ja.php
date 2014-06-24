@@ -1,9 +1,5 @@
 <?php
-/*
- * Notification language pack
- *
- */
-$japanese = array(
+return array(
 
 	'friends:all' => '全ての友達',
 
@@ -25,5 +21,3 @@ $japanese = array(
 	'notifications:subscriptions:success' => '通知設定を保存しました。',
 	
 );
-					
-	add_translation("ja",$japanese);

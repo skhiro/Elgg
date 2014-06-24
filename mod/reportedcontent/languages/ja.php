@@ -1,11 +1,5 @@
 <?php
-/**
- * Elgg reported content plugin language pack
- *
- * @package ElggReportedContent
- */
-
-$japanese = array(
+return array(
 
 	'item:object:reported_content' => '報告された対象',
 	'admin:administer_utilities:reportedcontent' => '報告されたコンテント',
@@ -14,7 +8,6 @@ $japanese = array(
 	'reportedcontent:this:tooltip' => '管理者にこのページが不適切だと報告する',
 	'reportedcontent:none' => '報告されたコンテントはありません',
 	'reportedcontent:report' => '管理者に報告',
-	'reportedcontent:title' => 'ページタイトル',
 	'reportedcontent:deleted' => '報告されたコンテントは削除されました。',
 	'reportedcontent:notdeleted' => 'この報告を削除することはできませんでした。',
 	'reportedcontent:delete' => '報告を削除',
@@ -31,7 +24,6 @@ $japanese = array(
 	'reportedcontent:success' => 'あなたの報告をサイト管理者に送信しました。',
 	'reportedcontent:failing' => 'あなたの報告を送信できませんでした。',
 	'reportedcontent:report' => '不適切',
-	'reportedcontent:moreinfo' => '詳細な情報',
 	'reportedcontent:instructions' => 'この報告はサイトの管理者に監査してもらうために送られます。',
 	'reportedcontent:numbertodisplay' => '報告の表示数',
 	'reportedcontent:widget:description' => '報告の内容を表示',
@@ -40,5 +32,3 @@ $japanese = array(
 	'reportedcontent:failed' => '申し訳ありません、このコンテントを報告しようとしましたが、失敗しました。もう一度お試しください。',
 	'reportedcontent:notarchived' => 'この報告を書庫に保存することができませんでした。',
 );
-
-add_translation("ja", $japanese);

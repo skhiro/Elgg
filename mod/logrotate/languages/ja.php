@@ -1,16 +1,6 @@
 <?php
-/**
- * Elgg log rotator language pack.
- * 
- * @package ElggLogRotate
- */
-
-$japanese = array(
+return array(
 	'logrotate:period' => 'システムログを保管する頻度',
-	
-	'logrotate:weekly' => '１週間に１回',
-	'logrotate:monthly' => '１ヶ月に１回',
-	'logrotate:yearly' => '１年に１回',
 	
 	'logrotate:logrotated' => 'ログをローテートしました\n',
 	'logrotate:lognotrotated' => "ログローテトに失敗しました\n",
@@ -24,5 +14,3 @@ $japanese = array(
 	'logrotate:logdeleted' => "ログを削除しました\n",
 	'logrotate:lognotdeleted' => "削除したログはありません\n",
 );
-					
-add_translation("ja",$japanese);

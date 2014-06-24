@@ -1,9 +1,5 @@
 <?php
-/**
- * Search plugin 日本語 language file
- */
-
-$japanese = array(
+return array(
 	'search:enter_term' => '検索キーワードを入力して下さい:',
 	'search:no_results' => '一致するものはありませんでした。',
 	'search:matched' => '一致:',
@@ -19,7 +15,5 @@ $japanese = array(
 	'search:comment_on' => '「%s」へのコメント',
 	'search:comment_by' => 'by',
 	'search:unavailable_entity' => '利用不可なエンティティ',
+    'search:unknown_entity' => '不明なエンティティ型です。',
 );
-
-add_translation('ja', $japanese);
-

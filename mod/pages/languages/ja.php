@@ -1,12 +1,5 @@
 <?php
 /**
- * Elgg pages plugin language pack
- * 
- * @package ElggPages
- */
-
-
-/**
  *------------------------------------------------------------------
  * 以下は、このファイルで(Email 通知に使われるメールのサブジェクト)に使われるキー名です。
  * 必要に応じて内容を書き換えて使用すると便利です。
@@ -16,7 +9,7 @@
  *
  */
 
-$japanese = array(
+return array(
 	
 	/**
 	 * Menu items and titles
@@ -31,6 +24,7 @@ $japanese = array(
 	'pages:group' => "グループページ",
 	'groups:enablepages' => 'グループページを使用する',
 
+    'pages:new' => "新規ページ",
 	'pages:edit' => "このページを編集",
 	'pages:delete' => "このページを削除",
 	'pages:history' => "履歴",
@@ -40,14 +34,12 @@ $japanese = array(
 	'pages:revert' => "戻す",
 
 	'pages:navigation' => "ナビゲーション",
-	'pages:new' => "新しいページが追加されました",
-	'pages:notification' =>
-'%s さんが新しくページを追加しました:
+	'pages:notify:body' =>
+'%s さんが新規ページ「%s」を追加しました:
 
 %s
-%s
 
-閲覧してコメントするには:
+このページについて閲覧・コメントするには:
 %s
 ',
 	'item:object:page_top' => '最上位のページ',
@@ -126,5 +118,3 @@ $japanese = array(
 	'pages:newchild' => "子ページを作成",
 	'pages:backtoparent' => "「 %s 」にもどる",
 );
-					
-add_translation("ja",$japanese);

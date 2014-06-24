@@ -1,16 +1,12 @@
 <?php
-/*
- * Members 日本語 language file
- */
-$japanese = array(
-	'members:label:newest' => '新着',
-	'members:label:popular' => '人気',
-	'members:label:online' => 'Online',
-	'members:searchname' => 'メンバを名前で検索',
-	'members:searchtag' => 'メンバをタグで検索',
-	'members:title:searchname' => 'メンバを名前で検索:%s',
-	'members:title:searchtag' => 'メンバをタグで検索:%s',
-		  );
-					
-add_translation("ja",$japanese);
+return array(
+	'members:label:online' => 'オンライン',
+	'members:search' => 'メンバを検索',
+	'members:title:search' => 'メンバを検索: %s',
+	'members:total' => '総メンバ数: %s 人',
+	'members:title:newest' => '新しい順',
+	'members:title:popular' => '人気順',
+	'members:title:online' => 'オンライン中',
+	'members:list:popular:none' => '友達がいるメンバが居ません',
+);
 

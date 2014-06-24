@@ -1,9 +1,5 @@
 <?php
 /**
- * Likes English language file
- **/
-
-/**
  *------------------------------------------------------------------
  * 以下は、このファイルで(Email 通知に使われるメールのサブジェクト)に使われるキー名です。
  * 必要に応じて内容を書き換えて使用すると便利です。
@@ -30,7 +26,7 @@
  *
  */
 
-$japanese = array(
+return array(
 	'likes:this' => '「like」にしました',
 	'likes:deleted' => 'あなたの「like」を削除しました',
 	'likes:see' => '「like」を押した人',
@@ -69,4 +65,3 @@ $japanese = array(
 	
 );
 
-add_translation('ja', $japanese);

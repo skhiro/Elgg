@@ -1,11 +1,5 @@
 <?php
-/**
- * Elgg log browser plugin language pack
- *
- * @package ElggLogBrowser
- */
-
-$japanese = array(
+return array(
 	'admin:administer_utilities:logbrowser' => 'ログブラウザ',
 	'logbrowser' => 'ログブラウザ',
 	'logbrowser:browse' => 'システムログの閲覧',
@@ -26,5 +20,3 @@ $japanese = array(
 
 	'logbrowser:no_result' => 'No results',
  );
-					
-add_translation("ja",$japanese);
