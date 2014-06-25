@@ -1,9 +1,5 @@
 <?php
-/**
- * Twitter API plugin 日本語 language definition file
- */
-
-$japanese = array(
+return array(
 	'twitter_api' => 'Twitter サービス',
 
 	'twitter_api:requires_oauth' => 'Twitterサービス機能を使用するには OAuth Libraries plugin が起動されている必要があります',
@@ -58,5 +54,3 @@ $japanese = array(
 	'twitter_api:interstitial:cannot_save' => 'アカウントの詳細を細んすることができませんでした。',
 	'twitter_api:interstitial:saved' => 'アカウントの詳細を保存しました！',
 );
-
-add_translation('ja', $japanese);
