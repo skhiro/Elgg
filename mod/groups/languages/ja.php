@@ -287,6 +287,7 @@ return array(
 	'river:join:group:default' => '%s さんは、グループ「 %s 」に参加しました。',
 	'river:create:object:groupforumtopic' => '%s さんは、新しく議題「 %s 」を追加しました。',
 	'river:reply:object:groupforumtopic' => '%s さんは、議題「 %s 」に返答しました',
+	'river:reply:view' => '返答を見る',
 	
 	'groups:nowidgets' => 'このグループに設定されているウィジェットはありません。',
 
