@@ -1246,11 +1246,12 @@ return array(
 	'river:comment:object:default' => '%s さんが、%s さんにコメントしました',
 
 	'generic_comments:add' => "コメントする",
+	'generic_comments:edit' => "コメントを編集",
 	'generic_comments:post' => "コメントを投稿する",
 	'generic_comments:text' => "コメント",
 	'generic_comments:latest' => "最新のコメント",
 	'generic_comment:posted' => "コメントを投稿しました。",
-	'generic_comments:edit' => "コメントを編集",
+	'generic_comment:updated' => "コメントを更新しました。",
 	'generic_comment:deleted' => "コメントを削除しました。",
 	'generic_comment:blank' => "申し訳ありません。コメント内容が空欄のため保存できません。",
 	'generic_comment:notfound' => "申し訳ありません。検索しましたが見つかりませんでした。",
