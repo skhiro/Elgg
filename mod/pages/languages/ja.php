@@ -34,6 +34,9 @@ return array(
 	'pages:revert' => "戻す",
 
 	'pages:navigation' => "ナビゲーション",
+
+	'pages:notify:summary' => '新規ページ「%s」が追加されました',
+	'pages:notify:subject' => "新規ページ: %s",
 	'pages:notify:body' =>
 '%s さんが新規ページ「%s」を追加しました:
 
