@@ -325,6 +325,8 @@ return array(
 
 	'groups:invitekilled' => '招待状を削除しました。',
 	'groups:joinrequestkilled' => '参加希望申請を削除しました。',
+	'groups:error:addedtogroup' => "%s さんをグループに加えることができませんでした。",
+	'groups:add:alreadymember' => "%s さんは、すでにこのグループのメンバーです。",
 
 	/**
      * ecml
