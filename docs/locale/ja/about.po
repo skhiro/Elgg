@@ -7,6 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Elgg Core\n"
 "Report-Msgid-Bugs-To: \n"
+<<<<<<< HEAD
 "POT-Creation-Date: 2014-07-10 19:59-0700\n"
 "PO-Revision-Date: 2014-08-17 10:45+0900\n"
 "Last-Translator: SAKAGUCHI, Hirotaka <kemo@sun.interq.or.jp>\n"
@@ -22,7 +23,7 @@ msgstr ""
 # b19d0252f1024d1da999b77295e0352d
 #: ../../about/contributing.rst:4
 msgid "Contributor Guide"
-msgstr "貢献しようとしてくださる方のためのガイド"
+msgstr "貢献者のためガイド"
 
 # c8ea256a7d0d4c8b9068ccc9e7c5715f
 # 9465a83a4f6044c6ad6f2a8a8f723353
@@ -33,7 +34,7 @@ msgstr "貢献しようとしてくださる方のためのガイド"
 #: ../../about/index.rst:6 ../../about/releases.rst:6
 #: ../../about/roadmap.rst:6
 msgid "This page has moved."
-msgstr "このページは移動しました。"
+msgstr "このページは移転しました。"
 
 # 7a7387af75fd4507b5414f7ab412db1e
 #: ../../about/contributing.rst:8
@@ -43,7 +44,7 @@ msgstr ":doc:`/contribute/index`"
 # ab32b0d6c08d44d6a0287aa7938e025e
 #: ../../about/history.rst:4
 msgid "History"
-msgstr "ヒストリ"
+msgstr "沿革"
 
 # 9ebafd3025194bb8aa28f33b3d66aa1a
 #: ../../about/history.rst:8

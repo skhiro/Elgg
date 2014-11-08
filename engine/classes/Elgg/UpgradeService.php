@@ -1,4 +1,5 @@
 <?php
+namespace Elgg;
 
 /**
  * Upgrade service for Elgg
@@ -11,7 +12,7 @@
  * @package    Elgg.Core
  * @subpackage Upgrade
  */
-class Elgg_UpgradeService {
+class UpgradeService {
 
 	/**
 	 * Run the upgrade process
@@ -94,32 +95,30 @@ class Elgg_UpgradeService {
 			if ($quiet) {
 				// hide include errors as well as any exceptions that might happen
 				try {
-					if (!@include("$upgrade_path/$upgrade")) {
+					if (!@self::includeCode("$upgrade_path/$upgrade")) {
 						$success = false;
 						error_log("Could not include $upgrade_path/$upgrade");
 					}
-				} catch (Exception $e) {
+				} catch (\Exception $e) {
 					$success = false;
 					error_log($e->getMessage());
 				}
 			} else {
-				if (!include("$upgrade_path/$upgrade")) {
+				if (!self::includeCode("$upgrade_path/$upgrade")) {
 					$success = false;
 					error_log("Could not include $upgrade_path/$upgrade");
 				}
 			}
 
 			if ($success) {
-				// incrementally set upgrade so we know where to start if something fails.
-				$processed_upgrades[] = $upgrade;
-
 				// don't set the version to a lower number in instances where an upgrade
 				// has been merged from a lower version of Elgg
 				if ($upgrade_version > $version) {
 					datalist_set('version', $upgrade_version);
 				}
 
-				$this->setProcessedUpgrades($processed_upgrades);
+				// incrementally set upgrade so we know where to start if something fails.
+				$this->setProcessedUpgrade($upgrade);
 			} else {
 				return false;
 			}
@@ -129,13 +128,25 @@ class Elgg_UpgradeService {
 	}
 
 	/**
-	 * Saves the processed upgrades to a dataset.
+	 * PHP include a file with a very limited scope
 	 *
-	 * @param array $processed_upgrades An array of processed upgrade filenames
-	 *                                  (not the path, just the file)
+	 * @param string $file File path to include
+	 * @return mixed
+	 */
+	protected static function includeCode($file) {
+		return include $file;
+	}
+
+	/**
+	 * Saves a processed upgrade to a dataset.
+	 *
+	 * @param string $upgrade Filename of the processed upgrade
+	 *                        (not the path, just the file)
 	 * @return bool
 	 */
-	protected function setProcessedUpgrades(array $processed_upgrades) {
+	protected function setProcessedUpgrade($upgrade) {
+		$processed_upgrades = $this->getProcessedUpgrades();
+		$processed_upgrades[] = $upgrade;
 		$processed_upgrades = array_unique($processed_upgrades);
 		return datalist_set('processed_upgrades', serialize($processed_upgrades));
 	}
@@ -251,7 +262,7 @@ class Elgg_UpgradeService {
 			system_message(elgg_echo('upgrade:core'));
 
 			// Now we trigger an event to give the option for plugins to do something
-			$upgrade_details = new stdClass;
+			$upgrade_details = new \stdClass;
 			$upgrade_details->from = $dbversion;
 			$upgrade_details->to = elgg_get_version();
 
@@ -298,11 +309,9 @@ class Elgg_UpgradeService {
 
 			// this has already been run in a previous 1.7.X -> 1.7.X upgrade
 			if ($upgrade_version < $db_version) {
-				$processed_upgrades[] = $upgrade_file;
+				$this->setProcessedUpgrade($upgrade_file);
 			}
 		}
-
-		return $this->setProcessedUpgrades($processed_upgrades);
 	}
 
 	/**
@@ -404,7 +413,7 @@ class Elgg_UpgradeService {
 					if ($quiet) {
 						try {
 							run_sql_script($fromdir . $sqlfile);
-						} catch (DatabaseException $e) {
+						} catch (\DatabaseException $e) {
 							error_log($e->getmessage());
 						}
 					} else {
@@ -419,3 +428,4 @@ class Elgg_UpgradeService {
 	}
 
 }
+

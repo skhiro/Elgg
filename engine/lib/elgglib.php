@@ -8,60 +8,6 @@
  */
 
 /**
- * Register a php library.
- *
- * @param string $name     The name of the library
- * @param string $location The location of the file
- *
- * @return void
- * @since 1.8.0
- */
-function elgg_register_library($name, $location) {
-	global $CONFIG;
-
-	if (!isset($CONFIG->libraries)) {
-		$CONFIG->libraries = array();
-	}
-
-	$CONFIG->libraries[$name] = $location;
-}
-
-/**
- * Load a php library.
- *
- * @param string $name The name of the library
- *
- * @return void
- * @throws InvalidParameterException
- * @since 1.8.0
- */
-function elgg_load_library($name) {
-	global $CONFIG;
-
-	static $loaded_libraries = array();
-
-	if (in_array($name, $loaded_libraries)) {
-		return;
-	}
-
-	if (!isset($CONFIG->libraries)) {
-		$CONFIG->libraries = array();
-	}
-
-	if (!isset($CONFIG->libraries[$name])) {
-		$error = $name . " is not a registered library";
-		throw new InvalidParameterException($error);
-	}
-
-	if (!include_once($CONFIG->libraries[$name])) {
-		$error = "Could not load the " . $name . " library from " . $CONFIG->libraries[$name];
-		throw new InvalidParameterException($error);
-	}
-
-	$loaded_libraries[] = $name;
-}
-
-/**
  * Forward to $location.
  *
  * Sends a 'Location: $location' header and exists.  If headers have
@@ -96,7 +42,7 @@ function forward($location = "", $reason = 'system') {
 			exit;
 		}
 	} else {
-		throw new SecurityException("Redirect could not be issued due to headers already being sent. Halting execution for security. "
+		throw new \SecurityException("Redirect could not be issued due to headers already being sent. Halting execution for security. "
 			. "Output started in file $file at line $line. Search http://docs.elgg.org/ for more information.");
 	}
 }
@@ -146,7 +92,7 @@ function elgg_register_js($name, $url, $location = 'head', $priority = null) {
  * @param array  $config An array like the following:
  *                       array  'deps'    An array of AMD module dependencies
  *                       string 'exports' The name of the exported module
- *                       string 'path'    The URL to the JS. Can be relative.
+ *                       string 'src'     The URL to the JS. Can be relative.
  *
  * @return void
  */
@@ -280,53 +226,7 @@ function elgg_get_loaded_css() {
  * @since 1.8.0
  */
 function elgg_register_external_file($type, $name, $url, $location, $priority = 500) {
-	global $CONFIG;
-
-	if (empty($name) || empty($url)) {
-		return false;
-	}
-
-	$url = elgg_format_url($url);
-	$url = elgg_normalize_url($url);
-	
-	_elgg_bootstrap_externals_data_structure($type);
-
-	$name = trim(strtolower($name));
-
-	// normalize bogus priorities, but allow empty, null, and false to be defaults.
-	if (!is_numeric($priority)) {
-		$priority = 500;
-	}
-
-	// no negative priorities right now.
-	$priority = max((int)$priority, 0);
-
-	$item = elgg_extract($name, $CONFIG->externals_map[$type]);
-
-	if ($item) {
-		// updating a registered item
-		// don't update loaded because it could already be set
-		$item->url = $url;
-		$item->location = $location;
-
-		// if loaded before registered, that means it hasn't been added to the list yet
-		if ($CONFIG->externals[$type]->contains($item)) {
-			$priority = $CONFIG->externals[$type]->move($item, $priority);
-		} else {
-			$priority = $CONFIG->externals[$type]->add($item, $priority);
-		}
-	} else {
-		$item = new stdClass();
-		$item->loaded = false;
-		$item->url = $url;
-		$item->location = $location;
-
-		$priority = $CONFIG->externals[$type]->add($item, $priority);
-	}
-
-	$CONFIG->externals_map[$type][$name] = $item;
-
-	return $priority !== false;
+	return _elgg_services()->externalFiles->register($type, $name, $url, $location, $priority);
 }
 
 /**
@@ -339,19 +239,7 @@ function elgg_register_external_file($type, $name, $url, $location, $priority = 
  * @since 1.8.0
  */
 function elgg_unregister_external_file($type, $name) {
-	global $CONFIG;
-
-	_elgg_bootstrap_externals_data_structure($type);
-
-	$name = trim(strtolower($name));
-	$item = elgg_extract($name, $CONFIG->externals_map[$type]);
-
-	if ($item) {
-		unset($CONFIG->externals_map[$type][$name]);
-		return $CONFIG->externals[$type]->remove($item);
-	}
-
-	return false;
+	return _elgg_services()->externalFiles->unregister($type, $name);
 }
 
 /**
@@ -364,26 +252,7 @@ function elgg_unregister_external_file($type, $name) {
  * @since 1.8.0
  */
 function elgg_load_external_file($type, $name) {
-	global $CONFIG;
-
-	_elgg_bootstrap_externals_data_structure($type);
-
-	$name = trim(strtolower($name));
-
-	$item = elgg_extract($name, $CONFIG->externals_map[$type]);
-
-	if ($item) {
-		// update a registered item
-		$item->loaded = true;
-	} else {
-		$item = new stdClass();
-		$item->loaded = true;
-		$item->url = '';
-		$item->location = '';
-
-		$CONFIG->externals[$type]->add($item);
-		$CONFIG->externals_map[$type][$name] = $item;
-	}
+	return _elgg_services()->externalFiles->load($type, $name);
 }
 
 /**
@@ -396,19 +265,7 @@ function elgg_load_external_file($type, $name) {
  * @since 1.8.0
  */
 function elgg_get_loaded_external_files($type, $location) {
-	global $CONFIG;
-
-	if (isset($CONFIG->externals) && $CONFIG->externals[$type] instanceof ElggPriorityList) {
-		$items = $CONFIG->externals[$type]->getElements();
-
-		$callback = "return \$v->loaded == true && \$v->location == '$location';";
-		$items = array_filter($items, create_function('$v', $callback));
-		if ($items) {
-			array_walk($items, create_function('&$v,$k', '$v = $v->url;'));
-		}
-		return $items;
-	}
-	return array();
+	return _elgg_services()->externalFiles->getLoadedFiles($type, $location);
 }
 
 /**
@@ -418,23 +275,7 @@ function elgg_get_loaded_external_files($type, $location) {
  * @access private
  */
 function _elgg_bootstrap_externals_data_structure($type) {
-	global $CONFIG;
-
-	if (!isset($CONFIG->externals)) {
-		$CONFIG->externals = array();
-	}
-
-	if (!isset($CONFIG->externals[$type]) || !$CONFIG->externals[$type] instanceof ElggPriorityList) {
-		$CONFIG->externals[$type] = new ElggPriorityList();
-	}
-
-	if (!isset($CONFIG->externals_map)) {
-		$CONFIG->externals_map = array();
-	}
-
-	if (!isset($CONFIG->externals_map[$type])) {
-		$CONFIG->externals_map[$type] = array();
-	}
+	_elgg_services()->externalFiles->bootstrap($type);
 }
 
 /**
@@ -759,7 +600,7 @@ function elgg_trigger_before_event($event, $object_type, $object = null) {
  */
 function elgg_trigger_after_event($event, $object_type, $object = null) {
 	$options = array(
-		Elgg_EventsService::OPTION_STOPPABLE => false,
+		\Elgg\EventsService::OPTION_STOPPABLE => false,
 	);
 	return _elgg_services()->events->trigger("$event:after", $object_type, $object, $options);
 }
@@ -779,8 +620,8 @@ function elgg_trigger_after_event($event, $object_type, $object = null) {
  */
 function elgg_trigger_deprecated_event($event, $object_type, $object = null, $message, $version) {
 	$options = array(
-		Elgg_EventsService::OPTION_DEPRECATION_MESSAGE => $message,
-		Elgg_EventsService::OPTION_DEPRECATION_VERSION => $version,
+		\Elgg\EventsService::OPTION_DEPRECATION_MESSAGE => $message,
+		\Elgg\EventsService::OPTION_DEPRECATION_VERSION => $version,
 	);
 	return _elgg_services()->events->trigger($event, $object_type, $object, $options);
 }
@@ -1039,7 +880,7 @@ function _elgg_php_error_handler($errno, $errmsg, $filename, $linenum, $vars) {
 			register_error("ERROR: $error");
 
 			// Since this is a fatal error, we want to stop any further execution but do so gracefully.
-			throw new Exception($error);
+			throw new \Exception($error);
 			break;
 
 		case E_WARNING :
@@ -1183,8 +1024,9 @@ function elgg_deprecated_notice($msg, $dep_version, $backtrace_level = 1) {
 	$elgg_major_version = (int)$elgg_version_arr[0];
 	$elgg_minor_version = (int)$elgg_version_arr[1];
 
-	$dep_major_version = (int)$dep_version;
-	$dep_minor_version = 10 * ($dep_version - $dep_major_version);
+	$dep_version_arr = explode('.', (string)$dep_version);
+	$dep_major_version = (int)$dep_version_arr[0];
+	$dep_minor_version = (int)$dep_version_arr[1];
 
 	$visual = false;
 
@@ -1821,9 +1663,9 @@ function _elgg_sql_reverse_order_by_clause($order_by) {
 /**
  * Enable objects with an enable() method.
  *
- * Used as a callback for ElggBatch.
+ * Used as a callback for \ElggBatch.
  *
- * @todo why aren't these static methods on ElggBatch?
+ * @todo why aren't these static methods on \ElggBatch?
  *
  * @param object $object The object to enable
  * @return bool
@@ -1837,7 +1679,7 @@ function elgg_batch_enable_callback($object) {
 /**
  * Disable objects with a disable() method.
  *
- * Used as a callback for ElggBatch.
+ * Used as a callback for \ElggBatch.
  *
  * @param object $object The object to disable
  * @return bool
@@ -1851,7 +1693,7 @@ function elgg_batch_disable_callback($object) {
 /**
  * Delete objects with a delete() method.
  *
- * Used as a callback for ElggBatch.
+ * Used as a callback for \ElggBatch.
  *
  * @param object $object The object to disable
  * @return bool
@@ -1983,7 +1825,7 @@ function _elgg_walled_garden_init() {
 	elgg_register_page_handler('walled_garden', '_elgg_walled_garden_ajax_handler');
 
 	// check for external page view
-	if (isset($CONFIG->site) && $CONFIG->site instanceof ElggSite) {
+	if (isset($CONFIG->site) && $CONFIG->site instanceof \ElggSite) {
 		$CONFIG->site->checkWalledGarden();
 	}
 }
@@ -2034,7 +1876,7 @@ function _elgg_engine_boot() {
 
 	_elgg_session_boot();
 
-	_elgg_load_cache();
+	_elgg_services()->systemCache->loadAll();
 
 	_elgg_load_translations();
 }
@@ -2107,7 +1949,7 @@ function _elgg_api_test($hook, $type, $value, $params) {
 }
 
 /**#@+
- * Controls access levels on ElggEntity entities, metadata, and annotations.
+ * Controls access levels on \ElggEntity entities, metadata, and annotations.
  *
  * @warning ACCESS_DEFAULT is a place holder for the input/access view. Do not
  * use it when saving an entity.

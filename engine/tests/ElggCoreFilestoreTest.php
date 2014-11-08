@@ -5,13 +5,13 @@
  * @package Elgg
  * @subpackage Test
  */
-class ElggCoreFilestoreTest extends ElggCoreUnitTest {
+class ElggCoreFilestoreTest extends \ElggCoreUnitTest {
 
 	/**
 	 * Called before each test method.
 	 */
 	public function setUp() {
-		$this->filestore = new ElggDiskFilestore();
+		$this->filestore = new \ElggDiskFilestore();
 	}
 
 	/**
@@ -26,10 +26,10 @@ class ElggCoreFilestoreTest extends ElggCoreUnitTest {
 		
 		// create a user to own the file
 		$user = $this->createTestUser();
-		$dir = new Elgg_EntityDirLocator($user->guid);
+		$dir = new \Elgg\EntityDirLocator($user->guid);
 		
 		// setup a test file
-		$file = new ElggFile();
+		$file = new \ElggFile();
 		$file->owner_guid = $user->guid;
 		$file->setFilename('testing/filestore.txt');
 		$file->open('write');
@@ -53,9 +53,9 @@ class ElggCoreFilestoreTest extends ElggCoreUnitTest {
 		
 		$user = $this->createTestUser();
 		$filestore = $this->filestore;
-		$dir = new Elgg_EntityDirLocator($user->guid);
+		$dir = new \Elgg\EntityDirLocator($user->guid);
 		
-		$file = new ElggFile();
+		$file = new \ElggFile();
 		$file->owner_guid = $user->guid;
 		$file->setFilename('testing/ElggFileDelete');
 		$this->assertTrue($file->open('write'));
@@ -73,8 +73,32 @@ class ElggCoreFilestoreTest extends ElggCoreUnitTest {
 		$user->delete();
 	}
 
+	function testElggGetFileSimpletype() {
+
+		$tests = array(
+			'x-world/x-svr' => 'general',
+			'application/msword' => 'document',
+			'application/vnd.openxmlformats-officedocument.wordprocessingml.document' => 'document',
+			'application/vnd.oasis.opendocument.text' => 'document',
+			'application/pdf' => 'document',
+			'application/ogg' => 'audio',
+			'text/css' => 'document',
+			'text/plain' => 'document',
+			'audio/midi' => 'audio',
+			'audio/mpeg' => 'audio',
+			'image/jpeg' => 'image',
+			'image/bmp' => 'image',
+			'video/mpeg' => 'video',
+			'video/quicktime' => 'video',
+		);
+
+		foreach ($tests as $mime_type => $simple_type) {
+			$this->assertEqual($simple_type, elgg_get_file_simple_type($mime_type));
+		}
+	}
+
 	protected function createTestUser($username = 'fileTest') {
-		$user = new ElggUser();
+		$user = new \ElggUser();
 		$user->username = $username;
 		$guid = $user->save();
 		

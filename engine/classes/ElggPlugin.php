@@ -8,7 +8,7 @@
  * @package    Elgg.Core
  * @subpackage Plugins.Settings
  */
-class ElggPlugin extends ElggObject {
+class ElggPlugin extends \ElggObject {
 	private $package;
 	private $manifest;
 
@@ -34,8 +34,8 @@ class ElggPlugin extends ElggObject {
 	 *
 	 * @internal also supports database objects
 	 *
-	 * @warning Unlike other ElggEntity objects, you cannot null instantiate
-	 *          ElggPlugin. You must provide the path to the plugin directory.
+	 * @warning Unlike other \ElggEntity objects, you cannot null instantiate
+	 *          \ElggPlugin. You must provide the path to the plugin directory.
 	 *
 	 * @param string $path The absolute path of the plugin
 	 *
@@ -43,7 +43,7 @@ class ElggPlugin extends ElggObject {
 	 */
 	public function __construct($path) {
 		if (!$path) {
-			throw new PluginException("ElggPlugin cannot be null instantiated. You must pass a full path.");
+			throw new \PluginException("\ElggPlugin cannot be null instantiated. You must pass a full path.");
 		}
 
 		if (is_object($path)) {
@@ -63,7 +63,7 @@ class ElggPlugin extends ElggObject {
 
 			// not a full path, so assume a directory name and use the default path
 			if (strpos($path, $mod_dir) !== 0) {
-				elgg_deprecated_notice("You should pass a full path to ElggPlugin.", 1.9);
+				elgg_deprecated_notice("You should pass a full path to \ElggPlugin.", 1.9);
 				$path = $mod_dir . $path;
 			}
 
@@ -88,7 +88,7 @@ class ElggPlugin extends ElggObject {
 	/**
 	 * Save the plugin object.  Make sure required values exist.
 	 *
-	 * @see ElggObject::save()
+	 * @see \ElggObject::save()
 	 * @return bool
 	 */
 	public function save() {
@@ -373,10 +373,11 @@ class ElggPlugin extends ElggObject {
 	 *
 	 * @param string $name      The setting name
 	 * @param int    $user_guid The user GUID
+	 * @param mixed  $default   The default value to return if none is set
 	 *
-	 * @return mixed The setting string value or false
+	 * @return mixed The setting string value, the default value or false if there is no user
 	 */
-	public function getUserSetting($name, $user_guid = 0) {
+	public function getUserSetting($name, $user_guid = 0, $default = null) {
 		$user_guid = (int)$user_guid;
 
 		if ($user_guid) {
@@ -385,12 +386,14 @@ class ElggPlugin extends ElggObject {
 			$user = elgg_get_logged_in_user_entity();
 		}
 
-		if (!($user instanceof ElggUser)) {
+		if (!($user instanceof \ElggUser)) {
 			return false;
 		}
 
 		$name = _elgg_namespace_plugin_private_setting('user_setting', $name, $this->getID());
-		return get_private_setting($user->guid, $name);
+		
+		$val = get_private_setting($user->guid, $name);
+		return $val !== null ? $val : $default;
 	}
 
 	/**
@@ -410,7 +413,7 @@ class ElggPlugin extends ElggObject {
 			$user = elgg_get_logged_in_user_entity();
 		}
 
-		if (!($user instanceof ElggUser)) {
+		if (!($user instanceof \ElggUser)) {
 			return false;
 		}
 
@@ -458,7 +461,7 @@ class ElggPlugin extends ElggObject {
 			$user = elgg_get_logged_in_user_entity();
 		}
 
-		if (!($user instanceof ElggUser)) {
+		if (!($user instanceof \ElggUser)) {
 			return false;
 		}
 
@@ -494,7 +497,7 @@ class ElggPlugin extends ElggObject {
 			$user = elgg_get_logged_in_user_entity();
 		}
 
-		if (!($user instanceof ElggUser)) {
+		if (!($user instanceof \ElggUser)) {
 			return false;
 		}
 
@@ -552,7 +555,7 @@ class ElggPlugin extends ElggObject {
 	 * Returns if the plugin is complete, meaning has all required files
 	 * and Elgg can read them and they make sense.
 	 *
-	 * @todo bad name? This could be confused with isValid() from ElggPluginPackage.
+	 * @todo bad name? This could be confused with isValid() from \ElggPluginPackage.
 	 *
 	 * @return bool
 	 */
@@ -562,7 +565,7 @@ class ElggPlugin extends ElggObject {
 			return false;
 		}
 
-		if (!$this->getPackage() instanceof ElggPluginPackage) {
+		if (!$this->getPackage() instanceof \ElggPluginPackage) {
 			$this->errorMsg = elgg_echo('ElggPlugin:NoPluginPackagePackage', array($this->getID(), $this->guid));
 			return false;
 		}
@@ -592,7 +595,7 @@ class ElggPlugin extends ElggObject {
 			$site = get_config('site');
 		}
 
-		if (!($site instanceof ElggSite)) {
+		if (!($site instanceof \ElggSite)) {
 			return false;
 		}
 
@@ -746,6 +749,21 @@ class ElggPlugin extends ElggObject {
 	// start helpers
 
 	/**
+	 * Get the config object in a deprecation wrapper
+	 *
+	 * @return \Elgg\DeprecationWrapper
+	 */
+	protected static function getConfigWrapper() {
+		static $wrapper;
+		if (null === $wrapper) {
+			global $CONFIG;
+			$warning = 'Do not rely on local $CONFIG being available in start.php';
+			$wrapper = new \Elgg\DeprecationWrapper($CONFIG, $warning, "1.10");
+		}
+		return $wrapper;
+	}
+
+	/**
 	 * Includes one of the plugins files
 	 *
 	 * @param string $filename The name of the file
@@ -757,7 +775,7 @@ class ElggPlugin extends ElggObject {
 		// This needs to be here to be backwards compatible for 1.0-1.7.
 		// They expect the global config object to be available in start.php.
 		if ($filename == 'start.php') {
-			global $CONFIG;
+			$CONFIG = self::getConfigWrapper();
 		}
 
 		$filepath = "$this->path/$filename";
@@ -765,7 +783,7 @@ class ElggPlugin extends ElggObject {
 		if (!$this->canReadFile($filename)) {
 			$msg = elgg_echo('ElggPlugin:Exception:CannotIncludeFile',
 							array($filename, $this->getID(), $this->guid, $this->path));
-			throw new PluginException($msg);
+			throw new \PluginException($msg);
 		}
 
 		return include $filepath;
@@ -800,7 +818,7 @@ class ElggPlugin extends ElggObject {
 		if (!$handle) {
 			$msg = elgg_echo('ElggPlugin:Exception:CannotRegisterViews',
 							array($this->getID(), $this->guid, $view_dir));
-			throw new PluginException($msg);
+			throw new \PluginException($msg);
 		}
 
 		while (false !== ($view_type = readdir($handle))) {
@@ -812,7 +830,7 @@ class ElggPlugin extends ElggObject {
 				} else {
 					$msg = elgg_echo('ElggPlugin:Exception:CannotRegisterViews',
 									array($this->getID(), $view_type_dir));
-					throw new PluginException($msg);
+					throw new \PluginException($msg);
 				}
 			}
 		}
@@ -838,7 +856,7 @@ class ElggPlugin extends ElggObject {
 		if (!register_translations($languages_path)) {
 			$msg = elgg_echo('ElggPlugin:Exception:CannotRegisterLanguages',
 							array($this->getID(), $this->guid, $languages_path));
-			throw new PluginException($msg);
+			throw new \PluginException($msg);
 		}
 
 		return true;
@@ -869,7 +887,7 @@ class ElggPlugin extends ElggObject {
 	public function __get($name) {
 		// rewrite for old and inaccurate plugin:setting
 		if (strstr($name, 'plugin:setting:')) {
-			$msg = 'Direct access of user settings is deprecated. Use ElggPlugin->getUserSetting()';
+			$msg = 'Direct access of user settings is deprecated. Use \ElggPlugin->getUserSetting()';
 			elgg_deprecated_notice($msg, 1.8);
 			$name = str_replace('plugin:setting:', '', $name);
 			$name = _elgg_namespace_plugin_private_setting('user_setting', $name, $this->getID());
@@ -967,7 +985,7 @@ class ElggPlugin extends ElggObject {
 		if ($site_guid) {
 			$site = get_entity($site_guid);
 
-			if (!($site instanceof ElggSite)) {
+			if (!($site instanceof \ElggSite)) {
 				return false;
 			}
 		} else {
@@ -995,12 +1013,12 @@ class ElggPlugin extends ElggObject {
 	}
 
 	/**
-	 * Returns this plugin's ElggPluginManifest object
+	 * Returns this plugin's \ElggPluginManifest object
 	 *
-	 * @return ElggPluginManifest
+	 * @return \ElggPluginManifest
 	 */
 	public function getManifest() {
-		if ($this->manifest instanceof ElggPluginManifest) {
+		if ($this->manifest instanceof \ElggPluginManifest) {
 			return $this->manifest;
 		}
 
@@ -1015,17 +1033,17 @@ class ElggPlugin extends ElggObject {
 	}
 
 	/**
-	 * Returns this plugin's ElggPluginPackage object
+	 * Returns this plugin's \ElggPluginPackage object
 	 *
-	 * @return ElggPluginPackage
+	 * @return \ElggPluginPackage
 	 */
 	public function getPackage() {
-		if ($this->package instanceof ElggPluginPackage) {
+		if ($this->package instanceof \ElggPluginPackage) {
 			return $this->package;
 		}
 
 		try {
-			$this->package = new ElggPluginPackage($this->path, false);
+			$this->package = new \ElggPluginPackage($this->path, false);
 		} catch (Exception $e) {
 			elgg_log("Failed to load package for $this->guid. " . $e->getMessage(), 'WARNING');
 			$this->errorMsg = $e->getmessage();

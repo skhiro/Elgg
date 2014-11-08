@@ -46,7 +46,7 @@ function elgg_get_metastring_id($string, $case_sensitive = true) {
 		$msfc = null;
 		static $metastrings_memcache;
 		if ((!$metastrings_memcache) && (is_memcache_available())) {
-			$metastrings_memcache = new ElggMemcache('metastrings_memcache');
+			$metastrings_memcache = new \ElggMemcache('metastrings_memcache');
 		}
 		if ($metastrings_memcache) {
 			$msfc = $metastrings_memcache->load($string);
@@ -108,52 +108,7 @@ function _elgg_add_metastring($string) {
 }
 
 /**
- * Delete any orphaned entries in metastrings. This is run by the garbage collector.
- *
- * @return bool
- * @access private
- */
-function _elgg_delete_orphaned_metastrings() {
-	global $CONFIG;
-
-	// If memcache is enabled then we need to flush it of deleted values
-	if (is_memcache_available()) {
-		$select_query = "
-		SELECT * FROM {$CONFIG->dbprefix}metastrings WHERE
-		(
-			(id NOT IN (SELECT name_id FROM {$CONFIG->dbprefix}metadata)) AND
-			(id NOT IN (SELECT value_id FROM {$CONFIG->dbprefix}metadata)) AND
-			(id NOT IN (SELECT name_id FROM {$CONFIG->dbprefix}annotations)) AND
-			(id NOT IN (SELECT value_id FROM {$CONFIG->dbprefix}annotations))
-		)";
-
-		$dead = get_data($select_query);
-		if ($dead) {
-			static $metastrings_memcache;
-			if (!$metastrings_memcache) {
-				$metastrings_memcache = new ElggMemcache('metastrings_memcache');
-			}
-
-			foreach ($dead as $d) {
-				$metastrings_memcache->delete($d->string);
-			}
-		}
-	}
-
-	$query = "
-		DELETE FROM {$CONFIG->dbprefix}metastrings WHERE
-		(
-			(id NOT IN (SELECT name_id FROM {$CONFIG->dbprefix}metadata)) AND
-			(id NOT IN (SELECT value_id FROM {$CONFIG->dbprefix}metadata)) AND
-			(id NOT IN (SELECT name_id FROM {$CONFIG->dbprefix}annotations)) AND
-			(id NOT IN (SELECT value_id FROM {$CONFIG->dbprefix}annotations))
-		)";
-
-	return delete_data($query);
-}
-
-/**
- * Returns an array of either ElggAnnotation or ElggMetadata objects.
+ * Returns an array of either \ElggAnnotation or \ElggMetadata objects.
  * Accepts all elgg_get_entities() options for entity restraints.
  *
  * @see elgg_get_entities
@@ -179,7 +134,7 @@ function _elgg_delete_orphaned_metastrings() {
  *                                            This differs from egef_annotation_calculation in that
  *                                            it returns only the calculation of all annotation values.
  *                                            You can sum, avg, count, etc. egef_annotation_calculation()
- *                                            returns ElggEntities ordered by a calculation on their
+ *                                            returns \ElggEntities ordered by a calculation on their
  *                                            annotation values.
  *
  *  metastring_type               => STR      metadata or annotation(s)
@@ -248,6 +203,7 @@ function _elgg_get_metastring_based_objects($options) {
 		'wheres' => array(),
 		'joins' => array(),
 
+		'preload_owners' => false,
 		'callback' => $callback,
 	);
 
@@ -432,6 +388,11 @@ function _elgg_get_metastring_based_objects($options) {
 		}
 
 		$dt = get_data($query, $options['callback']);
+
+		if ($options['preload_owners'] && is_array($dt) && count($dt) > 1) {
+			_elgg_services()->ownerPreloader->preload($dt);
+		}
+
 		return $dt;
 	} else {
 		$result = get_data_row($query);
@@ -674,7 +635,7 @@ function _elgg_batch_metastring_based_objects(array $options, $callback, $inc_of
 		return false;
 	}
 
-	$batch = new ElggBatch('_elgg_get_metastring_based_objects', $options, $callback, 50, $inc_offset);
+	$batch = new \ElggBatch('_elgg_get_metastring_based_objects', $options, $callback, 50, $inc_offset);
 	return $batch->callbackResult;
 }
 
@@ -683,7 +644,7 @@ function _elgg_batch_metastring_based_objects(array $options, $callback, $inc_of
  *
  * @param int    $id   The metastring-based object's ID
  * @param string $type The type: annotation or metadata
- * @return ElggExtender
+ * @return \ElggExtender
  * @access private
  */
 function _elgg_get_metastring_based_object_from_id($id, $type) {
@@ -742,7 +703,7 @@ function _elgg_delete_metastring_based_object_by_id($id, $type) {
 		if ($type == 'metadata') {
 			static $metabyname_memcache;
 			if ((!$metabyname_memcache) && (is_memcache_available())) {
-				$metabyname_memcache = new ElggMemcache('metabyname_memcache');
+				$metabyname_memcache = new \ElggMemcache('metabyname_memcache');
 			}
 
 			if ($metabyname_memcache) {

@@ -5,7 +5,7 @@
  *
  * Convert comment annotations to entities.
  *
- * Register comment subtype and add ElggUpgrade for ajax upgrade.
+ * Register comment subtype and add \ElggUpgrade for ajax upgrade.
  * 
  * We do not migrate comments in this upgrade. See the comment
  * upgrade action in actions/admin/upgrades/upgrade_comments.php for that.
@@ -22,7 +22,7 @@ $access_status = access_get_show_hidden_status();
 access_show_hidden_entities(true);
 $ia = elgg_set_ignore_access(true);
 
-// add ElggUpgrade object if need to migrate comments
+// add \ElggUpgrade object if need to migrate comments
 $options = array(
 	'annotation_names' => 'generic_comment',
 	'order_by' => 'n_table.id DESC',
@@ -30,12 +30,12 @@ $options = array(
 );
 
 if (elgg_get_annotations($options)) {
-	$url = "admin/upgrades/comments";
-	$upgrade = new ElggUpgrade();
+	$path = "admin/upgrades/comments";
+	$upgrade = new \ElggUpgrade();
 
 	// Create the upgrade if one with the same URL doesn't already exist
-	if (!$upgrade->getUpgradeFromURL($url)) {
-		$upgrade->setURL($url);
+	if (!$upgrade->getUpgradeFromPath($path)) {
+		$upgrade->setPath($path);
 		$upgrade->title = 'Comments Upgrade';
 		$upgrade->description = 'Comments have been improved in Elgg 1.9 and require a migration. Run this upgrade to complete the migration.';
 		$upgrade->save();

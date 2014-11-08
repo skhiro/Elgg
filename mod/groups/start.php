@@ -122,13 +122,13 @@ function groups_init() {
  */
 function discussion_notification_email_subject($hook, $type, $returnvalue, $params){
 
-	/** @var Elgg_Notifications_Notification */
+	/** @var Elgg\Notifications\Notification */
 	$notification = elgg_extract('notification', $returnvalue['params']);
 
-	if ($notification instanceof Elgg_Notifications_Notification) {
+	if ($notification instanceof Elgg\Notifications\Notification) {
 
 		$object = elgg_extract('object', $notification->params);
-		/** @var Elgg_Notifications_Event $event */
+		/** @var Elgg\Notifications\Event $event */
 		$event = elgg_extract('event', $notification->params);
 
 		if ($object instanceof ElggEntity) {
@@ -497,9 +497,10 @@ function groups_user_entity_menu_setup($hook, $type, $return, $params) {
 
 		// Add remove link if we can edit the group, and if we're not trying to remove the group owner
 		if ($group->canEdit() && $group->getOwnerGUID() != $entity->guid) {
-			$remove = elgg_view('output/confirmlink', array(
+			$remove = elgg_view('output/url', array(
 				'href' => "action/groups/remove?user_guid={$entity->guid}&group_guid={$group->guid}",
 				'text' => elgg_echo('groups:removeuser'),
+				'confirm' => true,
 			));
 
 			$options = array(
@@ -536,9 +537,9 @@ function groups_annotation_menu_setup($hook, $type, $return, $params) {
 		$options = array(
 			'name' => 'delete',
 			'href' => $url,
-			'text' => "<span class=\"elgg-icon elgg-icon-delete\"></span>",
+			'text' => elgg_view_icon('delete'),
 			'confirm' => elgg_echo('deleteconfirm'),
-			'encode_text' => false
+			'encode_text' => false,
 		);
 		$return[] = ElggMenuItem::factory($options);
 
@@ -1032,9 +1033,9 @@ function discussion_add_to_river_menu($hook, $type, $return, $params) {
  *
  * @param string                          $hook         Hook name
  * @param string                          $type         Hook type
- * @param Elgg_Notifications_Notification $notification The notification to prepare
+ * @param Elgg\Notifications\Notification $notification The notification to prepare
  * @param array                           $params       Hook parameters
- * @return Elgg_Notifications_Notification
+ * @return Elgg\Notifications\Notification
  */
 function discussion_prepare_notification($hook, $type, $notification, $params) {
 	$entity = $params['event']->getObject();
@@ -1065,9 +1066,9 @@ function discussion_prepare_notification($hook, $type, $notification, $params) {
  *
  * @param string                          $hook         Hook name
  * @param string                          $type         Hook type
- * @param Elgg_Notifications_Notification $notification The notification to prepare
+ * @param Elgg\Notifications\Notification $notification The notification to prepare
  * @param array                           $params       Hook parameters
- * @return Elgg_Notifications_Notification
+ * @return Elgg\Notifications\Notification
  */
 function discussion_prepare_reply_notification($hook, $type, $notification, $params) {
 	$reply = $params['event']->getObject();

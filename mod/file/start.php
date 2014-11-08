@@ -184,12 +184,12 @@ function file_register_toggle() {
 
 /**
  * Prepare a notification message about a new file
- * 
+ *
  * @param string                          $hook         Hook name
  * @param string                          $type         Hook type
- * @param Elgg_Notifications_Notification $notification The notification to prepare
+ * @param Elgg\Notifications\Notification $notification The notification to prepare
  * @param array                           $params       Hook parameters
- * @return Elgg_Notifications_Notification
+ * @return Elgg\Notifications\Notification
  */
 function file_prepare_notification($hook, $type, $notification, $params) {
 	$entity = $params['event']->getObject();
@@ -201,7 +201,7 @@ function file_prepare_notification($hook, $type, $notification, $params) {
 	$descr = $entity->description;
 	$title = $entity->title;
 
-	$notification->subject = elgg_echo('file:notify:subject', array($entity->title), $language); 
+	$notification->subject = elgg_echo('file:notify:subject', array($entity->title), $language);
 	$notification->body = elgg_echo('file:notify:body', array(
 		$owner->name,
 		$title,
@@ -230,54 +230,6 @@ function file_owner_block_menu($hook, $type, $return, $params) {
 	}
 
 	return $return;
-}
-
-/**
- * Returns an overall file type from the mimetype
- *
- * @param string $mimetype The MIME type
- * @return string The overall type
- */
-function file_get_simple_type($mimetype) {
-
-	$simple_type = null;
-
-	switch ($mimetype) {
-		case "application/msword":
-		case "application/vnd.openxmlformats-officedocument.wordprocessingml.document":
-			$simple_type = "document";
-			break;
-		case "application/pdf":
-			$simple_type = "document";
-			break;
-		case "application/ogg":
-			$simple_type = "audio";
-			break;
-		default:
-			if (substr_count($mimetype, 'text/')) {
-				$simple_type = "document";
-			} elseif (substr_count($mimetype, 'audio/')) {
-				$simple_type = "audio";
-			} elseif (substr_count($mimetype, 'image/')) {
-				$simple_type = "image";
-			} elseif (substr_count($mimetype, 'video/')) {
-				$simple_type = "video";
-			} elseif (substr_count($mimetype, 'opendocument')) {
-				$simple_type = "document";
-			} else {
-				$simple_type = "general";
-			}
-			break;
-	}
-
-	$params = array('mime_type' => $mimetype);
-	return elgg_trigger_plugin_hook('simple_type', 'file', $params, $simple_type);
-}
-
-// deprecated and will be removed
-function get_general_file_type($mimetype) {
-	elgg_deprecated_notice('Use file_get_simple_type() instead of get_general_file_type()', 1.8);
-	return file_get_simple_type($mimetype);
 }
 
 /**
@@ -415,7 +367,7 @@ function file_set_icon_url($hook, $type, $url, $params) {
 		} else {
 			$ext = '';
 		}
-		
+
 		$url = "mod/file/graphics/icons/{$type}{$ext}.gif";
 		$url = elgg_trigger_plugin_hook('file:icon:url', 'override', $params, $url);
 		return $url;

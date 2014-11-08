@@ -24,6 +24,7 @@ function site_notifications_init() {
 
 	$actions_base = elgg_get_plugins_path() . 'site_notifications/actions/site_notifications';
 	elgg_register_action('site_notifications/delete', "$actions_base/delete.php");
+	elgg_register_action('site_notifications/process', "$actions_base/process.php");
 }
 
 /**
@@ -80,7 +81,7 @@ function site_notifications_set_topbar() {
  * @param array  $params Hook parameters
  */
 function site_notifications_send($hook, $type, $result, $params) {
-	/* @var Elgg_Notifications_Notification */
+	/* @var Elgg\Notifications\Notification */
 	$notification = $params['notification'];
 	if ($notification->summary) {
 		$message = $notification->summary;

@@ -14,7 +14,7 @@ $batch_run_time_in_secs = 2;
 if (get_input('upgrade_completed')) {
 	// set the upgrade as completed
 	$factory = new ElggUpgrade();
-	$upgrade = $factory->getUpgradeFromURL('/admin/upgrades/comments');
+	$upgrade = $factory->getUpgradeFromPath('admin/upgrades/comments');
 	if ($upgrade instanceof ElggUpgrade) {
 		$upgrade->setCompleted();
 	}
@@ -33,8 +33,8 @@ access_show_hidden_entities(true);
 // don't want any event or plugin hook handlers from plugins to run
 $original_events = _elgg_services()->events;
 $original_hooks = _elgg_services()->hooks;
-_elgg_services()->events = new Elgg_EventsService();
-_elgg_services()->hooks = new Elgg_PluginHooksService();
+_elgg_services()->events = new Elgg\EventsService();
+_elgg_services()->hooks = new Elgg\PluginHooksService();
 elgg_register_plugin_hook_handler('permissions_check', 'all', 'elgg_override_permissions');
 elgg_register_plugin_hook_handler('container_permissions_check', 'all', 'elgg_override_permissions');
 

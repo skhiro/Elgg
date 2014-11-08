@@ -9,12 +9,12 @@ $access_status = access_get_show_hidden_status();
 access_show_hidden_entities(true);
 
 $factory = new ElggUpgrade();
-$upgrade = $factory->getUpgradeFromURL('/admin/upgrades/datadirs');
+$upgrade = $factory->getUpgradeFromPath('admin/upgrades/datadirs');
 
 if ($upgrade->isCompleted()) {
 	$count = 0;
 } else {
-	$helper = new Elgg_Upgrades_Helper2013022000(
+	$helper = new Elgg\Upgrades\Helper2013022000(
 		elgg_get_site_entity()->guid,
 		elgg_get_config('dbprefix')
 	);

@@ -18,11 +18,10 @@ Pull requests
 Pull requests (PRs) are the best way to get code contributed to Elgg core.
 The core development team uses them even for the most trivial changes.
 
-For new features, `submit a feature request`_ or `talk to us`_ first and make
+For new features, `submit a feature request <issues.html>`__ or `talk to us`_ first and make
 sure the core team approves of your direction before spending lots of time on code.
 
 .. _talk to us: http://community.elgg.org/groups/profile/211069/feedback-and-planning
-.. _submit a feature request: :doc:`/contribute/issues`
 
 
 Checklists
@@ -377,9 +376,6 @@ Naming
   
 * All other function names must begin with ``_elgg_``.
 
-* The names of all classes and interfaces must use underscores as namespace
-  separators and be within the Elgg namespace. (``Elgg_Cache_LRUCache``)
-
 * Name globals and constants in ``ALL_CAPS`` (``ACCESS_FRIENDS``, ``$CONFIG``).
 
 Miscellaneous
@@ -533,7 +529,7 @@ Javascript guidelines
 
 Same formatting standards as PHP apply.
 
-All functions should be in the elgg namespace.
+All functions should be in the ``elgg`` namespace.
 
 Function expressions should end with a semi-colon.
 

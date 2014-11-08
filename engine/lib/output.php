@@ -107,6 +107,27 @@ function elgg_format_url($url) {
 }
 
 /**
+ * Format bytes to a human readable format
+ *
+ * @param int $size      File size in bytes to format
+ *
+ * @param int $precision Precision to round formatting bytes to
+ *
+ * @return string
+ * @since 1.9.0
+ */
+function elgg_format_bytes($size, $precision = 2) {
+	if (!$size || $size < 0) {
+		return false;
+	}
+
+	$base = log($size) / log(1024);
+	$suffixes = array('B', 'kB', 'MB', 'GB', 'TB');   
+
+	return round(pow(1024, $base - floor($base)), $precision) . ' ' . $suffixes[floor($base)];
+}
+
+/**
  * Converts an associative array into a string of well-formed attributes
  *
  * @note usually for HTML, but could be useful for XML too...
@@ -144,7 +165,7 @@ function elgg_format_attributes(array $attrs = array()) {
 		 * Ignore non-array values and allow attribute values to be an array
 		 *  <code>
 		 *  $attrs = array(
-		 *		'entity' => <ElggObject>, // will be ignored
+		 *		'entity' => <\ElggObject>, // will be ignored
 		 * 		'class' => array('elgg-input', 'elgg-input-text'), // will be imploded with spaces
 		 * 		'style' => array('margin-left:10px;', 'color: #666;'), // will be imploded with spaces
 		 *		'alt' => 'Alt text', // will be left as is
@@ -193,7 +214,7 @@ function elgg_format_attributes(array $attrs = array()) {
  */
 function elgg_format_element($tag_name, array $attributes = array(), $text = '', array $options = array()) {
 	if (!is_string($tag_name)) {
-		throw new InvalidArgumentException('$tag_name is required');
+		throw new \InvalidArgumentException('$tag_name is required');
 	}
 
 	if (isset($options['is_void'])) {
@@ -324,7 +345,7 @@ function elgg_normalize_url($url) {
 		// 'install.php', 'install.php?step=step'
 		return elgg_get_site_url() . $url;
 
-	} elseif (preg_match("#^[^/]*\.#i", $url)) {
+	} elseif (preg_match("#^[^/?]*\.#i", $url)) {
 		// 'example.com', 'example.com/subpage'
 		return "http://$url";
 
@@ -357,7 +378,7 @@ function elgg_get_friendly_title($title) {
 	// titles are often stored HTML encoded
 	$title = html_entity_decode($title, ENT_QUOTES, 'UTF-8');
 	
-	$title = Elgg_Translit::urlize($title);
+	$title = \Elgg\Translit::urlize($title);
 
 	return $title;
 }
