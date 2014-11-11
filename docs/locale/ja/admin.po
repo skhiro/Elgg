@@ -1,58 +1,283 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2013, Various
 # This file is distributed under the same license as the Elgg package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+# Translators:
+# SAKAGUCHI, Hirotaka, 2014
 msgid ""
 msgstr ""
-"Project-Id-Version: Elgg Core\n"
+"Project-Id-Version: Elgg 1.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-10 19:59-0700\n"
-"PO-Revision-Date: 2014-07-19 18:32+0900\n"
-"Last-Translator: SAKAGUCHI, Hirotaka <kemo@sun.interq.or.jp>\n"
-"Language-Team: Japanese (Japan) (http://www.transifex.com/projects/p/elgg-"
-"core/language/ja_JP/)\n"
+"POT-Creation-Date: 2014-09-21 23:12+0300\n"
+"PO-Revision-Date: 2014-11-11 20:27+0900\n"
+"Last-Translator: SAKAGUCHI, Hirotaka <kemo@saka-hv.org>\n"
+"Language-Team: Japanese (http://www.transifex.com/projects/p/elgg-core/"
+"language/ja/)\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.6\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"Language: ja_JP\n"
+"X-Generator: Poedit 1.6.10\n"
 
-# 83c71df7dbf6478ca05709848f6fb078
+# 1e46a5df58d84552b00e5f56d00026ef
+#: ../../admin/cron.rst:2
+msgid "Cron"
+msgstr "Cron"
+
+# 28477ccec6ab431cad4053971d1700bc
+#: ../../admin/cron.rst:4
+msgid ""
+"`Cron`__ is a program available on Unix-based operating systems that enables "
+"users to run commands and scripts at set intervals or at specific times."
+msgstr ""
+"`Cron`__ はUnixベースのオペレーティングシステムで利用できるプログラムの一つ"
+"で、それを使うとユーザが指定した期間毎や時間にコマンドやスクリプトを実行する"
+"ことができるようになります。"
+
+# c9ddb8cbb50f4798a54840084840b043
+#: ../../admin/cron.rst:9
+msgid ""
+"Elgg's cron handler allows administrators and plugin developers to setup "
+"jobs that need to be executed at set intervals."
+msgstr ""
+"Elggのcronハンドラを使うと、管理者やプラグイン開発者が一定の間隔で実行しなけ"
+"ればならないようなジョブをセットアップできるようになります。"
+
+# 7c36bc946aef49c1bbdb10a2f1a9dfd0
+#: ../../admin/cron.rst:12
+msgid "Most common examples of cron jobs in Elgg include:"
+msgstr "Elggでのよくあるcronジョブの例として："
+
+# 3b51e78d27f643218227cf417d2caef6
+#: ../../admin/cron.rst:14
+msgid "sending out queued notifications"
+msgstr "たまった通知を送信する"
+
+# 393c2f22320642f282e5206ba05a8647
+#: ../../admin/cron.rst:15
+msgid "rotating the system log in the database"
+msgstr "データベース内のシステムログをローテーションする"
+
+# 976e9316f16448a5871dabd15f706e3b
+#: ../../admin/cron.rst:16
+msgid ""
+"collecting garbage in the database (compacting the database by removing "
+"entries that are no longer required)"
+msgstr ""
+"データベース内のゴミを集める(もはやいらなくなったエンティティーを削除してデー"
+"タベースをコンパクトにする)"
+
+# 985c9879b666442abfe03a15ebadad5b
+#: ../../admin/cron.rst:19
+msgid "Currently, Elgg supports the following hooks:"
+msgstr "現在、Elggは次のようなフックをサポートしています。"
+
+# 5419ceca8745452b82161cf11a3f4b87
+#: ../../admin/cron.rst:21
+msgid "``minute`` - Run every minute"
+msgstr "``minute`` - １分ごとに実行"
+
+# 9be95832d3ab4ef5a630c61e2fc27db1
+#: ../../admin/cron.rst:22
+msgid "``fiveminute`` - Run every 5 minutes"
+msgstr "``fiveminute`` - ５分毎に実行"
+
+# fe78cb0823c14a2a83f40fd57c70cad7
+#: ../../admin/cron.rst:23
+msgid "``fifteenmin`` - Run every 15 minutes"
+msgstr "``fifteenmin`` - １５分毎に実行"
+
+# ad1be834f82744d783f1fa8552617ac3
+#: ../../admin/cron.rst:24
+msgid "``halfhour`` - Run every 30 minutes"
+msgstr "``halfhour`` - ３０分毎に実行"
+
+# 77cf8955fe924f3c9e455dc59f9c54fe
+#: ../../admin/cron.rst:25
+msgid "``hourly`` - Run every hour"
+msgstr "``hourly`` - １時間毎に実行"
+
+# 98f08f24a0774f50b4a8bcd5aae1cd50
+#: ../../admin/cron.rst:26
+msgid "``daily`` - Run every day"
+msgstr "``daily`` - １日毎に実行"
+
+# b38e4c8d0d6a46ee8d864cf40a19dba4
+#: ../../admin/cron.rst:27
+msgid "``weekly`` - Run every week"
+msgstr "``weekly`` - １週ごとに実行"
+
+# 59177aff471844169a1ec3d5a455570a
+#: ../../admin/cron.rst:28
+msgid "``monthly`` - Run every month"
+msgstr "``monthly`` - ひと月毎に実行"
+
+# 10f0da4dab2249fb91dcdca360aa7227
+#: ../../admin/cron.rst:29
+msgid "``yearly`` - Run every year"
+msgstr "``yearly`` - １年毎に実行"
+
+# 421d0e4bed684949b8bb5e2f7a78cb30
+#: ../../admin/cron.rst:33
+msgid "``reboot`` cron hook has been deprecated and should not be used"
+msgstr ""
+"``reboot`` cron フックは今後削除予定となる機能なので、使用しないようにしま"
+"しょう。"
+
+# 844d073529e24b4aaff5ac52a7f7947a
+#: ../../admin/cron.rst:37
+msgid "How does it work?"
+msgstr "どのような仕組みで動くのでしょうか？"
+
+# 31f1b9d2623346dca09d8868be4fdc14
+#: ../../admin/cron.rst:39
+msgid ""
+"Elgg activates its cron handler when particular cron pages are loaded. As an "
+"example, loading http://example.com/cron/hourly/ in a web browser activates "
+"the hourly hook. To automate this, cron jobs are setup to hit those pages at "
+"certain times. This is done by setting up a ``crontab`` which is a "
+"configuration file that determines what cron jobs do and at what interval."
+msgstr ""
+"Elggはある特定のcronページがロードされた時にcronハンドラを起動します。一例を"
+"あげますと、webブラウザで http://example.com/cron/hourly/  をロードすると、"
+"hourly フックが起動されます。これを自動化するために、cronジョブはある決まった"
+"時間にこれらのページにアクセするように設定されます。具体的には ``crontab`` "
+"(cron ジョブがいつ何をするかを記述した設定ファイル)を設定します。"
+
+# b2650ae3b7c040c5a97beca332efb85b
+# 6fbae717d012450c8c4c6f68e11d8d32
+#: ../../admin/cron.rst:47 ../../admin/plugins.rst:46
+msgid "Installation"
+msgstr "インストールする"
+
+# e384324594da4839a04d3695f9959e07
+#: ../../admin/cron.rst:49
+msgid ""
+"The ``crontab`` needs to specify a script or command that will hit the Elgg "
+"cron pages. Two commonly available programs for this are `GET`__ and "
+"`wget`__. You will need to determine the location of one of these on your "
+"server. Your crontab also needs to specify the location of your website."
+msgstr ""
+"Elgg cron ページがうまくアクセスされるように  ``crontab`` にスクリプトやコマ"
+"ンドを書きましょう。 `GET`__ と `wget`__ の２つのコマンドがよく使われます。 "
+"あなたのサーバでこれらのコマンドのうちとちらかで良いのでそれがどこにあるのか"
+"をチェックしておいてください。また、 crontab にあなたのウェブサイトの場所を書"
+"かなくてはいけませんので用意しておいてください。"
+
+# 5ddc0a23766e4e91b6387b0f45c74776
+#: ../../admin/cron.rst:56
+msgid ""
+"In the above example, change the ``ELGG`` and ``GET`` variables to match you "
+"server setup. If you have SSH access to your Linux servers, type ``crontab -"
+"e`` and add your crontab configuration. If you already have a crontab "
+"configured, you will have to merge Elgg information into it. If you don't "
+"have SSH access, you will have to use a web-based configuration tool. This "
+"will vary depending on hosting provider."
+msgstr ""
+"上の例では、 ``ELGG`` と ``GET`` 変数をあなたのサーバの設定に置き換えてくださ"
+"い。 もし、あなたのLinuxサーバにSSHアクセスができるのなら、 ``crontab -e`` と"
+"タイプして crontab の設定を構築してください。もしすでに crontab の設定が終"
+"わっているのであれば、次に Elgg の情報を書き込みましょう。 もし、SSHアクセス"
+"ができなくても、webベースの設定構築ツールを使用してください。 こういったツー"
+"ルはホスティングプロバイダで用意されていると思いますが使い方などはプロバイダ"
+"によって違うでしょう。"
+
+# 6bad0052055541f3bb3183cd43b40d49
+#: ../../admin/cron.rst:62
+msgid ""
+"If you choose the ``wget`` utility, you might want to consider these flags:"
+msgstr ""
+"もし、 ``wget`` ユーティリティを使用するのでしたら、次のことに注意してくださ"
+"い。"
+
+# b349c901642b43fb98d5c83147f6b23f
+#: ../../admin/cron.rst:64
+msgid ""
+"``--output-document`` or ``-O`` to specify the location of the concatenated "
+"output file. For example, under Debian: ``/usr/bin/wget --output-document=/"
+"dev/null``. If you don't do that, a new file will be created for each cron "
+"page load in the home directory of the cron user."
+msgstr ""
+"``--output-document`` もしくは ``-O`` オプションには連結された出力ファイルを"
+"どこに出力するのかを書いてください。 例えば、Debianでは ``/usr/bin/wget --"
+"output-document=/dev/null`` です。 これをしないと、 cron ページがロードされる"
+"たびに cron ユーザのホームディレクトリにファイルが１つづつ増えていくでしょ"
+"う。"
+
+# 78264fd6766e41378007d488a5e0e93c
+#: ../../admin/cron.rst:67
+msgid "``--spider`` to prevent the cron page from being downloaded."
+msgstr ""
+"``--spider`` オプションは cron ページがダウンロードされるのを防ぎます。"
+
+# 348c19d82c314543bee52abead97ff1c
+#: ../../admin/cron.rst:70
+msgid "On Windows servers, there is a number of cron emulators available."
+msgstr ""
+"Windowsサーバには、たくさんの cron エミュレータがありますのでそれを使用して下"
+"さい。"
+
+# 55d9a1da27f8403c935cea7ddd9b2404
+#: ../../admin/cron.rst:72
+msgid ""
+"For information on setting up cron jobs using cPanel see `cPanel Docs`__."
+msgstr ""
+"cPanel を使用した cron ジョブについての情報は、 `cPanel Docs`__ を参考にして"
+"ください。"
+
+# 2f6700151b674aa1a8c22bc3ca670cc5
+#: ../../admin/cron.rst:74
+msgid ""
+"In the ``command`` field, enter the appropriate link of the cron page. For "
+"example, for a weekly cron job, enter the command as http://www.example.com/"
+"cron/weekly/."
+msgstr ""
+"``command`` 項目には、適切な cron ページヘのリンクを入力してください。 例え"
+"ば、weekly cron ジョブの場合は、command として http://www.example.com/cron/"
+"weekly/ を入力してください。"
+
+# 2ad40a290774403083cb60b216943058
+#: ../../admin/cron.rst:77
+msgid ""
+"To see if your cron jobs are running, visit Statistics > Cron in your Elgg "
+"admin panel."
+msgstr ""
+"あなたの cron ジョブが動いているかどうかは、Elggの管理業務パネルの "
+"Statistics > Cron (統計情報 > Cron ) をご覧ください。"
+
+# 45caefc22b5144548b11e68338eb3e62
 #: ../../admin/index.rst:2
 msgid "Administrator Guides"
-msgstr "管理者ガイド"
+msgstr "管理者のためのガイド"
 
-# f98278af603a420db8b15856d222766d
+# 95f5c3f31a134a9492752a8d9c5570cd
 #: ../../admin/index.rst:4
-#, fuzzy
 msgid "Best practices for effectively managing an Elgg-based site."
-msgstr "Elggをベースとしたサイトを効果的に管理をするためのもっともよい練習"
+msgstr "Elggベースのサイトを効率的に運営管理するためのノウハウ"
 
-# 3a9be14f7b6d4f38916347d6ebb31ad7
+# d7a11b0d84c64da994e21ca5f0c230d1
 #: ../../admin/performance.rst:2
 msgid "Performance"
-msgstr "パフォーマンス"
+msgstr "効率化"
 
-# e67579e609f9418a96e93cc5ca84e7d8
+# 409ff59a9bfe4403894b243287137261
 #: ../../admin/performance.rst:4
 msgid "Make your site run as smoothly and responsively as possible."
-msgstr "できる限り円滑にかつ俊敏にあなたのサイトを運営しましょう。"
+msgstr "あなたのサイトを如何にスムースにそしてキビキビとさせるか。"
 
-# c7a482daad494cf3ae3ca3be774cdbb1
+# 557a13bab5e348d5b1e89d0d3467932d
 #: ../../admin/performance.rst:8
 msgid "Can Elgg scale to X million users?"
-msgstr "Elggは数百万のユーザに耐えられるか？"
+msgstr ""
 
-# 3c8d22ec39cd486f888763c397ec3045
+# 4b60de71a75a4c48bac66c54807786a9
 #: ../../admin/performance.rst:10
 msgid "People often ask whether Elgg can scale to large installations."
-msgstr "Elggは大規模な導入に耐えられるのかという問いをしばしばいただきます。"
+msgstr ""
 
-# 9cde434ec61042b98daddf368b23c1d2
+# 9faf9eef2d1546979f0115f28a5414e1
 #: ../../admin/performance.rst:12
-#, fuzzy
 msgid ""
 "First, we might stop and ask, \"where are you planning to get all those "
 "users?\" Seriously, though, this is a really interesting problem. Making "
@@ -61,96 +286,79 @@ msgid ""
 "differently for Elgg than for Google, for example. Getting millions of "
 "users? That's like the Holy Grail of the entire tech industry."
 msgstr ""
-"第一に、「どこでそんなに多くのユーザを獲得するつもりなのでしょうか？」と問い"
-"なおしたいですが、これは本当に興味深い問題でもあります。このような問題は、ど"
-"ちらかといえば技術的なものです。興味はありますが多かれ少なかれ問題とはなりま"
-"せん。コンピュータサイエンスはElggの場合も、たとえば、Googleの場合も同じよう"
-"に作用します。数百万のユーザを獲得？技術産業界のツチノコのようですね。（訳"
-"注：原文では「the Holy Grail」聖杯と訳される。キリスト教の伝説にしばしば登場"
-"し、キリストが最後の晩餐に用いた聖杯でキリストの貼り付けの間にキリストの血を"
-"受けたといわれている。古来よりこの伝説の聖杯は人々によって探求され続けてきた"
-"ことより、求め続けるが実際には手に入らないものの意として用いられる）"
 
-# 51b92776cb1843cfbc29b00c59a85c52
+# 7fbbb8d9a01644aeaffef04da34fb078
 #: ../../admin/performance.rst:19
 msgid "Second, as with most things in life, the answer is \"it depends\":"
-msgstr "第2に、人生の内のほとんどの物事と同様、答えは「状況による」です："
+msgstr ""
 
-# 9d9a51465c96468d8cab6dd8a18bd9b8
+# 4b95fc0e60464a68b51c9bd308eea263
 #: ../../admin/performance.rst:21
 msgid "How active are your users?"
-msgstr "あなたのユーザはどの程度アクティブなのか？"
+msgstr ""
 
-# c44d95f87cc647169e26e5dd6c443d65
+# c6f4f7198d5a4789b0dfce3f268e97b6
 #: ../../admin/performance.rst:22
 msgid "What hardware is Elgg running on?"
-msgstr "Elggはどのようなハードウェアで実行されているのか？"
+msgstr ""
 
-# f1c86e9df0894ad69b38c75ca73190ee
+# 53898b3e89864b81b1cbf3009d28b8ca
 #: ../../admin/performance.rst:23
 msgid "Are your plugins behaving well?"
-msgstr "載せているプラグインはお行儀よくしていますか？"
+msgstr ""
 
-# 0224870ea3ae4542878b89ebdfda1581
+# be74f89d9ff747babdcc4cd3c4e058a9
 #: ../../admin/performance.rst:25
-#, fuzzy
 msgid ""
 "`Improving the efficiency of the Elgg engine`__ is an ongoing project, "
 "although there are limits to the amount that any script can do."
 msgstr ""
-"`Elggエンジンの改善`__は現在進行形のプロジェクトです。どのようなスクリプトも"
-"できることの限界というものがありますが。"
 
-# 1204533318814c74bc101cd338ac8ef1
+# 1ea41857d68c4494b320b370848b04e1
 #: ../../admin/performance.rst:30
-#, fuzzy
 msgid ""
 "If you are serious about scalability you will probably want to look at a "
 "number of things yourself."
 msgstr ""
-"もし、切実にスケーラビリティについて考えておられるのでしたら、あなた自身の内"
-"側にある多くの問題から見て行かれた方がよいでしょう。"
 
-# b664bb403c244409b107ae2880614696
+# d5acca1c28c04295b9fb47d43400de42
 #: ../../admin/performance.rst:33
 msgid "Measure first"
-msgstr "まずは調べてみましょう"
+msgstr ""
 
-# 56d218856c354f06a1ab8ca2dbd888d0
+# e617cc5fbf2449eca89b4521f91b6d2a
 #: ../../admin/performance.rst:35
 msgid "There is no point in throwing resources at a problem if you don't know:"
 msgstr ""
-"もし、以下このことを把握していなければ、ひとつの問題にリソースを投入したとし"
-"ても何もなりません："
 
-# 5763fb272683439c8ff41875c7d7a7b5
+# 44c65631bb3e4c04a81785d2a5a47182
 #: ../../admin/performance.rst:37
 msgid "what the problem is"
-msgstr "何が問題なのか"
+msgstr ""
 
-# c87e8984923f495e93b4668b4fd03d04
+# e4d2c1ff690b4992939c0d7414a2d517
 #: ../../admin/performance.rst:38
 msgid "what resources the problem needs"
-msgstr "問題解決に必要なリソースは"
+msgstr ""
 
-# 87faeef89bb949c98c6bbb9ba5dc69b6
+# a1d44c4706584412b298b45141006173
 #: ../../admin/performance.rst:39
 msgid "where those resources are needed"
-msgstr "何処でそのようなリソースが消費されるのか"
+msgstr ""
 
-# dbbe63e652004562bb817cf3f05d9d28
+# 44d36ee890ff40dc8ad0afd55aa08bd7
 #: ../../admin/performance.rst:41
 msgid ""
 "Invest in some kind of profiling to tell you where your bottleneck is, "
 "especially if you're considering throwing significant money at a problem."
 msgstr ""
 
-# b15a6f45dfe0490c97e2d13d2ca209da
+# 1610e848e388414c92062a1049fb48b7
 #: ../../admin/performance.rst:45
 msgid "Tune MySQL"
-msgstr "MySQLを調整する"
+msgstr ""
 
-# 7c65615544f94cfc903e27e6fea7dffd
+# 54feb91df4bf42cc97e19952181d5d2d
 #: ../../admin/performance.rst:47
 msgid ""
 "Elgg makes extensive use of the back end database, making many trips on each "
@@ -158,31 +366,31 @@ msgid ""
 "will be able to cope with thousands of requests per second."
 msgstr ""
 
-# 1f96b3f29188431ab52a790440077598
+# cc07504c42b24e30bac0657d4d1ed737
 #: ../../admin/performance.rst:50
 msgid "Here are some configuration tips that might help:"
 msgstr ""
 
-# 6d315936000c4ca4bf61065a02b44d8f
+# d4bff3b3b7154dfa9dd4c23f902108d1
 #: ../../admin/performance.rst:52
 msgid ""
 "Make sure that MySQL is configured to use an appropriate my.cnf for the size "
 "of your website."
 msgstr ""
 
-# 4f6cdd29af6542c1a05c2ff1edc4553b
+# 443c0e88a01e4c9d96a1afa8766326f6
 #: ../../admin/performance.rst:53
 msgid ""
 "Increase the amount of memory available to PHP and MySQL (you will have to "
 "increase the amount of memory available to the php process in any case)"
 msgstr ""
 
-# c257b28de789436881d4ff202c8619ed
+# fe5669c4b66a43afbdc7d53f5dfef19e
 #: ../../admin/performance.rst:57
 msgid "Enable caching"
-msgstr "キャッシュ機能を有効に"
+msgstr ""
 
-# 52364a22fa4c4d1d9c9481148dbcdcd3
+# 778c162aab9d4937a6a1b5c511eea10e
 #: ../../admin/performance.rst:59
 msgid ""
 "Generally, if a program is slow, that is because it is repeatedly performing "
@@ -192,12 +400,12 @@ msgid ""
 "several generally-available caching solutions relevant to Elgg."
 msgstr ""
 
-# de735a8d2b994a32b52950361005547c
+# 33ed7c8a75834f11a33d3a42f2fe3c16
 #: ../../admin/performance.rst:66
 msgid "Simplecache"
-msgstr "シンプルキャッシュ"
+msgstr ""
 
-# 71505e47a5c44b408b9cbd56fd626891
+# cdb65c6c46334c93b7c07d0cbcd2ee54
 #: ../../admin/performance.rst:68
 msgid ""
 "By default, views are cached in the Elgg data directory for a given period "
@@ -205,14 +413,14 @@ msgid ""
 "load."
 msgstr ""
 
-# 822e1c9018054b6082decfd460632a2d
+# b06a1e919a1f4a1d8aa5ec497df0b010
 #: ../../admin/performance.rst:71
 msgid ""
 "This can be disabled by setting ``$CONFIG->simplecache_enabled = false;`` "
 "For best performance, make sure this value is set to ``true``."
 msgstr ""
 
-# 6100176117774913a243efeb236574bd
+# 559110cd209942b1969db0740a88093d
 #: ../../admin/performance.rst:74
 msgid ""
 "This does lead to artifacts during development if you are editing themes in "
@@ -220,7 +428,7 @@ msgid ""
 "provided by your plugin."
 msgstr ""
 
-# 1861702b96974189852affaa75e221d9
+# 1169606b03714be8b42f23d6488e5d77
 #: ../../admin/performance.rst:77
 msgid ""
 "The simple cache can be disabled via the administration menu. It is "
@@ -228,19 +436,19 @@ msgid ""
 "Elgg plugins."
 msgstr ""
 
-# 254a2820fbe54f61a8035dac7d251c6b
+# 7fec2b72272e49819e1614cc2a7ea040
 #: ../../admin/performance.rst:80
 msgid ""
 "This cache is automatically flushed when a plugin is enabled, disabled or "
 "reordered, or when upgrade.php is executed."
 msgstr ""
 
-# 8d58cd1224304a15805188222d52af66
+# 1d312885868847c6847796a52275e911
 #: ../../admin/performance.rst:84
 msgid "System cache"
 msgstr "システムキャッシュ"
 
-# 192d5b96502745e38b9697aada8830d8
+# a109ec07a99b4d55a271cfa20d03bfd7
 #: ../../admin/performance.rst:86
 msgid ""
 "The location of views are cached so that they do not have to be discovered "
@@ -249,14 +457,14 @@ msgid ""
 "information like the language mapping and class map."
 msgstr ""
 
-# a9f9dbaf4fb0495fbb2227bece0d341d
+# 8da7fa88baa7412190f355b323a55f85
 #: ../../admin/performance.rst:91
 msgid ""
 "This can be disabled by setting ``$CONFIG->system_cache_enabled = false;`` "
 "For best performance, make sure this value is set to ``true``."
 msgstr ""
 
-# 110b7dccb497470c80d85196fd337444
+# 46eeb5bd131f41e9bab2a8e3a0c2136e
 #: ../../admin/performance.rst:94
 msgid ""
 "This is currently stored in files in your dataroot (although later versions "
@@ -264,7 +472,7 @@ msgid ""
 "plugin is enabled, disabled or reordered, or when upgrade.php is executed."
 msgstr ""
 
-# 97e31a36b48f42dc851109d11ea729cc
+# 802447a068c84bf99b1c3a0dee1fc661
 #: ../../admin/performance.rst:99
 msgid ""
 "The system cache can be disabled via the administration menu, and it is "
@@ -272,12 +480,12 @@ msgid ""
 "Elgg plugins."
 msgstr ""
 
-# e864f0611472419489b50be24e5beb63
+# be8cd34595d84a79b6ffd3d0f97cc703
 #: ../../admin/performance.rst:104
 msgid "Database query cache"
-msgstr "データベースクエリキャッシュ"
+msgstr "データベース・クエリ・キャッシュ"
 
-# 4030d5ea2ee64baab42332b71112a064
+# a129e57f920644fea3bb5b0b49a55d24
 #: ../../admin/performance.rst:106
 msgid ""
 "For the lifetime of a given page's execution, a cache of all ``SELECT`` "
@@ -289,7 +497,7 @@ msgid ""
 "automatically cleared at the end of a page load."
 msgstr ""
 
-# 174bc247d7644811a0198dd400eb128c
+# ef3cd65c7b2741e0b311b04c6f56f738
 #: ../../admin/performance.rst:113
 msgid ""
 "You may experience memory problems if you use the Elgg framework as a "
@@ -297,12 +505,12 @@ msgid ""
 ">db_disable_query_cache = true;``"
 msgstr ""
 
-# 074062dbdb6f423d8f6ad37e8a00584c
+# fb65723be9ff45aa85c3341d8ab81812
 #: ../../admin/performance.rst:118
 msgid "Etags and Expires headers"
-msgstr "Etagsとヘッダの有効期限"
+msgstr ""
 
-# cb14be91dca648f79a695c7caf7ef958
+# d54f449498bb4f1294065f91c8517854
 #: ../../admin/performance.rst:120
 msgid ""
 "These technologies tell your users' browsers to cache static assets (CSS, "
@@ -310,95 +518,95 @@ msgid ""
 "improves user-perceived performance."
 msgstr ""
 
-# 130222bd6e8c407eaf3f470903e20b90
+# 561f9e609dfe4e2aa88f3e796f4bcb0c
 #: ../../admin/performance.rst:123
 msgid ""
 "Use the `Firefox yslow plugin`__ or Chrome DevTools Audits to confirm which "
 "technologies are currently running on your site."
 msgstr ""
 
-# ebc918d0726a4cc0b50e68c95674bb92
-#: ../../admin/performance.rst:129
+# 381df7c08fb14f4197748e190f49f06f
+#: ../../admin/performance.rst:128
 msgid "If the static assets aren't being cached:"
 msgstr ""
 
-# 3adb21f06da54582bfc59d1b505f0a27
+# 28583fb36f2d49fa9a9e114c82d6c509
 #: ../../admin/performance.rst:127
 msgid ""
 "Verify that you have these extensions installed and enabled on your host"
 msgstr ""
 
-# 343905ef21244951a14fb788d04d0b78
+# a10421ad94cc47d1b7cb6b8c5352aa17
 #: ../../admin/performance.rst:128
 msgid ""
 "Update your .htaccess file, if you are upgrading from a previous version of "
 "Elgg"
 msgstr ""
 
-# 2eb7618a1ab44ecebfe000fe651c8860
+# 52eb78d3e6f64a3cb4f51f0ae0042e79
 #: ../../admin/performance.rst:129
 msgid ""
 "Enable Simplecache_, which turns select views into browser-cacheable assets"
 msgstr ""
 
-# 0eee2c4c83784ebbbf80448fb2421121
+# b02aea60ca7845a68b5e6c5db6d5600b
 #: ../../admin/performance.rst:134
 msgid "Memcache"
-msgstr "Memcache"
+msgstr ""
 
-# 38dc9a529a9a47a8bcc5cecb7a23d776
+# 5d3d250349a74cc7b28267e781195001
 #: ../../admin/performance.rst:136
 msgid ""
 "Memcache is a generic caching technology developed by Brad Fitzpatrick for "
 "LiveJournal."
 msgstr ""
 
-# ec8e13a18f6a4d7aa15e1c33f6e9a502
+# 67b56693afa340d7917308b94c22fc85
 #: ../../admin/performance.rst:138
 msgid "SUPPORT FOR MEMCACHE IS EXPERIMENTAL AND MAY BE CHANGED."
 msgstr ""
 
-# 441be9a571b74e219a2492705aa5f106
+# 6bc14f7a685e4d49abd561e65045a12e
 #: ../../admin/performance.rst:140
 msgid "Installation requirements:"
 msgstr ""
 
-# 50b5d310427d42029a22deb4476fed5d
+# e6a16d3ebf0b486eba1e086c5e3093dd
 #: ../../admin/performance.rst:142
 msgid "``   * php5-memcache``"
 msgstr ""
 
-# e2e561ba859b4caf8340f4aeca209381
+# f4d1e123f2da470db861a3e0ecb1dcec
 #: ../../admin/performance.rst:143
 msgid "``   * memcached``"
 msgstr ""
 
-# d996ba70711943c79bed7fea9cdc5312
+# 83e0149941494be8bfc5e8e13e3fcb12
 #: ../../admin/performance.rst:145
 msgid "Configuration:"
-msgstr "コンフィギュレーション:"
+msgstr ""
 
-# e9dc980bebc741fcb85d3390f80f7536
+# ca3faeb52efa45efb80150213c956ee1
 #: ../../admin/performance.rst:147
 msgid "Uncomment and populate the following sections in settings.php"
 msgstr ""
 
-# bb8a1e30d1df43f5b4d6dac407345738
+# e6d1912703f14cdaba78eaf3d26db72c
 #: ../../admin/performance.rst:159
 msgid "Squid"
 msgstr ""
 
-# e0379a888bc54e67b4d211ae98ce5e2e
+# 5f0dfcbe507444de85f40c34e94cce27
 #: ../../admin/performance.rst:161
 msgid "We have had good results by using `Squid`_ to cache images for us."
 msgstr ""
 
-# 6472bce4833b4a889e892525c7f1b2ed
+# 4bdb26e041cf4d48a6b3ddfb162164ca
 #: ../../admin/performance.rst:167
 msgid "Bytecode caching"
 msgstr ""
 
-# 85c12399cb944dcc8d3f9ea7819e38f5
+# 4029ad29f03b442aaf1d996c3c25bfe6
 #: ../../admin/performance.rst:169
 msgid ""
 "There are numerous PHP code caches available on the market. These speed up "
@@ -406,12 +614,12 @@ msgid ""
 "your server doesn't have to compile the PHP code each time it is executed."
 msgstr ""
 
-# 7762d9cffe8841f78c75dc392e1c7fa7
+# 18230732fdbf481a9ac820b1145d861f
 #: ../../admin/performance.rst:175
 msgid "Hosting"
-msgstr "ホスティング"
+msgstr ""
 
-# 72a4c34277c54be1bf256cf1c443930b
+# 271fe4b1d89347019e27928295b9e647
 #: ../../admin/performance.rst:177
 msgid ""
 "Don't expect to run a site catering for millions of users on a cheap shared "
@@ -419,19 +627,19 @@ msgid ""
 "configuration, as well as lots of bandwidth and memory available."
 msgstr ""
 
-# 0751cfebe89944c3af1dc25d5cadb1f3
+# d11dec4ebfeb4e5a96d66291ce1937ed
 #: ../../admin/performance.rst:182
 msgid "Memory, CPU and bandwidth"
 msgstr ""
 
-# 95aaab0da7b74945b8e2c92e04f1d4e3
+# 43e473921aad4221993b7836f83d5123
 #: ../../admin/performance.rst:184
 msgid ""
 "Due to the nature of caching, all caching solutions will require memory. It "
 "is a fairly cheap return to throw memory and CPU at the problem."
 msgstr ""
 
-# 4f5c2dc4f4e04bd4886ca6976266a7a5
+# 6c0af81b520142f1af50d9def4976472
 #: ../../admin/performance.rst:187
 msgid ""
 "On advanced hardware it is likely that bandwidth is going to be your "
@@ -439,19 +647,19 @@ msgid ""
 "load you are suggesting."
 msgstr ""
 
-# 16760a3d07d540218a584c731770ff4f
+# 8a64d90a69de4269adbf5545a68eaf57
 #: ../../admin/performance.rst:191
 msgid "Configuration"
-msgstr "コンフィギュレーション"
+msgstr ""
 
-# e6171b8b55ad4b69b575c84052ecf48e
+# de88a07e3f83467cb916c95a11049952
 #: ../../admin/performance.rst:193
 msgid ""
 "Lastly, take a look at your configuration as there are a few gotchas that "
 "can catch people."
 msgstr ""
 
-# c810b907730149369b078bbb76c871bf
+# 07e7adfab9a847bd863b5d5c73e22d8d
 #: ../../admin/performance.rst:195
 msgid ""
 "For example, out of the box, Apache can handle quite a high load. However, "
@@ -460,19 +668,19 @@ msgid ""
 "overloaded MySQL process."
 msgstr ""
 
-# 3b87cb039f0d4fa9ab6e26292ebce1ae
+# 2225dde3f9a84d7698538ef0ea2ad87c
 #: ../../admin/performance.rst:200
 msgid "Check for poorly-behaved plugins"
 msgstr ""
 
-# 15e817fe51314a358816f4943aa92b3f
+# 01be46222a5c44b0b2519bc6cb871f9e
 #: ../../admin/performance.rst:202
 msgid ""
 "Plugins can be programmed in a very naive way and this can cause your whole "
 "site to feel slow."
 msgstr ""
 
-# 302332f22f094dfc9d0bc05b1c73b5d8
+# a5417271bfc940ad9998da1ec63c2c79
 #: ../../admin/performance.rst:204
 msgid ""
 "Try disabling some plugins to see if that noticeably improves performance. "
@@ -480,19 +688,19 @@ msgid ""
 "report your findings."
 msgstr ""
 
-# 99ce566be24d4aec85b8847a85eb8be8
+# c1b389b32feb451a9d46709d84aa2d56
 #: ../../admin/performance.rst:208
 msgid "Use client-rendered HTML"
 msgstr ""
 
-# 248bbe422ea64283b41654311c222d8a
+# 8eeee08646274684a092021b5d8fa018
 #: ../../admin/performance.rst:210
 msgid ""
 "We've found that at a certain point, much of the time spent on the server is "
 "simply building the HTML of the page with Elgg's views system."
 msgstr ""
 
-# 34b9d2f3d33447bdad706afcf91e4557
+# 733906f9eb754ea2980d9e149099bb3e
 #: ../../admin/performance.rst:213
 msgid ""
 "It's very difficult to cache the output of templates since they can "
@@ -503,7 +711,7 @@ msgid ""
 "output by applying JSON data to those templates."
 msgstr ""
 
-# 2141dc151dad40119bb71a19a2cfd119
+# d6115c11e4964de58948818b25c246f0
 #: ../../admin/performance.rst:218
 msgid ""
 "This can be very effective, but has the downside of being significant extra "
@@ -512,138 +720,174 @@ msgid ""
 "hidden content."
 msgstr ""
 
-# f7d92038d7fe43d88a4d23e7f1754aa4
+# 1d377e10f9da444bbacbb4a5bb85bbb8
 #: ../../admin/plugins.rst:2
 msgid "Plugins"
-msgstr "プラグイン"
+msgstr "プラグイン管理"
 
-# 2c665c4cdc814edc943c79282570f3f6
+# 88c6dcec074843109d434bbf46e0194e
 #: ../../admin/plugins.rst:4
 msgid "Plugins can modify the behavior of and add new features to Elgg."
 msgstr ""
 
-# ca60023f8ce8472198dacef4ca610773
+# ef3ec34096094a93805650fcf86ade9c
 #: ../../admin/plugins.rst:7
 msgid "Where to get plugins"
-msgstr ""
+msgstr "プラグインはどこにあるの？"
 
-# eef77a8300294b1d983647e85ac05225
+# 3dc322c8ffe54ca58cf648c828552eff
 #: ../../admin/plugins.rst:9
 msgid "Plugins can be obtained from:"
 msgstr ""
 
-# 18c02d403e164aeb9a52d92eaca6e257
+# 6dd77663c11d41f5abfa60421387a2b1
 #: ../../admin/plugins.rst:11
 msgid "`The Elgg Community <http://community.elgg.org/plugins>`_"
 msgstr ""
 
-# 8c2fda666aec461f8df8d713dcdab2d0
+# 3d639caab3764b26a20d432cbb13219b
 #: ../../admin/plugins.rst:12
 msgid "`Github <https://github.com/Elgg>`_"
 msgstr ""
 
-# 14feacfa938d4e1580f57bef05f689c2
+# 2fabe7d93ecc42b4bfe8a381ba4e43c2
 #: ../../admin/plugins.rst:13
 msgid "Third-party sites (typically for a price)"
 msgstr ""
 
-# 6c0c796508a1442da32cbc7af36718cf
+# 6da89e36c06d44d8ab93d53024528a64
 #: ../../admin/plugins.rst:15
 msgid ""
 "If no existing plugins meet your needs, you can `hire a developer`__ or :doc:"
 "`create your own </guides/index>`."
 msgstr ""
 
-# 0496e9e206ec4f98b21faf22e4b7127a
+# 927aa63c2d504dd78010f3d832af1f91
 #: ../../admin/plugins.rst:20
 msgid "Types of plugins"
 msgstr "プラグインのタイプ"
 
-# ee5dfbe8ccac4e24b27ad02a95194f96
+# d4a5161c5f834974a950695b492706b2
 #: ../../admin/plugins.rst:23
 msgid "Themes"
 msgstr "テーマ"
 
-# 87d21ef09e544c168e70623c85b33340
+# 8ef4821ddf224c7d8bdc48ecd9be013e
 #: ../../admin/plugins.rst:25
 msgid ""
-"Themes are just plugins that modify the look-and-feel of your site, so "
-"you'll typically find them wherever Elgg plugins are available."
+"Themes are plugins that modify the look-and-feel of your site. They "
+"generally include stylesheets, client-side scripts and views that alter the "
+"default presentation and behavior of Elgg."
 msgstr ""
 
-# 8e3291ecd745496d996b6100c5e3538e
-#: ../../admin/plugins.rst:29
+# 29f8717d921046e5a83f35344e9c0c72
+#: ../../admin/plugins.rst:30
 msgid "Language Packs"
-msgstr "言語パック"
-
-# 787aeaabcd674ee08225626a82e168ca
-#: ../../admin/plugins.rst:31
-msgid ""
-"Language packs are just plugins that provide support for another language. "
-"There are language packs for the core and they are usually installed in the "
-"languages directory off the elgg root directory. Other language packs are "
-"provided for various plugins. Generally, the authors make it easy to copy "
-"those files into the languages directory of each plugin under the mod "
-"directory."
 msgstr ""
 
-# dbceaf89d4f349d79edc9778ebff79c3
+# c5bb906dc406433c8d06c4458b7df66c
+#: ../../admin/plugins.rst:32
+msgid "Language packs are plugins that provide support for other languages."
+msgstr ""
+
+# e70fe17741454e90962498f2a40c6c00
+#: ../../admin/plugins.rst:34
+msgid ""
+"Language packs can extend and include translations for language strings "
+"found in the core, core plugins and/or third-party plugins."
+msgstr ""
+
+# a079d4f4a8364432aca382f86ff355e6
 #: ../../admin/plugins.rst:37
-msgid "Installation"
-msgstr "インストール"
-
-# 534ee5b5874e4664b68e332939bc7f1d
-#: ../../admin/plugins.rst:39
 msgid ""
-"To install a plugin, unzip the archive and copy the plugin's main folder to "
-"the “mod” directory in your Elgg installation."
+"Some of the language packs are already included in the core, and can be "
+"found in ``languages`` directory off Elgg's root directory. Individual "
+"plugins tend to include their translations under the ``languages`` directory "
+"within the plugin's root."
 msgstr ""
 
-# 2b90cf0edb3943b29e4c708ec05eb373
+# 0e19808c88f84834b1b65b530ae02649
 #: ../../admin/plugins.rst:42
-msgid "You must then activate it from the admin panel:"
+msgid ""
+"This structure makes it easy to create new language packs that supercede "
+"existing language strings or add support for new languages."
 msgstr ""
 
-# e357e3d522354f1ba3b1b11de34e1473
-#: ../../admin/plugins.rst:44
+# 24a6d947d00c4cb698ef821c5061f323
+#: ../../admin/plugins.rst:48
+msgid "All plugins reside in the ``mod`` directory of your Elgg installation."
+msgstr ""
+
+# 97f666f8de4f4964a14af46fcba64578
+#: ../../admin/plugins.rst:56
+msgid "To install a new plugin:"
+msgstr ""
+
+# e53ce68c13dc4d82ac4e74a141e92f8c
+#: ../../admin/plugins.rst:51
+msgid "extract (unzip) contents of the plugin distribution package"
+msgstr ""
+
+# 9f022984a9144e3ab9f502d79cb81cdb
+#: ../../admin/plugins.rst:52
+msgid ""
+"copy/FTP the extracted folder into the ``mod`` directory of your Elgg "
+"installation, making sure that ``manifest.xml`` and ``start.php`` are "
+"directly under the plugin directory (e.g. if you were to install a plugin "
+"called ``my_elgg_plugin``, plugin's manifest would need to be found at ``mod/"
+"my_elgg_plugin/manifest.xml``)"
+msgstr ""
+
+# d54e94dec2f54645a08360555c71a735
+#: ../../admin/plugins.rst:57
+msgid "activate the plugin from your admin panel"
+msgstr ""
+
+# 3f716e07f2ae4ebbbb3b67a2299aa968
+#: ../../admin/plugins.rst:62
+msgid "To activate a plugin:"
+msgstr ""
+
+# baf98237a7d740519a39b8ad980745b8
+#: ../../admin/plugins.rst:60
 msgid "Log in to your Elgg site with your administrator account"
 msgstr ""
 
-# f1d39e33821746b4871767c0c0188e31
-#: ../../admin/plugins.rst:45
+# a5af0100dd714586abf6a6b6eccd2809
+#: ../../admin/plugins.rst:61
 msgid "Go to Administration -> Configure -> Plugins"
 msgstr ""
 
-# 68ff3dd32aec409899605a45d63c0914
-#: ../../admin/plugins.rst:46
+# e838f53148454a149fc1335ac0e1723e
+#: ../../admin/plugins.rst:62
 msgid ""
 "Find your plugin in the list of installed plugins and click on the 'enable' "
 "button."
 msgstr ""
 
-# 73bd435456f54aa882695297d7680cf5
-#: ../../admin/plugins.rst:50
+# 4e290c80b1d74bef8507ba5af50965a8
+#: ../../admin/plugins.rst:66
 msgid "Pre-1.8 notes"
-msgstr "Elgg1.8以前の注意事項"
+msgstr ""
 
-# ed665c2482c046e6bcaff04f7f076d56
-#: ../../admin/plugins.rst:52
+# de5d9e6ef771496480eb7121d0eaa5bd
+#: ../../admin/plugins.rst:68
 msgid ""
 "In Elgg 1.7 and below, the interface for managing installed plugins is "
 "located at Administration -> Tool Administration."
 msgstr ""
 
-# 6ba26d19976642e982f3414902e0e954
+# 119d5797a1324e19811c113ceb72b53f
 #: ../../admin/upgrading.rst:2
 msgid "Upgrading Elgg"
-msgstr "Elggのアップデート"
+msgstr ""
 
-# c0aa4e96a7c34e8383ac31818b56eb3f
+# 40a663eade0c48da8dab027866f0717b
 #: ../../admin/upgrading.rst:4
 msgid "Switch a live site to a new version of Elgg."
 msgstr ""
 
-# 1c3ad87791f74678b2388d0c5155dd95
+# 9b719294fc9f48609575b23dd6049457
 #: ../../admin/upgrading.rst:6
 msgid ""
 "If you've written custom plugins, you should also read the developer guides "
@@ -651,111 +895,124 @@ msgid ""
 "latest version of Elgg."
 msgstr ""
 
-# 44b868b77e21497689d034cfc16212fa
+# 31f69b022f4f453b88c94e651b1ba8c4
 #: ../../admin/upgrading.rst:10
 msgid "Advice"
-msgstr "アドバイス"
+msgstr ""
 
-# 28cf6bdc862c4e8b8ac5f99d442fda50
+# aa6ec1ac0f4a480aa3483251c653e2cd
 #: ../../admin/upgrading.rst:12
 msgid "**Back up your database** and code"
 msgstr ""
 
-# 13cbba469505417e88698530be7434c1
+# a884b1bd93a8476093450d34fd4e09d5
 #: ../../admin/upgrading.rst:13
 msgid "Mind any version-specific comments below"
 msgstr ""
 
-# 2a0e2f8848754d769e5d9b4c9aa45e13
+# bf122f99929c4ba08642f2854de09369
 #: ../../admin/upgrading.rst:14
 msgid "Upgrade only one minor version at a time (1.6 => 1.7, then 1.7 => 1.8)"
 msgstr ""
 
-# bb67ba4fac214346aabddc73929f6966
+# 5e5162133bc9426996c2e5ae6f3ed96f
 #: ../../admin/upgrading.rst:15
 msgid "Try out the new version on a test site before doing an upgrade"
 msgstr ""
 
-# 1c4eb2063c024ad3b84af1889822f1f8
+# 63087d2951334a699936458f68129c26
 #: ../../admin/upgrading.rst:16
 msgid "Report any problems in plugins to the plugin authors"
 msgstr ""
 
-# cbf2f6e9432a412fa356e7c2aa92b4b6
+# b2cd9f1a26e94b1195844ae15959c8a5
 #: ../../admin/upgrading.rst:17
 msgid ""
 "If you are a plugin author you can `report any backwards-compatibility "
 "issues to GitHub <issues_>`_"
 msgstr ""
 
-# 2b758dd8f2f8490e905d62fb56dc5bdc
+# 7e65ae947fc04a2bae6a5422875fd56d
 #: ../../admin/upgrading.rst:22
 msgid "Basic instructions"
-msgstr "基本的な手順"
+msgstr ""
 
-# a13174d564864834b5952c497aa8cbf9
+# a32974c93dd945b890e1439ce9c6c7f6
 #: ../../admin/upgrading.rst:24
 msgid "**Back up your database, data directory and code**"
 msgstr ""
 
-# 21f2b15ed4f34d8eb7364942cae5f660
+# ac03c3462cd8406bb08a76b4949bda5b
 #: ../../admin/upgrading.rst:25
 msgid "Download the new version of Elgg from http://elgg.org"
 msgstr ""
 
-# 1c0c34ee311c4a3eb673e87e66e70b03
+# 1dfae8ed20a449f1942ad2c225628404
 #: ../../admin/upgrading.rst:26
-msgid "Overwrite your existing files with the new version of Elgg"
+msgid "Update the files"
 msgstr ""
 
-# f8c693ad63b74589b22075052736e425
+# de9f55181d73453ca0e448c1ec9ada40
 #: ../../admin/upgrading.rst:27
+msgid ""
+"If doing a patch upgrade (1.9.x), overwrite your existing files with the new "
+"version of Elgg"
+msgstr ""
+
+# e303a80480e84272a4962ba2790592e0
+#: ../../admin/upgrading.rst:28
+msgid ""
+"If doing a minor upgrade (1.x), replace the existing core files completely"
+msgstr ""
+
+# a895082cf7ff444395b4643d24835b88
+#: ../../admin/upgrading.rst:29
 msgid "Merge any new changes from ``htaccess_dist`` into ``.htaccess``"
 msgstr ""
 
-# 126c9ac1b192497f972d07089be74f7d
-#: ../../admin/upgrading.rst:28
+# aa3c9b91761746baa271f20b525ee5d1
+#: ../../admin/upgrading.rst:30
 msgid ""
 "Merge any new changes from ``settings.example.php`` into ``settings.php``"
 msgstr ""
 
-# b48e62c485b545818a353829f8bd94aa
-#: ../../admin/upgrading.rst:29
+# 416ab5f73f3d46b8949a3b68a75f8687
+#: ../../admin/upgrading.rst:31
 msgid "Visit http://your-elgg-site.com/upgrade.php"
 msgstr ""
 
-# a65d535d50cd4824948b71bce996061c
-#: ../../admin/upgrading.rst:33
+# 97aeed7b5d05498596192d7bc01e1f33
+#: ../../admin/upgrading.rst:35
 msgid ""
 "Any modifications should have been written within plugins, so that they are "
 "not lost on overwriting. If this is not the case, take care to maintain your "
 "modifications."
 msgstr ""
 
-# 2a01a0436d314274b50703dd88ca39e4
-#: ../../admin/upgrading.rst:38
+# 60a97723135e4529a6055d24be350f89
+#: ../../admin/upgrading.rst:40
 msgid ""
 "If you modified the default .htaccess, be sure to port your modifications "
 "over to the new one."
 msgstr ""
 
-# 4ab16adc337045c3a244d036ffe6c194
-#: ../../admin/upgrading.rst:41
+# 71ca1133c5324e76938d8423a85f28c7
+#: ../../admin/upgrading.rst:43
 msgid "From 1.8 to 1.9"
-msgstr "Elgg1.8からElgg1.9へ"
+msgstr ""
 
-# 96f2e3b962fe467fb7ad6dabaca54924
-#: ../../admin/upgrading.rst:42
+# 4065e2bf22264b8c9677568a6a4d08b8
+#: ../../admin/upgrading.rst:44
 msgid "Elgg 1.9 is a much lighter upgrade than 1.8 was."
 msgstr ""
 
-# 49796b1d8e284972854f272101e6f587
-#: ../../admin/upgrading.rst:45
+# 98d7ce947f7a4025bb94eaa8f51c144b
+#: ../../admin/upgrading.rst:47
 msgid "Breaking changes"
 msgstr ""
 
-# e7e196f1de454aaba4a1479a30398e79
-#: ../../admin/upgrading.rst:46
+# 55d35a0e2cf44d338fb01e5a59e8e0cb
+#: ../../admin/upgrading.rst:48
 msgid ""
 "Plugins and themes written for 1.8 are expected to be compatible with 1.9 "
 "except as it pertains to comments, discussion replies, and notifications. "
@@ -763,166 +1020,182 @@ msgid ""
 "just listed."
 msgstr ""
 
-# 706fa6e073a343a69d24f5b3ec48a352
-#: ../../admin/upgrading.rst:51
+# 34254d63bcd94c95a0988c78771330b6
+#: ../../admin/upgrading.rst:53
 msgid "Upgrade steps"
-msgstr "アップグレードの手順"
+msgstr ""
 
-# 4e9ced8628ae48fb9c8867d1c6d9eb72
-#: ../../admin/upgrading.rst:52
+# 3ce53f8c071f49e289d5adeb124221ab
+#: ../../admin/upgrading.rst:54
 msgid ""
 "There are several data migrations involved, so it is especially important "
 "that you **back up your database and data directory** before performing the "
 "upgrade."
 msgstr ""
 
-# 44ff3d5a513847c7820e811e965bbd79
-#: ../../admin/upgrading.rst:55
+# 752311d038d94815a1966bb6e492ab0b
+#: ../../admin/upgrading.rst:57
 msgid ""
-"You may also consider getting rid of obsolete files from formerly installed "
-"Elgg versions by deleting everyting from the Elgg installation directory "
-"except for:"
+"Download the new version and copy these files from the existing 1.8 site:"
 msgstr ""
 
-# c8d4f9f52255458a8fd8416efc46accb
-#: ../../admin/upgrading.rst:58
-msgid "``.htaccess``"
-msgstr ""
-
-# 411e0372522e4174a1b965d015b953ca
+# 3d0ed31073ac48a4a20eb84ae02461b6
 #: ../../admin/upgrading.rst:59
-msgid "``engine/settings.php``"
-msgstr ""
+msgid "``.htaccess``"
+msgstr "``.htaccess``"
 
-# 434d507affc14fdc9b12fb038b1d678a
+# f8d7b0f0b9ce4d54b2d95c26910d4e51
 #: ../../admin/upgrading.rst:60
+msgid "``engine/settings.php``"
+msgstr "``engine/settings.php``"
+
+# 24a79547716d4a10a4b372371ea81643
+#: ../../admin/upgrading.rst:61
 msgid "any 3rd-party plugin folders in the ``mod`` directory"
 msgstr ""
 
-# f0a81f8e56a044c999a432a377893af7
-#: ../../admin/upgrading.rst:62
+# e27921e183ef4df8b895a8f9f1eecee3
+#: ../../admin/upgrading.rst:63
+msgid ""
+"Then replace the old installation directory with the new one. This way you "
+"are guaranteed to get rid of obsolete files which might cause problems if "
+"left behind."
+msgstr ""
+
+# 096f681b7a104322992be5331ad9cd8e
+#: ../../admin/upgrading.rst:66
 msgid "Follow the basic instructions listed above."
 msgstr ""
 
-# 908ec1c6f8c24c28926314c368ef9b92
-#: ../../admin/upgrading.rst:64
+# d2370e6dcab041b78c805d7154fc061d
+#: ../../admin/upgrading.rst:68
 msgid ""
 "After you've visited ``upgrade.php``, go to the admin area of your site. You "
 "should see a notification that you have pending upgrades. Click the link in "
 "the notification bar to view and run the upgrades."
 msgstr ""
 
-# 0ccadc1ba0c3448fa83af2ce94dc1737
-#: ../../admin/upgrading.rst:70
+# c6f99614c41749e0874a7dde9481e7c4
+#: ../../admin/upgrading.rst:72
+msgid ""
+"The new notifications system delivers messages via a minutely cron handler. "
+"If you haven't done so yet, you will need to :doc:`install and configure "
+"crontab </admin/cron>` on your server. If cron jobs are already configured, "
+"note that the scope of available cron periods may have changed and you may "
+"need to update your current crontab to reflect these changes."
+msgstr ""
+
+# db5404f6e9754e1d910def169318ec2a
+#: ../../admin/upgrading.rst:79
 msgid "Time commitment"
 msgstr ""
 
-# 3aa4f953c769481ab320327b8c877c5d
-#: ../../admin/upgrading.rst:71
+# 44c9c9d7360649ad8c59ed987400b560
+#: ../../admin/upgrading.rst:80
 msgid ""
 "Running all of the listed upgrades `took about 1 hour and 15 minutes`__ on "
 "the Elgg community site which at the time had to migrate:"
 msgstr ""
 
-# a48b6ea7f8e94e6b913865c58d0d1c47
-#: ../../admin/upgrading.rst:74
+# f7b773676fcd4906b7130a6d5e497780
+#: ../../admin/upgrading.rst:83
 msgid "~75,000 discussion replies"
 msgstr ""
 
-# b5d465cdc83c4690b76b27c45de3ffc2
-#: ../../admin/upgrading.rst:75
+# 0124a1832dc14ab59883017a8c4ed91a
+#: ../../admin/upgrading.rst:84
 msgid "~75,000 comments"
 msgstr ""
 
-# 196920cde0794dd3bcbe71705d2937bb
-#: ../../admin/upgrading.rst:76
+# bf2c5c3c98204f0b93517250ac02d764
+#: ../../admin/upgrading.rst:85
 msgid "~75,000 data directories"
 msgstr ""
 
-# 51860fa77cf0425c94c4d167ba072b73
-#: ../../admin/upgrading.rst:80
+# 9a778a38cc204230ae0b8e57e54bf888
+#: ../../admin/upgrading.rst:89
 msgid ""
 "You should take this only as a ballpark estimate for your own upgrade. How "
 "long it takes will depend on how large your site is and how powerful your "
 "servers are."
 msgstr ""
 
-# 5e0681308d55495988ee7d0a21241618
-#: ../../admin/upgrading.rst:84
+# 1dc86ecd7d2b479c9feab1164ef96ee3
+#: ../../admin/upgrading.rst:93
 msgid "From 1.7 to 1.8"
-msgstr "Elgg1.7からElgg1.8へ"
+msgstr ""
 
-# 2acdbbb3d1b643c08ca7c4b3ebd26b9c
-#: ../../admin/upgrading.rst:85
+# b8c7178356c84094a1480fbe6621c9b0
+#: ../../admin/upgrading.rst:94
 msgid ""
 "Elgg 1.8 is the biggest leap forward in the development of Elgg since "
 "version 1.0. As such, there is more work to update core and plugins than "
 "with previous upgrades."
 msgstr ""
 
-# 2a7105c356bf46aea874698b798685ed
-#: ../../admin/upgrading.rst:89
+# 4264f9bb690544779fda996e365fa5f8
+#: ../../admin/upgrading.rst:98
 msgid "Updating core"
-msgstr "コアのアップデート"
+msgstr ""
 
-# 84b42144dad64da4828310a5d074385a
-#: ../../admin/upgrading.rst:90
+# 2d1f985c5fc744fb9f2a803678ba938b
+#: ../../admin/upgrading.rst:99
 msgid ""
 "Delete the following core directories (same level as _graphics and engine):"
 msgstr ""
 
-# 1ff50096f1e64610a43242b78e793147
-#: ../../admin/upgrading.rst:92
+# 6175fe9259f442b39c1bb7e84c955f28
+#: ../../admin/upgrading.rst:101
 msgid "_css"
 msgstr ""
 
-# f2db9cd7ba2749b0bdd0fca6a735b667
-#: ../../admin/upgrading.rst:93
+# 0c5561f8390142658d11b391c16f8c14
+#: ../../admin/upgrading.rst:102
 msgid "account"
 msgstr ""
 
-# 39286b22113f4c91937a96d190fade70
-#: ../../admin/upgrading.rst:94
+# bb955eee8da541a2a8ca750489fb12de
+#: ../../admin/upgrading.rst:103
 msgid "admin"
 msgstr ""
 
-# 4406730e391f4be19e2eb504d3916441
-#: ../../admin/upgrading.rst:95
+# e9d68491748d4796be02b3099ef6bb49
+#: ../../admin/upgrading.rst:104
 msgid "dashboard"
 msgstr ""
 
-# 1cf92fae2d064cdbbd044a8af713b7fd
-#: ../../admin/upgrading.rst:96
+# 7982b1d8e56141b19f8bbe5793624c62
+#: ../../admin/upgrading.rst:105
 msgid "entities"
 msgstr ""
 
-# c7c6f47788db452a96b252b63bcee6bf
-#: ../../admin/upgrading.rst:97
+# 93fedd75fd9241439f2d1db01c1d62af
+#: ../../admin/upgrading.rst:106
 msgid "friends"
 msgstr ""
 
-# 2511809445ce4ece82dfb592831e6ff9
-#: ../../admin/upgrading.rst:98
+# 9486ef1b129948f89cb6a45257b5d616
+#: ../../admin/upgrading.rst:107
 msgid "search"
 msgstr ""
 
-# 6e9c98ed7baf431d923b24f9fe1c4d4e
-#: ../../admin/upgrading.rst:99
+# 5db99b0bf09442729c26cc9f3d6d8caf
+#: ../../admin/upgrading.rst:108
 msgid "settings"
 msgstr ""
 
-# 32b0b3d91ed746d3bd614de21b2f36c4
-#: ../../admin/upgrading.rst:100
+# 05da4c4007044df3a1cf93cfe8dd962f
+#: ../../admin/upgrading.rst:109
 msgid "simplecache"
 msgstr ""
 
-# 87664ff60bce4c168f28e71744a0469c
-#: ../../admin/upgrading.rst:101
+# 461bf6ffbbb34fa384f4e4e36a3126ce
+#: ../../admin/upgrading.rst:110
 msgid "views"
 msgstr ""
 
-# 5975decb8f1b4e9aa134651efd6eccb1
-#: ../../admin/upgrading.rst:105
+# 800dedffbf0b4eec88c03d468d8c2465
+#: ../../admin/upgrading.rst:114
 msgid ""
 "If you do not delete these directories before an upgrade, you will have "
 "problems!"

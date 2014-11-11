@@ -1,39 +1,35 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2013, Various
 # This file is distributed under the same license as the Elgg package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
+# Translators:
 msgid ""
 msgstr ""
 "Project-Id-Version: Elgg Core\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-10 19:59-0700\n"
-"PO-Revision-Date: 2014-07-22 20:15+0900\n"
-"Last-Translator: SAKAGUCHI, Hirotaka <kemo@sun.interq.or.jp>\n"
-"Language-Team: Japanese (Japan) (http://www.transifex.com/projects/p/elgg-"
-"core/language/ja_JP/)\n"
+"POT-Creation-Date: 2014-09-21 23:12+0300\n"
+"PO-Revision-Date: 2014-10-25 11:10+0000\n"
+"Last-Translator: SAKAGUCHI, Hirotaka\n"
+"Language-Team: Japanese (http://www.transifex.com/projects/p/elgg-core/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.6\n"
+"Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"Language: ja_JP\n"
 
-# 332082292d124222adbb774082ef2645
+# 354f15d64de14428a736f5b7ac0790db
 #: ../../appendix/history.rst:2
 msgid "History"
 msgstr "履歴"
 
-# 57be469b6a2841df93743083830d3a84
+# 365e4f80d96243538018432f53c4c6cd
 #: ../../appendix/history.rst:4
 msgid ""
 "The name comes from `a town in Switzerland`__. It also means \"elk\" or "
 "\"moose\" in Danish."
 msgstr ""
-"名前は、 `スイスに実在する村`__ から来ています。また、デンマーク語で大型の鹿"
-"の仲間である「エルク」または「ムース」のことでもあります。"
 
-# a02e387236e744e990f5acd18b30cf78
+# 78aa88c0dc3a469baaba8934884b5982
 #: ../../appendix/history.rst:8
 msgid ""
 "Elgg's initial funding was by a company called Curverider Ltd, which was "
@@ -42,55 +38,48 @@ msgid ""
 "to `The Elgg Foundation`_. Today, Elgg is a community-driven open source "
 "project and has a variety of contributors and sponsors."
 msgstr ""
-"Elggへの最初の資金援助は、David Tosh と Ben Werdmuller が設立した Curverider "
-"Ltd. 社によって行われました。2010年、 Curverider はThematic Networks に移籍"
-"し、このオープンソース・プロジェクトは `The Elgg Fundation`_ と名前を変えて管"
-"理されました。現在は、Elggはコミュニティーによって運営されるオープンソースプ"
-"ロジェクトとなり、様々な寄与者やスポンサーによって支えられています。"
 
-# 3f218f45d4634053baae2e77e0068474
+# 693566506562447ab9d89d6ca88817ac
 #: ../../appendix/index.rst:2
 msgid "Appendix"
-msgstr "付録"
+msgstr ""
 
-# c4f0657a27784499ae1d3bb9dcfe05a6
+# 4b5ce5be1838455d8f5b15f942fccdba
 #: ../../appendix/index.rst:4
 msgid "Miscellaneous information about the project."
-msgstr "このプロジェクトについてのその他いろいろな情報"
+msgstr ""
 
-# 573ca453f3dd44458d71930a5f3766a8
+# e735039f33924887bad53d2e91592ad4
 #: ../../appendix/releases.rst:2
 msgid "Release Policy"
-msgstr "リリース・ポリシー"
+msgstr "リリースの方針"
 
-# 2849cb4383a04c96a41050f5f33f1047
+# b2ce416c53d84379a0bce8c8bca5de2b
 #: ../../appendix/releases.rst:4
 msgid "What to expect when upgrading Elgg."
-msgstr "Elggのアップデートに何を期待するか"
+msgstr ""
 
-# 4351605cecb04f31bbc236f524d5bcfd
+# b391286229194433833eb2ee2531d722
 #: ../../appendix/releases.rst:6
-#, fuzzy
 msgid "In general, we adhere to `semantic versioning`_."
-msgstr "一般的に、私たちは`意味的なバージョンニング`_ にこだわります。"
+msgstr ""
 
-# 5369fa92023b484b83a63c7aced2b269
+# 2b49c2dc7ba641fc98de384c656a5843
 #: ../../appendix/releases.rst:10
-#, fuzzy
 msgid "Follow the blog to `stay up to date on the latest releases`__."
-msgstr "ブログにしたがって、 `最新のリリースまでとどまって`__ ください。"
+msgstr ""
 
-# 2201437199254b27b6c2e58b1666bc1d
+# 6960927b159c485e8c6e2512f116b612
 #: ../../appendix/releases.rst:15
 msgid "Bugfix Releases (1.9.x)"
-msgstr "バグ修正版リリース(1.9.x)"
+msgstr ""
 
-# 4c251a2e060545e0b551cfc44e32fe42
+# 5a833625805d4fbc9e03ef63dc48f95e
 #: ../../appendix/releases.rst:16
 msgid "Every few weeks."
-msgstr "数週間ごとに。"
+msgstr ""
 
-# 23ffc71aac7f43abb3f350a2f6aebb42
+# b0727d475284439195a237045fdfd8e4
 #: ../../appendix/releases.rst:18
 msgid ""
 "Bugfix releases are made regularly to make sure Elgg stays stable, secure, "
@@ -99,68 +88,55 @@ msgid ""
 "changes, themes and plugins should work from bugfix release to bugfix "
 "release."
 msgstr ""
-"バグ修正版リリースはElggを確実に安定させ安全でバグの無いものとするために、定"
-"期的に行われます。３つ目の数字が大きいほど、よくテストされ、より安全なリリー"
-"スです。バグ修正リリースはバグの修正が主たるものであって大きな変更はなされま"
-"せんので、テーマやプラグインはバグ修正版リリース間ならうまく動くはずです。"
 
-# 119e901fa2a244bd8b4c472ab9e6ed3d
+# 022cd03da49a4928a8e9cb25c86c9eb9
 #: ../../appendix/releases.rst:25
 msgid "Feature Releases (1.x.0)"
-msgstr "新機能版リリース(1.x.0)"
+msgstr ""
 
-# f3139294fc604ff48364d065b62944cb
+# 66b92e1f3b3e4939858e103efbbc00bd
 #: ../../appendix/releases.rst:26
 msgid "Every few months."
-msgstr "数カ月毎"
+msgstr ""
 
-# 98af7a0aa0ae466aa7ada81eaf5e6af0
+# 86358af97098457e9c54ea9c93b354b0
 #: ../../appendix/releases.rst:28
 msgid ""
 "New features are introduced in Elgg every few months in minor new feature "
 "releases. These versions are identified by the second digit (1.**8**.0). "
-"These releases aren't as mature as bugfix release, but are considered stable "
-"and useable. Though these releases try to be backward compatible, features "
+"These releases aren't as mature as bugfix release, but are considered stable"
+" and useable. Though these releases try to be backward compatible, features "
 "are added, unused code removed, and overall improvements are made, so "
 "plugins and themes might need to be updated to make use of the new and "
 "improved features."
 msgstr ""
-"新しい機能は数カ月毎にElggに実装され、マイナー機能追加版としてリリースされま"
-"す。このようなバージョンは、バージョン番号の２番目の数字(1.**8**.0)で表されま"
-"す。これらのリリースは、バグ修正版のようにこなれていませんが、安定で十分使え"
-"るものです。後方互換性が保たれるようにされおり新機能が追加され無駄なコードが"
-"排除され全体として改善がなされています。しかしながら、新しい改善された機能を"
-"利用するにはプラグインやテーマもアップデートしないといけないかもしれません。"
 
-# ad614397444846398e3a801140e556f2
+# fbfb73eda47b46dba13743092fe4cafa
 #: ../../appendix/releases.rst:37
 msgid "Major Releases (x.0.0)"
-msgstr "メジャーリリース(x.0.0)"
+msgstr ""
 
-# 0bb3c4a319ad4f719ea02898e108beb5
+# 8c63708c125848bbbcc0f53d8e618443
 #: ../../appendix/releases.rst:38
 msgid "Every few years."
-msgstr "数年毎。"
+msgstr ""
 
-# 13afc1e4555a487a91f0c113d2980d1b
+# 20e8f0225f72428bbc31441ea248ff97
 #: ../../appendix/releases.rst:40
 msgid ""
 "Elgg, as all software, inevitably undergoes serious changes and a major new "
 "feature release is made. These releases are opportunities for the core team "
-"to make dramatic improvements to the underlying platform. Themes and plugins "
-"from older versions are not expected to work without modification on "
+"to make dramatic improvements to the underlying platform. Themes and plugins"
+" from older versions are not expected to work without modification on "
 "different major releases."
 msgstr ""
-"ソフトウェアの宿命としてElggも重大な変更が行われることは避けられず、メジャー"
-"機能追加版リリースがなされます。このようなリリースは開発コアチームがプラット"
-"フォームに対してドラマティックな改善を行うにはよいきっかけともなります。"
 
-# 9a080bfd9c4e4b1894dbadb47be26098
+# 79bcfaa6b6924e06baa277a752164591
 #: ../../appendix/releases.rst:46
 msgid "Release Candidates/Betas"
-msgstr "リリース候補版/β版"
+msgstr ""
 
-# dafb6cec133949c2bec1766c7299d21b
+# f8acb11a62964d62b53f0926dfca4d48
 #: ../../appendix/releases.rst:47
 msgid ""
 "Before feature releases and major releases, the core team will typically "
@@ -172,48 +148,48 @@ msgid ""
 "writing plugins against any new APIs."
 msgstr ""
 
-# 9b0d4a8336f74e3696b573db47bfbdf7
+# fe82696f3b184c168a629141feecc38f
 #: ../../appendix/roadmap.rst:2
 msgid "Roadmap"
-msgstr "ロードマップ（計画表）"
+msgstr "ロードマップ"
 
-# 5c105efc2f4a47eab63093a4c0a49877
+# 3cd096f64e674a269a50296d3b535d2f
 #: ../../appendix/roadmap.rst:4
 msgid ""
 "What direction is the project going? What exciting new features are coming "
 "soon?"
 msgstr ""
 
-# 8ea80cbb132c4cfd9c1ebbefa1d8701d
+# e23b8881a28546e8ba5b9e0b09ebc90f
 #: ../../appendix/roadmap.rst:6
 msgid ""
 "We do not publish detailed roadmaps, but it’s possible to get a sense for "
 "our general direction by utilizing the following resources:"
 msgstr ""
 
-# 5534914e54ba4af8896c0fd5aa9c3a62
+# f3740b91e37d44f799fc4dab4b1fc706
 #: ../../appendix/roadmap.rst:9
 msgid ""
 "Our `feedback and planning group`_ is used to host early discussion about "
 "what will be worked on next."
 msgstr ""
 
-# f7a5a1a7c34a4f0c8bb8031743d25f57
+# 68dff2532c004bb2aba013ebfb61d992
 #: ../../appendix/roadmap.rst:10
 msgid ""
 "Our `Github milestones`_ represent a general direction for the future "
-"releases of Elgg. This is the closest thing to a traditional roadmap that we "
-"have."
+"releases of Elgg. This is the closest thing to a traditional roadmap that we"
+" have."
 msgstr ""
 
-# 75184c87d14342b8aa76daa2945b3f0b
+# 9ebf38f17ab243a68a583a5dd5896bbd
 #: ../../appendix/roadmap.rst:12
 msgid ""
 "`Github pull requests`_ will give you a good idea of what’s currently being "
 "developed, but nothing is sure until the PR is actually checked in."
 msgstr ""
 
-# d1d6d7be69de498ea7d7b81773da7ca5
+# c3d02f4fb46c4abbb61f78c15e756aac
 #: ../../appendix/roadmap.rst:14
 msgid ""
 "We use the `developer blog`_ to post announcements of features that have "
@@ -221,51 +197,51 @@ msgid ""
 "indication of what features will be available in the next release."
 msgstr ""
 
-# 884aab49b92c4b9c9b89208918a05751
+# 89ba1a73c7394558a07147a0c80384e0
 #: ../../appendix/roadmap.rst:24
 msgid "Values"
 msgstr ""
 
-# a648f184471a4e01872bd7cebc8b30bf
+# a6f12ab7e2484ab3a6a89af3354147e2
 #: ../../appendix/roadmap.rst:26
 msgid ""
 "We have several overarching goals/values that affect the direction of Elgg. "
 "Enhancements generally must promote these values in order to be accepted."
 msgstr ""
 
-# 81c1bf82a8bf48e4a4a0e0b9ccea2bf2
+# cd11ee079ec64ac9916bd61255a781bf
 #: ../../appendix/roadmap.rst:30
 msgid "Accessibility"
 msgstr ""
 
-# 73e65c70f8de4c6189a9c07ad4657336
+# 0620bdd527e04e7c8a9b7a65bda4a1f6
 #: ../../appendix/roadmap.rst:32
 msgid ""
 "Elgg-based sites should be usable by anyone anywhere. That means we'll "
 "always strive to make Elgg:"
 msgstr ""
 
-# 126fe64cf8754e21aafeb4a21ed9d835
+# 6afaf91bc9654464b23e38918b2c6305
 #: ../../appendix/roadmap.rst:34
 msgid "Device-agnostic -- mobile, tablet, desktop, etc. friendly"
 msgstr ""
 
-# 3d73ed52dab244abb3edb7df07661873
+# 6ffdd9238c12489cb103a2fa050a318a
 #: ../../appendix/roadmap.rst:35
 msgid "Language-agnostic -- i18n, RTL, etc."
 msgstr ""
 
-# d930fcc6ade54f96b29e424e3db1c4ff
+# d767996d45b543d0b14e45ca1c24140b
 #: ../../appendix/roadmap.rst:36
 msgid "Capability-agnostic -- touch, keyboard, screen-reader friendly"
 msgstr ""
 
-# eb48d0eeb08444f082b4032d45090a98
+# 4baffe640c0e4f23a4c191aa17edff35
 #: ../../appendix/roadmap.rst:39
 msgid "Testability"
 msgstr ""
 
-# bc92dc3e40f8409a8a2a44a2e4d9565f
+# e009fa5f43884d70a3eb93b61f9c1ed7
 #: ../../appendix/roadmap.rst:41
 msgid ""
 "We want to **make manual testing unnecessary** for core developers, plugin "
@@ -273,7 +249,7 @@ msgid ""
 "testing at every level of the Elgg stack."
 msgstr ""
 
-# 81cd54ebfa284181981c1165c6f68308
+# 4e05265383024a6ab7060322c6c76444
 #: ../../appendix/roadmap.rst:44
 msgid ""
 "We think APIs are broken if they require plugin authors to write untestable "
@@ -281,7 +257,7 @@ msgid ""
 "currently and are working to fix it."
 msgstr ""
 
-# 24bc7f56245f40aa992442a943e1c4b6
+# d344365118c94c2ca36bf1d7ea985f4a
 #: ../../appendix/roadmap.rst:47
 msgid ""
 "We look forward to a world where the core developers do not need to do any "
@@ -290,32 +266,32 @@ msgid ""
 "install new plugins with confidence that everything works well together."
 msgstr ""
 
-# bdc6579b01f64c69a543bbb771f11f24
+# 106a14eb9ecb4ee6a76876c5475d0de6
 #: ../../appendix/roadmap.rst:51
 msgid "TODO: other goals/values?"
-msgstr "TODO: other goals/values?"
+msgstr ""
 
-# 2043c78e9eb545558c19477bd4b4ee98
+# 51bdd91422fd4597b4f19e959e5fcfb9
 #: ../../appendix/roadmap.rst:54
 msgid "FAQ"
-msgstr "FAQ（よくある質問と答え）"
+msgstr ""
 
-# d055ffa5337b43e8970df23e1e83a7bd
+# c8db66612d2741eeb9f6dad96bd326b2
 #: ../../appendix/roadmap.rst:57
 msgid "When will feature X be implemented?"
-msgstr "機能Xはいつ実装されるのでしょうか？"
+msgstr ""
 
-# 9d5aa976c1df487eb007b686e0dc4e66
+# 0162ecdfd2a74db590ad1c2533963d6b
 #: ../../appendix/roadmap.rst:58
 msgid ""
 "We cannot promise when features will get implemented because new features "
-"are checked into Elgg only when someone is motivated enough to implement the "
-"feature and submit a pull request. The best we can do is tell you to look "
-"out for what features existing developers have expressed interest in working "
-"on."
+"are checked into Elgg only when someone is motivated enough to implement the"
+" feature and submit a pull request. The best we can do is tell you to look "
+"out for what features existing developers have expressed interest in working"
+" on."
 msgstr ""
 
-# 2ffe485b5fa842098ed44e8bbc02b133
+# b3a660053ec943a2b0e43d9d78c78d34
 #: ../../appendix/roadmap.rst:64
 msgid ""
 "The best way to ensure a feature gets implemented is to discuss it with the "
@@ -323,7 +299,7 @@ msgid ""
 "guide if you're interested. We love new contributors!"
 msgstr ""
 
-# 66b2b6b9f07e401b827673a8e74b3726
+# 3b90570c85514660bd884170646feca8
 #: ../../appendix/roadmap.rst:67
 msgid ""
 "Do not rely on future enhancements if you're on the fence as to whether to "
@@ -331,12 +307,12 @@ msgid ""
 "almost certainly not materialize within your timeline."
 msgstr ""
 
-# 2c921e27d8294cf5957de4adf22ab453
+# 07c0c98d5c3a45968d44cce924b6bdec
 #: ../../appendix/roadmap.rst:72
 msgid "When is version X.Y.Z going to be released?"
-msgstr "バージョン X.Y.Z は、いつリリースされるのでしょうか？"
+msgstr ""
 
-# 17b69164141e4f0b9b90c1a3fd4880f7
+# 3f3c61f846534fd788d67e049097e6cf
 #: ../../appendix/roadmap.rst:73
 msgid ""
 "The next version will be released when the core team feels it's ready and "
