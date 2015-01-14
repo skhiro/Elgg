@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Elgg 1.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-21 23:12+0300\n"
-"PO-Revision-Date: 2015-01-12 12:19+0900\n"
+"POT-Creation-Date: 2015-01-11 19:33-0500\n"
+"PO-Revision-Date: 2015-01-14 20:15+0900\n"
 "Last-Translator: SAKAGUCHI, Hirotaka <kemo@saka-hv.org>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/elgg-core/"
 "language/ja/)\n"
@@ -19,6 +19,599 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 1.7.1\n"
+
+#: ../../admin/backup-restore.rst:2
+msgid "Backup and Restore"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:0 ../../admin/duplicate-installation.rst:0
+#: ../../admin/getting-help.rst:0 ../../admin/performance.rst:0
+#: ../../admin/plugins.rst:0
+#, fuzzy
+msgid "Contents"
+msgstr "配布されているプラグインパッケージを解凍する"
+
+# 7e65ae947fc04a2bae6a5422875fd56d
+#: ../../admin/backup-restore.rst:9 ../../admin/duplicate-installation.rst:9
+#, fuzzy
+msgid "Introduction"
+msgstr "基本的な手順"
+
+#: ../../admin/backup-restore.rst:12
+msgid "Why"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:14
+msgid ""
+"Shared hosting providers typically don't provide an automated way to backup "
+"your Elgg installation. This article will address a method of accomplishing "
+"this task."
+msgstr ""
+
+#: ../../admin/backup-restore.rst:16
+msgid ""
+"In IT there are often many ways to accomplish the same thing. Keep that in "
+"mind. This article will explain one method to backup and restore your Elgg "
+"installation on a shared hosting provider that uses the CPanel application. "
+"However, the ideas presented here can be tailored to other applications as "
+"well. The following are typical situations that might require a procedure "
+"such as this:"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:18
+msgid "Disaster Recovery"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:19
+msgid "Moving your Elgg site to a new host"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:20
+#, fuzzy
+msgid "Duplicating an installation"
+msgstr "インストール"
+
+#: ../../admin/backup-restore.rst:23
+#, fuzzy
+msgid "What"
+msgstr "何が問題なのか"
+
+#: ../../admin/backup-restore.rst:25
+msgid "Topics covered:"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:27
+msgid ""
+"Full backups of the Elgg directories and MySQL databases are performed daily "
+"(automated)"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:28
+msgid "The backups are sent to an off-site location via FTP (automated)"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:29
+msgid ""
+"The local backups are deleted after successful transfer to the off-site "
+"location (automatic)"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:30
+msgid "Five days of backups will be maintained (automated)"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:31
+msgid "Restoration of data to the new host (manual)"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:33
+msgid ""
+"This process was composed with assistance from previous articles in the Elgg "
+"documentation wiki."
+msgstr ""
+
+#: ../../admin/backup-restore.rst:36
+msgid "Assumptions"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:38
+msgid "The following assumptions have been made:"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:40
+msgid "The Elgg program directory is ``/home/userx/public_html``"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:41
+msgid "The Elgg data directory is ``/home/userx/elggdata``"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:42
+msgid ""
+"You've created a local directory for your backups at ``/home/userx/"
+"sitebackups``"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:43
+msgid "You have an off-site FTP server to send the backup files to"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:44
+msgid ""
+"The directory that you will be saving the off-site backups to is ``/home/"
+"usery/sitebackups/``"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:45
+msgid ""
+"You will be restoring the site to a second shared hosting provider in the ``/"
+"home/usery/public_html`` directory"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:49
+msgid ""
+"Be sure to replace ``userx``, ``usery``, ``http://mynewdomain.com`` and all "
+"passwords with values that reflect your actual installation!"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:52
+msgid "Creating a usable backup - automatically"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:55
+msgid "Customize the backup script"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:57
+msgid ""
+"The script that you will use can be found :doc:`here <backup/ftp-backup-"
+"script>` ."
+msgstr ""
+
+#: ../../admin/backup-restore.rst:59
+msgid ""
+"Just copy the script to a text file and name the file with a .pl extension. "
+"You can use any text editor to update the file."
+msgstr ""
+
+#: ../../admin/backup-restore.rst:61
+msgid "Change the following to reflect your directory structure:"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:71
+msgid "Change the following to reflect your database parameters:"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:82
+msgid "Change the following to reflect your off-site FTP server parameters:"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:92
+msgid ""
+"Save the file with the ``.pl`` extension (for the purposes of this article "
+"we will name the file: ``elgg-ftp-backup-script.pl``) and upload it to the "
+"following directory ``/home/userx/sitebackups``"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:94
+msgid ""
+"Be aware that you can turn off FTP and flip a bit in the script so that it "
+"does not delete the local backup file in the event that you don't want to "
+"use off-site storage for your backups."
+msgstr ""
+
+#: ../../admin/backup-restore.rst:97
+msgid "Configure the backup Cron job"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:99
+msgid ""
+"Login to your CPanel application and click on the \"Cron Jobs\" link. In the "
+"Common Settings dropdown choose \"Once a day\" and type the following in the "
+"command field ``/usr/bin/perl /home/userx/sitebackups/elgg-ftp-backup-script."
+"pl``"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:101
+msgid ""
+"Click on the \"Add New Cron Job\" button. Daily full backups are now "
+"scheduled and will be transferred off-site."
+msgstr ""
+
+#: ../../admin/backup-restore.rst:104
+msgid "Configure the cleanup Cron job"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:106
+msgid ""
+"If you are sending your backups, via FTP, to another shared hosting provider "
+"that uses the CPanel application or you've turned off FTP altogether you can "
+"configure your data retention as follows."
+msgstr ""
+
+#: ../../admin/backup-restore.rst:108
+msgid ""
+"Login to your CPanel application for your FTP site, or locally if you're not "
+"using FTP, and click on the \"Cron Jobs\" link. In the Common Settings "
+"dropdown choose \"Once a day\" and type the following in the command field "
+"``find /home/usery/sitebackups/full_* -mtime +4 -exec rm {} \\;``"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:110
+msgid ""
+"The ``-mtime X`` parameter will set the number of days to retain backups. "
+"All files older than ``x`` number of days will be deleted. Click on the "
+"\"Add New Cron Job\" button. You have now configured your backup retention "
+"time."
+msgstr ""
+
+#: ../../admin/backup-restore.rst:113
+#, fuzzy
+msgid "Restoring from backup"
+msgstr "Elgg1.8からElgg1.9へ"
+
+#: ../../admin/backup-restore.rst:116
+msgid "Prepare your backup files"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:118
+msgid ""
+"The assumption is that you're restoring your site to another shared hosting "
+"provider with CPanel."
+msgstr ""
+
+#: ../../admin/backup-restore.rst:120
+msgid ""
+"When the script backed the files up the original directory structure was "
+"maintained in the zip file. We need to do a little cleanup. Perform the "
+"following:"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:122
+msgid "Download the backup file that you wish to restore from"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:123
+#, fuzzy
+msgid "Extract the contents of the backup file"
+msgstr "配布されているプラグインパッケージを解凍する"
+
+#: ../../admin/backup-restore.rst:127
+msgid ""
+"Drill down and you will find your site backup and SQL backup. Extract both "
+"of these. You will then have:"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:125
+msgid "a MySQL dump file with a ``.sql`` extension"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:127
+msgid "another directory structure with the contents of:"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:127
+msgid "``/home/userx/public_html``"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:128
+msgid "``/home/userx/elggdata``"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:129
+msgid ""
+"Repackage the contents of the ``/home/userx/public_html`` directory as a zip "
+"file so that the files are in the root of the zip file"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:130
+msgid ""
+"The reason for doing this is simple. It's much more efficient to upload one "
+"zip file than it is to ftp the contents of the ``/home/userx/public_html`` "
+"directory to your new host."
+msgstr ""
+
+#: ../../admin/backup-restore.rst:131
+msgid ""
+"Repackage the contents of the /home/userx/elggdata directory as a zip file "
+"so that the files are in the root of the zip file"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:133
+msgid "You should now have the following files:"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:135
+msgid "the ``.sql`` file"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:136
+msgid ""
+"the zip file with the contents of ``/home/userx/public_html`` in the root"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:137
+msgid "the zip file with the contents of ``/home/userx/elggdata`` in the root"
+msgstr ""
+
+# 1dfae8ed20a449f1942ad2c225628404
+#: ../../admin/backup-restore.rst:140
+#, fuzzy
+msgid "Restore the files"
+msgstr "ファイルのアップデート"
+
+#: ../../admin/backup-restore.rst:142
+msgid ""
+"This is written with the assumption that you're restoring to a different "
+"host but maintaining the original directory structure. Perform the following:"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:144
+msgid ""
+"Login to the CPanel application on the host that you wish to restore the "
+"site to and open the File Manager."
+msgstr ""
+
+#: ../../admin/backup-restore.rst:148
+msgid "Navigate to ``/home/usery/public_html``"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:146
+msgid "Upload the zip file that contains the ``/home/userx/public_html`` files"
+msgstr ""
+
+# 1dfae8ed20a449f1942ad2c225628404
+#: ../../admin/backup-restore.rst:147 ../../admin/backup-restore.rst:152
+#, fuzzy
+msgid "Extract the zip file"
+msgstr "ファイルのアップデート"
+
+#: ../../admin/backup-restore.rst:148
+msgid "You should now see all of the files in ``/home/usery/public_html``"
+msgstr ""
+
+# 1dfae8ed20a449f1942ad2c225628404
+#: ../../admin/backup-restore.rst:149 ../../admin/backup-restore.rst:154
+#, fuzzy
+msgid "Delete the zip file"
+msgstr "ファイルのアップデート"
+
+#: ../../admin/backup-restore.rst:154
+msgid "Navigate to ``/home/usery/elggdata``"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:151
+msgid "Upload the zip file that contains the ``/home/userx/elggdata`` files"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:153
+msgid "You should now see all of the files in /home/usery/elggdata"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:156
+msgid "Program and data file restoration is complete"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:159
+#, fuzzy
+msgid "Restore the MySQL Database"
+msgstr "MySQLを調整する"
+
+#: ../../admin/backup-restore.rst:163
+msgid ""
+"Again, the assumption here is that you're restoring your Elgg installation "
+"to a second shared hosting provider. Each shared hosting provider prepends "
+"the account holder's name to the databases associated with that account. For "
+"example, the username for our primary host is ``userx`` so the host will "
+"prepend ``userx_`` to give us a database name of ``userx_elgg``. When we "
+"restore to our second shared hosting provider we're doing so with a username "
+"of ``usery`` so our database name will be ``usery_elgg``. The hosting "
+"providers don't allow you to modify this behavior. So the process here isn't "
+"as simple as just restoring the database from backup to the usery account. "
+"However, having said that, it's not terribly difficult either."
+msgstr ""
+
+#: ../../admin/backup-restore.rst:166
+#, fuzzy
+msgid "Edit the MySQL backup"
+msgstr "MySQLを調整する"
+
+#: ../../admin/backup-restore.rst:168
+msgid ""
+"Open the ``.sql`` file that you extracted from your backup in your favorite "
+"text editor. Comment out the following lines with a hash mark:"
+msgstr ""
+
+# 1dfae8ed20a449f1942ad2c225628404
+#: ../../admin/backup-restore.rst:175
+#, fuzzy
+msgid "Save the file."
+msgstr "ファイルのアップデート"
+
+# 393c2f22320642f282e5206ba05a8647
+#: ../../admin/backup-restore.rst:178
+#, fuzzy
+msgid "Create the new database"
+msgstr "データベース内のシステムログをローテーションする"
+
+#: ../../admin/backup-restore.rst:180
+msgid "Perform the following:"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:189
+msgid ""
+"Login to the CPanel application on the new host and click on the \"MySQL "
+"Databases\" icon"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:183
+msgid ""
+"Fill in the database name and click the \"create\" button. For our example "
+"we are going to stick with ``elgg`` which will give us a database name of "
+"``usery_elgg``"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:185
+msgid ""
+"You can associate an existing user with the new database, but to create a "
+"new user you will need to:"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:185
+msgid "Go to the \"Add New User\" section of the \"MySQL Databases\" page"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:186
+msgid ""
+"Enter the username and password. For our example we're going to keep it "
+"simple and use ``elgg`` once again. This will give us a username of "
+"``usery_elgg``"
+msgstr ""
+
+# 393c2f22320642f282e5206ba05a8647
+#: ../../admin/backup-restore.rst:189
+#, fuzzy
+msgid "Associate the new user with the new database"
+msgstr "データベース内のシステムログをローテーションする"
+
+#: ../../admin/backup-restore.rst:188
+msgid ""
+"Go to the \"Add User To Database\" section of the \"MySQL Databases\" page. "
+"Add the ``usery_elgg`` user to the ``usery_elgg`` database"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:189
+msgid "Select \"All Privileges\" and click the \"Make Changes\" button"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:192
+#, fuzzy
+msgid "Restore the production database"
+msgstr "**データベースをバックアップする** 。コードも忘れずに。"
+
+#: ../../admin/backup-restore.rst:194
+msgid ""
+"Now it's time to restore the MySQL backup file by importing it into our new "
+"database named \"usery_elgg\"."
+msgstr ""
+
+#: ../../admin/backup-restore.rst:200
+msgid ""
+"Login to the CPanel application on the new host and click on the "
+"\"phpMyAdmin icon"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:197
+msgid "Choose the ``usery_elgg`` database in the left hand column"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:198
+msgid "Click on the \"import\" tab at the top of the page"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:199
+msgid "Browse to the ``.sql`` backup on your local computer and select it"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:200
+msgid "Click the \"Go\" button on the bottom right side of the page"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:202
+msgid "You should now see a message stating that the operation was successful"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:205
+msgid "Bringing it all together"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:207
+msgid ""
+"The restored elgg installation knows **nothing** about the new database "
+"name, database username, directory structure, etc. That's what we're going "
+"to address here."
+msgstr ""
+
+#: ../../admin/backup-restore.rst:209
+msgid ""
+"Edit ``/public_html/engine/settings.php`` on the new hosting provider to "
+"reflect the database information for the database that you just created."
+msgstr ""
+
+#: ../../admin/backup-restore.rst:226
+msgid ""
+"Upload the ``settings.php`` file back to the new host - overwriting the "
+"existing file."
+msgstr ""
+
+#: ../../admin/backup-restore.rst:228
+msgid ""
+"Open the phpMyAdmin tool on the new host from the CPanel. Select the "
+"``usery_elgg`` database on the left and click the SQL tab on the top of the "
+"page. Run the following SQL queries against the ``usery_elgg`` database:"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:230
+#: ../../admin/duplicate-installation.rst:159
+#, fuzzy
+msgid "Change the installation path"
+msgstr "インストール"
+
+#: ../../admin/backup-restore.rst:236
+#: ../../admin/duplicate-installation.rst:166
+msgid "Change the data directory"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:242
+msgid "Change the site URL (if this has changed)"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:248
+#: ../../admin/duplicate-installation.rst:180
+msgid "Change the filestore data directory"
+msgstr ""
+
+#: ../../admin/backup-restore.rst:255
+#, fuzzy
+msgid "Finalizing the new installation"
+msgstr "インストール"
+
+#: ../../admin/backup-restore.rst:257
+msgid ""
+"Run the upgrade script by visiting the following URL: ``http://mynewdomain."
+"com/upgrade.php`` . Do this step twice - back to back."
+msgstr ""
+
+#: ../../admin/backup-restore.rst:259
+msgid ""
+"Update your DNS records so that your host name resolves to the new host's IP "
+"address if this is a permanent move."
+msgstr ""
+
+# 8a64d90a69de4269adbf5545a68eaf57
+#: ../../admin/backup-restore.rst:262
+#, fuzzy
+msgid "Congratulations!"
+msgstr "コンフィグレーション（環境設定）"
+
+#: ../../admin/backup-restore.rst:264
+msgid ""
+"If you followed the steps outlined here you should now have a fully "
+"functional copy of your primary Elgg installation."
+msgstr ""
+
+#: ../../admin/backup-restore.rst:267
+#: ../../admin/duplicate-installation.rst:264
+msgid "Related"
+msgstr ""
+
+#: ../../admin/backup/ftp-backup-script.rst:2
+msgid "FTP backup script"
+msgstr ""
+
+#: ../../admin/backup/ftp-backup-script.rst:4
+msgid "Here is an automated script for backing up an Elgg installation."
+msgstr ""
 
 # 1e46a5df58d84552b00e5f56d00026ef
 #: ../../admin/cron.rst:2
@@ -147,17 +740,18 @@ msgstr ""
 
 # b2650ae3b7c040c5a97beca332efb85b
 # 6fbae717d012450c8c4c6f68e11d8d32
-#: ../../admin/cron.rst:47 ../../admin/plugins.rst:46
+#: ../../admin/cron.rst:47 ../../admin/plugins.rst:86
 msgid "Installation"
 msgstr "インストールする"
 
 # e384324594da4839a04d3695f9959e07
 #: ../../admin/cron.rst:49
+#, fuzzy
 msgid ""
 "The ``crontab`` needs to specify a script or command that will hit the Elgg "
-"cron pages. Two commonly available programs for this are `GET`__ and "
-"`wget`__. You will need to determine the location of one of these on your "
-"server. Your crontab also needs to specify the location of your website."
+"cron pages. Two commonly available programs for this are `GET` and `wget`. "
+"You will need to determine the location of one of these on your server. Your "
+"crontab also needs to specify the location of your website."
 msgstr ""
 "Elgg cron ページがうまくアクセスされるように  ``crontab`` にスクリプトやコマ"
 "ンドを書きましょう。 `GET`__ と `wget`__ の２つのコマンドがよく使われます。 "
@@ -246,6 +840,739 @@ msgstr ""
 "あなたの cron ジョブが動いているかどうかは、Elggの管理業務パネルの "
 "Statistics > Cron (統計情報 > Cron ) をご覧ください。"
 
+# b2650ae3b7c040c5a97beca332efb85b
+# 6fbae717d012450c8c4c6f68e11d8d32
+#: ../../admin/duplicate-installation.rst:2
+#, fuzzy
+msgid "Duplicate Installation"
+msgstr "インストール"
+
+#: ../../admin/duplicate-installation.rst:12
+msgid "Why Duplicate an Elgg Installation?"
+msgstr ""
+
+#: ../../admin/duplicate-installation.rst:14
+msgid ""
+"There are many reasons you may want to duplicate an Elgg installation: "
+"moving the site to another server, creating a test or development server, "
+"and creating functional backups are the most common. To create a successful "
+"duplicate of an Elgg site, 3 things need to be copied:"
+msgstr ""
+
+#: ../../admin/duplicate-installation.rst:16
+#, fuzzy
+msgid "Database"
+msgstr "データベースクエリキャッシュ"
+
+#: ../../admin/duplicate-installation.rst:17
+#, fuzzy
+msgid "Data from the data directory"
+msgstr "~75,000 個のデータディレクトリ"
+
+#: ../../admin/duplicate-installation.rst:18
+#, fuzzy
+msgid "Code"
+msgstr "**データベースをバックアップする** 。コードも忘れずに。"
+
+#: ../../admin/duplicate-installation.rst:20
+msgid ""
+"Also at least 5 pieces of information must be changed from the copied "
+"installation:"
+msgstr ""
+
+# f8d7b0f0b9ce4d54b2d95c26910d4e51
+#: ../../admin/duplicate-installation.rst:22
+#, fuzzy
+msgid "``engine/settings.php`` file"
+msgstr "``engine/settings.php``"
+
+# 3d0ed31073ac48a4a20eb84ae02461b6
+#: ../../admin/duplicate-installation.rst:23
+#, fuzzy
+msgid "``.htaccess`` file"
+msgstr ""
+"もし、以前のバージョンからElggをアップデートしたのであれば、.htaccess ファイ"
+"ルを更新してください"
+
+#: ../../admin/duplicate-installation.rst:24
+msgid "database entry for your site entity"
+msgstr ""
+
+#: ../../admin/duplicate-installation.rst:25
+msgid "database entry for the installation path"
+msgstr ""
+
+#: ../../admin/duplicate-installation.rst:26
+msgid "database entry for the data path"
+msgstr ""
+
+#: ../../admin/duplicate-installation.rst:29
+#, fuzzy
+msgid "What Is Not Covered in This Tutorial"
+msgstr "何が問題なのか"
+
+#: ../../admin/duplicate-installation.rst:31
+msgid ""
+"This tutorial expects a basic knowledge of Apache, MySQL, and Linux "
+"commands. As such, a few things will not be covered in this tutorial. These "
+"include:"
+msgstr ""
+
+#: ../../admin/duplicate-installation.rst:33
+msgid "How to backup and restore MySQL databases"
+msgstr ""
+
+#: ../../admin/duplicate-installation.rst:34
+msgid "How to configure Apache to work with Elgg"
+msgstr ""
+
+#: ../../admin/duplicate-installation.rst:35
+msgid "How to transfer files to and from your production server"
+msgstr ""
+
+#: ../../admin/duplicate-installation.rst:38
+msgid "Before You Start"
+msgstr ""
+
+#: ../../admin/duplicate-installation.rst:40
+msgid ""
+"Before you start, make sure the Elgg installation you want to duplicate is "
+"fully functional. You will also need the following items:"
+msgstr ""
+
+#: ../../admin/duplicate-installation.rst:42
+#, fuzzy
+msgid "A backup of the live Elgg database"
+msgstr "実働しているサイトのをあららしいバージョンのElggに切り替えます。"
+
+#: ../../admin/duplicate-installation.rst:43
+msgid "A place to copy the live database"
+msgstr ""
+
+#: ../../admin/duplicate-installation.rst:45
+msgid "A server suitable for installing duplicate Elgg site"
+msgstr ""
+
+#: ../../admin/duplicate-installation.rst:45
+msgid "(This can be the same server as your production Elgg installation.)"
+msgstr ""
+
+#: ../../admin/duplicate-installation.rst:47
+msgid ""
+"Backups of the database can be obtained various ways, including phpMyAdmin, "
+"the MySQL official GUI, and the command line. Talk to your host for "
+"information on how to backup and restore databases or use Google to find "
+"information on this."
+msgstr ""
+
+#: ../../admin/duplicate-installation.rst:49
+msgid ""
+"During this tutorial, we will make these assumptions about the production "
+"Elgg site:"
+msgstr ""
+
+#: ../../admin/duplicate-installation.rst:51
+#, fuzzy
+msgid "The URL is ``http://www.myelgg.org/``"
+msgstr "`The Elgg Community <http://community.elgg.org/plugins>`_"
+
+#: ../../admin/duplicate-installation.rst:52
+msgid "The installation path is ``/var/www/elgg/``"
+msgstr ""
+
+#: ../../admin/duplicate-installation.rst:53
+#, fuzzy
+msgid "The data directory is ``/var/data/elgg/``"
+msgstr "**データベースとデータディレクトリとコードをバックアップ**"
+
+#: ../../admin/duplicate-installation.rst:54
+#: ../../admin/duplicate-installation.rst:65
+#, fuzzy
+msgid "The database host is ``localhost``"
+msgstr "データベース内のシステムログをローテーションする"
+
+#: ../../admin/duplicate-installation.rst:55
+msgid "The database name is ``production_elgg``"
+msgstr ""
+
+#: ../../admin/duplicate-installation.rst:56
+#: ../../admin/duplicate-installation.rst:67
+msgid "The database user is ``db_user``"
+msgstr ""
+
+#: ../../admin/duplicate-installation.rst:57
+#: ../../admin/duplicate-installation.rst:68
+msgid "The database password is ``db_password``"
+msgstr ""
+
+#: ../../admin/duplicate-installation.rst:58
+#: ../../admin/duplicate-installation.rst:69
+#, fuzzy
+msgid "The database prefix is ``elgg``"
+msgstr "データベース内のシステムログをローテーションする"
+
+#: ../../admin/duplicate-installation.rst:60
+msgid "At the end of the tutorial, our test Elgg installation details will be:"
+msgstr ""
+
+#: ../../admin/duplicate-installation.rst:62
+#, fuzzy
+msgid "The URL is ``http://test.myelgg.org/``"
+msgstr "`The Elgg Community <http://community.elgg.org/plugins>`_"
+
+#: ../../admin/duplicate-installation.rst:63
+msgid "The installation path is ``/var/www/elgg_test/``"
+msgstr ""
+
+#: ../../admin/duplicate-installation.rst:64
+msgid "The data directory is ``/var/data/elgg_test/``"
+msgstr ""
+
+#: ../../admin/duplicate-installation.rst:66
+msgid "The database name is ``test_elgg``"
+msgstr ""
+
+#: ../../admin/duplicate-installation.rst:72
+msgid "Copy Elgg Code to the Test Server"
+msgstr ""
+
+#: ../../admin/duplicate-installation.rst:74
+msgid ""
+"The very first step is to duplicate the production Elgg code. In our "
+"example, this is as simple as copying ``/var/www/elgg/`` to ``/var/www/"
+"elgg_test/``."
+msgstr ""
+
+#: ../../admin/duplicate-installation.rst:81
+msgid "Copy Data to the Test Server"
+msgstr ""
+
+#: ../../admin/duplicate-installation.rst:83
+msgid ""
+"In this example, this is as simple as copying ``/var/data/elgg/`` to ``/var/"
+"data/elgg_test/``."
+msgstr ""
+
+#: ../../admin/duplicate-installation.rst:89
+msgid ""
+"If you don't have shell access to your server and have to ftp the data, you "
+"may need to change ownership and permissions on the files."
+msgstr ""
+
+#: ../../admin/duplicate-installation.rst:93
+msgid ""
+"You also need to delete the views cache on the test server after the copy "
+"process. This is a directory called ``views_simplecache`` in your data "
+"directory and the directory called ``system_cache`` ."
+msgstr ""
+
+# f8d7b0f0b9ce4d54b2d95c26910d4e51
+#: ../../admin/duplicate-installation.rst:96
+#, fuzzy
+msgid "Edit engine/settings.php"
+msgstr "``engine/settings.php``"
+
+#: ../../admin/duplicate-installation.rst:98
+msgid ""
+"The ``engine/settings.php`` file contains the database configuration "
+"details. These need to be adjusted for your new test Elgg installation. In "
+"our example, we'll look in ``/var/www/elgg_test/engine/settings.php`` and "
+"find the lines that look like this:"
+msgstr ""
+
+#: ../../admin/duplicate-installation.rst:120
+msgid "We need to change these lines to match our new installation:"
+msgstr ""
+
+#: ../../admin/duplicate-installation.rst:144
+msgid "Notice the ``$CONFIG->dbname`` has changed to reflect our new database."
+msgstr ""
+
+#: ../../admin/duplicate-installation.rst:147
+#, fuzzy
+msgid "Copy Elgg Database"
+msgstr "データベース内のシステムログをローテーションする"
+
+#: ../../admin/duplicate-installation.rst:149
+msgid ""
+"Now the database must be copied from ``elgg_production`` to ``elgg_test``. "
+"See your favorite MySQL manager's documentation for how to make a duplicate "
+"database. You will generally export the current database tables to a file, "
+"create the new database, and then import the tables that you previously "
+"exported."
+msgstr ""
+
+#: ../../admin/duplicate-installation.rst:151
+msgid ""
+"You have two options on updating the values in the database. You could "
+"change the values in the export file or you could import the file and change "
+"the values with database queries. One advantage of modifying the dump file "
+"is that you can also change links that people have created to content within "
+"your site. For example, if people have bookmarked pages using the bookmark "
+"plugin, the bookmarks will point to the old site unless your update their "
+"URLs."
+msgstr ""
+
+# be8cd34595d84a79b6ffd3d0f97cc703
+#: ../../admin/duplicate-installation.rst:154
+#, fuzzy
+msgid "Database Entries"
+msgstr "データベース・クエリ・キャッシュ"
+
+#: ../../admin/duplicate-installation.rst:156
+msgid ""
+"We must now change 4 entries in the database. This is easily accomplished "
+"with 4 simple SQL commands:"
+msgstr ""
+
+#: ../../admin/duplicate-installation.rst:173
+msgid "Change the site URL"
+msgstr ""
+
+#: ../../admin/duplicate-installation.rst:201
+msgid "Only change the first path here!!"
+msgstr ""
+
+# 3d0ed31073ac48a4a20eb84ae02461b6
+#: ../../admin/duplicate-installation.rst:204
+#, fuzzy
+msgid "Check .htaccess"
+msgstr "``.htaccess``"
+
+#: ../../admin/duplicate-installation.rst:206
+msgid ""
+"If you have made changes to .htaccess that modify any paths, make sure you "
+"update them in the test installation."
+msgstr ""
+
+#: ../../admin/duplicate-installation.rst:209
+#, fuzzy
+msgid "Update Webserver Config"
+msgstr "ファイルのアップデート"
+
+#: ../../admin/duplicate-installation.rst:211
+msgid ""
+"For this example, you must edit the Apache config to enable a subdomain with "
+"a document root of ``/var/www/elgg_test/``. If you plan to install into a "
+"subdirectory of your document root, this step is unnecessary."
+msgstr ""
+
+#: ../../admin/duplicate-installation.rst:214
+msgid "Run upgrade.php"
+msgstr ""
+
+#: ../../admin/duplicate-installation.rst:216
+msgid ""
+"To regenerate cached data, make sure to run ``http://test.myelgg.org/upgrade."
+"php``"
+msgstr ""
+
+#: ../../admin/duplicate-installation.rst:219
+#, fuzzy
+msgid "Tips"
+msgstr "参考までにデータベース設定のヒントを書いておきますと："
+
+#: ../../admin/duplicate-installation.rst:221
+msgid ""
+"It is a good idea to keep a test server around to experiment with installing "
+"new mods and doing development work. If you automate restorations to the "
+"``elgg_test`` database, changing the ``$CONFIG`` values and adding the "
+"follow lines to the end of the ``elgg_test/engine/settings.php`` file will "
+"allow seamless re-writing of the MySQL database entries."
+msgstr ""
+
+#: ../../admin/duplicate-installation.rst:268
+#, fuzzy
+msgid ":doc:`backup-restore`"
+msgstr ":doc:`/appendix/index`"
+
+# 5db99b0bf09442729c26cc9f3d6d8caf
+#: ../../admin/getting-help.rst:2
+#, fuzzy
+msgid "Getting Help"
+msgstr "settings"
+
+#: ../../admin/getting-help.rst:4
+msgid ""
+"Having a problem with Elgg? The best way to get help is to ask at the "
+"`Community Site`_. This site is community supported by a large group of "
+"volunteers. Here are a few tips to help you get the help you need."
+msgstr ""
+
+# 5db99b0bf09442729c26cc9f3d6d8caf
+#: ../../admin/getting-help.rst:13
+#, fuzzy
+msgid "Getting help"
+msgstr "settings"
+
+#: ../../admin/getting-help.rst:16
+msgid "Don't be a `Help Vampire`_"
+msgstr ""
+
+#: ../../admin/getting-help.rst:18
+msgid ""
+"We were all newbies at one time, but we can all learn. Not showing that you "
+"are making attempts to learn on your own or do your own research is off "
+"putting for those helping. Also, very generic questions like \"How do I "
+"build a forum?\" are almost impossible to answer."
+msgstr ""
+
+# d5acca1c28c04295b9fb47d43400de42
+#: ../../admin/getting-help.rst:23
+#, fuzzy
+msgid "Search first"
+msgstr "search"
+
+#: ../../admin/getting-help.rst:25
+msgid ""
+"Be sure to search the documentation (this site), the `Community Site`_, and "
+"Google before asking a question. New users to Elgg frequently have the same "
+"questions, so please search. People are less inclined to reply to a post "
+"that has been answered many other times or that can be answered easily by "
+"Googling."
+msgstr ""
+
+#: ../../admin/getting-help.rst:28
+msgid "Ask once"
+msgstr ""
+
+#: ../../admin/getting-help.rst:30
+msgid ""
+"Posting the same questions in multiple places makes it hard to answer you. "
+"Ask your question in one place only. Duplicate questions may be moderated."
+msgstr ""
+
+#: ../../admin/getting-help.rst:33
+#, fuzzy
+msgid "Include Elgg Version"
+msgstr "Elgg |version| ドキュメント"
+
+#: ../../admin/getting-help.rst:35
+msgid ""
+"Different versions of Elgg have different features (and different bugs). "
+"Including the version of Elgg that you are using will help those helping you."
+msgstr ""
+
+#: ../../admin/getting-help.rst:38
+msgid "Have a reasonable profile"
+msgstr ""
+
+#: ../../admin/getting-help.rst:40
+msgid ""
+"Profiles that look like spam or have silly names will often be ignored. "
+"Joviality is fine, but people are more likely to help Michael than "
+"1337elggHax0r."
+msgstr ""
+
+#: ../../admin/getting-help.rst:43
+msgid "Post in the appropriate forum"
+msgstr ""
+
+#: ../../admin/getting-help.rst:45
+msgid ""
+"Check to make sure you're posting in the right forum. If you have a question "
+"about creating a plugin, don't post to the Elgg Feedback forum. If you need "
+"help installing Elgg, post to Technical Support instead of the Theming group."
+msgstr ""
+
+#: ../../admin/getting-help.rst:48
+msgid "Use a descriptive topic title"
+msgstr ""
+
+#: ../../admin/getting-help.rst:50
+msgid ""
+"Good topic titles concisely describe your problem or question. Bad topic "
+"titles are vague, contain all capital letters, and excessive punctuation."
+msgstr ""
+
+#: ../../admin/getting-help.rst:52
+msgid "Good title: \"White screen after upgrading to 1.7.4.\""
+msgstr ""
+
+#: ../../admin/getting-help.rst:54
+msgid "Bad title: \"URGENT!!!!! site broke ;-( losing money help!!!!!!!!!!!\""
+msgstr ""
+
+#: ../../admin/getting-help.rst:57
+#, fuzzy
+msgid "Be detailed"
+msgstr ""
+"ロードマップの詳細については明かすことができませんが、次のリソースを利用すれ"
+"ばおおよその方向性がわかるかもしれません。"
+
+#: ../../admin/getting-help.rst:59
+msgid ""
+"Include as many details about your problem as possible. If you have a live "
+"site, include a link. Be forthcoming if community members might ask for more "
+"information. We can't help you if you won't give any details!"
+msgstr ""
+
+#: ../../admin/getting-help.rst:62
+msgid "Keep it public"
+msgstr ""
+
+#: ../../admin/getting-help.rst:64
+msgid ""
+"This is a public forum for the good of the Elgg project. Keep posts public. "
+"There's no reason for anyone to ask you to send a private message or email. "
+"Likewise, there's no reason to ask anyone to send a private email to you. "
+"Post in the public."
+msgstr ""
+
+#: ../../admin/getting-help.rst:67
+msgid "Guidelines"
+msgstr ""
+
+#: ../../admin/getting-help.rst:69
+msgid ""
+"In addition to the `site-wide Terms and Policies`_, following these "
+"guidelines keeps our community site useful and safe for everyone."
+msgstr ""
+
+#: ../../admin/getting-help.rst:74
+#, fuzzy
+msgid "Content"
+msgstr ""
+"これは大変有効だと思われますが、その反面、明らかに余計な開発の手間がかかると"
+"いう短所があります。Elgg開発チームは、この方法をElggに直接組み込むことを検討"
+"しています。なぜなら、この方法は繰り返しや隠れたコンテントのあるページに対し"
+"ては特に効果的だからです。"
+
+#: ../../admin/getting-help.rst:76
+msgid ""
+"All content must be safe for work: PG in the US and UK. If your Elgg site "
+"has adult content and you have been asked to post a link, please mark it "
+"NSFW (Not Safe For Work) so people know."
+msgstr ""
+
+#: ../../admin/getting-help.rst:78
+msgid "Excessive swearing in any language will not be tolerated."
+msgstr ""
+
+#: ../../admin/getting-help.rst:81
+msgid "Mood"
+msgstr ""
+
+#: ../../admin/getting-help.rst:83
+msgid ""
+"Working with technical problems can be frustrating. Please keep the "
+"community site free of frustration. If you're feeling anxious, take a step "
+"away and do something else. Threatening or attacking community members, core "
+"developers, or plugin developers will not help solve your problem and will "
+"likely get you banned."
+msgstr ""
+
+#: ../../admin/getting-help.rst:86
+msgid "Advertising"
+msgstr ""
+
+#: ../../admin/getting-help.rst:88
+msgid ""
+"Advertising is not allowed. Posts with any sort of advertising will be "
+"moderated."
+msgstr ""
+
+#: ../../admin/getting-help.rst:91
+msgid "Asking for money / Offering to pay"
+msgstr ""
+
+#: ../../admin/getting-help.rst:93
+msgid ""
+"Don't ask for money on the community site. Likewise, don't offer to pay for "
+"answers. If you are looking for custom development, post to the Professional "
+"Services group. Posts asking for money or recommending a commercial plugin "
+"may be moderated."
+msgstr ""
+
+#: ../../admin/getting-help.rst:96
+msgid "Links"
+msgstr ""
+
+#: ../../admin/getting-help.rst:98
+msgid ""
+"If you're having a problem with a live site, please provide a link to it."
+msgstr ""
+
+#: ../../admin/getting-help.rst:100
+msgid ""
+"That said, the community site is not a back linking service or SEO tool. "
+"Excessive linking will be moderated and your account may be banned."
+msgstr ""
+
+#: ../../admin/getting-help.rst:103
+msgid "Signatures"
+msgstr ""
+
+#: ../../admin/getting-help.rst:105
+msgid ""
+"There's a reason Elgg doesn't have an option for signatures: they cause "
+"clutter and distract from the conversation. Users are discouraged from using "
+"signatures on the community site, and signatures with links or advertising "
+"will be removed."
+msgstr ""
+
+#: ../../admin/getting-help.rst:108
+msgid "Bumping, +1, me too"
+msgstr ""
+
+#: ../../admin/getting-help.rst:110
+msgid ""
+"Don't do it. If your question hasn't been answered, see the top of this "
+"document for tips. These types of post add nothing to the conversation and "
+"may be moderated."
+msgstr ""
+
+# 18230732fdbf481a9ac820b1145d861f
+#: ../../admin/getting-help.rst:113
+#, fuzzy
+msgid "Posting Code"
+msgstr "コードを書く"
+
+#: ../../admin/getting-help.rst:115
+msgid ""
+"Long bits of code are confusing to read through in a forums context. Please "
+"use http://elgg.pastebin.com to post long bits of code and provide the Paste "
+"Bin link instead of directly posting the code."
+msgstr ""
+
+#: ../../admin/getting-help.rst:118
+msgid "Good Ideas"
+msgstr ""
+
+#: ../../admin/getting-help.rst:120
+#, fuzzy
+msgid "Not policies, but good ideas."
+msgstr "ここに、コミットメッセージの良い例を挙げておきます:"
+
+#: ../../admin/getting-help.rst:123
+msgid "Say thanks"
+msgstr ""
+
+#: ../../admin/getting-help.rst:125
+msgid ""
+"Did someone help you? Be sure to thank them! The community site is run by "
+"volunteers. No one has to help you with your problem. Be sure to show your "
+"appreciation!"
+msgstr ""
+
+#: ../../admin/getting-help.rst:128
+msgid "Give back"
+msgstr ""
+
+#: ../../admin/getting-help.rst:130
+msgid ""
+"Have a tip for Elgg? See someone with a similar problem you had? You've been "
+"there and can help them out, so give them a hand!"
+msgstr ""
+
+#: ../../admin/getting_started.rst:2
+msgid "Getting Started"
+msgstr ""
+
+#: ../../admin/getting_started.rst:4
+msgid ""
+"You have installed Elgg and worked through any potential initial issues. "
+"What now? Here are some suggestions on how to to familiarize yourself with "
+"Elgg."
+msgstr ""
+
+#: ../../admin/getting_started.rst:8
+msgid "Focus first on core functionality"
+msgstr ""
+
+#: ../../admin/getting_started.rst:10
+msgid ""
+"When you're new to Elgg, it's best to explore the stock features in core and "
+"its bundled plugins before installing any third party plugins. It's tempting "
+"install every interesting plugin from the community site, but exploring the "
+"core features builds a familiarity with Elgg's expected behavior, and "
+"prevents introducing any confusing bugs from third party plugin into your "
+"new Elgg network."
+msgstr ""
+
+#: ../../admin/getting_started.rst:12
+msgid ""
+"Elgg installs with a basic set of social network plugins activated: blogs, "
+"social bookmarking, files, groups, likes, message boards, wiki-like pages, "
+"user profiles, and microblogging. To change the plugins that are activated, "
+"log in as an admin user, then use the topbar to browse to Administration, "
+"then to Plugins on the right sidebar."
+msgstr ""
+
+#: ../../admin/getting_started.rst:14
+msgid "The user you create during installation is an admin user."
+msgstr ""
+
+#: ../../admin/getting_started.rst:17
+#, fuzzy
+msgid "Create test users"
+msgstr "あなたの抱えるユーザの活動はどの程度活発ですか？"
+
+#: ../../admin/getting_started.rst:18
+msgid "Users can be created two ways in stock Elgg:"
+msgstr ""
+
+#: ../../admin/getting_started.rst:20
+msgid ""
+"Complete the signup process using a different email address and username. "
+"(Logout first or use a different browser!)"
+msgstr ""
+
+#: ../../admin/getting_started.rst:21
+msgid ""
+"Add a user through the Admin section by browsing to Administration -> Users -"
+"> Add New User."
+msgstr ""
+
+#: ../../admin/getting_started.rst:23
+msgid ""
+"Users that self-register must validate their account through email before "
+"they can log in. Users that an admin creates are already validated."
+msgstr ""
+
+#: ../../admin/getting_started.rst:26
+msgid "Explore user functionality"
+msgstr ""
+
+#: ../../admin/getting_started.rst:27
+msgid ""
+"Use your test users to create blogs, add widgets to your profile or "
+"dashboard, post to the Wire (microblogging), and create pages (wiki-like "
+"page creation). Investigate the Settings on the topbar. This is where a user "
+"sets notification settings and configures tools (which will be blank because "
+"none of the default plugins add controls here)."
+msgstr ""
+
+#: ../../admin/getting_started.rst:30
+#, fuzzy
+msgid "Explore admin functionality"
+msgstr "admin"
+
+#: ../../admin/getting_started.rst:31
+msgid ""
+"All of the admin controls are found by clicking Administration in the "
+"topbar. The has a dashboard with a widget that explains the various "
+"sections. Change options in the Configure menu to change how Elgg looks and "
+"acts."
+msgstr ""
+
+# 119d5797a1324e19811c113ceb72b53f
+#: ../../admin/getting_started.rst:34
+#, fuzzy
+msgid "Extending Elgg"
+msgstr "Elggのアプグレード"
+
+#: ../../admin/getting_started.rst:35
+msgid ""
+"After exploring what Elgg can do out of the box, install some themes and "
+"plugins. You can find many plugins and themes at the community site that "
+"have been developed by third parties. These plugins do everything from "
+"changing language strings, to adding chat, to completely redesigning Elgg's "
+"interface. Because these plugins are not official, be certain to check the "
+"comments to make sure you only install well-written plugins by high quality "
+"developers."
+msgstr ""
+
 # 45caefc22b5144548b11e68338eb3e62
 #: ../../admin/index.rst:2
 msgid "Administrator Guides"
@@ -267,18 +1594,18 @@ msgid "Make your site run as smoothly and responsively as possible."
 msgstr "あなたのサイトを如何にスムースにそしてキビキビとさせるか。"
 
 # 557a13bab5e348d5b1e89d0d3467932d
-#: ../../admin/performance.rst:8
+#: ../../admin/performance.rst:11
 msgid "Can Elgg scale to X million users?"
 msgstr "Elggは百万人規模のユーザに耐えうるのですか？"
 
 # 4b60de71a75a4c48bac66c54807786a9
-#: ../../admin/performance.rst:10
+#: ../../admin/performance.rst:13
 msgid "People often ask whether Elgg can scale to large installations."
 msgstr ""
 "しばしばElggに対して大規模な導入に対応しているのかというような質問が来ます。"
 
 # 9faf9eef2d1546979f0115f28a5414e1
-#: ../../admin/performance.rst:12
+#: ../../admin/performance.rst:15
 msgid ""
 "First, we might stop and ask, \"where are you planning to get all those "
 "users?\" Seriously, though, this is a really interesting problem. Making "
@@ -296,29 +1623,29 @@ msgstr ""
 "のテーマです。"
 
 # 7fbbb8d9a01644aeaffef04da34fb078
-#: ../../admin/performance.rst:19
+#: ../../admin/performance.rst:22
 msgid "Second, as with most things in life, the answer is \"it depends\":"
 msgstr ""
 "２つ目は、人生におけるほとんどのことにも言えることですが、答えは、「問題に依"
 "る」です。"
 
 # 4b95fc0e60464a68b51c9bd308eea263
-#: ../../admin/performance.rst:21
+#: ../../admin/performance.rst:24
 msgid "How active are your users?"
 msgstr "あなたの抱えるユーザの活動はどの程度活発ですか？"
 
 # c6f4f7198d5a4789b0dfce3f268e97b6
-#: ../../admin/performance.rst:22
+#: ../../admin/performance.rst:25
 msgid "What hardware is Elgg running on?"
 msgstr "Elggの走っているハードウェアはなんですか？"
 
 # 53898b3e89864b81b1cbf3009d28b8ca
-#: ../../admin/performance.rst:23
+#: ../../admin/performance.rst:26
 msgid "Are your plugins behaving well?"
 msgstr "あなたの書いたプラグインはお行儀のよいものですか？"
 
 # be74f89d9ff747babdcc4cd3c4e058a9
-#: ../../admin/performance.rst:25
+#: ../../admin/performance.rst:28
 msgid ""
 "`Improving the efficiency of the Elgg engine`__ is an ongoing project, "
 "although there are limits to the amount that any script can do."
@@ -328,7 +1655,7 @@ msgstr ""
 "ています。"
 
 # 1ea41857d68c4494b320b370848b04e1
-#: ../../admin/performance.rst:30
+#: ../../admin/performance.rst:33
 msgid ""
 "If you are serious about scalability you will probably want to look at a "
 "number of things yourself."
@@ -337,32 +1664,32 @@ msgstr ""
 "と思うかもしれません。"
 
 # d5acca1c28c04295b9fb47d43400de42
-#: ../../admin/performance.rst:33
+#: ../../admin/performance.rst:36
 msgid "Measure first"
 msgstr "まずは調査"
 
 # e617cc5fbf2449eca89b4521f91b6d2a
-#: ../../admin/performance.rst:35
+#: ../../admin/performance.rst:38
 msgid "There is no point in throwing resources at a problem if you don't know:"
 msgstr "投資をするには以下のことを把握しておかないと始まりません。"
 
 # 44c65631bb3e4c04a81785d2a5a47182
-#: ../../admin/performance.rst:37
+#: ../../admin/performance.rst:40
 msgid "what the problem is"
 msgstr "問題は何なのか"
 
 # e4d2c1ff690b4992939c0d7414a2d517
-#: ../../admin/performance.rst:38
+#: ../../admin/performance.rst:41
 msgid "what resources the problem needs"
 msgstr "その問題を解決するにはどのようなリソースが必要なのか"
 
 # a1d44c4706584412b298b45141006173
-#: ../../admin/performance.rst:39
+#: ../../admin/performance.rst:42
 msgid "where those resources are needed"
 msgstr "どこでそのリソースが食われるのか"
 
 # 44d36ee890ff40dc8ad0afd55aa08bd7
-#: ../../admin/performance.rst:41
+#: ../../admin/performance.rst:44
 msgid ""
 "Invest in some kind of profiling to tell you where your bottleneck is, "
 "especially if you're considering throwing significant money at a problem."
@@ -372,12 +1699,12 @@ msgstr ""
 "ください。"
 
 # 1610e848e388414c92062a1049fb48b7
-#: ../../admin/performance.rst:45
+#: ../../admin/performance.rst:48
 msgid "Tune MySQL"
 msgstr "MySQLの調整"
 
 # 54feb91df4bf42cc97e19952181d5d2d
-#: ../../admin/performance.rst:47
+#: ../../admin/performance.rst:50
 msgid ""
 "Elgg makes extensive use of the back end database, making many trips on each "
 "pageload. This is perfectly normal and a well configured database server "
@@ -388,12 +1715,12 @@ msgstr ""
 "サーバは一秒間に何千ものリクエストを処理することができます。"
 
 # cc07504c42b24e30bac0657d4d1ed737
-#: ../../admin/performance.rst:50
+#: ../../admin/performance.rst:53
 msgid "Here are some configuration tips that might help:"
 msgstr "参考までにデータベース設定のヒントを書いておきますと："
 
 # d4bff3b3b7154dfa9dd4c23f902108d1
-#: ../../admin/performance.rst:52
+#: ../../admin/performance.rst:55
 msgid ""
 "Make sure that MySQL is configured to use an appropriate my.cnf for the size "
 "of your website."
@@ -402,7 +1729,7 @@ msgstr ""
 "確認してください。"
 
 # 443c0e88a01e4c9d96a1afa8766326f6
-#: ../../admin/performance.rst:53
+#: ../../admin/performance.rst:56
 msgid ""
 "Increase the amount of memory available to PHP and MySQL (you will have to "
 "increase the amount of memory available to the php process in any case)"
@@ -411,12 +1738,12 @@ msgstr ""
 "が利用できるメモリ量は増やさなければならないでしょう）"
 
 # fe5669c4b66a43afbdc7d53f5dfef19e
-#: ../../admin/performance.rst:57
+#: ../../admin/performance.rst:60
 msgid "Enable caching"
 msgstr "キャッシングを有効に"
 
 # 778c162aab9d4937a6a1b5c511eea10e
-#: ../../admin/performance.rst:59
+#: ../../admin/performance.rst:62
 msgid ""
 "Generally, if a program is slow, that is because it is repeatedly performing "
 "an expensive computation or operation. Caching allows the system to avoid "
@@ -431,12 +1758,12 @@ msgstr ""
 "る、一般的に利用可能なキャッシングを用いた解決法をいくつか見て行きましょう。"
 
 # 33ed7c8a75834f11a33d3a42f2fe3c16
-#: ../../admin/performance.rst:66
+#: ../../admin/performance.rst:69
 msgid "Simplecache"
 msgstr "Simplecache"
 
 # cdb65c6c46334c93b7c07d0cbcd2ee54
-#: ../../admin/performance.rst:68
+#: ../../admin/performance.rst:71
 msgid ""
 "By default, views are cached in the Elgg data directory for a given period "
 "of time. This removes the need for a view to be regenerated on every page "
@@ -447,7 +1774,7 @@ msgstr ""
 "るという無駄を省きます。"
 
 # b06a1e919a1f4a1d8aa5ec497df0b010
-#: ../../admin/performance.rst:71
+#: ../../admin/performance.rst:74
 msgid ""
 "This can be disabled by setting ``$CONFIG->simplecache_enabled = false;`` "
 "For best performance, make sure this value is set to ``true``."
@@ -457,7 +1784,7 @@ msgstr ""
 "おきましょう。"
 
 # 559110cd209942b1969db0740a88093d
-#: ../../admin/performance.rst:74
+#: ../../admin/performance.rst:77
 msgid ""
 "This does lead to artifacts during development if you are editing themes in "
 "your plugin as the cached version will be used in preference to the one "
@@ -469,7 +1796,7 @@ msgstr ""
 "てしまうからです。"
 
 # 1169606b03714be8b42f23d6488e5d77
-#: ../../admin/performance.rst:77
+#: ../../admin/performance.rst:80
 msgid ""
 "The simple cache can be disabled via the administration menu. It is "
 "recommended that you do this on your development platform if you are writing "
@@ -480,7 +1807,7 @@ msgstr ""
 "ておくことをおすすめします。"
 
 # 7fec2b72272e49819e1614cc2a7ea040
-#: ../../admin/performance.rst:80
+#: ../../admin/performance.rst:83
 msgid ""
 "This cache is automatically flushed when a plugin is enabled, disabled or "
 "reordered, or when upgrade.php is executed."
@@ -489,12 +1816,12 @@ msgstr ""
 "行された時に自動的に消去されます。"
 
 # 1d312885868847c6847796a52275e911
-#: ../../admin/performance.rst:84
+#: ../../admin/performance.rst:87
 msgid "System cache"
 msgstr "システムキャッシュ"
 
 # a109ec07a99b4d55a271cfa20d03bfd7
-#: ../../admin/performance.rst:86
+#: ../../admin/performance.rst:89
 msgid ""
 "The location of views are cached so that they do not have to be discovered "
 "(profiling indicated that page load took a non-linear amount of time the "
@@ -508,7 +1835,7 @@ msgstr ""
 "シュします。"
 
 # 8da7fa88baa7412190f355b323a55f85
-#: ../../admin/performance.rst:91
+#: ../../admin/performance.rst:94
 msgid ""
 "This can be disabled by setting ``$CONFIG->system_cache_enabled = false;`` "
 "For best performance, make sure this value is set to ``true``."
@@ -518,7 +1845,7 @@ msgstr ""
 "しておきましょう。"
 
 # 46eeb5bd131f41e9bab2a8e3a0c2136e
-#: ../../admin/performance.rst:94
+#: ../../admin/performance.rst:97
 msgid ""
 "This is currently stored in files in your dataroot (although later versions "
 "of Elgg may use memcache). As with the simple cache it is flushed when a "
@@ -530,7 +1857,7 @@ msgstr ""
 "は、upgrade.phpが実行された時です。"
 
 # 802447a068c84bf99b1c3a0dee1fc661
-#: ../../admin/performance.rst:99
+#: ../../admin/performance.rst:102
 msgid ""
 "The system cache can be disabled via the administration menu, and it is "
 "recommended that you do this on your development platform if you are writing "
@@ -541,12 +1868,12 @@ msgstr ""
 "ておくことをおすすめします。"
 
 # be8cd34595d84a79b6ffd3d0f97cc703
-#: ../../admin/performance.rst:104
+#: ../../admin/performance.rst:107
 msgid "Database query cache"
 msgstr "データベース・クエリ・キャッシュ"
 
 # a129e57f920644fea3bb5b0b49a55d24
-#: ../../admin/performance.rst:106
+#: ../../admin/performance.rst:109
 msgid ""
 "For the lifetime of a given page's execution, a cache of all ``SELECT`` "
 "queries is kept. This means that for a given page load a given select query "
@@ -565,7 +1892,7 @@ msgstr ""
 "は、ページ読み込みの一番最後に自動的にクリアされます。"
 
 # ef3cd65c7b2741e0b311b04c6f56f738
-#: ../../admin/performance.rst:113
+#: ../../admin/performance.rst:116
 msgid ""
 "You may experience memory problems if you use the Elgg framework as a "
 "library in a PHP CLI script. This can be disabled by setting ``$CONFIG-"
@@ -577,12 +1904,12 @@ msgstr ""
 "ます。"
 
 # fb65723be9ff45aa85c3341d8ab81812
-#: ../../admin/performance.rst:118
+#: ../../admin/performance.rst:121
 msgid "Etags and Expires headers"
 msgstr "ETag（エンティティータグ）とExpires ヘッダ"
 
 # d54f449498bb4f1294065f91c8517854
-#: ../../admin/performance.rst:120
+#: ../../admin/performance.rst:123
 msgid ""
 "These technologies tell your users' browsers to cache static assets (CSS, "
 "JS, images) locally. Having these enabled greatly reduces server load and "
@@ -594,7 +1921,7 @@ msgstr ""
 "できます。"
 
 # 561f9e609dfe4e2aa88f3e796f4bcb0c
-#: ../../admin/performance.rst:123
+#: ../../admin/performance.rst:126
 msgid ""
 "Use the `Firefox yslow plugin`__ or Chrome DevTools Audits to confirm which "
 "technologies are currently running on your site."
@@ -603,12 +1930,12 @@ msgstr ""
 "クノロジーがあなたのサイトで現在使用されているかを確認することができます。"
 
 # 381df7c08fb14f4197748e190f49f06f
-#: ../../admin/performance.rst:128
+#: ../../admin/performance.rst:132
 msgid "If the static assets aren't being cached:"
 msgstr "もし、静的アセットがキャッシュされていないなら："
 
 # 28583fb36f2d49fa9a9e114c82d6c509
-#: ../../admin/performance.rst:127
+#: ../../admin/performance.rst:130
 msgid ""
 "Verify that you have these extensions installed and enabled on your host"
 msgstr ""
@@ -616,7 +1943,7 @@ msgstr ""
 "する"
 
 # a10421ad94cc47d1b7cb6b8c5352aa17
-#: ../../admin/performance.rst:128
+#: ../../admin/performance.rst:131
 msgid ""
 "Update your .htaccess file, if you are upgrading from a previous version of "
 "Elgg"
@@ -625,7 +1952,7 @@ msgstr ""
 "ルを更新してください"
 
 # 52eb78d3e6f64a3cb4f51f0ae0042e79
-#: ../../admin/performance.rst:129
+#: ../../admin/performance.rst:132
 msgid ""
 "Enable Simplecache_, which turns select views into browser-cacheable assets"
 msgstr ""
@@ -633,12 +1960,12 @@ msgstr ""
 "アセットに変換します。"
 
 # b02aea60ca7845a68b5e6c5db6d5600b
-#: ../../admin/performance.rst:134
+#: ../../admin/performance.rst:137
 msgid "Memcache"
 msgstr "Memcache"
 
 # 5d3d250349a74cc7b28267e781195001
-#: ../../admin/performance.rst:136
+#: ../../admin/performance.rst:139
 msgid ""
 "Memcache is a generic caching technology developed by Brad Fitzpatrick for "
 "LiveJournal."
@@ -647,55 +1974,55 @@ msgstr ""
 "グのテクノロジーです。"
 
 # 67b56693afa340d7917308b94c22fc85
-#: ../../admin/performance.rst:138
+#: ../../admin/performance.rst:141
 msgid "SUPPORT FOR MEMCACHE IS EXPERIMENTAL AND MAY BE CHANGED."
 msgstr ""
 "Memcacheに対するサポートは試験的に運用されており、将来変わるかもしれていこと"
 "をご了承ください。"
 
 # 6bc14f7a685e4d49abd561e65045a12e
-#: ../../admin/performance.rst:140
+#: ../../admin/performance.rst:143
 msgid "Installation requirements:"
 msgstr "インストール時の必要条件:"
 
 # e6a16d3ebf0b486eba1e086c5e3093dd
-#: ../../admin/performance.rst:142
+#: ../../admin/performance.rst:145
 msgid "``   * php5-memcache``"
 msgstr "``   * php5-memcache``"
 
 # f4d1e123f2da470db861a3e0ecb1dcec
-#: ../../admin/performance.rst:143
+#: ../../admin/performance.rst:146
 msgid "``   * memcached``"
 msgstr "``   * memcached``"
 
 # 83e0149941494be8bfc5e8e13e3fcb12
-#: ../../admin/performance.rst:145
+#: ../../admin/performance.rst:148
 msgid "Configuration:"
 msgstr "コンフィグレーション（環境設定）:"
 
 # ca3faeb52efa45efb80150213c956ee1
-#: ../../admin/performance.rst:147
+#: ../../admin/performance.rst:150
 msgid "Uncomment and populate the following sections in settings.php"
 msgstr "settings.php内のコードのコメントを外して下のようにしてください。"
 
 # e6d1912703f14cdaba78eaf3d26db72c
-#: ../../admin/performance.rst:159
+#: ../../admin/performance.rst:162
 msgid "Squid"
 msgstr "Squid"
 
 # 5f0dfcbe507444de85f40c34e94cce27
-#: ../../admin/performance.rst:161
+#: ../../admin/performance.rst:164
 msgid "We have had good results by using `Squid`_ to cache images for us."
 msgstr ""
 "画像データのキャシュに `Squid`_ を試してみたところ、良い結果が出たようです。"
 
 # 4bdb26e041cf4d48a6b3ddfb162164ca
-#: ../../admin/performance.rst:167
+#: ../../admin/performance.rst:170
 msgid "Bytecode caching"
 msgstr "バイトコードキャッシング"
 
 # 4029ad29f03b442aaf1d996c3c25bfe6
-#: ../../admin/performance.rst:169
+#: ../../admin/performance.rst:172
 msgid ""
 "There are numerous PHP code caches available on the market. These speed up "
 "your site by caching the compiled byte code from your script meaning that "
@@ -707,12 +2034,12 @@ msgstr ""
 "をコンパイルする手間がなくなるということです。"
 
 # 18230732fdbf481a9ac820b1145d861f
-#: ../../admin/performance.rst:175
+#: ../../admin/performance.rst:178
 msgid "Hosting"
 msgstr "ホスティング"
 
 # 271fe4b1d89347019e27928295b9e647
-#: ../../admin/performance.rst:177
+#: ../../admin/performance.rst:180
 msgid ""
 "Don't expect to run a site catering for millions of users on a cheap shared "
 "host. You will need to have your own host hardware and access over the "
@@ -723,12 +2050,12 @@ msgstr ""
 "バンド幅とメモリが利用できないといけません。"
 
 # d11dec4ebfeb4e5a96d66291ce1937ed
-#: ../../admin/performance.rst:182
+#: ../../admin/performance.rst:185
 msgid "Memory, CPU and bandwidth"
 msgstr "メモリ、CPU、バンド幅"
 
 # 43e473921aad4221993b7836f83d5123
-#: ../../admin/performance.rst:184
+#: ../../admin/performance.rst:187
 msgid ""
 "Due to the nature of caching, all caching solutions will require memory. It "
 "is a fairly cheap return to throw memory and CPU at the problem."
@@ -737,7 +2064,7 @@ msgstr ""
 "入することは、なかなか安価な解決法です。"
 
 # 6c0af81b520142f1af50d9def4976472
-#: ../../admin/performance.rst:187
+#: ../../admin/performance.rst:190
 msgid ""
 "On advanced hardware it is likely that bandwidth is going to be your "
 "bottleneck before the server itself. Ensure that your host can support the "
@@ -748,12 +2075,12 @@ msgstr ""
 "確認してください。"
 
 # 8a64d90a69de4269adbf5545a68eaf57
-#: ../../admin/performance.rst:191
+#: ../../admin/performance.rst:194
 msgid "Configuration"
 msgstr "コンフィグレーション（環境設定）"
 
 # de88a07e3f83467cb916c95a11049952
-#: ../../admin/performance.rst:193
+#: ../../admin/performance.rst:196
 msgid ""
 "Lastly, take a look at your configuration as there are a few gotchas that "
 "can catch people."
@@ -762,7 +2089,7 @@ msgstr ""
 "しょう。"
 
 # 07e7adfab9a847bd863b5d5c73e22d8d
-#: ../../admin/performance.rst:195
+#: ../../admin/performance.rst:198
 msgid ""
 "For example, out of the box, Apache can handle quite a high load. However, "
 "most distros of Linux come with mysql configured for small sites. This can "
@@ -776,12 +2103,12 @@ msgstr ""
 "あります。"
 
 # 2225dde3f9a84d7698538ef0ea2ad87c
-#: ../../admin/performance.rst:200
+#: ../../admin/performance.rst:203
 msgid "Check for poorly-behaved plugins"
 msgstr "行儀の良くないプラグインをチェック"
 
 # 01be46222a5c44b0b2519bc6cb871f9e
-#: ../../admin/performance.rst:202
+#: ../../admin/performance.rst:205
 msgid ""
 "Plugins can be programmed in a very naive way and this can cause your whole "
 "site to feel slow."
@@ -790,7 +2117,7 @@ msgstr ""
 "うなプラグインはあなたのサイト全体を遅くしてしまうことがあります。"
 
 # a5417271bfc940ad9998da1ec63c2c79
-#: ../../admin/performance.rst:204
+#: ../../admin/performance.rst:207
 msgid ""
 "Try disabling some plugins to see if that noticeably improves performance. "
 "Once you've found a likely offender, go to the original plugin author and "
@@ -801,12 +2128,12 @@ msgstr ""
 "報告してください。"
 
 # c1b389b32feb451a9d46709d84aa2d56
-#: ../../admin/performance.rst:208
+#: ../../admin/performance.rst:211
 msgid "Use client-rendered HTML"
 msgstr "クライアント側でレンダリングされたHTMLを使用する"
 
 # 8eeee08646274684a092021b5d8fa018
-#: ../../admin/performance.rst:210
+#: ../../admin/performance.rst:213
 msgid ""
 "We've found that at a certain point, much of the time spent on the server is "
 "simply building the HTML of the page with Elgg's views system."
@@ -815,7 +2142,7 @@ msgstr ""
 "ときにかかるものと、ある次期まで思っていました。"
 
 # 733906f9eb754ea2980d9e149099bb3e
-#: ../../admin/performance.rst:213
+#: ../../admin/performance.rst:216
 msgid ""
 "It's very difficult to cache the output of templates since they can "
 "generally take arbitrary inputs. Instead of trying to cache the HTML output "
@@ -832,7 +2159,7 @@ msgstr ""
 "出力を生成させるのです。"
 
 # d6115c11e4964de58948818b25c246f0
-#: ../../admin/performance.rst:218
+#: ../../admin/performance.rst:221
 msgid ""
 "This can be very effective, but has the downside of being significant extra "
 "development cost. The Elgg team is looking to integrate this strategy into "
@@ -857,52 +2184,133 @@ msgstr ""
 "す。"
 
 # ef3ec34096094a93805650fcf86ade9c
-#: ../../admin/plugins.rst:7
+#: ../../admin/plugins.rst:11
 msgid "Where to get plugins"
 msgstr "プラグインはどこにあるの？"
 
 # 3dc322c8ffe54ca58cf648c828552eff
-#: ../../admin/plugins.rst:9
+#: ../../admin/plugins.rst:13
 msgid "Plugins can be obtained from:"
 msgstr "プラグインは、以下の場所から入手することができます。"
 
-# 6dd77663c11d41f5abfa60421387a2b1
-#: ../../admin/plugins.rst:11
-msgid "`The Elgg Community <http://community.elgg.org/plugins>`_"
+#: ../../admin/plugins.rst:15
+#, fuzzy
+msgid "`The Elgg Community`_"
 msgstr "`The Elgg Community <http://community.elgg.org/plugins>`_"
 
-# 3d639caab3764b26a20d432cbb13219b
-#: ../../admin/plugins.rst:12
-msgid "`Github <https://github.com/Elgg>`_"
+#: ../../admin/plugins.rst:16
+#, fuzzy
+msgid "`Github`_"
 msgstr "`Github <https://github.com/Elgg>`_"
 
 # 2fabe7d93ecc42b4bfe8a381ba4e43c2
-#: ../../admin/plugins.rst:13
+#: ../../admin/plugins.rst:17
 msgid "Third-party sites (typically for a price)"
 msgstr "サードパーティ（たいてい有料です）"
 
 # 6da89e36c06d44d8ab93d53024528a64
-#: ../../admin/plugins.rst:15
+#: ../../admin/plugins.rst:19
+#, fuzzy
 msgid ""
-"If no existing plugins meet your needs, you can `hire a developer`__ or :doc:"
+"If no existing plugins meet your needs, you can `hire a developer`_ or :doc:"
 "`create your own </guides/index>`."
 msgstr ""
 "もし、あなたのニーズに合ったものがなければ、開発者を雇ったり（ `hire a "
 "developer`__ ）、自分で作る（ :doc:`create your own </guides/index>` ）ことも"
 "できます。"
 
+#: ../../admin/plugins.rst:26
+#, fuzzy
+msgid "The Elgg Community"
+msgstr "`The Elgg Community <http://community.elgg.org/plugins>`_"
+
+# 1d377e10f9da444bbacbb4a5bb85bbb8
+#: ../../admin/plugins.rst:29
+#, fuzzy
+msgid "Finding Plugins"
+msgstr "プラグイン"
+
+#: ../../admin/plugins.rst:32
+msgid "Sort based on most popular"
+msgstr ""
+
+#: ../../admin/plugins.rst:34
+msgid ""
+"On the community plugin page, you can sort by date uploaded (Filter: Newest) "
+"or number of downloads (Filter: Most downloads). Sorting by the number of "
+"downloads is a good idea if you are new to Elgg and want to see which "
+"plugins are frequently used by other administrators. These will often (but "
+"not always) be higher quality plugins that provide significant capabilities."
+msgstr ""
+
+#: ../../admin/plugins.rst:37
+msgid "Use the plugin tag search"
+msgstr ""
+
+#: ../../admin/plugins.rst:39
+msgid ""
+"Next to the filtering control on the plugin page is a search box. It enables "
+"you to search by tags. Plugins authors choose the tags."
+msgstr ""
+
+#: ../../admin/plugins.rst:42
+#, fuzzy
+msgid "Look for particular plugin authors"
+msgstr "プラグインの問題は、プラグイン製作者に報告してください。"
+
+#: ../../admin/plugins.rst:44
+msgid ""
+"The quality of plugins varies substantially. If you find a plugin that works "
+"well on your site, you can check what else that plugin author has developed "
+"by clicking on their name when viewing a plugin."
+msgstr ""
+
+#: ../../admin/plugins.rst:47
+#, fuzzy
+msgid "Evaluating Plugins"
+msgstr "プラグイン"
+
+#: ../../admin/plugins.rst:50
+#, fuzzy
+msgid "Look at the comments and ratings"
+msgstr "~75,000 件のコメント"
+
+#: ../../admin/plugins.rst:52
+msgid ""
+"Before downloading and using a plugin, it is always a good idea to read "
+"through the comments that others have left. If you see people complaining "
+"that the plugin does not work or makes their site unstable, you probably "
+"want to stay away from that plugin. The caveat to that is that sometimes "
+"users ignore installation instructions or incorrectly install a plugin and "
+"then leave negative feedback. Further, some plugin authors have chosen to "
+"not allow comments."
+msgstr ""
+
+#: ../../admin/plugins.rst:55
+msgid "Install on a test site"
+msgstr ""
+
+#: ../../admin/plugins.rst:57
+msgid ""
+"If you are trying out a plugin for the first time, it is a bad idea to "
+"install it on your production site. You should maintain a separate test site "
+"for evaluating plugins. It is a good idea to slowly roll out new plugins to "
+"your production site even after they pass your evaluation on your test site. "
+"This enables you to isolate problems introduced by a new plugin."
+msgstr ""
+
 # 927aa63c2d504dd78010f3d832af1f91
-#: ../../admin/plugins.rst:20
+#: ../../admin/plugins.rst:60
 msgid "Types of plugins"
 msgstr "プラグインのタイプ"
 
 # d4a5161c5f834974a950695b492706b2
-#: ../../admin/plugins.rst:23
+#: ../../admin/plugins.rst:63
 msgid "Themes"
 msgstr "テーマ"
 
 # 8ef4821ddf224c7d8bdc48ecd9be013e
-#: ../../admin/plugins.rst:25
+#: ../../admin/plugins.rst:65
 msgid ""
 "Themes are plugins that modify the look-and-feel of your site. They "
 "generally include stylesheets, client-side scripts and views that alter the "
@@ -913,17 +2321,17 @@ msgstr ""
 "振舞いを変更します。"
 
 # 29f8717d921046e5a83f35344e9c0c72
-#: ../../admin/plugins.rst:30
+#: ../../admin/plugins.rst:70
 msgid "Language Packs"
 msgstr "言語パック（翻訳パック）"
 
 # c5bb906dc406433c8d06c4458b7df66c
-#: ../../admin/plugins.rst:32
+#: ../../admin/plugins.rst:72
 msgid "Language packs are plugins that provide support for other languages."
 msgstr "言語パックは外国語のサポートを可能にするプラグインです。"
 
 # e70fe17741454e90962498f2a40c6c00
-#: ../../admin/plugins.rst:34
+#: ../../admin/plugins.rst:74
 msgid ""
 "Language packs can extend and include translations for language strings "
 "found in the core, core plugins and/or third-party plugins."
@@ -932,7 +2340,7 @@ msgstr ""
 "れているメッセージの翻訳で構成されています。その翻訳の拡張しもできます。"
 
 # a079d4f4a8364432aca382f86ff355e6
-#: ../../admin/plugins.rst:37
+#: ../../admin/plugins.rst:77
 msgid ""
 "Some of the language packs are already included in the core, and can be "
 "found in ``languages`` directory off Elgg's root directory. Individual "
@@ -945,7 +2353,7 @@ msgstr ""
 "''languages'' ディレクトリ内に翻訳が置かれることが多いです。"
 
 # 0e19808c88f84834b1b65b530ae02649
-#: ../../admin/plugins.rst:42
+#: ../../admin/plugins.rst:82
 msgid ""
 "This structure makes it easy to create new language packs that supercede "
 "existing language strings or add support for new languages."
@@ -954,22 +2362,22 @@ msgstr ""
 "ポートを追加したりするような言語パックの新規作成がしやすくなります。"
 
 # 24a6d947d00c4cb698ef821c5061f323
-#: ../../admin/plugins.rst:48
+#: ../../admin/plugins.rst:88
 msgid "All plugins reside in the ``mod`` directory of your Elgg installation."
 msgstr "全てのプラグインは、Elggの ''mod'' ディレクトリ下に置かれます。"
 
 # 97f666f8de4f4964a14af46fcba64578
-#: ../../admin/plugins.rst:56
+#: ../../admin/plugins.rst:97
 msgid "To install a new plugin:"
 msgstr "新しいプラグインをインストールするには:"
 
 # e53ce68c13dc4d82ac4e74a141e92f8c
-#: ../../admin/plugins.rst:51
+#: ../../admin/plugins.rst:91
 msgid "extract (unzip) contents of the plugin distribution package"
 msgstr "配布されているプラグインパッケージを解凍する"
 
 # 9f022984a9144e3ab9f502d79cb81cdb
-#: ../../admin/plugins.rst:52
+#: ../../admin/plugins.rst:92
 msgid ""
 "copy/FTP the extracted folder into the ``mod`` directory of your Elgg "
 "installation, making sure that ``manifest.xml`` and ``start.php`` are "
@@ -984,27 +2392,27 @@ msgstr ""
 "manifest.xml'' になければなりません）"
 
 # d54e94dec2f54645a08360555c71a735
-#: ../../admin/plugins.rst:57
+#: ../../admin/plugins.rst:97
 msgid "activate the plugin from your admin panel"
 msgstr "管理者用パネルにてプラグインを起動してください。"
 
 # 3f716e07f2ae4ebbbb3b67a2299aa968
-#: ../../admin/plugins.rst:62
+#: ../../admin/plugins.rst:103
 msgid "To activate a plugin:"
 msgstr "プラグインを起動するには:"
 
 # baf98237a7d740519a39b8ad980745b8
-#: ../../admin/plugins.rst:60
+#: ../../admin/plugins.rst:100
 msgid "Log in to your Elgg site with your administrator account"
 msgstr "Elggサイトに管理者アカウントにてログインしてください"
 
 # a5af0100dd714586abf6a6b6eccd2809
-#: ../../admin/plugins.rst:61
+#: ../../admin/plugins.rst:101
 msgid "Go to Administration -> Configure -> Plugins"
 msgstr "管理業務 -> 設定 -> プラグイン でプラグインページに移動してください"
 
 # e838f53148454a149fc1335ac0e1723e
-#: ../../admin/plugins.rst:62
+#: ../../admin/plugins.rst:102
 msgid ""
 "Find your plugin in the list of installed plugins and click on the 'enable' "
 "button."
@@ -1012,13 +2420,41 @@ msgstr ""
 "インストール済みのプラグインのリストの中からあなたのプラグイン見つけて '起"
 "動' ボタンを押してください。"
 
+# 1d377e10f9da444bbacbb4a5bb85bbb8
+#: ../../admin/plugins.rst:106
+#, fuzzy
+msgid "Plugin order"
+msgstr "プラグインを起動するには:"
+
+#: ../../admin/plugins.rst:108
+msgid ""
+"Plugins are loaded according to the order they are listed on the Plugins "
+"page. The initial ordering after an install is more or less random. As more "
+"plugins are added by an administrator, they are placed at the bottom of the "
+"list."
+msgstr ""
+
+#: ../../admin/plugins.rst:110
+msgid "Some general rules for ordering plugins:"
+msgstr ""
+
+#: ../../admin/plugins.rst:112
+msgid "A theme plugin should be last or at least near the bottom"
+msgstr ""
+
+#: ../../admin/plugins.rst:113
+msgid ""
+"A plugin that modifies the behavior of another plugin should be lower in the "
+"plugin list"
+msgstr ""
+
 # 4e290c80b1d74bef8507ba5af50965a8
-#: ../../admin/plugins.rst:66
+#: ../../admin/plugins.rst:116
 msgid "Pre-1.8 notes"
 msgstr "Elgg1.8以前のバージョンについて"
 
 # de5d9e6ef771496480eb7121d0eaa5bd
-#: ../../admin/plugins.rst:68
+#: ../../admin/plugins.rst:118
 msgid ""
 "In Elgg 1.7 and below, the interface for managing installed plugins is "
 "located at Administration -> Tool Administration."
@@ -1107,7 +2543,7 @@ msgid "Download the new version of Elgg from http://elgg.org"
 msgstr "http://elgg.org から新しいバージョンのElggをダウンロード"
 
 # 1dfae8ed20a449f1942ad2c225628404
-#: ../../admin/upgrading.rst:26
+#: ../../admin/upgrading.rst:27
 msgid "Update the files"
 msgstr "ファイルのアップデート"
 
@@ -1404,3 +2840,11 @@ msgid ""
 msgstr ""
 "もし、アップグレードの前にこれらのファイルを削除しなければ、問題が起こりま"
 "す！"
+
+# 6dd77663c11d41f5abfa60421387a2b1
+#~ msgid "`The Elgg Community <http://community.elgg.org/plugins>`_"
+#~ msgstr "`The Elgg Community <http://community.elgg.org/plugins>`_"
+
+# 3d639caab3764b26a20d432cbb13219b
+#~ msgid "`Github <https://github.com/Elgg>`_"
+#~ msgstr "`Github <https://github.com/Elgg>`_"
