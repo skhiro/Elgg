@@ -8,21 +8,21 @@ msgstr ""
 "Project-Id-Version: Elgg Core\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-07-10 19:59-0700\n"
-"PO-Revision-Date: 2014-07-19 21:30+0900\n"
-"Last-Translator: SAKAGUCHI, Hirotaka <kemo@sun.interq.or.jp>\n"
+"PO-Revision-Date: 2015-01-14 12:30+0900\n"
+"Last-Translator: SAKAGUCHI, Hirotaka <kemo@saka-hv.org>\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/projects/p/elgg-"
 "core/language/ja_JP/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.6\n"
+"X-Generator: Poedit 1.7.1\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "Language: ja_JP\n"
 
 # 40be40a331c44ed5b6552ecaeb7f2e3d
 #: ../../contribute/code.rst:2
 msgid "Writing Code"
-msgstr ""
+msgstr "コードを書く"
 
 # 7cd16b33c6ce441d84efb7ffedc80e53
 #: ../../contribute/code.rst:4
@@ -30,11 +30,13 @@ msgid ""
 "Understand Elgg's standards and processes to get your changes accepted as "
 "quickly as possible."
 msgstr ""
+"できるだけ迅速にあなたの変更が承認されるようにするには、Elggの標準的コーディ"
+"ングと手順を理解しましょう。"
 
 # cf2fcf800e384f97a308f8dfc604fe9c
 #: ../../contribute/code.rst:7
 msgid "License agreement"
-msgstr ""
+msgstr "ライセンスに対する同意"
 
 # 7a9851b75dfe40dfb79c922a13db7fa9
 #: ../../contribute/code.rst:9
@@ -42,11 +44,13 @@ msgid ""
 "By submitting a patch you are agreeing to license the code under a `GPLv2 "
 "license`_ and `MIT license`_."
 msgstr ""
+"パッチを提供すると `GPLv2 license`_ と `MIT license`_ のもとでそのコードをラ"
+"イセンスするのに同意したことになります。"
 
 # 24f3d676cc724c85b19778eb465abbf6
 #: ../../contribute/code.rst:16
 msgid "Pull requests"
-msgstr ""
+msgstr "Pullリクエスト"
 
 # 2bb3ef23f49b4b3f8409513de587ca8c
 #: ../../contribute/code.rst:18
@@ -54,6 +58,8 @@ msgid ""
 "Pull requests (PRs) are the best way to get code contributed to Elgg core. "
 "The core development team uses them even for the most trivial changes."
 msgstr ""
+"Pullリクエスト（PRｓ）はElgg コアにコードを貢献できる最も良い方法です。コア開"
+"発チームはどんな些細は変更でも採用します。"
 
 # ddc452e8ba1c4ae1902a5a3664510ace
 #: ../../contribute/code.rst:21
@@ -62,11 +68,14 @@ msgid ""
 "make sure the core team approves of your direction before spending lots of "
 "time on code."
 msgstr ""
+"新機能には、機能のリクエストを提出する（ `submit a feature request`_ ）もしく"
+"は、コードに無駄に時間を費やす前に最初に私達に知らせて（ `talk to us`_ ）あな"
+"たの方針にコアチームが賛同することを確かめてください。"
 
 # fdea8ba3b6bf4d64bb6e24370aecc9cd
 #: ../../contribute/code.rst:29
 msgid "Checklists"
-msgstr ""
+msgstr "チェックリスト"
 
 # 5c332e75f039424c93f59ae163601dd1
 #: ../../contribute/code.rst:31
@@ -74,32 +83,38 @@ msgid ""
 "Use these markdown checklists for new PRs on github to ensure high-quality "
 "contributions and help everyone understand the status of open PRs."
 msgstr ""
+"githubで新しいPRsをするときは、貢献の質を高めるためとオープンPRsの状態を誰も"
+"が理解できるように、これらのマークダウンのチェックリストをご使用ください。"
 
 # 9fc076ba3ec4477da3b84b41d7ce22b1
 #: ../../contribute/code.rst:34
 msgid "Bugfix PRs:"
-msgstr ""
+msgstr "PRsのバグ修正"
 
 # 168e06d279944aa384b89dfc109fbfd2
 #: ../../contribute/code.rst:44
+#, fuzzy
 msgid "Feature PRs:"
-msgstr ""
+msgstr "機能PRs:"
 
 # 607449a6b7bd4ce4b27f4673a5294cdc
 #: ../../contribute/code.rst:56
 msgid "Choosing a branch to submit to"
-msgstr ""
+msgstr "提出するブランチを次から選んでください"
 
 # f460dad9c1b6499088511aa9358404f6
 #: ../../contribute/code.rst:58
 msgid ""
 "New features: master (we do not introduce new features in bugfix branches)."
 msgstr ""
+"新機能:masterブランチ（私達はバグ修正ブランチに新機能は盛り込みません）"
 
 # 4251d775bd1942b38d3ed5e5e9cb8ec9
 #: ../../contribute/code.rst:59
 msgid "Bug fixes: latest branch (or master if the bug only appears in master)."
 msgstr ""
+"バグ修正:最新のブランチ（もしくは、バグがmasterにのみ現れる場合は、masterブラ"
+"ンチ）"
 
 # 3b29f71d837449b193cbb767b5c96440
 #: ../../contribute/code.rst:60
@@ -107,117 +122,121 @@ msgid ""
 "Security fixes: lowest supported branch (If master is 1.9, then submit "
 "against 1.7)."
 msgstr ""
+"セキュリティ修正:サポートされている一番低いブランチ（masterが1.9なら、1.7に提"
+"出してください）"
 
 # fad2c064c5a9429ba96ed7e351e5f55a
 #: ../../contribute/code.rst:63
 msgid "Commit message format"
-msgstr ""
+msgstr "コミットメッセージのフォーマット"
 
 # 25c1aa3d46244f31a75ae2849a500794
 #: ../../contribute/code.rst:65
 msgid "Here is an example of a good commit message:"
-msgstr ""
+msgstr "ここに、コミットメッセージの良い例を挙げておきます:"
 
 # ac6ca5af439248a78e785408f1a26a39
 #: ../../contribute/code.rst:76
 msgid "All commit messages are required to adhere to this format:"
-msgstr ""
+msgstr "全てのコミットメッセージは、このフォーマットに従ってください:"
 
 # f54aa3904a254a10806e69b1c3e4b527
 #: ../../contribute/code.rst:89
 msgid "Where ``type`` is one of:"
-msgstr ""
+msgstr "``type`` は以下のうちの1つ:"
 
 # 550900c89217462c8e27c8f24200a52d
 #: ../../contribute/code.rst:91
 msgid "feature"
-msgstr ""
+msgstr "feature"
 
 # 08fa2a4f52d648e4a208635c67c629cb
 #: ../../contribute/code.rst:92
 msgid "fix"
-msgstr ""
+msgstr "fix"
 
 # f259ee9717d4430397f03c22f857f7cd
 #: ../../contribute/code.rst:93
 msgid "docs (when *only* docs are being updated)"
-msgstr ""
+msgstr "docs (docs が 更新されている *時だけ*)"
 
 # 015b2137e9c74c55babf5f7c13593c22
 #: ../../contribute/code.rst:94
 msgid ""
 "chore (refactoring, style changes, add missing tests, Travis stuff, etc.)"
 msgstr ""
+"chore（リファクトリング、スタイルの変更、間違ったテストの追加、Travis関連、な"
+"ど）"
 
 # e7a29493617543b5a59471af60155c59
 #: ../../contribute/code.rst:95
 msgid "perf (when primary purpose of change is to improve performance)"
-msgstr ""
+msgstr "pref（主な変更の目的がパフォーマンスの改善である時）"
 
 # d521b4d1d0954177b979fddf1ee1a1fd
 #: ../../contribute/code.rst:96
 msgid "security (any change affecting a security issue)"
-msgstr ""
+msgstr "security（セキュリティ関連にかかわる変更）"
 
 # e0b2b1f760d346169ae79beb09add98c
 #: ../../contribute/code.rst:97
 msgid "deprecate (any change that deprecates any part of the API)"
-msgstr ""
+msgstr "deprecate（廃止予定されるAPIに関する変更）"
 
 # 68b852134df547ee877d312c92128869
 #: ../../contribute/code.rst:99
 msgid "And ``component`` is one of:"
-msgstr ""
+msgstr "``component``は、以下のうちの1つ:"
 
 # 0d32e7d6246546d3921d468ada119605
 #: ../../contribute/code.rst:101
 msgid "i18n"
-msgstr ""
+msgstr "i18n"
 
 # bd169e6ba9c44de290f52b272e867c1c
 #: ../../contribute/code.rst:102
 msgid "seo"
-msgstr ""
+msgstr "seo"
 
 # 68b8cf70347a42b7ad518af04dbe8a4f
 #: ../../contribute/code.rst:103
 msgid "a11y"
-msgstr ""
+msgstr "a11y"
 
 # 80bea08a05114eacba03f8568156be8c
 #: ../../contribute/code.rst:104
 msgid "cache"
-msgstr ""
+msgstr "cache"
 
 # e015e03689d245d2901bd09ab68140d2
 #: ../../contribute/code.rst:105
 msgid "db"
-msgstr ""
+msgstr "db"
 
 # 3c40e52be39b4639afa2cd458ead5258
 #: ../../contribute/code.rst:106
 msgid "views"
-msgstr ""
+msgstr "views"
 
 # d98c8e64516a4ce1b862ef0d4299c999
 #: ../../contribute/code.rst:107
 msgid "session"
-msgstr ""
+msgstr "session"
 
 # 08d5bf1df90d432795b9fa8d170b5e9f
 #: ../../contribute/code.rst:108
 msgid "router"
-msgstr ""
+msgstr "router"
 
 # 44bfdb7f678a455887dd5db9a476231c
 #: ../../contribute/code.rst:109
 msgid "etc..."
-msgstr ""
+msgstr "など..."
 
 # 21fce4cfe58847b6b181326c910a11bf
 #: ../../contribute/code.rst:111
 msgid "All lines of the commit message must not be longer than 100 characters."
-msgstr ""
+msgstr "コミットメッセージは、一行に100文字を超えないでください。"
 
 # 21ba2a299f784341a539869dac334b11
 #: ../../contribute/code.rst:113
@@ -226,6 +245,9 @@ msgid ""
 "validate_commit_msg.php`` to ``.git/hooks/commit-msg`` and make sure it's "
 "executable."
 msgstr ""
+"ローカルにコミットメッセージが正しくかけているかどうかをチェックするには、 "
+"``.scripts/validate_commit_msg.php`` を ``.git/hooks/commit-msg`` にコピーも"
+"しくはシンボリックリンクをしてください。実行可能にすることを忘れずに。"
 
 # aedcefebe65b46599a9b767d6c0f70b7
 #: ../../contribute/code.rst:117
@@ -234,11 +256,14 @@ msgid ""
 "when it comes time to release. This saves a lot of time and makes it "
 "possible to release more often."
 msgstr ""
+"決まったフォーマットで書くようにすることで、リリース時に自動的に変更ログを作"
+"ることができます。したがって多くの時間を節約でき、より多くのリリースをするこ"
+"とができるのです。"
 
 # 47f1a6c5056f41d0912a62390c86c145
 #: ../../contribute/code.rst:121
 msgid "Rewriting commit messages"
-msgstr ""
+msgstr "コミットメッセージの書き直し"
 
 # 4879416a0312457e85e64efbc5899d27
 #: ../../contribute/code.rst:122
@@ -246,23 +271,30 @@ msgid ""
 "If your PR does not conform to the standard commit message format, we'll ask "
 "you to rewrite it:"
 msgstr ""
+"もし、あなたのPRが標準コミットメッセージのフォーマットに適合しなかった場合に"
+"は、私達が書き直しても良いかどうかをあなたに問い合わせるでしょう。"
 
 # a77cc61bca30486ab65d053fdca0fe83
 #: ../../contribute/code.rst:125
 msgid "Rebase last commit (Git will open the git-rebase-todo file for editing)"
 msgstr ""
+"最後のコミットをリベース（Git は編集のために git-rebase-todo ファイルを開きま"
+"す）"
 
 # 393e6e95f3a549dc926828adb0a10a8e
 #: ../../contribute/code.rst:127
 msgid "``git rebase -i HEAD~``"
-msgstr ""
+msgstr "``git rebase -i HEAD~``"
 
 # a3b3e09968554c119568440180e4b2f0
 #: ../../contribute/code.rst:128
+#, fuzzy
 msgid ""
 "Change ``pick`` to ``r`` (for reword) and save/exit the editor. (Git will "
 "present a file to alter the commit message)"
 msgstr ""
+"``pick`` を ``r`` に変更（置き換え）し、保存してエディタを抜けてください。"
+"（Gitはコミットメッセージを変更するためファイルを提出します）"
 
 # 21fe6c44f45e4bc6b510c5cd2be4961a
 #: ../../contribute/code.rst:130
