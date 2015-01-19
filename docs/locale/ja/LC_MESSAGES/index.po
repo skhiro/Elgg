@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Elgg Core\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-01-11 19:33-0500\n"
-"PO-Revision-Date: 2015-01-14 20:27+0900\n"
+"PO-Revision-Date: 2015-01-16 02:25+0900\n"
 "Last-Translator: SAKAGUCHI, Hirotaka <kemo@saka-hv.org>\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/projects/p/elgg-"
 "core/language/ja_JP/)\n"
@@ -28,19 +28,20 @@ msgstr "Elgg |version| ドキュメント"
 # リンク:
 # 「pronunciation」
 #: ../../index.rst:4
-#, fuzzy
 msgid ""
 "Elgg_ (:download:`pronunciation <_elgg_files/How_to_say_Elgg.mp3>`) is a "
 "rapid development framework with built-in social features. It is a great fit "
 "for building any app where users log in and share information."
 msgstr ""
-"Elgg_ (`読み方`__) はSNSの機能を持ったフレームワークでその開発は現在進行形で"
-"行われており、ユーザがログインして情報を共有できるようなアプリケーションを構"
-"築するのに大変フィットしています。"
+"Elgg_ (:download:`pronunciation <_elgg_files/How_to_say_Elgg.mp3>`) はSNSの機"
+"能を持ったフレームワークでその開発は現在進行形で行われています。また、ユーザ"
+"がログインして情報を共有できるようなアプリケーションを構築するのに大変適して"
+"います。"
 
 # c0e4a7709c9f4591b238ad5d2046f55a
 # リンク：「すべての種類のソーシャルアプリケーション」
 #: ../../index.rst:7
+#, fuzzy
 msgid "It has been used to build `all kinds of social apps`__:"
 msgstr ""
 "また、`すべての種類のソーシャルアプリケーション`__　が構築されています。例え"
@@ -89,10 +90,7 @@ msgstr ""
 #: ../../index.rst:20
 #, fuzzy
 msgid "This is the canonical documentation for the Elgg_ project."
-msgstr ""
-"これは、Elgg_ プロジェクトの標準ドキュメントです。 wiki_ で書かれたドキュメン"
-"トはありましたが、多くの部分でもはや古くなってしまったので、それに代わるもの"
-"として今回新たに書き直されました。"
+msgstr "これは、Elgg_ プロジェクトの正式ドキュメントです。"
 
 # 196a21144de44294862af9535f255b12
 #~ msgid "etc."
