@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Elgg 1.9\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-01-11 19:33-0500\n"
-"PO-Revision-Date: 2015-01-14 20:15+0900\n"
+"PO-Revision-Date: 2015-02-12 19:40+0900\n"
 "Last-Translator: SAKAGUCHI, Hirotaka <kemo@saka-hv.org>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/elgg-core/"
 "language/ja/)\n"
@@ -22,24 +22,22 @@ msgstr ""
 
 #: ../../admin/backup-restore.rst:2
 msgid "Backup and Restore"
-msgstr ""
+msgstr "バックアップとリストア"
 
 #: ../../admin/backup-restore.rst:0 ../../admin/duplicate-installation.rst:0
 #: ../../admin/getting-help.rst:0 ../../admin/performance.rst:0
 #: ../../admin/plugins.rst:0
-#, fuzzy
 msgid "Contents"
-msgstr "配布されているプラグインパッケージを解凍する"
+msgstr "内容"
 
 # 7e65ae947fc04a2bae6a5422875fd56d
 #: ../../admin/backup-restore.rst:9 ../../admin/duplicate-installation.rst:9
-#, fuzzy
 msgid "Introduction"
-msgstr "基本的な手順"
+msgstr "イントロダクション"
 
 #: ../../admin/backup-restore.rst:12
 msgid "Why"
-msgstr ""
+msgstr "なぜバックアップ？"
 
 #: ../../admin/backup-restore.rst:14
 msgid ""
@@ -47,6 +45,9 @@ msgid ""
 "your Elgg installation. This article will address a method of accomplishing "
 "this task."
 msgstr ""
+"共有ホスティングのプロバイダは、たいていあなたのインストールしたElggを自動的"
+"にはバックアップしてくれません。この章ではこのような作業を行う方法を説明しま"
+"す。"
 
 #: ../../admin/backup-restore.rst:16
 msgid ""
@@ -57,134 +58,157 @@ msgid ""
 "well. The following are typical situations that might require a procedure "
 "such as this:"
 msgstr ""
+"ITでは、同様のことを行う多くの方法がしばしば見受けられます。それを心に留めて"
+"おいて、ここでは、あなたのインストールしたElggのバックアップとリストアの方法"
+"の一例を、CPanelアプリケーションを使用した共有ホスティングのプロバイダで行う"
+"ものとして説明いたします。しかしながら、ここでのやり方を応用しますと別のアプ"
+"リケーションを使用しても同様のことができると思います。次のはこのような手続き"
+"が必要となりそうな典型的な状況です:"
 
 #: ../../admin/backup-restore.rst:18
 msgid "Disaster Recovery"
-msgstr ""
+msgstr "災害からの復帰"
 
 #: ../../admin/backup-restore.rst:19
 msgid "Moving your Elgg site to a new host"
-msgstr ""
+msgstr "あなたのElggサイトを新しいホストに引っ越す"
 
 #: ../../admin/backup-restore.rst:20
-#, fuzzy
 msgid "Duplicating an installation"
-msgstr "インストール"
+msgstr "インストールの複製を作る"
 
 #: ../../admin/backup-restore.rst:23
-#, fuzzy
 msgid "What"
-msgstr "何が問題なのか"
+msgstr "何をバックアップする？"
 
 #: ../../admin/backup-restore.rst:25
 msgid "Topics covered:"
-msgstr ""
+msgstr "以下のものについて説明します:"
 
 #: ../../admin/backup-restore.rst:27
 msgid ""
 "Full backups of the Elgg directories and MySQL databases are performed daily "
 "(automated)"
 msgstr ""
+"ElggディレクトリのとMySQLデータベース完全バックアップは、毎日行います。（自"
+"動）"
 
 #: ../../admin/backup-restore.rst:28
 msgid "The backups are sent to an off-site location via FTP (automated)"
-msgstr ""
+msgstr "バックアップは別サイトへFTPで転送します。（自動）"
 
 #: ../../admin/backup-restore.rst:29
 msgid ""
 "The local backups are deleted after successful transfer to the off-site "
 "location (automatic)"
-msgstr ""
+msgstr "別サイトへ転送成功後にローカルのバックアップは削除します。（自動）"
 
 #: ../../admin/backup-restore.rst:30
 msgid "Five days of backups will be maintained (automated)"
-msgstr ""
+msgstr "バックアップは５日間は保管されます。（自動）"
 
 #: ../../admin/backup-restore.rst:31
 msgid "Restoration of data to the new host (manual)"
-msgstr ""
+msgstr "新しいホストにデータをリストアします。（手動）"
 
 #: ../../admin/backup-restore.rst:33
 msgid ""
 "This process was composed with assistance from previous articles in the Elgg "
 "documentation wiki."
 msgstr ""
+"このやり方は、Elgg documentation wikiで以前掲載されたもの参考にして考えだされ"
+"ました。"
 
 #: ../../admin/backup-restore.rst:36
 msgid "Assumptions"
-msgstr ""
+msgstr "前提条件"
 
 #: ../../admin/backup-restore.rst:38
 msgid "The following assumptions have been made:"
-msgstr ""
+msgstr "次の条件を前提にしてバックアップについて説明します:"
 
 #: ../../admin/backup-restore.rst:40
 msgid "The Elgg program directory is ``/home/userx/public_html``"
-msgstr ""
+msgstr "Elggプログラムのディレクトリは、``/home/usrx/public_html`` です。"
 
 #: ../../admin/backup-restore.rst:41
 msgid "The Elgg data directory is ``/home/userx/elggdata``"
-msgstr ""
+msgstr "Elggデータディレクトリは、``/home/userx/elggdata`` です。"
 
 #: ../../admin/backup-restore.rst:42
 msgid ""
 "You've created a local directory for your backups at ``/home/userx/"
 "sitebackups``"
 msgstr ""
+"ローカルにバックアップ用ディレクトリ ``/home/usrx/sitebackups`` を作成しまし"
+"た。"
 
 #: ../../admin/backup-restore.rst:43
 msgid "You have an off-site FTP server to send the backup files to"
 msgstr ""
+"バックアップファイルを転送するためにサイト外にFTPサーバを用意しました。"
 
 #: ../../admin/backup-restore.rst:44
 msgid ""
 "The directory that you will be saving the off-site backups to is ``/home/"
 "usery/sitebackups/``"
 msgstr ""
+"サイト外のバックアップを保存する予定のディレクトリは、 ``/home/usery/"
+"sitebackups/`` です。"
 
 #: ../../admin/backup-restore.rst:45
 msgid ""
 "You will be restoring the site to a second shared hosting provider in the ``/"
 "home/usery/public_html`` directory"
 msgstr ""
+"２つ目の共有ホスティングプロバイダの ``/home/usery/public_html`` ディレクトリ"
+"にリストアします。"
 
 #: ../../admin/backup-restore.rst:49
 msgid ""
 "Be sure to replace ``userx``, ``usery``, ``http://mynewdomain.com`` and all "
 "passwords with values that reflect your actual installation!"
 msgstr ""
+"``userx`` , ``usery``, ``http://mynewdomain.com`` と全てのパスワードは、実際"
+"あなたの使用しているものに置き換えてください。"
 
 #: ../../admin/backup-restore.rst:52
 msgid "Creating a usable backup - automatically"
-msgstr ""
+msgstr "使い勝手の良いバックアップを作成する - 自動的に"
 
 #: ../../admin/backup-restore.rst:55
 msgid "Customize the backup script"
-msgstr ""
+msgstr "バックアップスクリプトをカスタマイズする"
 
 #: ../../admin/backup-restore.rst:57
 msgid ""
 "The script that you will use can be found :doc:`here <backup/ftp-backup-"
 "script>` ."
 msgstr ""
+"使用するスクリプトは、ここ（ :doc:`here <backup/ftp-backup-script>` ）にあり"
+"ます。"
 
 #: ../../admin/backup-restore.rst:59
 msgid ""
 "Just copy the script to a text file and name the file with a .pl extension. "
 "You can use any text editor to update the file."
 msgstr ""
+"スクリプトをテキストファイルにコピーして、 .pl 拡張子を付けてください。ファイ"
+"ルの更新するときは、お好みのテキストエディタを使用してください。"
 
 #: ../../admin/backup-restore.rst:61
 msgid "Change the following to reflect your directory structure:"
-msgstr ""
+msgstr "あなたのディレクトリ構造に合わせて、次のように変更してください。"
 
 #: ../../admin/backup-restore.rst:71
 msgid "Change the following to reflect your database parameters:"
-msgstr ""
+msgstr "あなたのデータベースパラメータに合わせて、次のように変更してください。"
 
 #: ../../admin/backup-restore.rst:82
 msgid "Change the following to reflect your off-site FTP server parameters:"
 msgstr ""
+"あなたのサイト外のFTPサーバのパラメータに合わせて、次のように変更してくださ"
+"い。"
 
 #: ../../admin/backup-restore.rst:92
 msgid ""
@@ -192,6 +216,9 @@ msgid ""
 "we will name the file: ``elgg-ftp-backup-script.pl``) and upload it to the "
 "following directory ``/home/userx/sitebackups``"
 msgstr ""
+"``.pl`` 拡張子をつけてファイルを保存してください。（この記事では、 ``elgg-"
+"ftp-backup-script.pl`` と付けました。）つぎに、 ``/home/userx/sitebackups`` "
+"ディレクトリにアップロードしてください。"
 
 #: ../../admin/backup-restore.rst:94
 msgid ""
@@ -199,10 +226,12 @@ msgid ""
 "does not delete the local backup file in the event that you don't want to "
 "use off-site storage for your backups."
 msgstr ""
+"FTPを無効にしてスクリプトのビットを反転させれば、サイト外のストレージをバック"
+"アップに使用したくない場合にローカルのバックアップは削除されません。"
 
 #: ../../admin/backup-restore.rst:97
 msgid "Configure the backup Cron job"
-msgstr ""
+msgstr "バックアップCronジョブの設定"
 
 #: ../../admin/backup-restore.rst:99
 msgid ""
@@ -211,16 +240,22 @@ msgid ""
 "command field ``/usr/bin/perl /home/userx/sitebackups/elgg-ftp-backup-script."
 "pl``"
 msgstr ""
+"CPanelアプリケーションにログインして、 \"Cron Jobs\" のリンクをクリックしてく"
+"ださい。Common Settings ドロップダウンにて \"Once a day\" を選択後、コマンド"
+"欄に次のコマンドを入力してください。 `` /usr/bin/perl /home/userx/"
+"sitebackups/elgg-ftp-backup-script.pl`` "
 
 #: ../../admin/backup-restore.rst:101
 msgid ""
 "Click on the \"Add New Cron Job\" button. Daily full backups are now "
 "scheduled and will be transferred off-site."
 msgstr ""
+"最後に、 \"Add New Cron job\" ボタンをクリックしてください。これで、完全バッ"
+"クアップが毎日行われ、サイト外に転送されるようになりました。"
 
 #: ../../admin/backup-restore.rst:104
 msgid "Configure the cleanup Cron job"
-msgstr ""
+msgstr "クリーンアップCronジョブの設定"
 
 #: ../../admin/backup-restore.rst:106
 msgid ""
@@ -228,6 +263,9 @@ msgid ""
 "that uses the CPanel application or you've turned off FTP altogether you can "
 "configure your data retention as follows."
 msgstr ""
+"FTPを使ってCPanelアプリケーションがある別のホスティング・プロバイダにバック"
+"アップファイルを転送している、もしくは、FTPを使用しない設定にしているのであれ"
+"ば、データの保存に関して次のように設定できます。"
 
 #: ../../admin/backup-restore.rst:108
 msgid ""
@@ -236,6 +274,10 @@ msgid ""
 "dropdown choose \"Once a day\" and type the following in the command field "
 "``find /home/usery/sitebackups/full_* -mtime +4 -exec rm {} \\;``"
 msgstr ""
+"あなたのFTPサイトのCPanelアプリケーションにログインします。FTPを使用していな"
+"い場合にはローカルサーバにログインします。Common Settings のドロップダウンメ"
+"ニューで \"Once a Day\" を選択して、コマンド欄に次のコマンドを入力してくださ"
+"い。 ``find /home/usery/sitebackups/full_* -mtime +4 -exec rm {}\\;`` "
 
 #: ../../admin/backup-restore.rst:110
 msgid ""
@@ -244,21 +286,25 @@ msgid ""
 "\"Add New Cron Job\" button. You have now configured your backup retention "
 "time."
 msgstr ""
+"``-mtime X`` には、バックアップを保管しておく日数を入れていください。 ``X`` "
+"日よりも古い全てのファイルは、削除されます。最後に、 \"Add New Cron Job\" ボ"
+"タンをクリックしてください。これで、バックアップの保管日数が設定されました。"
 
 #: ../../admin/backup-restore.rst:113
-#, fuzzy
 msgid "Restoring from backup"
-msgstr "Elgg1.8からElgg1.9へ"
+msgstr "バックアップをリストアする"
 
 #: ../../admin/backup-restore.rst:116
 msgid "Prepare your backup files"
-msgstr ""
+msgstr "バックアップファイルの用意"
 
 #: ../../admin/backup-restore.rst:118
 msgid ""
 "The assumption is that you're restoring your site to another shared hosting "
 "provider with CPanel."
 msgstr ""
+"別の共有ホスティング・プロバイダにCPanelを用いてあなたのサイトをリストアする"
+"場合についてお話します。"
 
 #: ../../admin/backup-restore.rst:120
 msgid ""
@@ -266,43 +312,50 @@ msgid ""
 "maintained in the zip file. We need to do a little cleanup. Perform the "
 "following:"
 msgstr ""
+"スクリプトがファイルをバックアップするとき、オリジナルのディレクトリ構造を"
+"保ったままzipファイルに移されます。ここで、すこしお掃除をする必要があります。"
+"次のとおり実行してください:"
 
 #: ../../admin/backup-restore.rst:122
 msgid "Download the backup file that you wish to restore from"
-msgstr ""
+msgstr "リストア用のバックアップをダウンロードしてください。"
 
 #: ../../admin/backup-restore.rst:123
-#, fuzzy
 msgid "Extract the contents of the backup file"
-msgstr "配布されているプラグインパッケージを解凍する"
+msgstr "圧縮されたバックアップファイルを解凍します"
 
 #: ../../admin/backup-restore.rst:127
 msgid ""
 "Drill down and you will find your site backup and SQL backup. Extract both "
 "of these. You will then have:"
 msgstr ""
+"そのまま進んでいきますと、あなたのサイトのバックアップとSQLのバックアップが見"
+"つかるはずです。両方とも、解凍してください。この時点で、次のファイルがあるは"
+"ずです:"
 
 #: ../../admin/backup-restore.rst:125
 msgid "a MySQL dump file with a ``.sql`` extension"
-msgstr ""
+msgstr "``.sql``拡張子を持ったMySQLのダンプファイル１つ。"
 
 #: ../../admin/backup-restore.rst:127
 msgid "another directory structure with the contents of:"
-msgstr ""
+msgstr "次の内容を含んだ、別のディレクトリ構造:"
 
 #: ../../admin/backup-restore.rst:127
 msgid "``/home/userx/public_html``"
-msgstr ""
+msgstr "``/home/userx/public_html``"
 
 #: ../../admin/backup-restore.rst:128
 msgid "``/home/userx/elggdata``"
-msgstr ""
+msgstr "``/home/userx/elggdata``"
 
 #: ../../admin/backup-restore.rst:129
 msgid ""
 "Repackage the contents of the ``/home/userx/public_html`` directory as a zip "
 "file so that the files are in the root of the zip file"
 msgstr ""
+"``/home/userx/public_html``ディレクトリ下の内容を１つのzipファイルに再圧縮し"
+"ます。これで、それらのファイルがzipファイルのルートに置かれます。"
 
 #: ../../admin/backup-restore.rst:130
 msgid ""
@@ -310,92 +363,114 @@ msgid ""
 "zip file than it is to ftp the contents of the ``/home/userx/public_html`` "
 "directory to your new host."
 msgstr ""
+"このようするには、単純な理由がります。新しいホストにアップロードすると似、zip"
+"フィアイル１つをアップロードするほうが、``/home/userx/public_html``ディレクト"
+"リの内容をftpするよりも、ずっと効率が良いためです。"
 
+# bug:
+# /home/userx/elggdata
+# -->
+# ``/home/usrx/elggdata``
 #: ../../admin/backup-restore.rst:131
 msgid ""
 "Repackage the contents of the /home/userx/elggdata directory as a zip file "
 "so that the files are in the root of the zip file"
 msgstr ""
+"``/home/usrx/elggdata`` ディレクトリの内容を１つのzipファイルに再圧縮します。"
+"これで、それらのファイルがzipファイルのルートに置かれるようになります。"
 
 #: ../../admin/backup-restore.rst:133
 msgid "You should now have the following files:"
-msgstr ""
+msgstr "これまでで、以下のファイルができているはずです。"
 
 #: ../../admin/backup-restore.rst:135
 msgid "the ``.sql`` file"
-msgstr ""
+msgstr "``.sql`` ファイル"
 
 #: ../../admin/backup-restore.rst:136
 msgid ""
 "the zip file with the contents of ``/home/userx/public_html`` in the root"
 msgstr ""
+"``/home/userx/public_html``ディレクトリの内容がルートに置かれているzipファイ"
+"ル"
 
 #: ../../admin/backup-restore.rst:137
 msgid "the zip file with the contents of ``/home/userx/elggdata`` in the root"
 msgstr ""
+"``/home/userx/elggdata``ディレクトリの内容がルートに置かれているzipファイル"
 
 # 1dfae8ed20a449f1942ad2c225628404
 #: ../../admin/backup-restore.rst:140
-#, fuzzy
 msgid "Restore the files"
-msgstr "ファイルのアップデート"
+msgstr "ファイルをリストアする"
 
 #: ../../admin/backup-restore.rst:142
 msgid ""
 "This is written with the assumption that you're restoring to a different "
 "host but maintaining the original directory structure. Perform the following:"
 msgstr ""
+"オリジナルのディレクトリ構造を保ったまま、別のサーバにリストアする場合につい"
+"て説明します。次の通り実行してください:"
 
 #: ../../admin/backup-restore.rst:144
 msgid ""
 "Login to the CPanel application on the host that you wish to restore the "
 "site to and open the File Manager."
 msgstr ""
+"サイトをリストアしたいホストのCPanelアプリケーションにログインしてファイルマ"
+"ネージャを開いてください。"
 
 #: ../../admin/backup-restore.rst:148
 msgid "Navigate to ``/home/usery/public_html``"
-msgstr ""
+msgstr "``/home/usery/public_html`` に移ってください。"
 
 #: ../../admin/backup-restore.rst:146
 msgid "Upload the zip file that contains the ``/home/userx/public_html`` files"
 msgstr ""
+"``/home/userx/public_html``下のファイルが圧縮されているzipファイルをそこに"
+"アップロードしてください。"
 
 # 1dfae8ed20a449f1942ad2c225628404
 #: ../../admin/backup-restore.rst:147 ../../admin/backup-restore.rst:152
-#, fuzzy
 msgid "Extract the zip file"
-msgstr "ファイルのアップデート"
+msgstr "zipファイルを解凍してください"
 
 #: ../../admin/backup-restore.rst:148
 msgid "You should now see all of the files in ``/home/usery/public_html``"
 msgstr ""
+"これで、全てのファイルが``home/usery/public_html``下に展開されるはずです。"
 
 # 1dfae8ed20a449f1942ad2c225628404
 #: ../../admin/backup-restore.rst:149 ../../admin/backup-restore.rst:154
-#, fuzzy
 msgid "Delete the zip file"
-msgstr "ファイルのアップデート"
+msgstr "zipファイルを削除してください。"
 
 #: ../../admin/backup-restore.rst:154
 msgid "Navigate to ``/home/usery/elggdata``"
-msgstr ""
+msgstr "次に、``/home/usery/elggdata``に移ってください。"
 
 #: ../../admin/backup-restore.rst:151
 msgid "Upload the zip file that contains the ``/home/userx/elggdata`` files"
 msgstr ""
+"``/home/userx/elggdata``下のファイイルが圧縮されているzipファイルをここにアッ"
+"プロードしてください。"
 
+# bug:
+# /home/usery/elggdata
+# --->
+# ``/home/usery/elggdata``
 #: ../../admin/backup-restore.rst:153
 msgid "You should now see all of the files in /home/usery/elggdata"
 msgstr ""
+"これで、``/home/usery/elggdata`` 下に全てのファイルが展開されるはずです。"
 
 #: ../../admin/backup-restore.rst:156
 msgid "Program and data file restoration is complete"
-msgstr ""
+msgstr "以上で、プログラムとデータファイルのリストが完了しました。"
 
 #: ../../admin/backup-restore.rst:159
-#, fuzzy
 msgid "Restore the MySQL Database"
-msgstr "MySQLを調整する"
+msgstr "MySQLデータベースのリストア"
 
 #: ../../admin/backup-restore.rst:163
 msgid ""
@@ -410,39 +485,52 @@ msgid ""
 "as simple as just restoring the database from backup to the usery account. "
 "However, having said that, it's not terribly difficult either."
 msgstr ""
+"もう一度お話しますが、ここでは、第２サーバにElggをリストアするとして説明いた"
+"します。それぞれの共有ホスティング・プロバイダは、アカウントと結び付けられた"
+"データベース名の前にアカウントホルダ名を付加します。例えば、１番目のホストで"
+"のユーザ名が ``userx`` だとすると、``userx_``が付けられて、データベース名は、"
+"``userx_elgg``となります。同様に、２番目のホストにリストアするときには、"
+"``usery``がユーザ名だとすると、データベースの名前は、``usery_elgg``となりま"
+"す。このような名前の付け方はホスティング・プロバイダが決めているので、ユーザ"
+"が独自に変更することはできないようになっています。というわけなので、ここでの"
+"作業は、単純にデータベースをバックアップから usery にリストアすればよいもので"
+"はないことがわかります。そうは言いましたが、実はそれほど難しいものでもありま"
+"せん。"
 
 #: ../../admin/backup-restore.rst:166
-#, fuzzy
 msgid "Edit the MySQL backup"
-msgstr "MySQLを調整する"
+msgstr "MySQLバックアップの編集"
 
 #: ../../admin/backup-restore.rst:168
 msgid ""
 "Open the ``.sql`` file that you extracted from your backup in your favorite "
 "text editor. Comment out the following lines with a hash mark:"
 msgstr ""
+"バックアップから解凍した``.sql``ファイルをお好みのエディタで開いてください。"
+"次のハッシュマーク（#）で始まるコメント行のハッシュマークを削除してコメントを"
+"外してください:"
 
 # 1dfae8ed20a449f1942ad2c225628404
 #: ../../admin/backup-restore.rst:175
-#, fuzzy
 msgid "Save the file."
-msgstr "ファイルのアップデート"
+msgstr "ファイルのを保存してください。"
 
 # 393c2f22320642f282e5206ba05a8647
 #: ../../admin/backup-restore.rst:178
-#, fuzzy
 msgid "Create the new database"
-msgstr "データベース内のシステムログをローテーションする"
+msgstr "新しいデータベスを作成する"
 
 #: ../../admin/backup-restore.rst:180
 msgid "Perform the following:"
-msgstr ""
+msgstr "次の作業を実行してください:"
 
 #: ../../admin/backup-restore.rst:189
 msgid ""
 "Login to the CPanel application on the new host and click on the \"MySQL "
 "Databases\" icon"
 msgstr ""
+"新しいホストのCPanelにログインして、\"MySQL Databases\" アイコンをクリックし"
+"てください。"
 
 #: ../../admin/backup-restore.rst:183
 msgid ""
@@ -450,16 +538,22 @@ msgid ""
 "we are going to stick with ``elgg`` which will give us a database name of "
 "``usery_elgg``"
 msgstr ""
+"データベース名を入力して \"create\" ボタンをクリックしてください。今回の例で"
+"は、 ``elgg`` にしましょう。この場合データベス名は ``usery_elgg`` となりま"
+"す。"
 
 #: ../../admin/backup-restore.rst:185
 msgid ""
 "You can associate an existing user with the new database, but to create a "
 "new user you will need to:"
 msgstr ""
+"新しいデータベースには既存のユーザを割り当てることができますが、新しくユーザ"
+"を作成するには次のことをしましょう:"
 
 #: ../../admin/backup-restore.rst:185
 msgid "Go to the \"Add New User\" section of the \"MySQL Databases\" page"
 msgstr ""
+"\"MySQL Database\" ページの \"Add New User\" セクションに行ってください。"
 
 #: ../../admin/backup-restore.rst:186
 msgid ""
@@ -467,63 +561,76 @@ msgid ""
 "simple and use ``elgg`` once again. This will give us a username of "
 "``usery_elgg``"
 msgstr ""
+"ユーザ名とパスワードを入力してください。今回の例では、簡単にするため、"
+"``elgg`` という名をもう一度使用します。これで、 ``usery_elgg`` というユーザ名"
+"が作られます。"
 
 # 393c2f22320642f282e5206ba05a8647
 #: ../../admin/backup-restore.rst:189
-#, fuzzy
 msgid "Associate the new user with the new database"
-msgstr "データベース内のシステムログをローテーションする"
+msgstr "新く作成したユーザを新しく作成したデータベースに関連付けます。"
 
 #: ../../admin/backup-restore.rst:188
 msgid ""
 "Go to the \"Add User To Database\" section of the \"MySQL Databases\" page. "
 "Add the ``usery_elgg`` user to the ``usery_elgg`` database"
 msgstr ""
+"\"MySQL Database\" ページの \"Add User To Database\" セクションに行きましょ"
+"う。``usery_elgg`` データベースに \"ysery_elgg\" を加えてください。"
 
 #: ../../admin/backup-restore.rst:189
 msgid "Select \"All Privileges\" and click the \"Make Changes\" button"
 msgstr ""
+"\"All Privileges\" を選んで \"Make Changes\" ボタンをクリックしてください。"
 
 #: ../../admin/backup-restore.rst:192
-#, fuzzy
 msgid "Restore the production database"
-msgstr "**データベースをバックアップする** 。コードも忘れずに。"
+msgstr "実働しているデータベースをリストアする"
 
 #: ../../admin/backup-restore.rst:194
 msgid ""
 "Now it's time to restore the MySQL backup file by importing it into our new "
 "database named \"usery_elgg\"."
 msgstr ""
+"いよいよ、MySQLバックアップファイルのリストア作業に移ります。新しく作成した"
+"データベース \"usery_elgg\" にMySQLバックアップファイルをインポートをします。"
 
+# bug:
+# \"phpMyAdmin
+# --->
+# \"phpMyAdmin\"
 #: ../../admin/backup-restore.rst:200
 msgid ""
 "Login to the CPanel application on the new host and click on the "
 "\"phpMyAdmin icon"
 msgstr ""
+"新しいホストのCPanelアプリケーションにログインして、\"phpMyAdmin\" アイコンを"
+"クリックします。"
 
 #: ../../admin/backup-restore.rst:197
 msgid "Choose the ``usery_elgg`` database in the left hand column"
-msgstr ""
+msgstr "左列の ``usery_elgg`` データベースを選択してください。"
 
 #: ../../admin/backup-restore.rst:198
 msgid "Click on the \"import\" tab at the top of the page"
-msgstr ""
+msgstr "ページの上段にある \"import\" タブをクリックしてください。"
 
 #: ../../admin/backup-restore.rst:199
 msgid "Browse to the ``.sql`` backup on your local computer and select it"
 msgstr ""
+"ローカルコンピュータにある ``.sql`` バックアップを探して選択肢てください。"
 
 #: ../../admin/backup-restore.rst:200
 msgid "Click the \"Go\" button on the bottom right side of the page"
-msgstr ""
+msgstr "ページの右下にある \"Go\" ボタンをクリックしてください。"
 
 #: ../../admin/backup-restore.rst:202
 msgid "You should now see a message stating that the operation was successful"
-msgstr ""
+msgstr "成功した旨のメセージが出てくるはずです。"
 
 #: ../../admin/backup-restore.rst:205
 msgid "Bringing it all together"
-msgstr ""
+msgstr "全てをまとめる"
 
 #: ../../admin/backup-restore.rst:207
 msgid ""
@@ -531,18 +638,24 @@ msgid ""
 "name, database username, directory structure, etc. That's what we're going "
 "to address here."
 msgstr ""
+"リストアするelggは新しいデータベースの名前や、データベースのユーザ名や、ディ"
+"レクトリ構造などに関しては、**知る由もありません**。そこで、私達の出番です。"
 
 #: ../../admin/backup-restore.rst:209
 msgid ""
 "Edit ``/public_html/engine/settings.php`` on the new hosting provider to "
 "reflect the database information for the database that you just created."
 msgstr ""
+"新しいホスティング・プロバイダの``/public_html/engine/settings.php``を編集し"
+"て、データベースの情報をさっき作成したデータベースに反映させます。"
 
 #: ../../admin/backup-restore.rst:226
 msgid ""
 "Upload the ``settings.php`` file back to the new host - overwriting the "
 "existing file."
 msgstr ""
+"編集した``settings.php``ファイルを新しいホストにアップロードし、既存のファイ"
+"ルに上書きします。"
 
 #: ../../admin/backup-restore.rst:228
 msgid ""
@@ -550,68 +663,77 @@ msgid ""
 "``usery_elgg`` database on the left and click the SQL tab on the top of the "
 "page. Run the following SQL queries against the ``usery_elgg`` database:"
 msgstr ""
+"CPanelから新しいホストの phpMyAdmin ツールを開きます。左側に表示されている "
+"``usery_elgg`` データベースを選択してページ上段の SQL タグをクリックします。"
+"``usery_elgg`` データベースに対して次のSQLクエリを実行します。"
 
 #: ../../admin/backup-restore.rst:230
 #: ../../admin/duplicate-installation.rst:159
-#, fuzzy
 msgid "Change the installation path"
-msgstr "インストール"
+msgstr "インストール path の変更"
 
 #: ../../admin/backup-restore.rst:236
 #: ../../admin/duplicate-installation.rst:166
 msgid "Change the data directory"
-msgstr ""
+msgstr "データディレクトリの変更"
 
 #: ../../admin/backup-restore.rst:242
 msgid "Change the site URL (if this has changed)"
-msgstr ""
+msgstr "もし変更があるなら、サイトURLの変更"
 
 #: ../../admin/backup-restore.rst:248
 #: ../../admin/duplicate-installation.rst:180
 msgid "Change the filestore data directory"
-msgstr ""
+msgstr "ファイル保管用のデータティレクトリの変更"
 
 #: ../../admin/backup-restore.rst:255
-#, fuzzy
 msgid "Finalizing the new installation"
-msgstr "インストール"
+msgstr "新しいインストールの最終仕上げ（ファイナライズ）"
 
 #: ../../admin/backup-restore.rst:257
 msgid ""
 "Run the upgrade script by visiting the following URL: ``http://mynewdomain."
 "com/upgrade.php`` . Do this step twice - back to back."
 msgstr ""
+"次のURL ``http://mynewdomain.com/upgrade.php`` にアクセスしてアップグレード・"
+"スクリプトを実行します。この作業を２回やり直してください。"
 
 #: ../../admin/backup-restore.rst:259
 msgid ""
 "Update your DNS records so that your host name resolves to the new host's IP "
 "address if this is a permanent move."
 msgstr ""
+"一時的な移動でなくずっと使い続ける予定なら、DNSレコードを更新してください。そ"
+"うすれば、あなたのホスト名が新しいホストのIPアドレスに結び付けられるでしょ"
+"う。"
 
 # 8a64d90a69de4269adbf5545a68eaf57
 #: ../../admin/backup-restore.rst:262
-#, fuzzy
 msgid "Congratulations!"
-msgstr "コンフィグレーション（環境設定）"
+msgstr "おめでとうございます！"
 
 #: ../../admin/backup-restore.rst:264
 msgid ""
 "If you followed the steps outlined here you should now have a fully "
 "functional copy of your primary Elgg installation."
 msgstr ""
+"ここでご紹介した通りに行えば、最初のElggインストレーションと全く同じコピーが"
+"できるはずです。"
 
 #: ../../admin/backup-restore.rst:267
 #: ../../admin/duplicate-installation.rst:264
 msgid "Related"
-msgstr ""
+msgstr "関連リンク"
 
 #: ../../admin/backup/ftp-backup-script.rst:2
 msgid "FTP backup script"
-msgstr ""
+msgstr "FTPバックアップ・スクリプト"
 
 #: ../../admin/backup/ftp-backup-script.rst:4
 msgid "Here is an automated script for backing up an Elgg installation."
 msgstr ""
+"ここに、Elggインストレーションのバックアップを自動化するスクリプトがありま"
+"す。"
 
 # 1e46a5df58d84552b00e5f56d00026ef
 #: ../../admin/cron.rst:2
@@ -746,18 +868,17 @@ msgstr "インストールする"
 
 # e384324594da4839a04d3695f9959e07
 #: ../../admin/cron.rst:49
-#, fuzzy
 msgid ""
 "The ``crontab`` needs to specify a script or command that will hit the Elgg "
 "cron pages. Two commonly available programs for this are `GET` and `wget`. "
 "You will need to determine the location of one of these on your server. Your "
 "crontab also needs to specify the location of your website."
 msgstr ""
-"Elgg cron ページがうまくアクセスされるように  ``crontab`` にスクリプトやコマ"
-"ンドを書きましょう。 `GET`__ と `wget`__ の２つのコマンドがよく使われます。 "
-"あなたのサーバでこれらのコマンドのうちとちらかで良いのでそれがどこにあるのか"
-"をチェックしておいてください。また、 crontab にあなたのウェブサイトの場所を書"
-"かなくてはいけませんので用意しておいてください。"
+"``crontab`` は、Elgg cron ページにアクセスするようなスクリプトもしくはコマン"
+"ドを必要とします。よく利用されるプログラムに、 `GET` と `wget` の２つががあり"
+"ます。これらのち１つで良いのであなたのサーバではそれがどこにあるのかを知って"
+"おく必要があります。また、 crontab には、あなたのウェブサイトの位置を書かなく"
+"てはいけません。"
 
 # 5ddc0a23766e4e91b6387b0f45c74776
 #: ../../admin/cron.rst:56
@@ -843,13 +964,12 @@ msgstr ""
 # b2650ae3b7c040c5a97beca332efb85b
 # 6fbae717d012450c8c4c6f68e11d8d32
 #: ../../admin/duplicate-installation.rst:2
-#, fuzzy
 msgid "Duplicate Installation"
-msgstr "インストール"
+msgstr "複製インストール"
 
 #: ../../admin/duplicate-installation.rst:12
 msgid "Why Duplicate an Elgg Installation?"
-msgstr ""
+msgstr "なぜ、Elggインストレーションを複製するのでしょうか？"
 
 #: ../../admin/duplicate-installation.rst:14
 msgid ""
@@ -858,58 +978,56 @@ msgid ""
 "and creating functional backups are the most common. To create a successful "
 "duplicate of an Elgg site, 3 things need to be copied:"
 msgstr ""
+"Elggインストレーションの複製が必要である理由はたくさんあります:サイトを別の"
+"サーバに引っ越したいとき、テストもしくは開発用サーバを作成したいとき、稼働で"
+"きるバックアップを作りたいときが主な理由です。Elggサイトの複製をうまく作成す"
+"るには、次の３つのものをコピーする必要があります。"
 
 #: ../../admin/duplicate-installation.rst:16
-#, fuzzy
 msgid "Database"
-msgstr "データベースクエリキャッシュ"
+msgstr "データベース"
 
 #: ../../admin/duplicate-installation.rst:17
-#, fuzzy
 msgid "Data from the data directory"
-msgstr "~75,000 個のデータディレクトリ"
+msgstr "データディレクトリからのデータ"
 
 #: ../../admin/duplicate-installation.rst:18
-#, fuzzy
 msgid "Code"
-msgstr "**データベースをバックアップする** 。コードも忘れずに。"
+msgstr "コード"
 
 #: ../../admin/duplicate-installation.rst:20
 msgid ""
 "Also at least 5 pieces of information must be changed from the copied "
 "installation:"
 msgstr ""
+"さらに、コピー版のインストレーションに少なくとも５つの情報の変更をしないとい"
+"けません。"
 
 # f8d7b0f0b9ce4d54b2d95c26910d4e51
 #: ../../admin/duplicate-installation.rst:22
-#, fuzzy
 msgid "``engine/settings.php`` file"
-msgstr "``engine/settings.php``"
+msgstr "``engine/settings.php`` ファイル"
 
 # 3d0ed31073ac48a4a20eb84ae02461b6
 #: ../../admin/duplicate-installation.rst:23
-#, fuzzy
 msgid "``.htaccess`` file"
-msgstr ""
-"もし、以前のバージョンからElggをアップデートしたのであれば、.htaccess ファイ"
-"ルを更新してください"
+msgstr "``.htaccess`` ファイル"
 
 #: ../../admin/duplicate-installation.rst:24
 msgid "database entry for your site entity"
-msgstr ""
+msgstr "データベース内に記録されている、あなたのsite entityについての情報"
 
 #: ../../admin/duplicate-installation.rst:25
 msgid "database entry for the installation path"
-msgstr ""
+msgstr "データベース内に記録されている、インストールしたpathについての情報"
 
 #: ../../admin/duplicate-installation.rst:26
 msgid "database entry for the data path"
-msgstr ""
+msgstr "データベース内に記録されている、データ path についての情報"
 
 #: ../../admin/duplicate-installation.rst:29
-#, fuzzy
 msgid "What Is Not Covered in This Tutorial"
-msgstr "何が問題なのか"
+msgstr "このチュートリアルで詳しく説明しないこと"
 
 #: ../../admin/duplicate-installation.rst:31
 msgid ""
@@ -917,45 +1035,50 @@ msgid ""
 "commands. As such, a few things will not be covered in this tutorial. These "
 "include:"
 msgstr ""
+"このチュートリアルは、Apache, MySQL, Linux コマンドについての基本的な知識があ"
+"ることを前提にしています。ですので、このチュートリアルでカバーされていないこ"
+"とが２，３あるでしょう。それには、次のことが含まれます:"
 
 #: ../../admin/duplicate-installation.rst:33
 msgid "How to backup and restore MySQL databases"
-msgstr ""
+msgstr "MySQLデータベースのバックアップとリストアの仕方"
 
 #: ../../admin/duplicate-installation.rst:34
 msgid "How to configure Apache to work with Elgg"
-msgstr ""
+msgstr "Elgg がうまく動くような Apache の設定の仕方"
 
 #: ../../admin/duplicate-installation.rst:35
 msgid "How to transfer files to and from your production server"
 msgstr ""
+"運用しているあなたのサーバへ、もしくは、サーバからのファイルの転送の仕方"
 
 #: ../../admin/duplicate-installation.rst:38
 msgid "Before You Start"
-msgstr ""
+msgstr "始める前に"
 
 #: ../../admin/duplicate-installation.rst:40
 msgid ""
 "Before you start, make sure the Elgg installation you want to duplicate is "
 "fully functional. You will also need the following items:"
 msgstr ""
+"まず始めるあたって、複製しようとするあなたのElggインストレーションが完全に機"
+"能しているかどうかを確認してください。これには、以下の物も必要になります:"
 
 #: ../../admin/duplicate-installation.rst:42
-#, fuzzy
 msgid "A backup of the live Elgg database"
-msgstr "実働しているサイトのをあららしいバージョンのElggに切り替えます。"
+msgstr "稼働中のElggデータベースのバックアップ１つ"
 
 #: ../../admin/duplicate-installation.rst:43
 msgid "A place to copy the live database"
-msgstr ""
+msgstr "稼働中のデータベースのコピーを置く場所１つ"
 
 #: ../../admin/duplicate-installation.rst:45
 msgid "A server suitable for installing duplicate Elgg site"
-msgstr ""
+msgstr "複製Elggサイトをインストールのに適したサーバ１つ"
 
 #: ../../admin/duplicate-installation.rst:45
 msgid "(This can be the same server as your production Elgg installation.)"
-msgstr ""
+msgstr "(稼働中のElggインストレーションと同一のサーバであっても問題ありません)"
 
 #: ../../admin/duplicate-installation.rst:47
 msgid ""
@@ -964,77 +1087,80 @@ msgid ""
 "information on how to backup and restore databases or use Google to find "
 "information on this."
 msgstr ""
+"データベースのバックアップはいろいろな方法で作成できます。phpMyAdim、MYSQLオ"
+"フィシャルGUI、コマンドラインなど。どのようにデータベースのバックアップをとり"
+"リストアするかの情報についてはホストに問い合わせるか、Goolgeで見つけてくださ"
+"い。"
 
 #: ../../admin/duplicate-installation.rst:49
 msgid ""
 "During this tutorial, we will make these assumptions about the production "
 "Elgg site:"
 msgstr ""
+"このチュートリアルでは、稼働しているElggサイトに関して仮に次の設定がされてい"
+"るものとしてお話しいたします。"
 
 #: ../../admin/duplicate-installation.rst:51
-#, fuzzy
 msgid "The URL is ``http://www.myelgg.org/``"
-msgstr "`The Elgg Community <http://community.elgg.org/plugins>`_"
+msgstr "URLは、``http://www.myelgg.org/``"
 
 #: ../../admin/duplicate-installation.rst:52
 msgid "The installation path is ``/var/www/elgg/``"
-msgstr ""
+msgstr "インストールされているpathは、``/var/www/elgg/``"
 
 #: ../../admin/duplicate-installation.rst:53
-#, fuzzy
 msgid "The data directory is ``/var/data/elgg/``"
-msgstr "**データベースとデータディレクトリとコードをバックアップ**"
+msgstr "データ用ディレクトリは、``/var/data/elgg``"
 
 #: ../../admin/duplicate-installation.rst:54
 #: ../../admin/duplicate-installation.rst:65
-#, fuzzy
 msgid "The database host is ``localhost``"
-msgstr "データベース内のシステムログをローテーションする"
+msgstr "データベースのホストは、``localhost``"
 
 #: ../../admin/duplicate-installation.rst:55
 msgid "The database name is ``production_elgg``"
-msgstr ""
+msgstr "データベース名は、``production_elgg``"
 
 #: ../../admin/duplicate-installation.rst:56
 #: ../../admin/duplicate-installation.rst:67
 msgid "The database user is ``db_user``"
-msgstr ""
+msgstr "データベースユーザは、``db_user``"
 
 #: ../../admin/duplicate-installation.rst:57
 #: ../../admin/duplicate-installation.rst:68
 msgid "The database password is ``db_password``"
-msgstr ""
+msgstr "データベースのパスワードは、``db_passoword``"
 
 #: ../../admin/duplicate-installation.rst:58
 #: ../../admin/duplicate-installation.rst:69
-#, fuzzy
 msgid "The database prefix is ``elgg``"
-msgstr "データベース内のシステムログをローテーションする"
+msgstr "データベースのプレフィックスは、``elgg``"
 
 #: ../../admin/duplicate-installation.rst:60
 msgid "At the end of the tutorial, our test Elgg installation details will be:"
 msgstr ""
+"このチュートリアルを終えると、我々のテスト用lggインストレーションの詳細は次の"
+"ようになります:"
 
 #: ../../admin/duplicate-installation.rst:62
-#, fuzzy
 msgid "The URL is ``http://test.myelgg.org/``"
-msgstr "`The Elgg Community <http://community.elgg.org/plugins>`_"
+msgstr "URL は、``http://test.myelgg.org/``"
 
 #: ../../admin/duplicate-installation.rst:63
 msgid "The installation path is ``/var/www/elgg_test/``"
-msgstr ""
+msgstr "インストールされる path は、``/var/www.elgg_test``"
 
 #: ../../admin/duplicate-installation.rst:64
 msgid "The data directory is ``/var/data/elgg_test/``"
-msgstr ""
+msgstr "データディレクトリは、``/var/data/elgg_test/``"
 
 #: ../../admin/duplicate-installation.rst:66
 msgid "The database name is ``test_elgg``"
-msgstr ""
+msgstr "データベースの名前は、 ``test_elgg``"
 
 #: ../../admin/duplicate-installation.rst:72
 msgid "Copy Elgg Code to the Test Server"
-msgstr ""
+msgstr "Elggコードをテストサーバにコピーする"
 
 #: ../../admin/duplicate-installation.rst:74
 msgid ""
@@ -1042,22 +1168,30 @@ msgid ""
 "example, this is as simple as copying ``/var/www/elgg/`` to ``/var/www/"
 "elgg_test/``."
 msgstr ""
+"最初のステップは、稼働しているElggのコードの複製を作ることです。今回の例で"
+"は、単純に ``/var/www/elgg/`` を ``/var/www/elgg_test`` にコピーするだけで"
+"す。"
 
 #: ../../admin/duplicate-installation.rst:81
 msgid "Copy Data to the Test Server"
-msgstr ""
+msgstr "テストサーバにデータをコピーする"
 
 #: ../../admin/duplicate-installation.rst:83
 msgid ""
 "In this example, this is as simple as copying ``/var/data/elgg/`` to ``/var/"
 "data/elgg_test/``."
 msgstr ""
+"今回の例では、単純に ``/var/data/elgg`` を ``/var/data/elgg_test/`` にコピー"
+"するだけです。"
 
 #: ../../admin/duplicate-installation.rst:89
 msgid ""
 "If you don't have shell access to your server and have to ftp the data, you "
 "may need to change ownership and permissions on the files."
 msgstr ""
+"もし、サーバへのsehllアクセスができないようでしたら、ftpを使ってデータを転送"
+"しましょう。その場合、ファイルの所有者とパーミッションを変更する必要がありか"
+"もしれません。"
 
 #: ../../admin/duplicate-installation.rst:93
 msgid ""
@@ -1065,12 +1199,14 @@ msgid ""
 "process. This is a directory called ``views_simplecache`` in your data "
 "directory and the directory called ``system_cache`` ."
 msgstr ""
+"コピー作業が終わったあと、テストサーバのveiwsキャッシュを削除する必要もありま"
+"す。あなたの設定したデータディレクトリにある ``views_simplecache``` と "
+"``system_cache`` というディレクトリがこれに当たります。"
 
 # f8d7b0f0b9ce4d54b2d95c26910d4e51
 #: ../../admin/duplicate-installation.rst:96
-#, fuzzy
 msgid "Edit engine/settings.php"
-msgstr "``engine/settings.php``"
+msgstr "engine/settings.php の編集"
 
 #: ../../admin/duplicate-installation.rst:98
 msgid ""
@@ -1079,19 +1215,24 @@ msgid ""
 "our example, we'll look in ``/var/www/elgg_test/engine/settings.php`` and "
 "find the lines that look like this:"
 msgstr ""
+"``engine/settings.php`` ファイルには、データベース設定の詳細が書かれています"
+"が、あなたの新しいテスト用Elggインストレーションに合わせて書き換える必要があ"
+"ります。今回の例では、 ``/var/www/elgg_test/engine/settings.php`` の中に次の"
+"ような行があります:"
 
 #: ../../admin/duplicate-installation.rst:120
 msgid "We need to change these lines to match our new installation:"
-msgstr ""
+msgstr "これを今回のインストレーションに合わせて次のように変更しましょう。"
 
 #: ../../admin/duplicate-installation.rst:144
 msgid "Notice the ``$CONFIG->dbname`` has changed to reflect our new database."
 msgstr ""
+"新しいデータベースに合わせて、``$CONFIG->dbname`` を変更したことに注目してく"
+"ださい。"
 
 #: ../../admin/duplicate-installation.rst:147
-#, fuzzy
 msgid "Copy Elgg Database"
-msgstr "データベース内のシステムログをローテーションする"
+msgstr "Elggデータベースのコピー"
 
 #: ../../admin/duplicate-installation.rst:149
 msgid ""
@@ -1101,6 +1242,11 @@ msgid ""
 "create the new database, and then import the tables that you previously "
 "exported."
 msgstr ""
+"さて次は、``elgg_production`` から ``elgg_test`` へデータベースをコピーしま"
+"しょう。データベースを複製する方法に関しては、お使いのMySQLマネージャのドキュ"
+"メントを参考にしてください。流れを大まかに言いますと、現在のデータベース・"
+"テーブルを１つのファイルのエクスポート、新しいデータベースを作成、これに先ほ"
+"どエクスポートしたテーブルをインポートすると言った具合になります。"
 
 #: ../../admin/duplicate-installation.rst:151
 msgid ""
@@ -1112,43 +1258,51 @@ msgid ""
 "plugin, the bookmarks will point to the old site unless your update their "
 "URLs."
 msgstr ""
+"データベース内の値を更新するのに、２つの選択肢があります。エクスポートファイ"
+"ルの値を変更する方法か、ファイルをインポートしたのちデータベース・クエリにて"
+"値を変更する方法です。ダンプファイルを変更する利点としては、サイトのユーザが"
+"作成したサイト内のコンテンツへのリンクも変更できることです。例えば、ユーザが "
+"bookmark プラグインを使ったブックマークされたページを持っいる場合に、あなたが"
+"それらのURLを更新しなければ、そのブックマークは古いサイトのものを指し示してい"
+"るままになっているでしょう。"
 
 # be8cd34595d84a79b6ffd3d0f97cc703
 #: ../../admin/duplicate-installation.rst:154
-#, fuzzy
 msgid "Database Entries"
-msgstr "データベース・クエリ・キャッシュ"
+msgstr "データベースのエンティティ"
 
 #: ../../admin/duplicate-installation.rst:156
 msgid ""
 "We must now change 4 entries in the database. This is easily accomplished "
 "with 4 simple SQL commands:"
 msgstr ""
+"データベースの４つのエントリを変更します。これには、次の４つの単純なSQLコマン"
+"ドを実行すれば簡単です。"
 
 #: ../../admin/duplicate-installation.rst:173
 msgid "Change the site URL"
-msgstr ""
+msgstr "サイトのURLを変更"
 
 #: ../../admin/duplicate-installation.rst:201
 msgid "Only change the first path here!!"
-msgstr ""
+msgstr "最初のpathを変更するだけです！"
 
 # 3d0ed31073ac48a4a20eb84ae02461b6
 #: ../../admin/duplicate-installation.rst:204
-#, fuzzy
 msgid "Check .htaccess"
-msgstr "``.htaccess``"
+msgstr ".htaccessのチェック"
 
 #: ../../admin/duplicate-installation.rst:206
 msgid ""
 "If you have made changes to .htaccess that modify any paths, make sure you "
 "update them in the test installation."
 msgstr ""
+"もし、pathの変更するために .htaccess を変更していた場合には、テスト用インスト"
+"レーションにそのような変更を反映させなくてはいけません。"
 
 #: ../../admin/duplicate-installation.rst:209
-#, fuzzy
 msgid "Update Webserver Config"
-msgstr "ファイルのアップデート"
+msgstr "ウェブ・サーバの設定"
 
 #: ../../admin/duplicate-installation.rst:211
 msgid ""
@@ -1156,21 +1310,26 @@ msgid ""
 "a document root of ``/var/www/elgg_test/``. If you plan to install into a "
 "subdirectory of your document root, this step is unnecessary."
 msgstr ""
+"今回の例では、``/var/www/elgg_test/`` をドキュメント・ルートとしたサブドメイ"
+"ンを使えるようにするためにApacheの設定を編集します。もし、あなたがドキュメン"
+"ト・ルートのサブディレクトリにインストールするつもりなら、このステップは必要"
+"ありません。"
 
 #: ../../admin/duplicate-installation.rst:214
 msgid "Run upgrade.php"
-msgstr ""
+msgstr "upgrade.php を実行"
 
 #: ../../admin/duplicate-installation.rst:216
 msgid ""
 "To regenerate cached data, make sure to run ``http://test.myelgg.org/upgrade."
 "php``"
 msgstr ""
+"キャッシュされているデータを再生成するために、 ``http://test.myelgg.org/"
+"upgrade.php`` を実行することを忘れずに。"
 
 #: ../../admin/duplicate-installation.rst:219
-#, fuzzy
 msgid "Tips"
-msgstr "参考までにデータベース設定のヒントを書いておきますと："
+msgstr "ヒント"
 
 #: ../../admin/duplicate-installation.rst:221
 msgid ""
@@ -1180,17 +1339,20 @@ msgid ""
 "follow lines to the end of the ``elgg_test/engine/settings.php`` file will "
 "allow seamless re-writing of the MySQL database entries."
 msgstr ""
+"テストサーバを新しい modsのインストールやや開発作業をするための実験的な位置づ"
+"けとして使用するのは、いい考えだと思います。もし、``elgg_test`` データベース"
+"へのリストア作業を自動化するのであれば、``$CONFIG`` 値を変更して ``elgg_test/"
+"engine/settings.php`` ファイルの最終行に次のコードを追加すれば、MySQL データ"
+"ベースの内容をシームレスに書き直しできるようになります。"
 
 #: ../../admin/duplicate-installation.rst:268
-#, fuzzy
 msgid ":doc:`backup-restore`"
-msgstr ":doc:`/appendix/index`"
+msgstr ":doc:`backup-restore`"
 
 # 5db99b0bf09442729c26cc9f3d6d8caf
 #: ../../admin/getting-help.rst:2
-#, fuzzy
 msgid "Getting Help"
-msgstr "settings"
+msgstr "助けてもらう"
 
 #: ../../admin/getting-help.rst:4
 msgid ""
@@ -1198,16 +1360,20 @@ msgid ""
 "`Community Site`_. This site is community supported by a large group of "
 "volunteers. Here are a few tips to help you get the help you need."
 msgstr ""
+"Elggについて何かお困りですか？助けてもらう最善の方法は、`Comunity Site`_ で助"
+"けを請うことです。このサイトは、多くのボランティアの人たちによって支えられて"
+"います。ここに、あなたに助けが必要なときに役立つヒントを書いておきます。"
 
 # 5db99b0bf09442729c26cc9f3d6d8caf
 #: ../../admin/getting-help.rst:13
-#, fuzzy
 msgid "Getting help"
-msgstr "settings"
+msgstr "助けてもらう"
 
 #: ../../admin/getting-help.rst:16
 msgid "Don't be a `Help Vampire`_"
 msgstr ""
+"`Help Vampire`_ （訳注：人に聞いてばかりで自分では何もしない人。助けようとし"
+"ている人たちの気力や時間を奪っていく）にならないために"
 
 #: ../../admin/getting-help.rst:18
 msgid ""
@@ -1216,12 +1382,15 @@ msgid ""
 "putting for those helping. Also, very generic questions like \"How do I "
 "build a forum?\" are almost impossible to answer."
 msgstr ""
+"どんな人でも最初は初心者ですが、学習していきます。自分で何とか学んでいこうし"
+"たり自分で研究したりする姿勢を見せないと、助けて人くれているたちにいやな感じ"
+"を起こさせてしまうでしょう。また、「どのようにフォールラムを設立するのです"
+"か？」と言ったような大変大漠然とした質問に答えるのはほとんど不可能です。"
 
 # d5acca1c28c04295b9fb47d43400de42
 #: ../../admin/getting-help.rst:23
-#, fuzzy
 msgid "Search first"
-msgstr "search"
+msgstr "最初に検索しましょう"
 
 #: ../../admin/getting-help.rst:25
 msgid ""
@@ -1231,31 +1400,39 @@ msgid ""
 "that has been answered many other times or that can be answered easily by "
 "Googling."
 msgstr ""
+"質問する前に、まずはこのサイトのドキュメント、`Community Site`_、Googleで検索"
+"してください。Elggの初心者は高頻度で同じような質問をしますので、まずは検索を"
+"してください。過去に他で何度も回答されたような質問や、簡単にGoogleで引けるよ"
+"うな質問には、答えてくれる人はそういないでしょう。"
 
 #: ../../admin/getting-help.rst:28
 msgid "Ask once"
-msgstr ""
+msgstr "尋ねるのは、一度だけ"
 
 #: ../../admin/getting-help.rst:30
 msgid ""
 "Posting the same questions in multiple places makes it hard to answer you. "
 "Ask your question in one place only. Duplicate questions may be moderated."
 msgstr ""
+"１つの質問を複数の場所に投稿すると、あなたに回答するのが難しくなります。質問"
+"をする場はひとつだけに絞ってください。同じ質問を複数投稿すると編集されてしま"
+"うかもしれません。"
 
 #: ../../admin/getting-help.rst:33
-#, fuzzy
 msgid "Include Elgg Version"
-msgstr "Elgg |version| ドキュメント"
+msgstr "Elgg バージョンを併記してください"
 
 #: ../../admin/getting-help.rst:35
 msgid ""
 "Different versions of Elgg have different features (and different bugs). "
 "Including the version of Elgg that you are using will help those helping you."
 msgstr ""
+"Elggのバージョンが違うと、仕様も異なります（そして、バグも..）。お使いのElgg"
+"のバージョンを併記するとあなたを助ける人にとって役立つでしょう。"
 
 #: ../../admin/getting-help.rst:38
 msgid "Have a reasonable profile"
-msgstr ""
+msgstr "わかりやすプロフィールで"
 
 #: ../../admin/getting-help.rst:40
 msgid ""
@@ -1263,10 +1440,13 @@ msgid ""
 "Joviality is fine, but people are more likely to help Michael than "
 "1337elggHax0r."
 msgstr ""
+"プロフィールがspamのようだったり、バカみたいな名前だったりすると無視されるこ"
+"とがあるでしょう。楽しいのは良いことですが、1337elggHax0rさんよりは、Michael"
+"さんを助けるひとのほうが多いでしょう。"
 
 #: ../../admin/getting-help.rst:43
 msgid "Post in the appropriate forum"
-msgstr ""
+msgstr "適切なフォーラムに投稿しましょう"
 
 #: ../../admin/getting-help.rst:45
 msgid ""
@@ -1274,31 +1454,40 @@ msgid ""
 "about creating a plugin, don't post to the Elgg Feedback forum. If you need "
 "help installing Elgg, post to Technical Support instead of the Theming group."
 msgstr ""
+"正しいフォーラムに投稿しているのか確認しましょう。例えば、プラグインの作成に"
+"ついての質問があるのでしたら、Elgg Feedback フォーラムには、投稿しないでくだ"
+"さい。Elggのインストールについて助けが必要なら、Theming group ではなく、"
+"Technical Support に投稿してください。"
 
 #: ../../admin/getting-help.rst:48
 msgid "Use a descriptive topic title"
-msgstr ""
+msgstr "トピック・タイトル／議題には、説明的なものを使いましょう"
 
 #: ../../admin/getting-help.rst:50
 msgid ""
 "Good topic titles concisely describe your problem or question. Bad topic "
 "titles are vague, contain all capital letters, and excessive punctuation."
 msgstr ""
+"良いトピック／タイトルとは、あなたの問題や質問が簡潔に書かれているものです。"
+"悪いタイトルとは、漠然としていたり、全て大文字だったり、句読点が多かったりと"
+"いうものです。"
 
 #: ../../admin/getting-help.rst:52
 msgid "Good title: \"White screen after upgrading to 1.7.4.\""
 msgstr ""
+"良いタイトル: \"White screen after upgrading to 1.7.4.\" （1.7.4にアップグ"
+"レードしたら画面が真っ白になりました）"
 
 #: ../../admin/getting-help.rst:54
 msgid "Bad title: \"URGENT!!!!! site broke ;-( losing money help!!!!!!!!!!!\""
 msgstr ""
+"悪いタイトル: \"URGENT!!!!! site broke ;-( losing money help!!!!!!!!!!!"
+"\" （緊急!!!!! サイトがメチャクチャ(｀Д´) お金が飛んでく〜!!!!タスケ"
+"テ〜!!!!）"
 
 #: ../../admin/getting-help.rst:57
-#, fuzzy
 msgid "Be detailed"
-msgstr ""
-"ロードマップの詳細については明かすことができませんが、次のリソースを利用すれ"
-"ばおおよその方向性がわかるかもしれません。"
+msgstr "詳細に"
 
 #: ../../admin/getting-help.rst:59
 msgid ""
@@ -1306,10 +1495,14 @@ msgid ""
 "site, include a link. Be forthcoming if community members might ask for more "
 "information. We can't help you if you won't give any details!"
 msgstr ""
+"できるだけ問題についての詳細を多く書いてください。稼働サイトをもっているので"
+"したら、リンクも付けておいてください。コミュニティのメンバがもっと情報がほし"
+"いとのことでしたら、協力してください。あなたが詳細を伏せるようなら、私達はお"
+"手伝いできないのです！"
 
 #: ../../admin/getting-help.rst:62
 msgid "Keep it public"
-msgstr ""
+msgstr "問題を公開しましょう"
 
 #: ../../admin/getting-help.rst:64
 msgid ""
@@ -1318,25 +1511,27 @@ msgid ""
 "Likewise, there's no reason to ask anyone to send a private email to you. "
 "Post in the public."
 msgstr ""
+"これは、Elggプロジェクトのための公開フォーラムです。投稿は、公開したままにし"
+"ましょう。あなたにプライベートなメッセージやemailを自分に送ってくれという人な"
+"どいるわけありません。同様にあなたが誰かにあなた宛にプライベートメッセージを"
+"おくるよう頼むわけもありません。投稿は、公開しましょう。"
 
 #: ../../admin/getting-help.rst:67
 msgid "Guidelines"
-msgstr ""
+msgstr "ガイドライン"
 
 #: ../../admin/getting-help.rst:69
 msgid ""
 "In addition to the `site-wide Terms and Policies`_, following these "
 "guidelines keeps our community site useful and safe for everyone."
 msgstr ""
+"サイトの利用条件と方針（ `site-wide Terms and Policies`_ ）に加えて、私達のコ"
+"ミュニティサイトが利用者にとって便利で安全なように、次のガイドラインを定めま"
+"す。"
 
 #: ../../admin/getting-help.rst:74
-#, fuzzy
 msgid "Content"
-msgstr ""
-"これは大変有効だと思われますが、その反面、明らかに余計な開発の手間がかかると"
-"いう短所があります。Elgg開発チームは、この方法をElggに直接組み込むことを検討"
-"しています。なぜなら、この方法は繰り返しや隠れたコンテントのあるページに対し"
-"ては特に効果的だからです。"
+msgstr "コンテント（記事の内容）"
 
 #: ../../admin/getting-help.rst:76
 msgid ""
@@ -1344,14 +1539,18 @@ msgid ""
 "has adult content and you have been asked to post a link, please mark it "
 "NSFW (Not Safe For Work) so people know."
 msgstr ""
+"全てのコンテントは、職場にとって適したもの（米国や英国で言うところのPG）でな"
+"ければいけません。もし、あなたのElggサイトにアダルトコンテントがあり、リンク"
+"を投稿したいのであれば、NSFW(Not Safe For Work;職場閲覧不適切)の印を人にわか"
+"るように付けてください。"
 
 #: ../../admin/getting-help.rst:78
 msgid "Excessive swearing in any language will not be tolerated."
-msgstr ""
+msgstr "罵り合いは、どんな言語でも容認できません。"
 
 #: ../../admin/getting-help.rst:81
 msgid "Mood"
-msgstr ""
+msgstr "ムード"
 
 #: ../../admin/getting-help.rst:83
 msgid ""
@@ -1361,20 +1560,26 @@ msgid ""
 "developers, or plugin developers will not help solve your problem and will "
 "likely get you banned."
 msgstr ""
+"技術的な問題を抱えると、イライラの貯まるものです。コミュニティサイトをイライ"
+"ラののない場所にしましょう。もし、不安を感じたならば、一歩離れて他の場所で別"
+"のことをしてみましょう。コミュニティのメンバやコア開発者やプラグイン開発者を"
+"脅したり攻撃したりしてもあなたの問題の解決にはなりません。それどころか出入り"
+"禁止になってしまうでしょう。"
 
 #: ../../admin/getting-help.rst:86
 msgid "Advertising"
-msgstr ""
+msgstr "広告宣伝"
 
 #: ../../admin/getting-help.rst:88
 msgid ""
 "Advertising is not allowed. Posts with any sort of advertising will be "
 "moderated."
 msgstr ""
+"広告宣伝は禁止されています。そのたぐいの投稿は、調整されてしまうでしょう。"
 
 #: ../../admin/getting-help.rst:91
 msgid "Asking for money / Offering to pay"
-msgstr ""
+msgstr "金銭を要求する/金銭を支払う"
 
 #: ../../admin/getting-help.rst:93
 msgid ""
@@ -1383,25 +1588,34 @@ msgid ""
 "Services group. Posts asking for money or recommending a commercial plugin "
 "may be moderated."
 msgstr ""
+"コミュニティサイトで金銭を要求してはいけません。同時に、回答に対して支払いを"
+"してもいけません。カスタム開発者をお探しなら、Personal Services group にあ"
+"たってみてください。金銭を要求するまたは、売り物のプラグインを推薦するような"
+"投稿は、調整されるかもしれません。"
 
 #: ../../admin/getting-help.rst:96
 msgid "Links"
-msgstr ""
+msgstr "リンク"
 
 #: ../../admin/getting-help.rst:98
 msgid ""
 "If you're having a problem with a live site, please provide a link to it."
 msgstr ""
+"もし、稼働させているサイトに問題が起こった時には、そのサイトへのリンクも付け"
+"ておいてください。"
 
 #: ../../admin/getting-help.rst:100
 msgid ""
 "That said, the community site is not a back linking service or SEO tool. "
 "Excessive linking will be moderated and your account may be banned."
 msgstr ""
+"コミュニティサイトはいバックリンクサービスではありませんし、SEOツールでもあり"
+"ません。極端に多くリンクを貼り付けると調整されるかもしれません。また、あなた"
+"のアカウントが出入り禁止になるかもしれません。"
 
 #: ../../admin/getting-help.rst:103
 msgid "Signatures"
-msgstr ""
+msgstr "サイン"
 
 #: ../../admin/getting-help.rst:105
 msgid ""
@@ -1410,10 +1624,13 @@ msgid ""
 "signatures on the community site, and signatures with links or advertising "
 "will be removed."
 msgstr ""
+"Elggがサインを求めない理由があります:それらは、会話の流れを乱したり散らしたり"
+"する原因となるかです。ユーザはコミュニティサイトで極力サインの仕様をやめるよ"
+"うにしてください。リンクや広告宣伝のあるサインは、調整されるかもしれません。"
 
 #: ../../admin/getting-help.rst:108
 msgid "Bumping, +1, me too"
-msgstr ""
+msgstr "バンピング,+1,私も"
 
 #: ../../admin/getting-help.rst:110
 msgid ""
@@ -1421,12 +1638,16 @@ msgid ""
 "document for tips. These types of post add nothing to the conversation and "
 "may be moderated."
 msgstr ""
+"しないでください。あなたの質問に対して回答がなかったなら、このドキュメントの"
+"文頭を見てください。ヒントがあるかもしれません。このたぐいの投稿は、会話に"
+"とって何の意味もなしません。それどころが調整されてしまうかもしれません。（バ"
+"ンピング(bumping) とは、スレッドを伸ばして目立たそうとするためだけに記事を投"
+"稿すること）"
 
 # 18230732fdbf481a9ac820b1145d861f
 #: ../../admin/getting-help.rst:113
-#, fuzzy
 msgid "Posting Code"
-msgstr "コードを書く"
+msgstr "コードを投稿する"
 
 #: ../../admin/getting-help.rst:115
 msgid ""
@@ -1434,19 +1655,21 @@ msgid ""
 "use http://elgg.pastebin.com to post long bits of code and provide the Paste "
 "Bin link instead of directly posting the code."
 msgstr ""
+"長いプログラムコードはフォーラムの文脈を読みにくくします。長いプログラムコー"
+"ドを投稿するのであれば、 http://elgg.pastebin.com を使用して、直接コードを投"
+"稿するのでなく、Paste Bin リンクを付けてください。"
 
 #: ../../admin/getting-help.rst:118
 msgid "Good Ideas"
-msgstr ""
+msgstr "いいかも"
 
 #: ../../admin/getting-help.rst:120
-#, fuzzy
 msgid "Not policies, but good ideas."
-msgstr "ここに、コミットメッセージの良い例を挙げておきます:"
+msgstr "方針ではないですが、良いことです。"
 
 #: ../../admin/getting-help.rst:123
 msgid "Say thanks"
-msgstr ""
+msgstr "感謝の気持を伝えてください"
 
 #: ../../admin/getting-help.rst:125
 msgid ""
@@ -1454,20 +1677,26 @@ msgid ""
 "volunteers. No one has to help you with your problem. Be sure to show your "
 "appreciation!"
 msgstr ""
+"どなたかがあなたを手伝ってくれましたか？ありがとうを言いましたか？コミュニ"
+"ティサイトはボランティアで成り立っております。あなたに起こった問題に対して誰"
+"も助ける義務はないのです。感謝の気持を伝えることをお忘れなく！"
 
 #: ../../admin/getting-help.rst:128
 msgid "Give back"
-msgstr ""
+msgstr "おかえし"
 
 #: ../../admin/getting-help.rst:130
 msgid ""
 "Have a tip for Elgg? See someone with a similar problem you had? You've been "
 "there and can help them out, so give them a hand!"
 msgstr ""
+"Elggのヒントを得ましたか？かつてあなたに起こったのと同様な問題を抱えている人"
+"を見かけました？あなたがいるじゃないですか。あなたなら助けてあられるかもしま"
+"せん。手を貸してあげましょう！"
 
 #: ../../admin/getting_started.rst:2
 msgid "Getting Started"
-msgstr ""
+msgstr "さあ、始めましょう"
 
 #: ../../admin/getting_started.rst:4
 msgid ""
@@ -1475,11 +1704,15 @@ msgid ""
 "What now? Here are some suggestions on how to to familiarize yourself with "
 "Elgg."
 msgstr ""
+"Elggをインストールしました。初期に起こりえる諸問題を解決しました。これから何"
+"をしましょう？ここでは、Elggに慣れ親しむためのいくつかの提案をしたいと思いま"
+"す。"
 
 #: ../../admin/getting_started.rst:8
 msgid "Focus first on core functionality"
-msgstr ""
+msgstr "まずは、コアの機能性に注目"
 
+# It's tempting ...., but ...　からの文章の意味がわからない。
 #: ../../admin/getting_started.rst:10
 msgid ""
 "When you're new to Elgg, it's best to explore the stock features in core and "
@@ -1489,6 +1722,12 @@ msgid ""
 "prevents introducing any confusing bugs from third party plugin into your "
 "new Elgg network."
 msgstr ""
+"Elgg初心者なら、サードパーティのプラグインをインストールする前に、まずコアの"
+"機能や元から付属しているプラグインを調べるのが良いでしょう。面白そうなプラグ"
+"インを何でもかんでもコミュニティサイトからインストールするのは魅力的ではあり"
+"ますが、コアの機能を探索するとElggの予想される振舞いに慣れ親しむことができ、"
+"その結果、サードパーティのプラグインからの困ったバグが新しいElggネットワーク"
+"へ持ち込まれるのを未然に防ぐことができます。"
 
 #: ../../admin/getting_started.rst:12
 msgid ""
@@ -1498,41 +1737,49 @@ msgid ""
 "log in as an admin user, then use the topbar to browse to Administration, "
 "then to Plugins on the right sidebar."
 msgstr ""
+"Elggがインストールされた時点で、ブログ、ソーシャル・ブックマーク、ファイル、"
+"グループ、いいね、メセージボード、ウィキ似のページ、ユーザ・プロフィール、マ"
+"イクログロブなどのような基本的なソーシャルネットワークのプラグイン一式が使え"
+"る状態になっています。有効になっているプラグインを変更するには、"
 
 #: ../../admin/getting_started.rst:14
 msgid "The user you create during installation is an admin user."
-msgstr ""
+msgstr "インストール時に作成したユーザは、管理者ユーザ(admin user)となります。"
 
 #: ../../admin/getting_started.rst:17
-#, fuzzy
 msgid "Create test users"
-msgstr "あなたの抱えるユーザの活動はどの程度活発ですか？"
+msgstr "テスト用のユーザを作成する"
 
 #: ../../admin/getting_started.rst:18
 msgid "Users can be created two ways in stock Elgg:"
-msgstr ""
+msgstr "Elggでユーザを作成するには、2通りの方法がります。"
 
 #: ../../admin/getting_started.rst:20
 msgid ""
 "Complete the signup process using a different email address and username. "
 "(Logout first or use a different browser!)"
 msgstr ""
+"別のemailアドレスとユーザ名でサインアップを行います。(その前にログアウトする"
+"か、別のブラウザを使用しましょう！)"
 
 #: ../../admin/getting_started.rst:21
 msgid ""
 "Add a user through the Admin section by browsing to Administration -> Users -"
 "> Add New User."
-msgstr ""
+msgstr "管理業務画面でユーザを追加する。管理業務->ユーザ->新規ユーザ"
 
 #: ../../admin/getting_started.rst:23
 msgid ""
 "Users that self-register must validate their account through email before "
 "they can log in. Users that an admin creates are already validated."
 msgstr ""
+"自分で登録作業を行ったユーザは、emailを通してアカウントが正しいものであるのか"
+"を確認しなければ、ログインできません。管理者が作成したユーザに対しては、この"
+"確認作業を行う必要ありません。"
 
 #: ../../admin/getting_started.rst:26
 msgid "Explore user functionality"
-msgstr ""
+msgstr "ユーザ用機能を探検する"
 
 #: ../../admin/getting_started.rst:27
 msgid ""
@@ -1542,11 +1789,16 @@ msgid ""
 "sets notification settings and configures tools (which will be blank because "
 "none of the default plugins add controls here)."
 msgstr ""
+"ブログを作成したり、プロフィールやダッシュボードにウィジェットを追加したり、"
+"つぶやき（マイクログロブ）に投稿したり、ページ（ウィキ様ページ）を作成したり"
+"するためにテストユーザを使いましょう。トップバーにある「設定」ボタンを押して"
+"みましょう。そこでは、ユーザが通知の設定やツールの設定をすることができます。"
+"（ここにコントロールを追加するようなデフォルトのプラグインがありませんので最"
+"初は白紙の画面になっているはずです。）"
 
 #: ../../admin/getting_started.rst:30
-#, fuzzy
 msgid "Explore admin functionality"
-msgstr "admin"
+msgstr "管理用機能を探索する"
 
 #: ../../admin/getting_started.rst:31
 msgid ""
@@ -1555,12 +1807,14 @@ msgid ""
 "sections. Change options in the Configure menu to change how Elgg looks and "
 "acts."
 msgstr ""
+"全ての管理者用のコントロールは、トップバーの「管理業務」をクリックすると現れ"
+"ます。そのページには、様々なセクションを説明したウィジェットがあります。Elgg"
+"の見かけや動作を変更するには、設定メニューの各種選択項目を変更してください。"
 
 # 119d5797a1324e19811c113ceb72b53f
 #: ../../admin/getting_started.rst:34
-#, fuzzy
 msgid "Extending Elgg"
-msgstr "Elggのアプグレード"
+msgstr "Elggの拡張"
 
 #: ../../admin/getting_started.rst:35
 msgid ""
@@ -1572,6 +1826,13 @@ msgid ""
 "comments to make sure you only install well-written plugins by high quality "
 "developers."
 msgstr ""
+"ひと通りElggを触ったあとは、テーマやプラグインをインストールしてみましょう。"
+"サードパティーが開発してきたコミュニティサイトでは、たくさんのプラグインや"
+"テーマがあります。これらのプラグインは、翻訳の変更やチャット機能を付け加えた"
+"り、Elggのインターフェースを全く違うデザインにしたりすることができます。ただ"
+"し、これらのプラグインは公式のものではないので、コメントをよく確認して質の高"
+"い開発者によってうまく書かれたプラグインのみをインストールするようにしてくだ"
+"さい。"
 
 # 45caefc22b5144548b11e68338eb3e62
 #: ../../admin/index.rst:2
@@ -2194,14 +2455,12 @@ msgid "Plugins can be obtained from:"
 msgstr "プラグインは、以下の場所から入手することができます。"
 
 #: ../../admin/plugins.rst:15
-#, fuzzy
 msgid "`The Elgg Community`_"
-msgstr "`The Elgg Community <http://community.elgg.org/plugins>`_"
+msgstr "`The Elgg Community`_"
 
 #: ../../admin/plugins.rst:16
-#, fuzzy
 msgid "`Github`_"
-msgstr "`Github <https://github.com/Elgg>`_"
+msgstr "`Github`_"
 
 # 2fabe7d93ecc42b4bfe8a381ba4e43c2
 #: ../../admin/plugins.rst:17
@@ -2210,7 +2469,6 @@ msgstr "サードパーティ（たいてい有料です）"
 
 # 6da89e36c06d44d8ab93d53024528a64
 #: ../../admin/plugins.rst:19
-#, fuzzy
 msgid ""
 "If no existing plugins meet your needs, you can `hire a developer`_ or :doc:"
 "`create your own </guides/index>`."
@@ -2220,19 +2478,17 @@ msgstr ""
 "できます。"
 
 #: ../../admin/plugins.rst:26
-#, fuzzy
 msgid "The Elgg Community"
-msgstr "`The Elgg Community <http://community.elgg.org/plugins>`_"
+msgstr "The Elgg Community"
 
 # 1d377e10f9da444bbacbb4a5bb85bbb8
 #: ../../admin/plugins.rst:29
-#, fuzzy
 msgid "Finding Plugins"
-msgstr "プラグイン"
+msgstr "プラグインを見つける"
 
 #: ../../admin/plugins.rst:32
 msgid "Sort based on most popular"
-msgstr ""
+msgstr "人気がある順で並び替え"
 
 #: ../../admin/plugins.rst:34
 msgid ""
@@ -2242,21 +2498,27 @@ msgid ""
 "plugins are frequently used by other administrators. These will often (but "
 "not always) be higher quality plugins that provide significant capabilities."
 msgstr ""
+"コミュニティのプラグインページでは、アップロードされた日付(Filter:Newest)やダ"
+"ウンロード数で並び替えることができます。もし、あなたがElgg初心者で他の管理者"
+"がどんなプラグインをよく使っているのか知りたいのならば、ダウンロード数で並び"
+"替えると良いでしょう。絶対ではありませんが大抵は、高性能で高品質のプラグイン"
+"が見つかるでしょう。"
 
 #: ../../admin/plugins.rst:37
 msgid "Use the plugin tag search"
-msgstr ""
+msgstr "プラグイン・タグ検索を使う"
 
 #: ../../admin/plugins.rst:39
 msgid ""
 "Next to the filtering control on the plugin page is a search box. It enables "
 "you to search by tags. Plugins authors choose the tags."
 msgstr ""
+"プラグインページのフィルタリングの仕方の説明の次は、検索ボックスについてお話"
+"します。タグによる検索が可能です。プラグインの作者がタグを決めます。"
 
 #: ../../admin/plugins.rst:42
-#, fuzzy
 msgid "Look for particular plugin authors"
-msgstr "プラグインの問題は、プラグイン製作者に報告してください。"
+msgstr "特定のプラグイン作者を探す"
 
 #: ../../admin/plugins.rst:44
 msgid ""
@@ -2264,16 +2526,17 @@ msgid ""
 "well on your site, you can check what else that plugin author has developed "
 "by clicking on their name when viewing a plugin."
 msgstr ""
+"プラグインの質にはばらつきがあるものです。あなたがあるプラグインをサイトにイ"
+"ンストールしてそれがうまく動作したのなら、そのプラグインの作者の名前をクリッ"
+"クして他に別のプラグインを開発していないかチェックしてみましょう。"
 
 #: ../../admin/plugins.rst:47
-#, fuzzy
 msgid "Evaluating Plugins"
-msgstr "プラグイン"
+msgstr "プラグインの評価"
 
 #: ../../admin/plugins.rst:50
-#, fuzzy
 msgid "Look at the comments and ratings"
-msgstr "~75,000 件のコメント"
+msgstr "コメントと人気投票を見ましょう"
 
 #: ../../admin/plugins.rst:52
 msgid ""
@@ -2285,10 +2548,16 @@ msgid ""
 "then leave negative feedback. Further, some plugin authors have chosen to "
 "not allow comments."
 msgstr ""
+"プラグインをダウンロードしてインストールする前に、他の人の残したコメントに目"
+"を通しておくと良いでしょう。そのプラグインがうまく動かないとかサイトが不安定"
+"になったとかいうようなコメントが見られたなら、そのプラグインの導入について思"
+"いとどまるかもしれません。ただ、インストールの手順を無視したり正しくインス"
+"トールできねなかったりするユーザが時々悪いフィードバックを残したりすることも"
+"ありますので、注意が必要です。"
 
 #: ../../admin/plugins.rst:55
 msgid "Install on a test site"
-msgstr ""
+msgstr "テストサイトにインストールしましょう"
 
 #: ../../admin/plugins.rst:57
 msgid ""
@@ -2298,6 +2567,12 @@ msgid ""
 "your production site even after they pass your evaluation on your test site. "
 "This enables you to isolate problems introduced by a new plugin."
 msgstr ""
+"もし、試したいプラグインが初めて使うものなら、いきなり実働サイトにインストー"
+"ルするのはあまり良いことではありません。プラグインを評価するためのテストサイ"
+"トを別に準備しておいたほうがよいでしょう。テストサイトでの評価にパスしたあと"
+"でさえも、実働サイトにいくつかの新しいプラグインを運用する際に少しづつお披露"
+"目していくのは、良い考えだと主ます。こうすることによって、一つ一つの新しいプ"
+"ラグインの導入に伴って起こるような諸問題を判別することができます。"
 
 # 927aa63c2d504dd78010f3d832af1f91
 #: ../../admin/plugins.rst:60
@@ -2422,9 +2697,8 @@ msgstr ""
 
 # 1d377e10f9da444bbacbb4a5bb85bbb8
 #: ../../admin/plugins.rst:106
-#, fuzzy
 msgid "Plugin order"
-msgstr "プラグインを起動するには:"
+msgstr "プラグインの順序"
 
 #: ../../admin/plugins.rst:108
 msgid ""
@@ -2433,20 +2707,25 @@ msgid ""
 "plugins are added by an administrator, they are placed at the bottom of the "
 "list."
 msgstr ""
+"プラグインは、プラグインページでリストされている順番に従ってロードされます。"
+"インストール直後の並び順は、大体ランダムになっています。管理者がプラグインを"
+"追加すると、順番にリストの最後に加えられていきます。"
 
 #: ../../admin/plugins.rst:110
 msgid "Some general rules for ordering plugins:"
-msgstr ""
+msgstr "プラグインの順番に関する一般的な規則:"
 
 #: ../../admin/plugins.rst:112
 msgid "A theme plugin should be last or at least near the bottom"
-msgstr ""
+msgstr "テーマプラグインは、リストの最後かその辺りに配置しましょう"
 
 #: ../../admin/plugins.rst:113
 msgid ""
 "A plugin that modifies the behavior of another plugin should be lower in the "
 "plugin list"
 msgstr ""
+"他のプラグインの振舞いを変更するようなプラグインは、前者のプラグインのあとに"
+"配置しましょう"
 
 # 4e290c80b1d74bef8507ba5af50965a8
 #: ../../admin/plugins.rst:116
