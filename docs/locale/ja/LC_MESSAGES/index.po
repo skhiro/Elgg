@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Elgg Core\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-01-11 19:33-0500\n"
-"PO-Revision-Date: 2015-01-16 02:25+0900\n"
+"PO-Revision-Date: 2015-02-16 00:25+0900\n"
 "Last-Translator: SAKAGUCHI, Hirotaka <kemo@saka-hv.org>\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/projects/p/elgg-"
 "core/language/ja_JP/)\n"
@@ -41,21 +41,20 @@ msgstr ""
 # c0e4a7709c9f4591b238ad5d2046f55a
 # リンク：「すべての種類のソーシャルアプリケーション」
 #: ../../index.rst:7
-#, fuzzy
 msgid "It has been used to build `all kinds of social apps`__:"
 msgstr ""
-"また、`すべての種類のソーシャルアプリケーション`__　が構築されています。例え"
-"ば："
+"また、全てのソーシャルアプリケーションの類( `all kinds of social apps`__) を"
+"構築するのに使われてきました。例えば："
 
 # d21733a29c7348de87ac706ed9eda003
 #: ../../index.rst:11
 msgid "open networks (similar to Facebook)"
-msgstr "オープンネットワーク (Facebookににています)"
+msgstr "オープンネットワーク (Facebookみたいなもの)"
 
 # e2b7f615d09347c6b380fa5dbf6968e9
 #: ../../index.rst:12
 msgid "topical (like the Elgg Community)"
-msgstr "話題 (the Elgg Communityのような)"
+msgstr "議論や話題を交わす場(the Elgg Communityのようなもの)"
 
 # 1a8a975bbb5740cd87fe2cc3df499425
 #: ../../index.rst:13
@@ -88,7 +87,6 @@ msgstr ""
 
 # d94b70b267b34149a7f857b5b7fbf809
 #: ../../index.rst:20
-#, fuzzy
 msgid "This is the canonical documentation for the Elgg_ project."
 msgstr "これは、Elgg_ プロジェクトの正式ドキュメントです。"
 
