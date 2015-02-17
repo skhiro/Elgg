@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: Elgg Core\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-01-11 19:33-0500\n"
-"PO-Revision-Date: 2015-01-14 20:23+0900\n"
-"Last-Translator: SAKAGUCHI, Hirotaka <kemo@saka-hv.org>\n"
+"PO-Revision-Date: 2015-02-17 19:17+0900\n"
+"Last-Translator: SAKAGUCHI, Hirotaka <kemo@sun.interq.or.jp>\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/projects/p/elgg-"
 "core/language/ja_JP/)\n"
 "Language: ja_JP\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.7.1\n"
+"X-Generator: Poedit 1.7.4\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 # 40be40a331c44ed5b6552ecaeb7f2e3d
@@ -35,9 +35,8 @@ msgstr ""
 
 #: ../../contribute/code.rst:0 ../../contribute/docs.rst:0
 #: ../../contribute/releases.rst:0
-#, fuzzy
 msgid "Contents"
-msgstr "配布されているプラグインパッケージを解凍する"
+msgstr "目次"
 
 # cf2fcf800e384f97a308f8dfc604fe9c
 #: ../../contribute/code.rst:11
@@ -69,15 +68,15 @@ msgstr ""
 
 # ddc452e8ba1c4ae1902a5a3664510ace
 #: ../../contribute/code.rst:25
-#, fuzzy
 msgid ""
 "For new features, `submit a feature request <https://github.com/Elgg/Elgg/"
 "issues>`__ or `talk to us`_ first and make sure the core team approves of "
 "your direction before spending lots of time on code."
 msgstr ""
-"新機能には、機能のリクエストを提出する（ `submit a feature request`_ ）もしく"
-"は、コードに無駄に時間を費やす前に最初に私達に知らせて（ `talk to us`_ ）あな"
-"たの方針にコアチームが賛同することを確かめてください。"
+"新機能には、機能のリクエストを提出する（ `submit a feature request <https://"
+"github.com/Elgg/Elgg/issues>`__ ）もしくは、コードに無駄に時間を費やす前にま"
+"ず最初に私達にお知らせください（ `talk to us`_ ）。そして、あなたの方針にコア"
+"チームが賛同することを確かめてください。"
 
 # fdea8ba3b6bf4d64bb6e24370aecc9cd
 #: ../../contribute/code.rst:31
@@ -96,13 +95,12 @@ msgstr ""
 # 9fc076ba3ec4477da3b84b41d7ce22b1
 #: ../../contribute/code.rst:36
 msgid "Bugfix PRs:"
-msgstr "PRsのバグ修正"
+msgstr "バグ修正PRs:"
 
 # 168e06d279944aa384b89dfc109fbfd2
 #: ../../contribute/code.rst:46
-#, fuzzy
 msgid "Feature PRs:"
-msgstr "feature"
+msgstr "機能追加PRs:"
 
 # 607449a6b7bd4ce4b27f4673a5294cdc
 #: ../../contribute/code.rst:58
@@ -111,90 +109,64 @@ msgstr "提出するブランチを次から選んでください"
 
 #: ../../contribute/code.rst:60
 msgid "The following table assumes the latest stable release is 1.9."
-msgstr ""
+msgstr "次のテーブルは、最新安定版が1.9であることを仮定します。"
 
 #: ../../contribute/code.rst:63
-#, fuzzy
 msgid "Type of change"
-msgstr "``type`` は以下のうちの1つ:"
+msgstr "変更のタイプ"
 
 # 607449a6b7bd4ce4b27f4673a5294cdc
 #: ../../contribute/code.rst:63
-#, fuzzy
 msgid "Branch to submit against"
-msgstr "提出するブランチを次から選んでください"
+msgstr "以下に対する提出したいブランチ"
 
 #: ../../contribute/code.rst:65
-#, fuzzy
 msgid "Security fix"
-msgstr "fix"
+msgstr "Security fix（セキュリティー修正）"
 
 #: ../../contribute/code.rst:65
 msgid "1.8 (Email security@elgg.org first!)"
-msgstr ""
+msgstr "1.8 (まずは、 security@elgg.org にEmailしてください。)"
 
 #: ../../contribute/code.rst:66
-#, fuzzy
 msgid "Bug fix"
-msgstr "fix"
+msgstr "Bug fix (バグ修正)"
 
 #: ../../contribute/code.rst:66
-#, fuzzy
 msgid "1.9"
-msgstr "1.8 から1.9 へのアップグレード"
+msgstr "1.9"
 
 #: ../../contribute/code.rst:67
 msgid "Deprecation"
-msgstr ""
+msgstr "廃止予定"
 
 #: ../../contribute/code.rst:67 ../../contribute/code.rst:68
-#, fuzzy
 msgid "1.x"
-msgstr ""
-"マイナーアップグレード(1.x)をするなら、すでにあるコアファイルをすべて完全に置"
-"き換えてください。"
+msgstr "1.x"
 
 # 550900c89217462c8e27c8f24200a52d
 #: ../../contribute/code.rst:68
-#, fuzzy
 msgid "Minor feature"
-msgstr ""
-"新しい機能は数ヶ月ペースでElggに導入され、マイナーフィーチャーリリース(ちょっ"
-"とした新機能追加版)としてリリースされます。このようなバージョンは 1.**8**.0 "
-"のように２番めの数字で識別されます。これらのリリースはバグ修正版ほど熟成され"
-"ていませんが、安定かつ使用に耐えると熟慮されたものです。また、これらのリリー"
-"スは後方互換性が保たれるようにされていますが、新機能が追加され、無用コードが"
-"削除され、全体にわたっての改善がなされています。なので、新しい改善された機能"
-"を利用するためにはプラグインとテーマのアップデートが必要になるかもしれませ"
-"ん。"
+msgstr "Minor feature (小規模機能追加)"
 
 # 550900c89217462c8e27c8f24200a52d
 #: ../../contribute/code.rst:69
-#, fuzzy
 msgid "Major feature"
-msgstr ""
-"世のソフトウェア同様、Elggも重要な変更をせざるを得ない状況になり、メジャー新"
-"機能版がされる時があります。このようなリリースがなされるときは、ソフトウェ開"
-"発のコア・チームがソフトウェアの地盤そのものを大きく改善するきっかけにもなり"
-"ます。古いバージョンのテーマとプラグインは、異なるメジャーリリース間では何か"
-"しらの改変をしないとうまく動かなくなるかもしれません。"
+msgstr "Major feature (大幅機能追加)"
 
 #: ../../contribute/code.rst:69 ../../contribute/code.rst:70
-#, fuzzy
 msgid "master"
-msgstr ""
-"新機能:masterブランチ（私達はバグ修正ブランチに新機能は盛り込みません）"
+msgstr "master"
 
 #: ../../contribute/code.rst:70
-#, fuzzy
 msgid "Breaking"
-msgstr "芋づる式にエラーを起こさせるような変更"
+msgstr ""
 
 #: ../../contribute/code.rst:73
 msgid ""
 "The difference between minor and major feature is subjective and up to the "
 "core team."
-msgstr ""
+msgstr "小規模機能追加か大幅機能追加かは、主観によるものでコアチーム次第です。"
 
 # fad2c064c5a9429ba96ed7e351e5f55a
 #: ../../contribute/code.rst:76
@@ -206,55 +178,57 @@ msgid ""
 "We require a particular format to allow releasing more often, and with "
 "improved changelogs and source history. Just follow these steps:"
 msgstr ""
+"そして変更ログやソースヒストリを改善してリリースをより頻繁に行えるように、以"
+"下のようなフォーマットで書いていただいています:"
 
 #: ../../contribute/code.rst:81
 msgid ""
 "Start with the ``type`` by selecting the *last category which applies* from "
 "this list:"
 msgstr ""
+"``type`` の後に下のリストの中から選んだカテゴリであてはまる最後のものを付け加"
+"えてください。"
 
 # f259ee9717d4430397f03c22f857f7cd
 #: ../../contribute/code.rst:83
-#, fuzzy
 msgid "**docs** - *only* docs are being updated"
-msgstr "docs (docs が 更新されている *時だけ*)"
+msgstr "**docs** - docs が 更新されている *時だけ*"
 
 # 015b2137e9c74c55babf5f7c13593c22
 #: ../../contribute/code.rst:84
-#, fuzzy
 msgid ""
 "**chore** - this include refactoring, code style changes, adding missing "
 "tests, Travis stuff, etc."
 msgstr ""
-"chore（リファクトリング、スタイルの変更、間違ったテストの追加、Travis関連、な"
-"ど）"
+"**chore** - リファクタリング、コードスタイルの変更、欠けたテストの追加、"
+"Travis関連、など）"
 
 # e7a29493617543b5a59471af60155c59
 #: ../../contribute/code.rst:85
-#, fuzzy
 msgid "**perf** - the primary purpose is to improve performance"
-msgstr "pref（主な変更の目的がパフォーマンスの改善である時）"
+msgstr "**pref** - 主な変更の目的がパフォーマンスの改善である時"
 
 #: ../../contribute/code.rst:86
-#, fuzzy
 msgid "**fix** - this fixes a bug"
-msgstr "fix"
+msgstr "**fix** - バグの修正"
 
 # e0b2b1f760d346169ae79beb09add98c
 #: ../../contribute/code.rst:87
-#, fuzzy
 msgid "**deprecate** - the change deprecates any part of the API"
-msgstr "deprecate（廃止予定されるAPIに関する変更）"
+msgstr "**deprecate** - 廃止が予定されるAPIに関する変更"
 
 #: ../../contribute/code.rst:88
 msgid "**feature** - this adds a new user-facing or developer feature"
-msgstr ""
+msgstr "**feature** - 新しいユーザ向けもしくは開発者向けの機能を追加する"
 
 #: ../../contribute/code.rst:89
 msgid ""
 "**security** - the change affects a security issue in any way. *Please do "
 "not push this commit to any public repo.* Instead contact security@elgg.org."
 msgstr ""
+"**security** - どのような形であれセキュリティーに影響を与える変更。*公開リポ"
+"ジトリにはこれをコミットしないでください。* 代わりに security@elgg.org に連絡"
+"をしてください。"
 
 #: ../../contribute/code.rst:91
 msgid ""
@@ -263,18 +237,27 @@ msgid ""
 "should email security@elgg.org before proceeding. When in doubt, make your "
 "best guess and a reviewer will provide guidance."
 msgstr ""
+"例) もしあなたのコミットが、バグの修正をするためにリファクタするのであれば、 "
+"\"fix\" です。そのバグがセキュリティ関連ならば、タイプは \"security\" にしな"
+"ければなりません。そして作業を行う前に、 security@elgg.org にemailしてくださ"
+"い。どちらか迷う場合は、とりあえずあなたが一番と思ったものを付けてください。"
+"あとでレビュアーが教えてくれるでしょう。"
 
 #: ../../contribute/code.rst:95
 msgid ""
 "In parenthesis, add the ``component``, a short string which describes the "
 "subsystem being changed."
 msgstr ""
+"括弧内には、``component`` を付け加えてください。変更したサブシステムの詳細を"
+"短い文字列で表したものです。"
 
 #: ../../contribute/code.rst:97
 msgid ""
 "Some examples: \"views\", \"i18n\", \"seo\", \"a11y\", \"cache\", \"db\", "
 "\"session\", \"router\", \"<plugin_name>\"."
 msgstr ""
+"いくつか例を挙げますと、\"views\", \"i18n\", \"seo\", \"a11y\", \"cache\", "
+"\"db\", \"session\", \"router\", \"<plugin_name>\" 等です。"
 
 #: ../../contribute/code.rst:99
 msgid ""
@@ -289,21 +272,19 @@ msgstr ""
 
 #: ../../contribute/code.rst:104
 msgid "Good summary"
-msgstr ""
+msgstr "良いサマリ"
 
 #: ../../contribute/code.rst:104
-#, fuzzy
 msgid "Bad summary (problem)"
-msgstr "何が問題なのか"
+msgstr "悪いサマリ（問題）"
 
 #: ../../contribute/code.rst:106
 msgid "page owners see their own owner blocks on pages"
 msgstr ""
 
 #: ../../contribute/code.rst:106
-#, fuzzy
 msgid "bug fix (vague)"
-msgstr "fix"
+msgstr ""
 
 #: ../../contribute/code.rst:107
 msgid "bar view no longer dies if 'foo' not set"
@@ -441,46 +422,41 @@ msgstr ""
 
 # a77cc61bca30486ab65d053fdca0fe83
 #: ../../contribute/code.rst:173
-#, fuzzy
 msgid ""
 "Rebase the last N commits: ``git rebase -i HEAD~N`` where N is a number. "
 "(Git will open the git-rebase-todo file for editing)"
 msgstr ""
-"最後のコミットをリベース（Git は編集のために git-rebase-todo ファイルを開きま"
-"す）"
+"最後の N個のコミットをリベース: `git rebase -i HEAD~N`` ここで、Nは数字。"
+"（Git は編集のために git-rebase-todo ファイルを開きます）"
 
+# git rebase のコマンドラインで表示されるメッセージについて説明しているのたが、バッチでしているのか、対話形式でしているのかを区別してから、表現を変えないといけないので、保留
 #: ../../contribute/code.rst:175
+#, fuzzy
 msgid ""
 "For the commits that need to change, change ``pick`` to ``r`` (for reword) "
 "and save/exit the editor."
 msgstr ""
+"変更が必要なコミットには、``pick``を``r``(rewordする)に変更して、エディタで保"
+"存/終了"
 
 # a3b3e09968554c119568440180e4b2f0
 #: ../../contribute/code.rst:176
-#, fuzzy
 msgid ""
 "Change the commit message(s), save/exit the editor (git will present a file "
 "for each commit that needs rewording)."
 msgstr ""
-"``pick`` を ``r`` に変更（置き換え）し、保存してエディタを抜けてください。"
-"（Gitはコミットメッセージを変更するためファイルを提出します）"
 
 #: ../../contribute/code.rst:177
 msgid ""
 "``git push -f your_remote your_branch`` to force push the branch (updating "
 "your PR)."
 msgstr ""
+"強制的にブランチをプッシュする(あなたのPRを更新する)には、``git push -f "
+"your_remote your_branch`` 。"
 
 #: ../../contribute/code.rst:180
-#, fuzzy
 msgid "Testing"
-msgstr ""
-"新機能リリースとメジャーリリースが出される前に、コアチームはリリース候補版も"
-"しくはベータ版ともいわれますが、を発表することにしています。このような版はテ"
-"スト専用で、製品同等のものとみなしてはいけません。コアチームがリリーする目的"
-"は、実世界でテストしフィードバックさせるためです。リリース候補版のAPIは安定し"
-"ていると思われますので、候補版が発表されたなら、その新しいAPIを使ったプラグン"
-"を書いたとしても問題はないでしょう。"
+msgstr "テストをする"
 
 #: ../../contribute/code.rst:182
 msgid ""
@@ -493,11 +469,8 @@ msgid "PHPUnit Tests"
 msgstr ""
 
 #: ../../contribute/code.rst:188
-#, fuzzy
 msgid "TODO"
-msgstr ""
-"最後のコミットをリベース（Git は編集のために git-rebase-todo ファイルを開きま"
-"す）"
+msgstr "TODO"
 
 #: ../../contribute/code.rst:191
 msgid "Jasmine Tests"
@@ -515,9 +488,8 @@ msgid "Test boilerplate"
 msgstr ""
 
 #: ../../contribute/code.rst:213
-#, fuzzy
 msgid "Running the tests"
-msgstr "Elggはどのようなハードウェアで実行されているのか？"
+msgstr "テストを実行する"
 
 #: ../../contribute/code.rst:214
 msgid "Elgg uses `Karma`_ with `Jasmine`_ to run JS unit tests."
@@ -544,7 +516,7 @@ msgstr ""
 # 6f299ce6e4c7469ea6da9f084d1562af
 #: ../../contribute/code.rst:242
 msgid "Coding best practices"
-msgstr ""
+msgstr "コーディングのベスト・プラクティス"
 
 # 9989740d6f78489f8746452faa162b78
 #: ../../contribute/code.rst:244
@@ -557,7 +529,7 @@ msgstr ""
 # 86f63e459eb24119966864ebc3fda696
 #: ../../contribute/code.rst:250
 msgid "General coding"
-msgstr ""
+msgstr "一般的なコーディング"
 
 # 455c20c33d25460a8d0d2f36c05f5ac9
 #: ../../contribute/code.rst:253
@@ -600,7 +572,7 @@ msgstr ""
 # d670cdcdf6f544c7997cffe50e169bce
 #: ../../contribute/code.rst:273
 msgid "Whitespace is free"
-msgstr ""
+msgstr "ホワイトスペースはご自由に"
 
 # 86be30f662e24d46a8bf04eedafd6054
 #: ../../contribute/code.rst:275
@@ -612,7 +584,7 @@ msgstr ""
 # 9da87bc10ae14f07a933ba18189c8afa
 #: ../../contribute/code.rst:279
 msgid "Variable names"
-msgstr ""
+msgstr "変数の名前"
 
 # b5327250f11346c09921b5b9b8a9ee0e
 #: ../../contribute/code.rst:281
@@ -630,7 +602,7 @@ msgstr ""
 # 30377ce58ddf47cc9b174b584a681d2c
 #: ../../contribute/code.rst:286
 msgid "Functions"
-msgstr ""
+msgstr "関数"
 
 # 510def9cb0c047a5b4e97eac40b9f71a
 #: ../../contribute/code.rst:288
@@ -683,9 +655,8 @@ msgstr ""
 
 # 7f82201fb42b4e14b99bd92f34b1beb0
 #: ../../contribute/code.rst:312
-#, fuzzy
 msgid "Use comments effectively"
-msgstr "~75,000 件のコメント"
+msgstr ""
 
 #: ../../contribute/code.rst:314
 msgid ""
@@ -718,9 +689,8 @@ msgstr ""
 #: ../../contribute/code.rst:483 ../../contribute/code.rst:499
 #: ../../contribute/code.rst:514 ../../contribute/code.rst:534
 #: ../../contribute/code.rst:557 ../../contribute/code.rst:580
-#, fuzzy
 msgid "Good:"
-msgstr "ここに、コミットメッセージの良い例を挙げておきます:"
+msgstr ""
 
 #: ../../contribute/code.rst:338
 msgid ""
@@ -731,9 +701,8 @@ msgstr ""
 
 # a1251ffa384849e187a59dde88d54b00
 #: ../../contribute/code.rst:350
-#, fuzzy
 msgid "Commit effectively"
-msgstr "コミットメッセージのフォーマット"
+msgstr ""
 
 #: ../../contribute/code.rst:352
 msgid ""
@@ -818,7 +787,7 @@ msgstr ""
 # c25c12ea98f94887bdfc36c7aec23b4b
 #: ../../contribute/code.rst:389
 msgid "PHP guidelines"
-msgstr ""
+msgstr "PHPのガイドライン"
 
 # 71a8e98fedff4f2cb0887ab18e12af96
 #: ../../contribute/code.rst:391
@@ -862,9 +831,8 @@ msgstr ""
 
 # bdce91be80e34dc2aa0f9a907a63a96e
 #: ../../contribute/code.rst:408
-#, fuzzy
 msgid "Documentation"
-msgstr "Elgg |version| ドキュメント"
+msgstr "ドキュメンテーション"
 
 # 187f43886ff144e7829c792988f653ce
 #: ../../contribute/code.rst:410
@@ -891,19 +859,18 @@ msgstr ""
 
 # 4db5aaf18acb491e9f2746f3bb15b3ba
 #: ../../contribute/code.rst:421
-#, fuzzy
 msgid "Use ``//`` or ``/* */`` when commenting."
-msgstr "いつになれば、X機能が導入されるのですか？"
+msgstr "コメントは、 ``//`` または ``/* */`` をご使用ください。"
 
 # d3e3c0cb4d6b4a4090ac7193d743da58
 #: ../../contribute/code.rst:423
 msgid "Use only ``//`` comments inside function/method bodies."
-msgstr ""
+msgstr "関数やメソッドのボディ内では、 ``//`` だけをご使用ください。"
 
 # 761637febc084a88a71d546dba809efc
 #: ../../contribute/code.rst:426
 msgid "Naming"
-msgstr ""
+msgstr "名前付け"
 
 # e3ecc6af4b104cb68a34864d9bbd04eb
 #: ../../contribute/code.rst:428
@@ -979,30 +946,28 @@ msgstr ""
 
 # a0a441035ff84bf4a5b631bb3ab64586
 #: ../../contribute/code.rst:468
-#, fuzzy
 msgid "CSS guidelines"
-msgstr "_css"
+msgstr "CSSのガイドライン"
 
 # 355c55b1a4dd4e4cad9f99d548f59f4e
 #: ../../contribute/code.rst:471
 msgid "Use shorthand where possible"
-msgstr ""
+msgstr "可能な場合は短く"
 
 # 986b62290dfd4dde809945c70e4dbb3b
 #: ../../contribute/code.rst:491
-#, fuzzy
 msgid "Use hyphens, not underscores"
-msgstr "クライアント側でレンダリングされたHTMLを使用する"
+msgstr "アンダースコアを使わず、ハイフンを使用してください。"
 
 # e29b2c7a650a4213a4c09d1af0bd642b
 #: ../../contribute/code.rst:506
 msgid "One property per line"
-msgstr ""
+msgstr "１行に１プロパティ"
 
 # a3ae30f00313430f949f0dee06d5729b
 #: ../../contribute/code.rst:522
 msgid "Property declarations"
-msgstr ""
+msgstr "プロパティの宣言"
 
 # 929017619656409895bbe726f0fec759
 #: ../../contribute/code.rst:524
@@ -1125,7 +1090,7 @@ msgstr ""
 # ce5e6bc6d99c45cc979fff9d9e15c79c
 #: ../../contribute/docs.rst:17
 msgid "intro/*"
-msgstr ""
+msgstr "intro/*"
 
 # 14495dd67290461e9e4855e6e9498be5
 #: ../../contribute/docs.rst:18
@@ -1136,9 +1101,8 @@ msgstr ""
 
 # 0eec113614ca4c51b421f5ffc4743bf8
 #: ../../contribute/docs.rst:21
-#, fuzzy
 msgid "admin/*"
-msgstr "admin"
+msgstr "admin/*"
 
 # 436c3231dafd455ca65e65d71a2ecfa3
 #: ../../contribute/docs.rst:22
@@ -1147,9 +1111,8 @@ msgstr ""
 
 # 7c9489b194f847f2a375369409be3c67
 #: ../../contribute/docs.rst:25
-#, fuzzy
 msgid "guides/*"
-msgstr "管理者のためのガイド"
+msgstr "guides/*"
 
 # 113d22ecee044e948e56ce91b1884383
 #: ../../contribute/docs.rst:26
@@ -1177,9 +1140,8 @@ msgstr ""
 
 # 209c8fa53cdd4b4d97be86ea09b42be8
 #: ../../contribute/docs.rst:38
-#, fuzzy
 msgid "contribute/*"
-msgstr ":doc:`/contribute/index`"
+msgstr "contribute/*"
 
 # 9c044b724c4647f6a86d29cc814ee3e5
 #: ../../contribute/docs.rst:39
@@ -1190,9 +1152,8 @@ msgstr ""
 
 # 7eba7a5229474e7a80de1a3ac87e59cb
 #: ../../contribute/docs.rst:42
-#, fuzzy
 msgid "appendix/*"
-msgstr "付録"
+msgstr "appendix/*"
 
 # 4a2f1effdb5b4e9693892ee5b545878e
 #: ../../contribute/docs.rst:43
@@ -1270,10 +1231,8 @@ msgstr ""
 # bd11ecfd4a784d37b864aced068f854e
 #: ../../contribute/docs.rst:65 ../../contribute/docs.rst:76
 #: ../../contribute/docs.rst:88 ../../contribute/docs.rst:102
-#, fuzzy
 msgid "Before:"
 msgstr ""
-"アプグレードを行う場合は、まず、テストサイトで新しいバージョンを試してから。"
 
 # ff7dc581c1fc45aeb1590f1996798cc1
 #: ../../contribute/docs.rst:67
@@ -1286,12 +1245,8 @@ msgstr ""
 # a2ee08614f0e47e5b0c55129fbdd3e20
 #: ../../contribute/docs.rst:69 ../../contribute/docs.rst:80
 #: ../../contribute/docs.rst:92 ../../contribute/docs.rst:106
-#, fuzzy
 msgid "After:"
 msgstr ""
-"''upgrade.php''にアクセスしたあと、あなたのサイトの管理者用エリアに行きます。"
-"アップグレードが途中である旨の通知が出ているはずです。通知バーのリンクをク"
-"リックして確認してください。その後アップグレードを実行してください。"
 
 # 948918bbc1c340ac82e1890211d40515
 #: ../../contribute/docs.rst:71
@@ -1377,9 +1332,8 @@ msgstr ""
 
 # aab564b246ff44d6bbe6031114a51b33
 #: ../../contribute/docs.rst:119
-#, fuzzy
 msgid "Internationalizing documentation"
-msgstr "Elgg |version| ドキュメント"
+msgstr "ドキュメントの国際化"
 
 # c0672c6abac64d2391ea2c675044cbd4
 #: ../../contribute/docs.rst:121
@@ -1397,13 +1351,8 @@ msgstr ""
 
 # 8a316fd189a549e2bb5f5bd2f39af3bc
 #: ../../contribute/i18n.rst:2
-#, fuzzy
 msgid "Translations"
-msgstr ""
-"いくつかの言語パックは、すでにコアに含まれているものもあります。それらは、"
-"Elggのルートディレクトリ下にある ''languages'' ディレクトリ内で見つけることが"
-"できます。個々のプラグインにおいては、プラグインのルートディレクトリ下の "
-"''languages'' ディレクトリ内に翻訳が置かれることが多いです。"
+msgstr "翻訳作業"
 
 # 5ff3d6ef4b6b49269799c7ef3f3453b9
 #: ../../contribute/i18n.rst:4
@@ -1422,18 +1371,18 @@ msgstr ""
 # c334318307274e24bc3b50a1e85071f8
 #: ../../contribute/i18n.rst:11
 msgid "Transifex"
-msgstr ""
+msgstr "Transifex"
 
 # 03738f8eedb64dfe9aa52fba10e5d39b
 #: ../../contribute/i18n.rst:13
 msgid "All translation for the Elgg project is organized through Transifex."
 msgstr ""
+"全てのElggプロジェクトのの翻訳は Transifex を介してまとめられています。"
 
 # b9c3bfb746b8430abe4cf4a72f1587f4
 #: ../../contribute/i18n.rst:15
-#, fuzzy
 msgid "https://www.transifex.com/organization/elgg"
-msgstr "`Github <https://github.com/Elgg>`_"
+msgstr "https://www.transifex.com/organization/elgg"
 
 # 66f64a78e44a4857a6b14324e5a67ef6
 #: ../../contribute/i18n.rst:17
@@ -1442,17 +1391,19 @@ msgid ""
 "well so the whole community can be unified and make it really easy for "
 "translators to contribute to any plugin in the Elgg ecosystem."
 msgstr ""
+"プラグイン作者様には、Transifexを介して翻訳を行うようお願いしております。そう"
+"することによって、コミュニティ全体が一つになることができ、翻訳者がElggエコシ"
+"ステムのどのようなプラグインにもほんとに気軽に貢献できるようになるでしょう。"
 
 # 397017e25e304ada99ec1eb2c5891381
 #: ../../contribute/index.rst:2
-#, fuzzy
 msgid "Contributor Guides"
 msgstr "貢献者のためガイド"
 
 # 2f2770ffef2b45b191fb174dbcdd42f0
 #: ../../contribute/index.rst:4
 msgid "Participate in making Elgg even better."
-msgstr ""
+msgstr "みんなで参加してElggをさらに良いものにしましょう"
 
 # a9d557e8883948e0b235f4817e0db24e
 #: ../../contribute/index.rst:6
@@ -1460,11 +1411,14 @@ msgid ""
 "Elgg is a community-driven project. It relies on the support of volunteers "
 "to succeed. Here are some ways you can help:"
 msgstr ""
+"Elggはコミュニティによって動いていくプロジェクトです。成功するためには、ボラ"
+"ンティアの方々のサポートが必要です。ここに、あなたができることについて書いて"
+"いきます:"
 
 # 27b9de16b6fd4b848dbd714f09107294
 #: ../../contribute/issues.rst:2
 msgid "Reporting Issues"
-msgstr ""
+msgstr "問題の報告"
 
 # 00d19d51fac74a2982ad56cda4e45f23
 #: ../../contribute/issues.rst:4
@@ -1500,12 +1454,12 @@ msgstr ""
 # 5a27b1a0488c473698fd380826fd7d8d
 #: ../../contribute/issues.rst:17
 msgid "Bug reports"
-msgstr ""
+msgstr "バグの報告"
 
 # 61c3099176cd4e42a5a075e7b4d551f8
 #: ../../contribute/issues.rst:19
 msgid "Before submitting a bug report:"
-msgstr ""
+msgstr "バグの報告を提出する前に:"
 
 # 50c3b5bdb3d94409856651729ac6b1e9
 #: ../../contribute/issues.rst:21
@@ -1516,19 +1470,13 @@ msgstr ""
 
 # 2368d719aba84c4da9eb87b55a4123e6
 #: ../../contribute/issues.rst:23
-#, fuzzy
 msgid "Verify the problem is reproducible"
-msgstr "問題解決に必要なリソースは"
+msgstr "問題が再現できるか調べる"
 
 # 4a682a889fad479db580bf5cd37232b5
 #: ../../contribute/issues.rst:25
-#, fuzzy
 msgid "On the latest version of Elgg"
-msgstr ""
-"もし、あなたがカスタムプラグインの製作者なら、最新バージョンのElggに対して、"
-"開発者のためのガイド「アップグレードするときのプラグインコードに関する情報"
-"（ :doc:`information on upgrading plugin code </guides/upgrading>` ）」も一読"
-"してください。"
+msgstr "最新版のElggで"
 
 # 01dc71329e0a4775bf1917a9a83b5204
 #: ../../contribute/issues.rst:26
@@ -1557,15 +1505,13 @@ msgstr ""
 
 # 64b92ea3521041ffa5aec0fc85919005
 #: ../../contribute/issues.rst:33
-#, fuzzy
 msgid "Browsers affected by this problem"
-msgstr "問題解決に必要なリソースは"
+msgstr ""
 
 # 88153d4046a1438bab61d7873f8ee33b
 #: ../../contribute/issues.rst:36
-#, fuzzy
 msgid "Feature requests"
-msgstr "Pullリクエスト"
+msgstr ""
 
 # 9471b2f616ef45249f50964e5306825f
 #: ../../contribute/issues.rst:38
@@ -1599,9 +1545,8 @@ msgstr ""
 
 # db6a1230e42c482aac39b4d4838f7074
 #: ../../contribute/issues.rst:49
-#, fuzzy
 msgid "Detailed explanation of the feature"
-msgstr "feature"
+msgstr "その機能の詳細な説明"
 
 # a52a8047d4c742f3ac3e82d1ff778ce7
 #: ../../contribute/issues.rst:50
@@ -1709,9 +1654,8 @@ msgstr ""
 
 # 9f28de469ced4e4d9f2dda56c5f8eb66
 #: ../../contribute/money.rst:45
-#, fuzzy
 msgid "read the disclaimer_ above"
-msgstr "上記の基本的な手順を踏んでください。"
+msgstr ""
 
 # 2f89370d92ee4477bc15e3d800e05c76
 #: ../../contribute/money.rst:46
@@ -1735,17 +1679,13 @@ msgstr ""
 
 # a735bdf6beaf45cda4a62f86e4065c13
 #: ../../contribute/money.rst:51
-#, fuzzy
 msgid "your website"
-msgstr ""
-"MySQLがあなたのウェブサイトの規模に合った my.cnf で最適に設定されているのかを"
-"確認してください。"
+msgstr "あなたのウェブサイト"
 
 # 1ec656c74eef4663a9f94d3f2c54ea15
 #: ../../contribute/money.rst:52
-#, fuzzy
 msgid "your Elgg community profile"
-msgstr "話題 (the Elgg Communityのような)"
+msgstr "あなたの Elgg community のプロフィール"
 
 # ea055a5748574efb9a0d15217424c650
 #: ../../contribute/money.rst:57
@@ -1756,15 +1696,13 @@ msgstr ""
 
 # 7050f720565b405cad50b0a420140b8c
 #: ../../contribute/releases.rst:2
-#, fuzzy
 msgid "Release Process Workflow"
-msgstr "リリースの方針"
+msgstr "リリース・プロセスのワークフロー"
 
 # ef3d20e1648d4b628184622a0d39776b
 #: ../../contribute/releases.rst:4
-#, fuzzy
 msgid "Release a new version of Elgg."
-msgstr "Elgg |version| ドキュメント"
+msgstr "新しいバージョンのElggのリリース"
 
 # 8be8179fd71f4ef090f657d474acba31
 #: ../../contribute/releases.rst:6
@@ -1776,54 +1714,53 @@ msgstr ""
 
 # 738d78182616439b8e502a517fc3a2fc
 #: ../../contribute/releases.rst:15
-#, fuzzy
 msgid "Requirements"
-msgstr "インストール時の必要条件:"
+msgstr "必要なもの"
 
 #: ../../contribute/releases.rst:17
 msgid "SSH access to elgg.org"
-msgstr ""
+msgstr "elgg.orgへのSSHアクセス権"
 
 # 607238512e38484aa48e038e599b8bc6
 #: ../../contribute/releases.rst:18
 msgid "Commit access to http://github.com/Elgg/Elgg"
-msgstr ""
+msgstr "http://github.com/Elgg/Elgg へのコミットアクセス権"
 
 # 1c7c46f8a1af44acb906ba2e0c698345
 #: ../../contribute/releases.rst:19
 msgid "Author access to http://blog.elgg.org"
-msgstr ""
+msgstr "http://blog.elgg.org への作者アクセス権"
 
 # 3d6437b9f5e4471a87052cf7a5013b58
 #: ../../contribute/releases.rst:20
-#, fuzzy
 msgid "Access to `Twitter account`_"
-msgstr "account"
+msgstr "`Twitter account`_ へのアクセス権"
 
 # 16843ff4ae1449539f28f2004196f6bf
 #: ../../contribute/releases.rst:21
-#, fuzzy
 msgid "Access to `G+ page`_"
-msgstr "このページは移転しました。"
+msgstr "`G+ page`_ へのアクセス権"
 
 # ca5d35605ecc4de6aa0f8400cb7a9cbe
 #: ../../contribute/releases.rst:22
 msgid "Node.js and NPM installed"
-msgstr ""
+msgstr "Node.js and NPM がインストールされていること"
 
 #: ../../contribute/releases.rst:23
 msgid "Sphinx installed (``easy_install sphinx``)"
-msgstr ""
+msgstr "Sphinx がインストールされていること (``easy_install sphinx``)"
 
 # c4debc7f05c64057acc765d6270132d5
 #: ../../contribute/releases.rst:24
 msgid "Transifex client installed (``easy_install transifex-client``)"
 msgstr ""
+"Transifex クライアントがインストールされていること (``easy_install transifex-"
+"client``)"
 
 # de158a93081e4afc8f6cb03a63ef384a
 #: ../../contribute/releases.rst:25
 msgid "Transifex account with access to Elgg project"
-msgstr ""
+msgstr "Transifex での Elggプロジェクトへのアクセス権"
 
 #: ../../contribute/releases.rst:28
 msgid "1. First new stable minor/major release"
@@ -1854,9 +1791,8 @@ msgstr ""
 
 # 66079dc37fff4b76b88e29d0a1f603d3
 #: ../../contribute/releases.rst:41
-#, fuzzy
 msgid "Install the prerequisites:"
-msgstr "新しいプラグインをインストールするには:"
+msgstr ""
 
 # a3551ee218894751b2559e28cbcae375
 #: ../../contribute/releases.rst:49
@@ -1871,57 +1807,55 @@ msgstr ""
 # 9a599c2ad1c646ddbef308dc0456c2e0
 #: ../../contribute/releases.rst:58
 msgid "Next, submit a PR via Github:"
-msgstr ""
+msgstr "次に、Github経由でPRを提出しましょう:"
 
 # dc9cd8621d4e41f5a972cec75c8105e1
 #: ../../contribute/releases.rst:64
 msgid "Once approved and merged, tag the release:"
-msgstr ""
+msgstr "マージが承認されたら、そのリリースにタグをつけましょう:"
 
 # 18cb29045eef45a8b20caa99da5c6e25
 #: ../../contribute/releases.rst:74
 msgid "Update Milestones on Github"
-msgstr ""
+msgstr "Guthubのマイルストーンのアップデート"
 
 # b8b8f21c30ab44fe9eb0f444ffcad194
 #: ../../contribute/releases.rst:73
 msgid "Mark release milestones as completed"
-msgstr ""
+msgstr "releaseマイルストーンをcompletedとマークする"
 
 # 07501a8789904241b9cf740c8866503b
 #: ../../contribute/releases.rst:74
 msgid "Move unresolved tickets in released milestones to later milestones"
-msgstr ""
+msgstr "releasedマイルストーンの未解決のチケットを次のマイルストーンに移動する"
 
 #: ../../contribute/releases.rst:77
-#, fuzzy
 msgid "3. Update the website"
-msgstr "ファイルのアップデート"
+msgstr "3. ウェブサイトのアップデート"
 
 # a3b3b9882d18436e9562b4868c4424d3
 #: ../../contribute/releases.rst:79
 msgid "The downloads need to point to the new releases."
-msgstr ""
+msgstr "ダウンロードは新しいリリースを指し示していなければいけません。"
 
 # 448b02a09824433dba04761411cd4f5d
 #: ../../contribute/releases.rst:82
 msgid "Build Package"
-msgstr ""
+msgstr "パッケージをビルド"
 
 #: ../../contribute/releases.rst:84
 msgid "ssh to elgg.org"
-msgstr ""
+msgstr "elgg.org に ssh する"
 
 # b42dc8c0096f41838c03b0e3d430f576
 #: ../../contribute/releases.rst:85
-#, fuzzy
 msgid "Clone https://github.com/Elgg/elgg-scripts"
-msgstr "`Github <https://github.com/Elgg>`_"
+msgstr "https://github.com/Elgg/elgg-scripts をクローンしてください。"
 
 # 20cd24e727a142e0a584cf81c382384a
 #: ../../contribute/releases.rst:86
 msgid "Use elgg-scripts/build/build.sh to generate the .zip file."
-msgstr ""
+msgstr "elgg-script/build/build.sh で .zip ファイルを作成"
 
 # 34d2bbebe5284c649e584c39cc80bb11
 #: ../../contribute/releases.rst:88
@@ -1929,76 +1863,78 @@ msgid ""
 "Run without arguments to see usage. This also generates the ChangeLog.txt "
 "file."
 msgstr ""
+"オプションなしで実行すれば使い方が見られます。このスクリプトは、ChangeLog."
+"txt ファイルも生成します。"
 
 # 97dcc239267b48caaa8a1a6ab29dedfd
 #: ../../contribute/releases.rst:90
-#, fuzzy
 msgid "Example::"
-msgstr "ここに、コミットメッセージの良い例を挙げておきます:"
+msgstr "Example::"
 
 # ba8ab58782634ade94206b2c33a936e9
 #: ../../contribute/releases.rst:94
-#, fuzzy
 msgid "MIT::"
-msgstr ""
-"パッチを提供すると `GPLv2 license`_ と `MIT license`_ のもとでそのコードをラ"
-"イセンスするのに同意したことになります。"
+msgstr "MIT::"
 
 # f4036d6af9d1489b922796bd6a7f908d
 #: ../../contribute/releases.rst:99
+#, fuzzy
 msgid "Update homepage, download, and previous download pages"
 msgstr ""
+"ホームページ、ダウンロードページ、前のダウンロードページをアップデートしま"
+"す。"
 
 # c1808f35f7f4457bb71acad0c3184deb
 #: ../../contribute/releases.rst:101
 msgid "Clone https://github.com/Elgg/old-elgg-website"
-msgstr ""
+msgstr "https://github.com/Elgg/old-elgg-website をクローンしてください。"
 
 # 063e07a8f89f4ea6a5d71297a5d41443
 #: ../../contribute/releases.rst:102
 msgid "Make changes, commit, push."
-msgstr ""
+msgstr "変更して、コミットして、プッシュします。"
 
 # a6082be93bc94d88bb7cfa3480ef9c62
 #: ../../contribute/releases.rst:104
 msgid "index.php"
-msgstr ""
+msgstr "index.php"
 
 # d3ae6ad4b71a47eea9b11700db3f23b7
 #: ../../contribute/releases.rst:105
 msgid "download.php"
-msgstr ""
+msgstr "download.php"
 
 # 595e0702afb14dfeb42ea6383636b00f
 #: ../../contribute/releases.rst:106
 msgid "previous.php"
-msgstr ""
+msgstr "previous.php"
 
 # 9845f8f011c543b1a4c26066176dbedf
 #: ../../contribute/releases.rst:108
-#, fuzzy
 msgid "Pull to live site"
-msgstr "Pullリクエスト"
+msgstr "稼働しているサイトへプルする"
 
 # 7291154a8d7646aea64f61e91cc8d6f2
 #: ../../contribute/releases.rst:114
 msgid "flush apc cache (via community admin panel)"
-msgstr ""
+msgstr "acp cache をフラッシュします。(community admin パネル経由で)"
 
 #: ../../contribute/releases.rst:117
 msgid "4. Make the announcement"
-msgstr ""
+msgstr "4. アナウンスします"
 
 # 0f11aaab115a41dc93b77a0c1683cecd
 #: ../../contribute/releases.rst:119
 msgid "This should be the very last thing you do."
-msgstr ""
+msgstr "これはほんとに一番最後に行ってください。"
 
 #: ../../contribute/releases.rst:121
 msgid ""
 "Sign in at http://blog.elgg.org/pg/login and compose a blog on with HTML "
 "version of CHANGELOG.md."
 msgstr ""
+"http://blog.elgg.org/pg/login にサインインして、CHANGLOG.md の HTML版をを付け"
+"加えてブログを書いてください。"
 
 # a579ad39d4df4ba2ba9b3bdd095d7f52
 #: ../../contribute/releases.rst:122
@@ -2006,16 +1942,18 @@ msgid ""
 "Add tags “release” and “elgg1.x” where x is whatever branch is being "
 "released."
 msgstr ""
+"\"release\" と \"elgg1.x\" でタグづけしてください。xには、リリースするブラン"
+"チを入れてください。"
 
 # f743dfd120804f829b169003a3973b0f
 #: ../../contribute/releases.rst:123
 msgid "Tweet from the elgg `Twitter account`_"
-msgstr ""
+msgstr "elggの`Twitter account`_ からTweet"
 
 # ffed083fc77645b2a0474e421512bc1d
 #: ../../contribute/releases.rst:124
 msgid "Post from the `G+ page`_"
-msgstr ""
+msgstr "`G+ page`_ から投稿"
 
 # f460dad9c1b6499088511aa9358404f6
 #~ msgid ""
