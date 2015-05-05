@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Elgg Core\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-01-11 19:33-0500\n"
-"PO-Revision-Date: 2015-01-14 20:16+0900\n"
+"PO-Revision-Date: 2015-03-24 21:17+0900\n"
 "Last-Translator: SAKAGUCHI, Hirotaka <kemo@saka-hv.org>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/elgg-core/"
 "language/ja/)\n"
@@ -17,45 +17,47 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 1.7.1\n"
-"X-Poedit-Bookmarks: -1,-1,24,-1,-1,-1,-1,-1,-1,-1\n"
+"X-Generator: Poedit 1.7.4\n"
+"X-Poedit-Bookmarks: 179,-1,24,-1,-1,-1,-1,-1,-1,-1\n"
 
 #: ../../appendix/faqs.rst:2
-#, fuzzy
 msgid "FAQs and Other Troubleshooting"
-msgstr "TODO: other goals/values?"
+msgstr "FAQとその他のトラブルシューティング"
 
 #: ../../appendix/faqs.rst:4
 msgid "Below are some commonly asked questions about Elgg."
-msgstr ""
+msgstr "下にあるのはElggについてよく聞かれる質問です。"
 
 #: ../../appendix/faqs.rst:0
-#, fuzzy
 msgid "Contents"
-msgstr "配布されているプラグインパッケージを解凍する"
+msgstr "目次"
 
 #: ../../appendix/faqs/general.rst:2
-#, fuzzy
 msgid "General"
-msgstr ""
-"一般的に私達は、セマンティック・バージョンニング（意味のあるバージョンの管理"
-"の仕方）（ `semantic versioning`_ ）の方法を採用しています。"
+msgstr "一般的な質問"
 
 #: ../../appendix/faqs/general.rst:6
 msgid ":doc:`/admin/getting-help`"
-msgstr ""
+msgstr ":doc:`/admin/getting-help`"
 
+# コアのエラーメッセージを確認
 #: ../../appendix/faqs/general.rst:9
+#, fuzzy
 msgid ""
 "\"Plugin cannot start and has been deactivated\" or \"This plugin is invalid"
 "\""
 msgstr ""
+"「プラグインが起動できません。停止状態のままです」または、「このプラグインは"
+"不正です」"
 
 #: ../../appendix/faqs/general.rst:10
 msgid ""
 "This error is usually accompanied by more details explaining why the plugin "
 "is invalid. This is usually caused by an incorrectly installed plugin."
 msgstr ""
+"このエラーは大抵は、なぜプラグインが不正なのかという、より詳細な説明も伴って"
+"なされています。大抵は正しくプラグインがインストールされていなかったために起"
+"こるようです。"
 
 #: ../../appendix/faqs/general.rst:13
 msgid ""
@@ -64,29 +66,34 @@ msgid ""
 "file: ``/mod/test/start.php`` and a manifest.xml file ``/mod/test/manifest."
 "xml``."
 msgstr ""
+"もしあなたが、\"test\" と呼ばれているようなプラグインをインストールしているな"
+"らば、modディレクトリ以下に test ディレクトリなるものがあると思います。この "
+"test ディレクトリには start.php ファイル ``/mod/test/start.php`` と manifest."
+"xml ファイル ``/mod/test/manifest.xml`` があるはずです。"
 
 #: ../../appendix/faqs/general.rst:19
 msgid "If these files do not exist, it could be caused by:"
-msgstr ""
+msgstr "もし、これらのファイルがなければ、次のような原因が考えられます:"
 
 #: ../../appendix/faqs/general.rst:16
-#, fuzzy
 msgid "installing a plugin to the wrong directory"
-msgstr "''mod'' ディレクトリ下にあるサードパーティのプラグインフォルダ"
+msgstr "間違ったディレクトリにプラグインがインストールされている"
 
 #: ../../appendix/faqs/general.rst:17
 msgid "creating a directory under /mod that does not contain a plugin"
-msgstr ""
+msgstr "プラグインが含まれていない /mod にディレクトリを作成している"
 
 #: ../../appendix/faqs/general.rst:18
 msgid "a bad ftp transfer"
-msgstr ""
+msgstr "ftp転送がうまく行っていなかった"
 
 #: ../../appendix/faqs/general.rst:19
 msgid ""
 "unzipping a plugin into an extra directory (myplugin.zip unzips to "
 "``myplugin/myplugin``)"
 msgstr ""
+"別のディレクトリにプラグインが unzip された(myplugin.zip が ``myplugin/"
+"myplugin`` に)"
 
 #: ../../appendix/faqs/general.rst:21
 msgid ""
@@ -94,33 +101,43 @@ msgid ""
 "directory, check the permissions. Elgg must have read access to the files "
 "and read + execute access on the directories."
 msgstr ""
+"もし、Unixベースのホストでファイルも正しいディレクトリにあったのなら、次は"
+"パーミッションをチェックしてみてください。Elggは、ファイルに対しては読み込み"
+"可能であることを、ディレクトリに対しては読み込み+実行可能であることを必要とし"
+"ています。"
 
 #: ../../appendix/faqs/general.rst:24
-#, fuzzy
 msgid "White Page (WSOD)"
-msgstr "このページは移転しました。"
+msgstr "真っ白なページ(WSOD)"
 
 #: ../../appendix/faqs/general.rst:29
 msgid ""
 "A blank, white page (often called a \"white screen of death\") means there "
 "is a PHP syntax error. There are a few possible causes of this:"
 msgstr ""
+"真っ白で何も表示されないページ(しばしば、\"white screen of death\" と呼ばれる"
+"ことがあります)は、PHP構文エラーがあることを意味しています。これの原因となる"
+"ものがいくつかあります:"
 
 #: ../../appendix/faqs/general.rst:27
 msgid "corrupted file - try transfering the code again to your server"
-msgstr ""
+msgstr "破損したファイル - もう一度サーバに転送しなおしてみてください。"
 
 #: ../../appendix/faqs/general.rst:28
 msgid ""
 "a call to a php module that was not loaded - this can happen after you "
 "install a plugin that requires a specific module."
 msgstr ""
+"ロードされていないphpモジュールを呼び出した - ある特定のモジュールを必要とす"
+"るようなプラグインをインストールしたあとに起こります。"
 
 #: ../../appendix/faqs/general.rst:29
 msgid ""
 "bad plugin - not all plugins have been written to the same quality so you "
 "should be careful which ones you install."
 msgstr ""
+"悪いプラグイン - 全てのプラグインが同じ品質で書かれいるわけではありませんの"
+"で、インストールする際には慎重になってください。"
 
 #: ../../appendix/faqs/general.rst:31
 msgid ""
@@ -159,7 +176,7 @@ msgstr ""
 
 #: ../../appendix/faqs/general.rst:46
 msgid "Page not found"
-msgstr ""
+msgstr "ページが見つかりません"
 
 #: ../../appendix/faqs/general.rst:48
 msgid ""
@@ -193,7 +210,7 @@ msgstr ""
 
 #: ../../appendix/faqs/general.rst:58
 msgid "Login token mismatch"
-msgstr ""
+msgstr "ログイントークンが一致していません"
 
 #: ../../appendix/faqs/general.rst:60
 msgid ""
@@ -250,7 +267,7 @@ msgstr ""
 
 #: ../../appendix/faqs/general.rst:85
 msgid "Maintenance mode"
-msgstr ""
+msgstr "メンテナンス・モード"
 
 #: ../../appendix/faqs/general.rst:87
 msgid ""
@@ -306,7 +323,7 @@ msgstr ""
 
 #: ../../appendix/faqs/general.rst:123
 msgid "Server logs"
-msgstr ""
+msgstr "サーバ・ログ"
 
 #: ../../appendix/faqs/general.rst:125
 msgid ""
@@ -337,33 +354,35 @@ msgid ""
 msgstr ""
 
 #: ../../appendix/faqs/general.rst:134
-#, fuzzy
 msgid "How does registration work?"
-msgstr "どのような仕組みで動くのでしょうか？"
+msgstr "登録はどのような仕組みででしょうか？"
 
 #: ../../appendix/faqs/general.rst:136
 msgid "With a default setup, this is how registration works:"
 msgstr ""
+"デフォルトで立ち上げた場合は、登録は次のような仕組みでなされています。l"
 
 #: ../../appendix/faqs/general.rst:138
 msgid "User fills out registration form and submits it"
-msgstr ""
+msgstr "ユーザは登録フォームの記入欄を埋めて、送信します。"
 
 #: ../../appendix/faqs/general.rst:139
 msgid "User account is created and disabled until validated"
 msgstr ""
+"アカウントが作成されて、登録確認作業が終わるまでは無効のままにされます。"
 
 #: ../../appendix/faqs/general.rst:140
 msgid "Email is sent to user with a link to validate the account"
 msgstr ""
+"アカウントの登録確認のリンクが記載されているEmailがユーザに送信されます。"
 
 #: ../../appendix/faqs/general.rst:141
 msgid "When a user clicks on the link, the account is validated"
-msgstr ""
+msgstr "ユーザがリンクをクリックすると、アカウントが確認されます。"
 
 #: ../../appendix/faqs/general.rst:142
 msgid "The user can now log in"
-msgstr ""
+msgstr "これで、ユーザがログインできるようになります。"
 
 #: ../../appendix/faqs/general.rst:144
 msgid ""
@@ -500,7 +519,7 @@ msgstr "プラグインを起動するには:"
 
 #: ../../appendix/faqs/general.rst:199 ../../appendix/faqs/development.rst:38
 msgid ":doc:`/guides/plugins/plugin-skeleton`"
-msgstr ""
+msgstr ":doc:`/guides/plugins/plugin-skeleton`"
 
 #: ../../appendix/faqs/general.rst:202
 msgid "Changing registration display"
@@ -594,12 +613,11 @@ msgstr ""
 
 #: ../../appendix/faqs/general.rst:239
 msgid "Possible causes"
-msgstr ""
+msgstr "考えられる原因"
 
 #: ../../appendix/faqs/general.rst:242
-#, fuzzy
 msgid "Web server configuration"
-msgstr "コンフィグレーション（環境設定）:"
+msgstr "Webサーバのコンフィグレーション"
 
 #: ../../appendix/faqs/general.rst:242
 msgid ""
@@ -609,9 +627,8 @@ msgid ""
 msgstr ""
 
 #: ../../appendix/faqs/general.rst:245
-#, fuzzy
 msgid "Permissions on files"
-msgstr "ファイルのアップデート"
+msgstr "ファイルのパーミッション"
 
 #: ../../appendix/faqs/general.rst:245
 msgid ""
@@ -631,13 +648,12 @@ msgid ""
 msgstr ""
 
 #: ../../appendix/faqs/general.rst:253
-#, fuzzy
 msgid "CSS is missing"
-msgstr "_css"
+msgstr "CSSが無い"
 
 #: ../../appendix/faqs/general.rst:256
 msgid "Wrong URL"
-msgstr ""
+msgstr "URLが間違っている"
 
 #: ../../appendix/faqs/general.rst:258
 msgid ""
@@ -651,7 +667,7 @@ msgstr ""
 
 #: ../../appendix/faqs/general.rst:261
 msgid "Syntax error"
-msgstr ""
+msgstr "構文エラー"
 
 #: ../../appendix/faqs/general.rst:263
 msgid ""
@@ -662,7 +678,7 @@ msgstr ""
 
 #: ../../appendix/faqs/general.rst:266
 msgid "Rewrite rules errors"
-msgstr ""
+msgstr "Rewrite ルールのエラー"
 
 #: ../../appendix/faqs/general.rst:268
 msgid ""
@@ -808,7 +824,7 @@ msgstr ""
 
 #: ../../appendix/faqs/general.rst:340
 msgid "File is missing an owner"
-msgstr ""
+msgstr "ファイルの所有者がいません"
 
 #: ../../appendix/faqs/general.rst:342
 msgid ""
@@ -845,11 +861,8 @@ msgid ""
 msgstr ""
 
 #: ../../appendix/faqs/general.rst:353
-#, fuzzy
 msgid "Fixes"
-msgstr ""
-"バグ修正:最新のブランチ（もしくは、バグがmasterにのみ現れる場合は、masterブラ"
-"ンチ）"
+msgstr "修正"
 
 #: ../../appendix/faqs/general.rst:355
 msgid ""
@@ -859,13 +872,8 @@ msgid ""
 msgstr ""
 
 #: ../../appendix/faqs/general.rst:360
-#, fuzzy
 msgid "No images"
-msgstr ""
-"これらのテクノロジーは、ユーザのブラウザにCSSやJSや画像などの静的な情報（ア"
-"セット）をローカルにキャッシュするように知らせる、というものです。有効にする"
-"と、サーバ負荷を大いに減少させ、ユーザから見たパフォーマンスを改善することが"
-"できます。"
+msgstr "画像がありません"
 
 #: ../../appendix/faqs/general.rst:362
 msgid ""
@@ -933,7 +941,7 @@ msgstr ""
 
 #: ../../appendix/faqs/general.rst:399
 msgid "Deprecation warnings"
-msgstr ""
+msgstr "非推奨の警告"
 
 #: ../../appendix/faqs/general.rst:401
 msgid "If you are seeing many deprecation warnings that say things like"
@@ -950,7 +958,7 @@ msgstr ""
 
 #: ../../appendix/faqs/general.rst:410
 msgid "Javascript not working"
-msgstr ""
+msgstr "Javascript が動きません"
 
 #: ../../appendix/faqs/general.rst:412
 msgid ""
@@ -978,7 +986,7 @@ msgstr "security（セキュリティ関連にかかわる変更）"
 
 #: ../../appendix/faqs/security.rst:5
 msgid "Is upgrade.php a security concern?"
-msgstr ""
+msgstr "upgrade.php は、セキュリティー上問題でしょうか？"
 
 #: ../../appendix/faqs/security.rst:7
 msgid ""
@@ -996,7 +1004,7 @@ msgstr ""
 
 #: ../../appendix/faqs/security.rst:12
 msgid "Should I delete install.php?"
-msgstr ""
+msgstr "install.php は、削除するべきでしょうか？"
 
 #: ../../appendix/faqs/security.rst:14
 msgid ""
@@ -1007,7 +1015,7 @@ msgstr ""
 
 #: ../../appendix/faqs/security.rst:17
 msgid "Filtering"
-msgstr ""
+msgstr "フィルタリング"
 
 #: ../../appendix/faqs/security.rst:19
 msgid ""
@@ -1034,15 +1042,12 @@ msgid ""
 msgstr ""
 
 #: ../../appendix/faqs/development.rst:2
-#, fuzzy
 msgid "Development"
-msgstr ""
-"Pullリクエスト（PRｓ）はElgg コアにコードを貢献できる最も良い方法です。コア開"
-"発チームはどんな些細は変更でも採用します。"
+msgstr "開発"
 
 #: ../../appendix/faqs/development.rst:5
 msgid "What should I use to edit php code"
-msgstr ""
+msgstr "phpコードを編集するには、何を使用したら良いでしょうか"
 
 #: ../../appendix/faqs/development.rst:7
 msgid ""
@@ -1052,8 +1057,9 @@ msgstr ""
 
 #: ../../appendix/faqs/development.rst:10
 msgid "Text Editor"
-msgstr ""
+msgstr "テキストエディタ"
 
+# get you up の意味
 #: ../../appendix/faqs/development.rst:12
 msgid ""
 "If you are new to software development or do not have much experience with "
@@ -1065,10 +1071,18 @@ msgid ""
 "on a Mac, TextWrangler_ is a popular choice. You could also give TextMate_ a "
 "try."
 msgstr ""
+"もし、あなたがソフトウェア開発の初心者か、IDEをまだ十分に使い慣れていないので"
+"あれば、テキストエディタを使用しようするのが上達する意味においても起動する意"
+"味においても一番手っ取り早いでしょう。ただ、最低で構文を目立たせる機能を持っ"
+"たものを使いましょう。コードがずっと読みやすくなります。もし、バグトラッカー"
+"にパッチを上げたいと思うのでしたら、ご使用のエディタに改行の変更ができるかど"
+"うかを確認しておいてください。Windowsをご使用なら、`NotePad++`_ がお薦めで"
+"す。Macの場合でしたら、 TextWrangeler_ がよく使われています。TextMate_ も使っ"
+"て見るとよいかもしれません。"
 
 #: ../../appendix/faqs/development.rst:15
 msgid "Integrated Development Environment"
-msgstr ""
+msgstr "統合開発環境（Integrated Development Environment）"
 
 #: ../../appendix/faqs/development.rst:17
 msgid ""
@@ -1257,14 +1271,12 @@ msgid "All database queries"
 msgstr ""
 
 #: ../../appendix/faqs/development.rst:106
-#, fuzzy
 msgid "Database query profiling"
-msgstr "データベースクエリキャッシュ"
+msgstr "データベースクエリのプロファイリング"
 
 #: ../../appendix/faqs/development.rst:107
-#, fuzzy
 msgid "Page generation time"
-msgstr "束縛時間"
+msgstr "ページの生成時間"
 
 #: ../../appendix/faqs/development.rst:108
 msgid "Number of queries per page"
@@ -1295,29 +1307,24 @@ msgid ""
 msgstr ""
 
 #: ../../appendix/faqs/development.rst:149
-#, fuzzy
 msgid "boot, system"
-msgstr "システムキャッシュ"
+msgstr "boot, system"
 
 #: ../../appendix/faqs/development.rst:150
-#, fuzzy
 msgid "plugins_boot, system"
-msgstr "システムキャッシュ"
+msgstr "plugins_boot, system"
 
 #: ../../appendix/faqs/development.rst:151
-#, fuzzy
 msgid "init, system"
-msgstr "システムキャッシュ"
+msgstr "init, system"
 
 #: ../../appendix/faqs/development.rst:152
-#, fuzzy
 msgid "pagesetup, system"
-msgstr "システムキャッシュ"
+msgstr "pagesetup, system"
 
 #: ../../appendix/faqs/development.rst:153
-#, fuzzy
 msgid "shutdown, system"
-msgstr "システムキャッシュ"
+msgstr "shutdown, system"
 
 #: ../../appendix/faqs/development.rst:155
 msgid ""
@@ -1340,38 +1347,32 @@ msgid ""
 msgstr ""
 
 #: ../../appendix/faqs/development.rst:160
-#, fuzzy
 msgid "What variables are reserved by Elgg?"
-msgstr "Elggはどのようなハードウェアで実行されているのか？"
+msgstr "Elggで使用されている予約語は何でしょうか？"
 
 #: ../../appendix/faqs/development.rst:162
-#, fuzzy
 msgid "``$CONFIG``"
-msgstr ""
-"ElggフレームワークをPHP CLIスクリプト内でライブラリとして使用する場合は、メモ"
-"リ関連の問題が起こることがあるかもしれません。こういう時には、``$CONFIG-"
-">db_disable_query_cache = true;`` と設定すればそのような問題を防ぐことができ"
-"ます。"
+msgstr "``$CONFIG``"
 
 #: ../../appendix/faqs/development.rst:163
 msgid "``$vars``"
-msgstr ""
+msgstr "``$vars``"
 
 #: ../../appendix/faqs/development.rst:164
 msgid "``$autofeed``"
-msgstr ""
+msgstr "``$autofeed``"
 
 #: ../../appendix/faqs/development.rst:165
 msgid "``$_GET['action']`` / ``$_POST['action']``"
-msgstr ""
+msgstr "``$_GET['action']`` / ``$_POST['action']``"
 
 #: ../../appendix/faqs/development.rst:166
 msgid "``$viewtype``"
-msgstr ""
+msgstr "``$viewtype``"
 
 #: ../../appendix/faqs/development.rst:169
 msgid "Copy a plugin"
-msgstr ""
+msgstr "プラグインをコピーする"
 
 #: ../../appendix/faqs/development.rst:171
 msgid ""
@@ -1383,37 +1384,41 @@ msgstr ""
 
 #: ../../appendix/faqs/development.rst:173
 msgid "change the directory name"
-msgstr ""
+msgstr "ディレクトリ名を変更する"
 
 #: ../../appendix/faqs/development.rst:174
 msgid ""
 "change the names of every function (having two functions causes PHP to crash)"
 msgstr ""
+"全ての関数の名前を変更する(同じ名前の関数が2つあるとPHPがクラッシュします)"
 
 #: ../../appendix/faqs/development.rst:175
 msgid ""
 "change the name of every view (so as not to override the views on the "
 "original plugin)"
 msgstr ""
+"全てのviewの名前を変更する(オリジナルのプラグインのviewが上書きされないよう"
+"に)"
 
 #: ../../appendix/faqs/development.rst:176
 msgid "change any data model subtypes"
-msgstr ""
+msgstr "全てのデータモデルのsubtypeを変更する"
 
 #: ../../appendix/faqs/development.rst:177
-#, fuzzy
 msgid "change the language file"
-msgstr "言語パック"
+msgstr "言語ファイルを変更する"
 
 #: ../../appendix/faqs/development.rst:178
 msgid "change anything else that was specific to the original plugin"
-msgstr ""
+msgstr "オリジナルのプラグインに特有な物以外すべて変更する"
 
 #: ../../appendix/faqs/development.rst:182
 msgid ""
 "If you are trying to clone the ``groups`` plugin, you will have the "
 "additional difficulty that the group plugin does not set a subtype."
 msgstr ""
+"``groups`` プラグインをクローンするつもりでしたら、グループプラグインは"
+"subtypeを設定しないという更なる困難に直面する"
 
 # 354f15d64de14428a736f5b7ac0790db
 #: ../../appendix/history.rst:2
@@ -1433,7 +1438,6 @@ msgstr ""
 
 # 78aa88c0dc3a469baaba8934884b5982
 #: ../../appendix/history.rst:8
-#, fuzzy
 msgid ""
 "Elgg's initial funding was by a company called Curverider Ltd, which was "
 "started by David Tosh and Ben Werdmuller. In 2010, Curverider was acquired "
@@ -1442,9 +1446,9 @@ msgid ""
 "project and has a variety of contributors and supporters."
 msgstr ""
 "一番最初にElggsに投資したのは、 Curverider Ltd という会社でした。David Tosh "
-"と Ben Werdmuller が始めた会社です。2010年に Curverider は、Thematic "
-"Networks に移籍して、そのもとでこのオープンソースプロジェクトは `The Elgg "
-"Foundation`_ となりました。そして今日、 Elgg はコミュニティによって維持される"
+"と Ben Werdmuller が始めた会社です。2010年に Curverider社 はThematic Networks"
+"社に取り込まれ、オープンソースプロジェクトの管理は `The Elgg Foundation`_ の"
+"もとに引き継がれました。そして今日、 Elgg はコミュニティによって維持される"
 "オープンソースプロジェクトになり、様々なコントリビューターやスポンサーによっ"
 "て支えられています。"
 
@@ -1769,7 +1773,6 @@ msgstr ""
 
 # b3a660053ec943a2b0e43d9d78c78d34
 #: ../../appendix/roadmap.rst:64
-#, fuzzy
 msgid ""
 "The best way to ensure a feature gets implemented is to discuss it with the "
 "core team and implement it yourself. See our :doc:`/contribute/index` guide "
@@ -1807,19 +1810,20 @@ msgstr ""
 "のスケジュールがあります。"
 
 #: ../../appendix/support.rst:2
-#, fuzzy
 msgid "Support policy"
-msgstr "リリースの方針"
+msgstr "サポートの方針"
 
 #: ../../appendix/support.rst:6
 msgid "As of Elgg 1.9, each minor release gets:"
-msgstr ""
+msgstr "Elgg1.9につきましては、次の通りマイナーリリースを予定しております:"
 
 #: ../../appendix/support.rst:5
 msgid ""
 "Normal bugfixes every 2 weeks for 3 months, at which point the next minor "
 "release candidate is made available."
 msgstr ""
+"通常のバグ修正は2週毎に3ヶ月間で行います。その時点で、次のマイナーリリース候"
+"補が利用できるようにします。"
 
 #: ../../appendix/support.rst:6
 msgid ""
@@ -1827,61 +1831,62 @@ msgid ""
 "of the next stable minor release. These will be released on an as-needed "
 "basis."
 msgstr ""
+"セキュリティーと重大な(例えば、後退するような)バグ修正は、次の安定マイナーリ"
+"リースの日より、1年間で行います。こういったものは、必要に応じてリリースをいた"
+"します。"
 
 #: ../../appendix/support.rst:10
-#, fuzzy
 msgid ":doc:`releases`"
-msgstr ":doc:`/appendix/releases`"
+msgstr ":doc:`releases`"
 
 #: ../../appendix/support.rst:12
 msgid "Below is a table outlining the specifics for each release:"
-msgstr ""
+msgstr "それぞれのリリースの仕様の概要については次の表をご覧ください:"
 
 #: ../../appendix/support.rst:15
-#, fuzzy
 msgid "Version"
-msgstr "いつになれば、バージョンX.Y.Zがリリースされるのですか？"
+msgstr "Version"
 
 #: ../../appendix/support.rst:15
 msgid "First stable release"
-msgstr ""
+msgstr "最初の安定版"
 
 #: ../../appendix/support.rst:15
 msgid "Bug fixes through"
-msgstr ""
+msgstr "バグ修正の期間"
 
 #: ../../appendix/support.rst:15
 msgid "Security fixes through"
-msgstr ""
+msgstr "セキュリティー修正の期間"
 
 #: ../../appendix/support.rst:17
-#, fuzzy
 msgid "1.8"
-msgstr "Elgg1.8からElgg1.9へ"
+msgstr "1.8"
 
 #: ../../appendix/support.rst:17
 msgid "September 2011"
-msgstr ""
+msgstr "2011年9月"
 
 #: ../../appendix/support.rst:17
 msgid "August 2014"
-msgstr ""
+msgstr "2014年8月"
 
 #: ../../appendix/support.rst:17
 msgid "September 2015"
-msgstr ""
+msgstr "2015年9月"
 
 #: ../../appendix/support.rst:19
-#, fuzzy
 msgid "1.9"
-msgstr "Elgg1.8からElgg1.9へ"
+msgstr "1.9"
 
 #: ../../appendix/support.rst:19
 msgid "September 2014"
-msgstr ""
+msgstr "2014年9月"
 
 #: ../../appendix/support.rst:22
 msgid ""
 "We don't have a support policy for major releases (x.0.0) yet because we've "
 "never done one."
 msgstr ""
+"メジャーリリース(x.0.0)についてのサポート方針につきましては、まだ取り掛かって"
+"いないため未定です。"

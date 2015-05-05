@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Elgg Core\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-01-11 19:33-0500\n"
-"PO-Revision-Date: 2015-01-14 20:28+0900\n"
+"PO-Revision-Date: 2015-02-16 20:52+0900\n"
 "Last-Translator: SAKAGUCHI, Hirotaka <kemo@saka-hv.org>\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/projects/p/elgg-"
 "core/language/ja_JP/)\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../intro/development.rst:2
 msgid "Developer Overview"
-msgstr ""
+msgstr "開発者に向けての概要説明"
 
 #: ../../intro/development.rst:4
 msgid ""
@@ -29,17 +29,21 @@ msgid ""
 "to working with Elgg as a framework, and mentions some of the terms and "
 "technologies used."
 msgstr ""
+"この文章は、Elggを開発しようとする人に向けて簡単に概要を説明するものです。フ"
+"レームワークとしてのElggとうまくつき合うための基本的なアプローチについて言及"
+"するとともに、Elggで使用しているいくつかの用語や技術を説明します。"
 
 #: ../../intro/development.rst:7
 msgid ""
 "See the :doc:`/guides/index` for tutorials or the :doc:`/design/index` for "
 "in-depth discussion on design."
 msgstr ""
+"チュートリアルとして :doc:`/guides/index` や、デザインに関してのより深い議論"
+"として :doc:`/design/index`  を参照してください。"
 
 #: ../../intro/development.rst:10
-#, fuzzy
 msgid "Database and Persistence"
-msgstr "データベースクエリキャッシュ"
+msgstr "データベースと永続性"
 
 #: ../../intro/development.rst:12
 msgid ""
@@ -49,11 +53,14 @@ msgid ""
 "supports additional information such as relationships between Entities, "
 "activity streams, and various types of settings."
 msgstr ""
+"Elggはデータを永続的に残す手段としてMySQL 5.5以上を使用し、データベースの値を"
+"Entities (情報の核となる単位を表わしたもの)とExtenders (Entitiesについての付"
+"加情報と詳細)にマッピングします。加えて、ElggはEntities同士の関係やアクティビ"
+"ティ・ストリームや様々なタイプの設定などのような情報もサポートします。"
 
 #: ../../intro/development.rst:18
-#, fuzzy
 msgid "Plugins"
-msgstr "プラグイン管理"
+msgstr "Plugin(プラグイン)"
 
 #: ../../intro/development.rst:20
 msgid ""
@@ -61,21 +68,26 @@ msgid ""
 "handling events and plugin hooks. All changes to an Elgg site should be "
 "implemented through plugins to ensure upgrading core is easy."
 msgstr ""
+"プラグインは、ビューを上書きしたり、イベントやプラグイン・フックをハンドリン"
+"グすることによって、Elggの振舞いや見た目を変更します。コアのアップグレードは"
+"簡単にということを確実にするため、Elggサイトへの変更は全てプラグインを通して"
+"なされます。"
 
 #: ../../intro/development.rst:24
 msgid "Actions"
-msgstr ""
+msgstr "Actions(アクション)"
 
 #: ../../intro/development.rst:26
 msgid ""
 "Actions are the primary way users interact with an Elgg site. Actions are "
 "registered by plugins."
 msgstr ""
+"アクションとは、ユーザがElggサイトと対話するための主となる方法のことです。ア"
+"クションは、プラグインによって登録されます。"
 
 #: ../../intro/development.rst:29
-#, fuzzy
 msgid "Events and Plugin Hooks"
-msgstr "現在、Elggは次のようなフックをサポートしています。"
+msgstr "Events(イベント)とPlugin Hooks(プラグイン・フック)"
 
 #: ../../intro/development.rst:31
 msgid ""
@@ -84,11 +96,14 @@ msgid ""
 "strategic times throughout Elgg's boot and execution process, and allows "
 "plugins to modify or cancel the default behavior."
 msgstr ""
+"イベントとプラグイン・フックとは、ある状況下でElggエンジンと対話するための"
+"Elggプラグインで使われる仕組みのことです。イベントとフックは、Elggの起動時と"
+"実行過程においてある決まったタイミングで呼び出され、プラグインがElggのデフォ"
+"ルトの振舞いを変えたり取り消したりできるようにしているのです。"
 
 #: ../../intro/development.rst:36
-#, fuzzy
 msgid "Views"
-msgstr "views"
+msgstr "Views（ビュー）"
 
 #: ../../intro/development.rst:38
 msgid ""
@@ -96,10 +111,14 @@ msgid ""
 "or extended by Plugins. Views are categories into a Viewtype, which hints at "
 "what sort of output should be expected by the view."
 msgstr ""
+"ビューとは、Elggの主となるプレゼンテーション・レイヤーのことです。ビューは、"
+"プラグインで上書きしたり拡張したりすることができます。ビューは"
+"Viewtype（ビュータイプ）に分類されます。ビュータイプとは、ビューに表示させた"
+"い出力の種類のことです。"
 
 #: ../../intro/development.rst:43
 msgid "JavaScript"
-msgstr ""
+msgstr "JavaScript"
 
 #: ../../intro/development.rst:45
 msgid ""
@@ -107,15 +126,19 @@ msgid ""
 "Bundled with Elgg are jQuery 1.11.0, jQuery UI 1.10.4, jQuery Form "
 "v20140304, jQuery jeditable, and jQuery UI Autocomplete."
 msgstr ""
+"Elgg は、AMD-compatible JavaScript system を使用しています。このシステムは、"
+"require.js にあります。また、jQuery 1.11.0, jQuery UI 1.10.4, jQuery Form "
+"v20140304, jQuery jeditable,  jQuery UI Autocomplete がElggと一緒に配布されま"
+"す。"
 
 #: ../../intro/development.rst:48
 msgid "Plugins can load their own JS libs."
-msgstr ""
+msgstr "プラグインは、自前のJSライブラリをロードすることができます。"
 
 # 021c6c4b7ad544d79910239f3c2d0b9e
 #: ../../intro/development.rst:51 ../../intro/features.rst:13
 msgid "Internationalization"
-msgstr ""
+msgstr "国際化"
 
 #: ../../intro/development.rst:53
 msgid ""
@@ -124,9 +147,8 @@ msgid ""
 msgstr ""
 
 #: ../../intro/development.rst:56
-#, fuzzy
 msgid "Caching"
-msgstr "キャッシングを有効に"
+msgstr "キャッシング"
 
 #: ../../intro/development.rst:58
 msgid ""
@@ -135,12 +157,8 @@ msgstr ""
 
 # 1524b210e4f440ccad5f165d58ad0b2a
 #: ../../intro/features.rst:2
-#, fuzzy
 msgid "Features"
-msgstr ""
-"新機能には、機能のリクエストを提出する（ `submit a feature request`_ ）もしく"
-"は、コードに無駄に時間を費やす前に最初に私達に知らせて（ `talk to us`_ ）あな"
-"たの方針にコアチームが賛同することを確かめてください。"
+msgstr "機能"
 
 # e67693d4514b4a43808c039812d002c4
 #: ../../intro/features.rst:4
@@ -153,12 +171,8 @@ msgstr ""
 
 # 80f9741bb71b4aa29f2272232a0de578
 #: ../../intro/features.rst:9
-#, fuzzy
 msgid "For developers"
-msgstr ""
-"わたしたちは、コアの開発者やプラグイン作者やサイト管理者のために、Elggスタッ"
-"クのレベル毎に迅速で自動的なテストを促進し可能にすることで、 **人の手によるテ"
-"ストは不用に** したいと思っています。"
+msgstr "開発者の方へ"
 
 # f4b008c58315413f9966aa519ec4856c
 #: ../../intro/features.rst:11
@@ -169,7 +183,7 @@ msgstr "ライセンスに対する同意"
 # 8ee67b92332e4caaae080eaf7895e6c3
 #: ../../intro/features.rst:12
 msgid "Theme framework"
-msgstr ""
+msgstr "テーマ・フレームワーク"
 
 # 29f61288bc014786ba1921fa4b8272f6
 #: ../../intro/features.rst:14
@@ -180,12 +194,12 @@ msgstr "``engine/settings.php``"
 # b99438d34b7449b28819a3f13ea875bf
 #: ../../intro/features.rst:15
 msgid "Widgets framework"
-msgstr ""
+msgstr "ウィジェット・フレームワーク"
 
 # aa72e4499ff545fb8063764947e2b180
 #: ../../intro/features.rst:16
 msgid "Plugin APIs"
-msgstr ""
+msgstr "プラグインAPI"
 
 # 7b4604cbddec444a9e470b19b87a7367
 #: ../../intro/features.rst:17
@@ -195,33 +209,32 @@ msgstr ""
 # f107f161e1554f18833ca2b4bc2572d9
 #: ../../intro/features.rst:18
 msgid "Web services API"
-msgstr ""
+msgstr "WebサービスAPI"
 
 # c4984041a587455293695dba3c31d62c
 #: ../../intro/features.rst:19
 msgid "jQuery-based JS framework"
-msgstr ""
+msgstr "jQueryベースの JS フレームワーク"
 
 # 4a449fd0e3a6441b9a2ea0d0bb8a8e4c
 #: ../../intro/features.rst:20
-#, fuzzy
 msgid "Session management"
-msgstr "session"
+msgstr "セッション管理"
 
 # c16870ea3d8847ebbc1280011594b15f
 #: ../../intro/features.rst:21
 msgid "Custom URL routing"
-msgstr ""
+msgstr "カスタム URL ルーティング"
 
 # 71be55621c6248b99789f333bbe098a4
 #: ../../intro/features.rst:24
 msgid "For admins"
-msgstr ""
+msgstr "管理者のために"
 
 # 35881e8c4add4872b0fec5a40f10583c
 #: ../../intro/features.rst:26
 msgid "User profiles and avatars"
-msgstr ""
+msgstr "ユーザのプロフィールとアバター"
 
 # 071f99b13c8a4d99968059f7bf0e3ea1
 #: ../../intro/features.rst:27
@@ -241,12 +254,12 @@ msgstr ""
 # ab708da47cf2449294928c7eb902ab04
 #: ../../intro/features.rst:30
 msgid "RSS support"
-msgstr ""
+msgstr "RSS サポート"
 
 # fcab46a3d9ac476b813d7403afd267db
 #: ../../intro/features.rst:31
 msgid "Activity stream"
-msgstr ""
+msgstr "アクティビティ・ストリーム"
 
 # 94a8a62dc3824ccc8da1b96cdc6dd229
 #: ../../intro/features.rst:32
@@ -257,9 +270,8 @@ msgstr ""
 
 # 105711659be64064a13f9f9fb3ab3aee
 #: ../../intro/features.rst:33
-#, fuzzy
 msgid "User authentication and administration"
-msgstr "管理業務 -> 設定 -> プラグイン でプラグインページに移動してください"
+msgstr "ユーザの認証と管理"
 
 # 455dc8ca97594d0591639e8bf56bdc32
 #: ../../intro/features.rst:35
@@ -297,9 +309,8 @@ msgstr ""
 
 # 5da2ffe667b949289d6a7846d9410aad
 #: ../../intro/install.rst:2
-#, fuzzy
 msgid "Installation"
-msgstr "インストールする"
+msgstr "インストール"
 
 # 635d256051b940019c64600495a8f7e0
 #: ../../intro/install.rst:4
@@ -307,46 +318,44 @@ msgid "Get your own instance of Elgg running in no time."
 msgstr ""
 
 #: ../../intro/install.rst:0
-#, fuzzy
 msgid "Contents"
-msgstr "配布されているプラグインパッケージを解凍する"
+msgstr "目次"
 
 # a1fadca2c6fd4f109604a513d690649e
 #: ../../intro/install.rst:11
-#, fuzzy
 msgid "Requirements"
-msgstr "インストール時の必要条件:"
+msgstr "必要なもの"
 
 # d96dba0cfbbd41e884d1f8514851458d
 #: ../../intro/install.rst:13
-#, fuzzy
 msgid "MySQL 5+"
-msgstr "MySQLを調整する"
+msgstr "MySQL 5+"
 
 # 0af7397f920b441eab283d3e48b59329
 #: ../../intro/install.rst:14
 msgid "PHP 5.2+ with the following extensions:"
-msgstr ""
+msgstr "PHP 5.2+ と次のエスクテンション:"
 
 # 24475abd363d4f2aa5924a0ccae477a1
 #: ../../intro/install.rst:16
 msgid "GD (for graphics processing)"
-msgstr ""
+msgstr "GD (グラフィック処理に使います)"
 
 # 0f458681ba1041ed99bed7373165c125
 #: ../../intro/install.rst:17
 msgid "`Multibyte String support`_ (for i18n)"
 msgstr ""
+"マルチバイト文字列のサポート(`Multibyte String support`_ )(i18nでつかいます)"
 
 # 2835bfd6caac4e7489be581f1412148e
 #: ../../intro/install.rst:18
 msgid "Proper configuration and ability to send email through an MTA"
-msgstr ""
+msgstr "MTAでemailを送信するために適切に設定されており、送信が可能であること"
 
 # 4b89618e2b074bd596678cc237e8ef3b
 #: ../../intro/install.rst:20
 msgid "Web server with support for URL rewriting"
-msgstr ""
+msgstr "URLリライトがサポートされているWebサーバ"
 
 # 673602dd4893435bb052bb4d386cab19
 #: ../../intro/install.rst:22
@@ -389,34 +398,35 @@ msgstr ""
 # 8b1ecb28eb954ca484aaac9eb2de20dc
 #: ../../intro/install.rst:35
 msgid "Overview"
-msgstr ""
+msgstr "概要"
 
 # ae4f5bc3f38f4a31aafc104e8397cafe
 #: ../../intro/install.rst:38
-#, fuzzy
 msgid "Upload Elgg"
-msgstr "Elgg |version| ドキュメント"
+msgstr "Elggのアップロード"
 
 # ce248b1a77b64a7990ca260c16fd4a25
 #: ../../intro/install.rst:40
 msgid "Download the `latest version of Elgg`_"
-msgstr ""
+msgstr "最新のElgg( `latest version of Elgg`_)をダウンロードします。"
 
 # 2a74707d45af4b5cbf6b1304542d7bb3
 #: ../../intro/install.rst:41
 msgid "Upload the ZIP file with an FTP client to your server"
 msgstr ""
+"FTPクライアントを使用してZIPファイルをあなたのサーバにアップロードします。"
 
 # f742cfb93faa4a299b39c0fddfd7bf74
 #: ../../intro/install.rst:42
 msgid "Unzip the files in your domain's document root (/home/username/www)."
 msgstr ""
+"あなたのドメインのドキュメント・ルート(例えば、/home/username/wwwなど)へファ"
+"イルをUnzipします。"
 
 # 5fa4b95065554b0abb5f0b56436a6150
 #: ../../intro/install.rst:47
-#, fuzzy
 msgid "Create a data folder"
-msgstr "~75,000 個のデータディレクトリ"
+msgstr "データフォルダ(Elggのデータを保存しておくためのフォルダ)を作成します。"
 
 # bb84ca15570447a4a733aa33caafe605
 #: ../../intro/install.rst:49
@@ -468,9 +478,8 @@ msgstr ""
 
 # 4413b0823a8349e0ade75788cc96f577
 #: ../../intro/install.rst:82
-#, fuzzy
 msgid "Create a MySQL database"
-msgstr "データベースクエリキャッシュ"
+msgstr "MySQLデータベースの作成"
 
 # 7aea5f03f75448b09cf2bc6f66bf20c5
 #: ../../intro/install.rst:84
@@ -490,11 +499,8 @@ msgstr ""
 
 # 53f159a17b3a4a0182ddd7e4e1e77078
 #: ../../intro/install.rst:94
-#, fuzzy
 msgid "Visit your Elgg site"
-msgstr ""
-"自分のサイトが your-elgg-site.com だとして、 http://your-elgg-site.com/"
-"upgrade.php にアクセスします。"
+msgstr "あなたのElggサイトにアクセスします"
 
 # cf5fc2f7c9d347af9f1ffa0f4d92aa83
 #: ../../intro/install.rst:96
@@ -507,9 +513,8 @@ msgstr ""
 
 # 9ddb70ed08c4400bb8af9246b56dafc8
 #: ../../intro/install.rst:103
-#, fuzzy
 msgid "A note on settings.php and .htaccess"
-msgstr "``.htaccess``"
+msgstr "settings.php と .htaccess についての注意"
 
 # 6b25367bdb2f43348145b74e22943cd6
 #: ../../intro/install.rst:105
@@ -554,14 +559,13 @@ msgstr ""
 
 # 396fbae623e4413f8f9c8b5b1098d11c
 #: ../../intro/install.rst:125
-#, fuzzy
 msgid "Other Configurations"
-msgstr "TODO: other goals/values?"
+msgstr "その他の設定"
 
 # c7c3bb8ac6934c3599439c413e130946
 #: ../../intro/install.rst:128
 msgid "Lighttpd"
-msgstr ""
+msgstr "Lighttpd"
 
 # 07b3a6e86f5c4f359312931cc9644ff1
 #: ../../intro/install.rst:129
@@ -574,7 +578,7 @@ msgstr ""
 # f172b238073a404cae7fd418d2d0a7c0
 #: ../../intro/install.rst:134
 msgid "Nginx"
-msgstr ""
+msgstr "Nginx"
 
 # 28e52175d4dc41af8e78bee075a68422
 #: ../../intro/install.rst:135
@@ -599,7 +603,7 @@ msgstr ""
 # cfe5dc013a3145819b082b72c4686a76
 #: ../../intro/install.rst:143
 msgid "IIS"
-msgstr ""
+msgstr "IIS"
 
 # 8e06127fe34c45e18d87d2f99724348a
 #: ../../intro/install.rst:145
@@ -620,7 +624,7 @@ msgstr ""
 # 546e6a49c5da4e33bcfa7b67bbebfbb6
 #: ../../intro/install.rst:158
 msgid "MariaDB"
-msgstr ""
+msgstr "MariaDB"
 
 # 8ec03c2f74154b6fb4485a0831ffc58f
 #: ../../intro/install.rst:160
@@ -652,7 +656,7 @@ msgstr ""
 # d2476137b8ff41f3aa35ae42c9d862ef
 #: ../../intro/install.rst:177
 msgid "MAMP"
-msgstr ""
+msgstr "MAMP"
 
 # 05c1b4b7bb6842ccaf96593a5e6ac419
 #: ../../intro/install.rst:179
@@ -672,7 +676,7 @@ msgstr ""
 # 831d8651a96c4d92979359cbf81c5e37
 #: ../../intro/install.rst:187
 msgid "XAMPP"
-msgstr ""
+msgstr "XAMPP"
 
 # 3e26b1738f5b40d2abe10c9f33989f4d
 #: ../../intro/install.rst:189
@@ -824,7 +828,7 @@ msgstr ""
 # 190cd15bef644818b21e47297e972241
 #: ../../intro/install.rst:239
 msgid "EasyPHP"
-msgstr ""
+msgstr "EasyPHP"
 
 # aa4fbcc973ea4a4cbfe324b5d87119a8
 #: ../../intro/install.rst:241
@@ -887,7 +891,7 @@ msgstr ""
 # 65281682e9d547d9860dd7cd6bce487f
 #: ../../intro/install.rst:271
 msgid "Ubuntu Linux"
-msgstr ""
+msgstr "Ubuntu Linux"
 
 # 8bd15dec5095409082eda4f0a4295d32
 #: ../../intro/install.rst:273
@@ -916,7 +920,7 @@ msgstr "上記の基本的な手順を踏んでください。"
 # 7185505e5f114ef7bd758e105c5d509d
 #: ../../intro/install.rst:286
 msgid "Cloud9IDE"
-msgstr ""
+msgstr "Cloud9IDE"
 
 # c4f6101f130449159f447b44cc448375
 #: ../../intro/install.rst:288
@@ -925,15 +929,13 @@ msgstr ""
 
 # d9a1467828634c3cbfe433919f81ca56
 #: ../../intro/install.rst:290
-#, fuzzy
 msgid "Go to http://c9.io"
-msgstr "`The Elgg Community <http://community.elgg.org/plugins>`_"
+msgstr "http://c9.io に進んでください。"
 
 # cf29baeb2b0740a4ba8bf2833184b920
 #: ../../intro/install.rst:291
-#, fuzzy
 msgid "Login with GitHub"
-msgstr "`Github <https://github.com/Elgg>`_"
+msgstr "GitHubでログイン"
 
 # ad6ea61ec7ca4830a187785fa2e56525
 #: ../../intro/install.rst:292
@@ -1017,9 +1019,8 @@ msgstr ""
 
 # fb237a18db674f36b34d2b3e625038f6
 #: ../../intro/install.rst:333
-#, fuzzy
 msgid "Create the admin account"
-msgstr "admin"
+msgstr "管理用アカウントを作成する"
 
 # 80b6c167cde9471ca5717f3a24861cc7
 #: ../../intro/install.rst:334
@@ -1146,7 +1147,7 @@ msgstr ""
 # ece6a9aeb8c042b4b867e7adac7cce8b
 #: ../../intro/install.rst:397
 msgid "``AllowOverride all``"
-msgstr ""
+msgstr "``AllowOverride all``"
 
 # 220982934d3e4d4ebb7d58f9a1fff2ab
 #: ../../intro/install.rst:399
@@ -1222,9 +1223,8 @@ msgstr ""
 
 # 628c248e743d424ba544f4319434b955
 #: ../../intro/install.rst:433
-#, fuzzy
 msgid "``RewriteBase /elgg/``"
-msgstr "Elgg |version| ドキュメント"
+msgstr "``RewriteBase /elgg/``"
 
 # 9819cd57a55c432da972ebd31fcab25f
 #: ../../intro/install.rst:435
@@ -1462,16 +1462,13 @@ msgstr ""
 
 # 397d876949f94a25b83562c474d36524
 #: ../../intro/license.rst:2
-#, fuzzy
 msgid "License"
-msgstr ""
-"パッチを提供すると `GPLv2 license`_ と `MIT license`_ のもとでそのコードをラ"
-"イセンスするのに同意したことになります。"
+msgstr "ライセンス"
 
 # c34504089c8a438abe4f292e24682af6
 #: ../../intro/license.rst:5
 msgid "MIT or GPLv2"
-msgstr ""
+msgstr "MIT or GPLv2"
 
 # f90703dd80ae42d8a6d084daaf3df94d
 #: ../../intro/license.rst:6
@@ -1484,7 +1481,6 @@ msgstr ""
 
 # adee33c61ad84beba8b6b5a4c17ef3af
 #: ../../intro/license.rst:13
-#, fuzzy
 msgid "FAQ"
 msgstr "FAQ"
 
